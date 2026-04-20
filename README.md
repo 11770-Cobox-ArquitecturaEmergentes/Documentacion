@@ -560,14 +560,15 @@ A pesar de las capacidades de estos competidores, ninguno de ellos se enfoca de 
 
 #### 2.1.2. Estrategias y tácticas frente a competidores
 
-**Estrategia de posicionamiento**
+**Estrategia de posicionamiento:**
+
 CoBox Smart Vision se posiciona como una solución especializada en la validación automática de información operativa mediante inteligencia artificial, orientada a mejorar la confiabilidad de los datos en entornos logísticos.
 
 A diferencia de plataformas de gestión de flotas o sistemas de planificación logística, la propuesta no busca reemplazar soluciones existentes, sino resolver una brecha específica relacionada con la integridad y verificabilidad de los datos, especialmente en escenarios donde el ingreso manual de información genera errores o inconsistencias.
 
 Este posicionamiento permite enfocar la solución en segmentos que actualmente no cuentan con herramientas avanzadas de validación, particularmente pequeñas y medianas empresas de transporte de carga con procesos manuales o semi-digitalizados.
 
-**Estrategias frente a competidores**
+**Estrategias frente a competidores:**
 
 1. _Estrategia de diferenciación por especialización:_
   En lugar de competir en amplitud funcional con plataformas como Samsara o Powerfleet, CoBox Smart Vision se enfoca en un dominio específico: la validación automática de datos operativos mediante evidencia visual.
@@ -605,7 +606,7 @@ Se han definido dos segmentos objetivo para la recolección de información: ges
 
 ---
 
-### Segmento 1: Gestión de operaciones logísticas
+**Segmento 1: Gestión de operaciones logísticas**
 
 1. ¿Cuál es su rol dentro de la empresa y cuáles son sus principales responsabilidades en la gestión de la flota?  
 2. ¿Cuántos vehículos administra y qué tipo de operaciones logísticas realiza (distribución, larga distancia, última milla)?  
@@ -622,7 +623,7 @@ Se han definido dos segmentos objetivo para la recolección de información: ges
 
 ---
 
-### Segmento 2: Conductores / operadores de ruta
+**Segmento 2: Conductores / operadores de ruta**
 
 1. ¿Cuánto tiempo lleva trabajando como conductor de transporte de carga y qué tipo de rutas realiza?  
 2. ¿Cómo registra actualmente el inicio y fin de cada viaje?  
@@ -638,12 +639,301 @@ Se han definido dos segmentos objetivo para la recolección de información: ges
 12. ¿Qué lo motivaría a completar correctamente el registro de información en cada servicio?  
 
 #### 2.2.2. Registro de entrevistas
+
+**Segmento 1: Gestión de operaciones logísticas**
+
+**Entrevista #1**
+
+**Datos generales**
+
+| Detalle       | Información                                      |
+|---------------|--------------------------------------------------|
+| Entrevistado  | Ricardo Valdivia Quispe                          |
+| Rol           | Coordinador de Operaciones                       |
+| Empresa       | Transportes Valdivia SAC                         |
+| Edad          | 38 años                                          |
+| Origen        | Huancayo, reside en Lima Norte                   |
+| Flota         | 14 unidades — rutas Lima–Junín–Pasco             |
+
+---
+
+**Resumen de la entrevista**
+
+Ricardo coordina una flota de 14 camiones en una empresa familiar de transporte interprovincial. Gestiona toda la operación con WhatsApp, Excel y llamadas telefónicas, sin herramientas integradas. Un intento previo de implementar GPS fue abandonado al año por costos de mensualidad.
+
+Identifica inconsistencias frecuentes en el kilometraje reportado por los conductores —diferencias de 50 a 60 km sin justificación— y boletas de combustible que no corresponden a la fecha o ruta del servicio. No cuenta con ningún mecanismo real de auditoría: su única validación es cruzar manualmente los datos con Google Maps, lo que califica él mismo como "intuición, no auditoría".
+
+El impacto más directo de estas discrepancias es doble: conflictos internos con conductores que no pueden resolverse por falta de evidencia, e incapacidad de proyectar costos de combustible con datos confiables para reportar al gerente general. Describe su situación con claridad: *"eso no es gestión, es adivinar"*.
+
+Muestra disposición media-alta ante una solución de captura visual y validación automática, condicionada a que no le genere más carga operativa a él. El modelo que le genera mayor interés es el de alertas proactivas ante anomalías, no el de consulta activa. Sus principales objeciones son la precisión del sistema ante falsos positivos, la privacidad de los datos y la necesidad de un caso económico claro para convencer al dueño, dado el antecedente negativo con el GPS.
+
+---
+
+**Entrevista #2**
+
+**Datos generales**
+
+| Detalle       | Información                                          |
+|---------------|------------------------------------------------------|
+| Entrevistada  | Miriam Ccori Huanca                                  |
+| Rol           | Jefa de Operaciones                                  |
+| Empresa       | Grupo Ccori Logística EIRL                           |
+| Edad          | 44 años                                              |
+| Origen        | Cusco, reside en San Juan de Lurigancho              |
+| Flota         | 22 unidades — distribución retail Lima Metropolitana |
+
+---
+
+**Resumen de la entrevista**
+
+Miriam dirige las operaciones de una empresa de distribución retail fundada por su familia en Cusco, con 22 unidades activas en Lima. Reporta ante un directorio de tres socios, lo que le exige presentar datos operativos confiables de forma periódica. A pesar de contar con un TMS instalado hace tres años y GPS en todas las unidades, el sistema está subutilizado: los conductores siguen llenando papel y el equipo transcribe manualmente al sistema, generando doble trabajo para el mismo dato.
+
+Sus problemas principales son la variabilidad inexplicable de consumo de combustible entre unidades similares —hasta un 30% de diferencia sin causa técnica identificada— y la incapacidad de resolver disputas con clientes por falta de evidencia de entrega. Ambos problemas le han generado consecuencias concretas: pérdida de un contrato de cliente corporativo que exigía trazabilidad formal, y cuestionamientos recurrentes del directorio ante márgenes operativos inconsistentes.
+
+Su validación actual consiste en cruzar manualmente el registro GPS con los reportes del conductor solo cuando hay un reclamo puntual, lo que la deja con visibilidad reactiva y parcial sobre la operación. Describe la necesidad de datos auditables como urgente tanto para retener clientes como para sostener su posición ante los socios.
+
+Muestra alta disposición hacia una solución de captura visual y validación automática, pero exige implementación gradual tras una mala experiencia previa con un TMS que fue lanzado sin soporte adecuado. Sus criterios de adopción incluyen integración con sistemas existentes, soporte postventa con SLA claro, gestión del cambio con conductores veteranos y resultados medibles en los primeros dos meses.
+
+---
+
+**Entrevista #3**
+
+**Datos generales**
+
+| Detalle       | Información                                           |
+|---------------|-------------------------------------------------------|
+| Entrevistado  | Jorge Mamani Apaza                                    |
+| Rol           | Gerente General y fundador                            |
+| Empresa       | Trans Mamani Cargo SAC                                |
+| Edad          | 52 años                                               |
+| Origen        | Puno, reside en Villa El Salvador                     |
+| Flota         | 8 unidades propias + 6 en alquiler — rutas Lima–sur   |
+
+---
+
+**Resumen de la entrevista**
+
+Jorge fundó su empresa en 2003 con un solo camión. Hoy administra 14 unidades operativas sin ningún sistema formal: usa cuaderno físico, WhatsApp y llamadas telefónicas para controlar toda la operación. Es el único decisor de la empresa, lo que simplifica el proceso de adopción pero también concentra en él todas las resistencias al cambio.
+
+La transición de empresa pequeña a mediana le generó una pérdida de control que reconoce con preocupación: antes conocía cada detalle de la operación porque la manejaba personalmente, hoy no puede hacer seguimiento confiable de 14 unidades, especialmente de las 6 alquiladas cuyos conductores no son de su confianza directa. Ha tenido casos documentados de odómetros manipulados en unidades alquiladas y boletas de combustible de grifos que no corresponden a la ruta reportada.
+
+El impacto económico es concreto: estima que hay un margen mensual inexplicable producto de kilómetros y combustible inflados, y perdió un cliente en Arequipa que solicitó reportes formales de cada servicio para su auditoría interna, algo que Jorge no pudo proveer. Señala con honestidad: *"me da vergüenza mostrarles mi cuaderno"*.
+
+Su disposición ante tecnología es escéptica pero pragmática: no rechaza la solución, pero exige verla funcionar en una de sus unidades reales antes de comprometerse. El término "inteligencia artificial" le genera distancia; el valor debe comunicársele en lenguaje operativo concreto. Es el perfil de cierre más rápido si el piloto convence, ya que no necesita aprobación de ningún comité. Sus condiciones son simplicidad real de uso, precio accesible para una pyme y acompañamiento en el arranque.
+
+---
+
+**Segmento 2: Conductores / operadores de ruta**
+
+**Entrevista #1**
+
+**Datos generales**
+
+| Detalle       | Información                                         |
+|---------------|-----------------------------------------------------|
+| Entrevistado  | Edilberto Poma Condori                              |
+| Rol           | Conductor de larga distancia                        |
+| Ruta          | Lima–Arequipa–Juliaca                               |
+| Edad          | 46 años                                             |
+| Origen        | Juliaca, reside en Villa María del Triunfo          |
+| Experiencia   | 19 años — licencia AIII-C, récord limpio en SUTRAN  |
+
+---
+
+**Resumen de la entrevista**
+
+Edilberto es conductor de larga distancia con 19 años de trayectoria, especializado en rutas al sur del país. Registra su operación en un cuadernillo propio que completa a mano durante el viaje y entrega al retorno, proceso que le toma entre una hora y hora y media al cierre de cada servicio. Reconoce abiertamente que el cansancio después de jornadas de 12 horas genera errores involuntarios en los registros numéricos.
+
+Sus principales conflictos operativos se originan en eventos que no quedan documentados: desvíos por huaycos o bloqueos viales en rutas de sierra, tiempos de espera en almacenes de destino de hasta cuatro horas, y retenciones por controles policiales en carretera. Ninguno de estos eventos tiene canal formal de registro, lo que deriva en discrepancias de kilometraje que luego son cuestionadas por el coordinador sin posibilidad de defensa objetiva. Sufrió un descuento de viáticos injustificado por este motivo, episodio que recuerda con malestar acumulado: *"uno guarda esas cosas"*.
+
+Usa WhatsApp con fluidez pero rechaza aplicaciones con múltiples pantallas; abandonó una app anterior tras dos semanas por complejidad de uso. Su aceptación de la captura visual es inmediata y entusiasta: identifica con precisión que la foto del odómetro es más rápida y prueba que el dato es real, lo que invierte la dinámica actual donde "el papel casi siempre gana". Sus condiciones técnicas son claras: funcionamiento offline en zonas sin señal de la sierra y el altiplano, botones grandes compatibles con uso con guantes, legibilidad bajo luz solar directa y confirmación visible de que el registro fue guardado.
+
+Su motivación para adoptar la solución no es económica sino de justicia laboral: quiere que su trabajo bien hecho quede respaldado automáticamente, sin depender de que alguien le crea.
+
+---
+
+**Entrevista #2**
+
+**Datos generales**
+
+| Detalle       | Información                                          |
+|---------------|------------------------------------------------------|
+| Entrevistada  | Yadira Ríos Solano                                   |
+| Rol           | Conductora de reparto urbano                         |
+| Ruta          | Lima Metropolitana — reparto multípunto              |
+| Edad          | 34 años                                              |
+| Origen        | Piura, reside en San Martín de Porres                |
+| Experiencia   | 5 años — licencia AIII-B, opera con ayudante         |
+
+---
+
+**Resumen de la entrevista**
+
+Yadira realiza hasta 14 o 15 entregas diarias en Lima Metropolitana, lo que la convierte en el perfil con mayor volumen de registros por jornada entre los conductores entrevistados. El cierre administrativo del día le toma entre 40 minutos y una hora, parte del cual corresponde a transcripción duplicada: registra información en papel durante la ruta y luego la pasa al Excel del coordinador. Identifica este proceso como ineficiente desde hace tiempo y ya lo escaló internamente sin obtener respuesta.
+
+El conflicto más frecuente que enfrenta es el de entregas rechazadas posteriormente por clientes que no firmaron o que niegan haber recibido la carga completa. Sin evidencia objetiva, la resolución depende de a quién le cree la empresa. Por iniciativa propia, Yadira comenzó a fotografiar cada entrega —producto descargado y guía firmada— y a enviarlas por WhatsApp al coordinador, práctica que ella misma diseñó sin que nadie se la pidiera y que la ha protegido en múltiples ocasiones. Es la usuaria que más claramente articula el valor de CoBox: la solución formaliza y organiza lo que ella ya hace de forma manual.
+
+Su comodidad digital es alta: usa Google Maps, Waze y WhatsApp de forma habitual. Sus objeciones no son de capacidad sino de diseño: rechaza el onboarding largo, los flujos lentos y la falta de confirmación de guardado. Define con precisión el producto que necesita: foto georeferenciada asociada automáticamente a cada entrega, lista de pendientes del día consultable, y validación inmediata de la imagen con mensaje claro si algo salió mal.
+
+Una observación de campo relevante que aporta: en algunos almacenes de mercados mayoristas no se permite el uso del celular en el interior, por lo que el registro debe hacerse fuera del recinto. Su motivación de adopción está ligada a la reciprocidad: usará el sistema si también ella puede consultar su propio historial, no solo la empresa.
+
+---
+
+**Entrevista #3**
+
+**Datos generales**
+
+| Detalle       | Información                                                  |
+|---------------|--------------------------------------------------------------|
+| Entrevistado  | Hipólito Ccama Luque                                         |
+| Rol           | Conductor de carga pesada                                    |
+| Ruta          | Lima–Ica–Nasca                                               |
+| Edad          | 41 años                                                      |
+| Origen        | Nasca, reside en Lurlurín desde hace 6 años                  |
+| Experiencia   | 8 años — licencia AIII-C con habilitación mercancías peligrosas |
+
+---
+
+**Resumen de la entrevista**
+
+Hipólito transporta insumos agroindustriales con habilitación para mercancías peligrosas en la ruta Lima–sur. La naturaleza regulada de su carga le exige documentación adicional con datos técnicos —temperatura, presión, volumen— que no siempre comprende en detalle, lo que le genera incertidumbre al momento de llenar formularios en campo. Tuvo un caso de error por confusión de unidades de medida (litros vs. galones) que derivó en un llamado de atención formal.
+
+Su conflicto más significativo involucra una retención de SUTRAN en Cañete de aproximadamente una hora que no quedó documentada en ningún registro oficial. La demora causó un reclamo del cliente y una consulta de la empresa sin que él pudiera aportar más que su palabra. Desde entonces intenta solicitar el número de acta de intervención policial cuando lo retienen, pero no siempre lo obtienen con rapidez. Esta situación define con claridad su necesidad: el registro automático de hora y ubicación en paradas forzadas es el caso de uso de mayor valor para su perfil.
+
+Describe desconfianza hacia las aplicaciones móviles no por incapacidad técnica sino por experiencias previas con apps que solicitaban permisos excesivos sin explicación. Esta barrera es psicológica y puede superarse con comunicación transparente sobre el uso de cada permiso. Su uso digital actual se limita a WhatsApp con mensajes de voz.
+
+Sus requisitos de uso son precisos: modo offline obligatorio para tramos sin cobertura entre Cañete, Chincha y zonas de Ica; fallback manual si la foto no es reconocida por el sistema; mensajes de error descriptivos y accionables en lugar de alertas genéricas; autocompletado de datos conocidos como placa y ruta habitual; e interfaz mínima con instrucciones explícitas en cada paso. Su motivación de adopción es la seguridad: protección ante fiscalizaciones de SUTRAN, reducción de conflictos al retornar a Lima y tranquilidad de saber que su trabajo queda documentado. Resume su postura con una observación que aplica a todo el proceso de diseño del producto: *"quien diseña la app capaz no las piensa"*, en referencia a las condiciones reales de uso en campo que raramente llegan al equipo de desarrollo.
+
 #### 2.2.3. Análisis de entrevistas
 
+A partir de las entrevistas realizadas a los segmentos de gestión de operaciones logísticas y conductores de unidades de carga, se identificaron patrones consistentes en relación con los problemas operativos, la confiabilidad de los datos y la adopción de soluciones tecnológicas en el contexto del transporte de carga.
+
+---
+
+**1. Problemas recurrentes identificados**
+
+Se evidenció una alta dependencia de procesos manuales para el registro de información operativa, incluyendo kilometraje, consumo de combustible y eventos de servicio. Estos procesos generan errores frecuentes, pérdida de información y retrasos en la disponibilidad de datos.
+
+Asimismo, se identificaron inconsistencias recurrentes en los datos reportados, tales como diferencias de kilometraje sin justificación y registros de combustible que no corresponden al contexto operativo. Estas discrepancias impactan directamente en los costos y en la capacidad de planificación de las empresas.
+
+Otro problema crítico identificado es la ausencia de mecanismos formales de validación de la información. La verificación de datos se realiza de manera manual y reactiva, generalmente solo cuando ocurre un conflicto, lo que limita la capacidad de control y auditoría de las operaciones.
+
+---
+
+**2. Impacto en la operación logística**
+
+Los problemas identificados generan efectos directos en la gestión operativa, incluyendo:
+
+- Conflictos entre conductores y gestores debido a la falta de evidencia objetiva
+- Dificultades para tomar decisiones basadas en datos confiables
+- Pérdida de clientes por falta de trazabilidad y evidencia de servicio
+- Incremento de costos operativos debido a datos inconsistentes
+
+Estos impactos reflejan que la problemática no es únicamente técnica, sino también organizacional, afectando la confianza interna y la relación con clientes.
+
+---
+
+**3. Comportamiento y necesidades de los usuarios**
+
+En el segmento de gestión, se observa una necesidad clara de contar con información confiable, verificable y disponible en tiempo oportuno para la toma de decisiones. Los gestores priorizan la capacidad de auditar datos y detectar inconsistencias de manera proactiva.
+
+En el segmento de conductores, se identificó una preferencia por soluciones simples, con mínima interacción, que no incrementen la carga operativa durante la ejecución de sus tareas. La captura de evidencia visual es percibida como una alternativa más práctica frente al ingreso manual de datos.
+
+Asimismo, se identificaron condiciones operativas relevantes como la necesidad de funcionamiento offline, uso en entornos con iluminación variable y limitaciones en el uso de dispositivos móviles en ciertos contextos.
+
+---
+
+**4. Validación de hipótesis Lean UX**
+
+Los resultados obtenidos permiten validar las siguientes hipótesis planteadas:
+
+- La dependencia del ingreso manual de datos es una de las principales causas de errores e inconsistencias en la información operativa.
+- Existe una necesidad real de contar con mecanismos de validación automática que permitan garantizar la confiabilidad de los datos.
+- Los usuarios están dispuestos a adoptar soluciones basadas en captura de evidencia visual, siempre que estas no incrementen la complejidad de uso.
+- La disponibilidad de información validada tiene un impacto directo en la toma de decisiones y en la eficiencia operativa.
+
+Estas validaciones confirman la relevancia del problema identificado y la pertinencia de la propuesta de solución planteada.
+
+---
+
+**5. Riesgos y barreras de adopción**
+
+A pesar de la disposición hacia soluciones tecnológicas, se identificaron riesgos relevantes que podrían afectar la adopción:
+
+- Escepticismo hacia nuevas herramientas debido a experiencias previas fallidas
+- Desconfianza en la precisión de sistemas automatizados
+- Resistencia al cambio en usuarios con baja alfabetización digital
+- Limitaciones operativas como conectividad intermitente y condiciones de uso en campo
+
+Estos factores deben ser considerados en el diseño de la solución para asegurar su viabilidad en entornos reales.
+
+---
+
+**6. Oportunidad identificada**
+
+El análisis evidencia una brecha clara en el mercado: la falta de soluciones que permitan validar automáticamente la información operativa en entornos logísticos.
+
+Mientras que las herramientas actuales se enfocan en la captura y gestión de datos, no abordan de manera central la confiabilidad de la información registrada.
+
+En este contexto, se identifica una oportunidad para desarrollar una solución que permita reducir la dependencia del ingreso manual y mejorar la integridad de los datos mediante mecanismos automatizados de validación, alineándose con las necesidades identificadas en ambos segmentos de usuarios.
+
 ### 2.3. Needfinding
-#### 2.3.1. User Personas
-#### 2.3.2. User Task Matrix
+
+#### 2.3.1 User Personas
+
+A partir del análisis de entrevistas realizado en la sección 2.2.3, se definieron dos user personas representativas de los segmentos objetivo. Estos perfiles sintetizan patrones reales de comportamiento, necesidades y problemáticas identificadas en los usuarios entrevistados.
+
+**Segmento 1: Gestión de operaciones logísticas**
+
+User Persona: **Ricardo Valdivia — Coordinador de Operaciones**
+
+<img src="./assets/tb1/user_persona_1.png" alt="User Persona Coordinador de Operaciones" />
+
+Este perfil representa a gestores que operan con herramientas fragmentadas, enfrentan inconsistencias en datos y requieren información confiable para la toma de decisiones.
+
+---
+
+**Segmento 2: Conductores de transporte**
+
+User Persona: **Edilberto Poma — Conductor de larga distancia**
+
+<img src="./assets/tb1/user_persona_2.png" alt="User Persona Conductor de larga distancia" />
+
+Este perfil representa a conductores que trabajan en condiciones exigentes, con alta carga operativa, y que necesitan herramientas simples que reduzcan el esfuerzo de registro y respalden su trabajo con evidencia objetiva.
+
+
+#### 2.3.2 User Task Matrix
+
+A partir de los user personas definidos, se identificaron las tareas clave que cada perfil realiza dentro del proceso logístico, así como su frecuencia e importancia dentro de la operación.
+
+| Tareas / User Persona              | Ricardo Valdivia (Frec.) | Ricardo Valdivia (Imp.) | Edilberto Poma (Frec.) | Edilberto Poma (Imp.) |
+|----------------------------------|--------------------------|--------------------------|-------------------------|------------------------|
+| Planificar rutas                 | Alta                     | Alta                     | N/A                     | N/A                    |
+| Coordinar entregas              | Alta                     | Alta                     | Media                   | Alta                   |
+| Registrar kilometraje           | Media                    | Alta                     | Alta                    | Alta                   |
+| Reportar consumo de combustible | Media                    | Alta                     | Alta                    | Alta                   |
+| Validar información operativa   | Alta                     | Alta                     | Baja                    | Alta                   |
+| Consolidar datos                | Alta                     | Alta                     | N/A                     | N/A                    |
+| Generar reportes               | Media                    | Alta                     | N/A                     | N/A                    |
+| Capturar evidencia (odómetro / entrega) | Baja             | Alta                     | Alta                    | Alta                   |
+| Usar aplicaciones móviles       | Media                    | Alta                     | Baja                    | Alta                   |
+| Verificar entregas              | Alta                     | Alta                     | Media                   | Alta                   |
+| Atender reclamos                | Media                    | Alta                     | Baja                    | Media                  |
+
+**Conclusiones de la sección**
+
+- Ambos perfiles dependen de tareas críticas relacionadas con el registro de kilometraje, consumo de combustible y verificación de entregas, las cuales presentan actualmente problemas de confiabilidad.
+
+- El perfil de gestión (Ricardo Valdivia) se enfoca en la consolidación, validación y análisis de la información, siendo altamente dependiente de la precisión de los datos para la toma de decisiones.
+
+- El perfil operativo (Edilberto Poma) se enfoca en la ejecución del servicio, priorizando herramientas simples que reduzcan la carga de registro y permitan documentar eventos en campo de forma rápida.
+
+- Se identifica como punto crítico compartido la necesidad de contar con evidencia verificable que respalde los datos registrados, reduciendo conflictos operativos y mejorando la trazabilidad.
+
+- La solución debe priorizar la automatización del registro y validación de datos en campo, así como la disponibilidad de información confiable para el análisis operativo.
+
 #### 2.3.3. Empathy Mapping
+
 #### 2.3.4. As-is Scenario Mapping
 
 ### 2.4. Ubiquitous Language
