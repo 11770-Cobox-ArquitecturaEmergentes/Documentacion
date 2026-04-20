@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/upc-logo.png" alt="UPC Logo" width="200"/>
+  <img src="./assets/logos/upc-logo.png" alt="UPC Logo" width="200"/>
 </p>
 
 <p align="center">
@@ -407,12 +407,236 @@ Este segmento está compuesto por los operadores de campo encargados de ejecutar
 
 ### 2.1. Competidores
 
+Se han identificado tres competidores relevantes dentro del dominio de soluciones digitales para gestión de flotas y operaciones logísticas, los cuales representan alternativas actuales en el mercado y permiten establecer un contraste con la propuesta de CoBox Smart Vision.
+
+**Competidor 1: Samsara**  
+Web: https://www.samsara.com/mx  
+
+Plataforma líder en la Nube de Operaciones Conectadas que utiliza IA de vanguardia para transformar la seguridad y eficiencia operativa. Más allá de la telemática tradicional, destaca por sus cámaras con visión computacional que previenen accidentes en tiempo real y su ecosistema integral que centraliza datos de seguridad, cumplimiento (ELD) y mantenimiento en una sola interfaz inteligente.
+
+**Competidor 2: Powerfleet**  
+Web: https://www.fleetcomplete.com/es/  
+
+Powerfleet es una solución global especializada en la unificación de datos de flotas mixtas. Su ventaja competitiva es la plataforma Unity, que integra datos de hardware propietario, sensores de terceros y sistemas originales de fabricantes (OEMs). Se enfoca en la visibilidad total del ciclo de vida del activo, permitiendo una integración profunda con ERPs corporativos mediante APIs robustas.
+
+**Competidor 3: Driv.in**  
+Web: https://driv.in/  
+
+Driv.in es un TMS SaaS especializado en la optimización de la última milla y distribución urbana en Latinoamérica. Su núcleo es un potente algoritmo de ruteo dinámico que reduce costos logísticos y emisiones. Sobresale por su capacidad de gestionar la experiencia del cliente final (notificaciones y ETAs precisas) y herramientas de control de entregas (Proof of Delivery) adaptadas a la realidad operativa de la región.
+
+A pesar de las capacidades de estos competidores, ninguno de ellos se enfoca de manera central en la validación automática de datos mediante inteligencia artificial a partir de evidencia visual, lo que representa una oportunidad de diferenciación para CoBox Smart Vision.
+
 #### 2.1.1. Análisis competitivo
+
+<table style="width:100%; border-collapse: collapse; font-family: sans-serif; font-size: 14px; border: 1px solid #000;">
+    <thead>
+        <tr style="background-color: #f2f2f2;">
+            <th colspan="6" style="border: 1px solid #000; padding: 10px; text-align: left; font-size: 18px;">Competitive Analysis Landscape</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #000; padding: 10px; font-weight: bold; width: 15%;">¿Por qué llevar a cabo este análisis?</td>
+            <td colspan="5" style="border: 1px solid #000; padding: 10px; vertical-align: top;">
+                Identificar las capacidades, limitaciones y enfoques de soluciones actuales en el mercado de gestión logística, con el fin de determinar oportunidades de diferenciación para CoBox Smart Vision, especialmente en la validación automática de datos operativos mediante inteligencia artificial.
+                <br><br>
+            </td>
+        </tr>
+        <tr style="text-align: center; font-weight: bold; background-color: #fafafa;">
+            <td colspan="2" style="border: 1px solid #000; padding: 10px; width: 30%;">Nombre y Logo</td>
+            <td style="border: 1px solid #000; padding: 10px; width: 17.5%;">
+                CoBox SV<br>
+                <div style="height: 50px; margin-top: 5px; display: flex; align-items: center; justify-content: center;">
+                    <img src="./assets/logos/cobox_sv_logo.webp" alt="Logo de su startup" style="max-height: 50px; max-width: 100%; object-fit: contain;" />
+                </div>
+            </td>
+            <td style="border: 1px solid #000; padding: 10px; width: 17.5%;">
+                Samsara<br>
+                <div style="height: 50px; margin-top: 5px; display: flex; align-items: center; justify-content: center;">
+                    <img src="./assets/logos/samsara_logo.png" alt="Logo de Samsara" style="max-height: 50px; max-width: 100%; object-fit: contain;" />
+                </div>
+            </td>
+            <td style="border: 1px solid #000; padding: 10px; width: 17.5%;">
+                Powerfleet<br>
+                <div style="height: 50px; margin-top: 5px; display: flex; align-items: center; justify-content: center;">
+                    <img src="./assets/logos/powerfleet_logo.png" alt="Logo de Powerfleet" style="max-height: 50px; max-width: 100%; object-fit: contain;" />
+                </div>
+            </td>
+            <td style="border: 1px solid #000; padding: 10px; width: 17.5%;">
+                Driv.in<br>
+                <div style="height: 50px; margin-top: 5px; display: flex; align-items: center; justify-content: center;">
+                    <img src="./assets/logos/drivin_logo.png" alt="Logo de Driv.in" style="max-height: 50px; max-width: 100%; object-fit: contain;" />
+                </div>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2" style="border: 1px solid #000; padding: 10px; font-weight: bold; text-align: center; writing-mode: vertical-lr; transform: rotate(180deg);">Perfil</td>
+            <td style="border: 1px solid #000; padding: 10px;">Overview</td>
+            <td style="border: 1px solid #000;">Plataforma de auditoría logística basada en IA que valida automáticamente datos operativos mediante evidencia visual.</td>
+            <td style="border: 1px solid #000;">Nube de Operaciones Conectadas con enfoque en seguridad proactiva e inteligencia de datos IoT.</td>
+            <td style="border: 1px solid #000;">Ecosistema de Datos Unificados para activos mixtos, agnóstico al hardware y centrado en integración empresarial.</td>
+            <td style="border: 1px solid #000;">TMS SaaS especializado en orquestación de última milla, ruteo dinámico y experiencia de entrega.</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #000; padding: 10px;">Ventaja competitiva ¿Qué valor ofrece a los clientes?</td>
+            <td style="border: 1px solid #000;">Validación automática con IA sin hardware especializado, eliminando el error humano en auditorías.</td>
+            <td style="border: 1px solid #000;">Seguridad preventiva basada en IA de visión y una experiencia de usuario (UX) líder en la industria.</td>
+            <td style="border: 1px solid #000;">Interoperabilidad total (plataforma Unity) e integración nativa con fabricantes de vehículos (OEMs).</td>
+            <td style="border: 1px solid #000;">Optimización logística profunda adaptada a las restricciones específicas de LATAM (barreras geográficas, pagos, etc.).</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="border: 1px solid #000; padding: 10px; font-weight: bold; text-align: center; writing-mode: vertical-lr; transform: rotate(180deg); background-color: #f9f9f9;">Perfil de Marketing</td>
+            <td style="border: 1px solid #000; padding: 10px; background-color: #f9f9f9;">Mercado objetivo</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">PyMES y contratistas logísticos con procesos manuales y alta rotación.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Grandes corporativos (Enterprise) de transporte, construcción y servicios públicos.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Flotas industriales mixtas, maquinaria pesada y empresas con infraestructura IT compleja (SAP/Oracle).</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Empresas de Retail, Consumo Masivo (CPG) y logística de distribución urbana en LATAM.</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #000; padding: 10px; background-color: #f9f9f9;">Estrategias de marketing</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Enfoque en la "Verdad Operativa" y reducción inmediata de fraude/costos administrativos.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Marketing basado en Seguridad y ROI a través de la prevención de accidentes y ahorro de combustible.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Estrategia de "Data-First": eficiencia a través de la integración de silos de información corporativa.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Crecimiento regional basado en la digitalización de la experiencia del cliente final y eficiencia de rutas.</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="border: 1px solid #000; padding: 10px; font-weight: bold; text-align: center; writing-mode: vertical-lr; transform: rotate(180deg);">Perfil de Producto</td>
+            <td style="border: 1px solid #000; padding: 10px;">Productos & Servicios</td>
+            <td style="border: 1px solid #000;">IA de visión, validación de documentos/fotos, App móvil, Backend Cloud con trazabilidad.</td>
+            <td style="border: 1px solid #000;">Dashcams con IA, Sensores de activos, ELD, Monitoreo de temperatura, Software de seguridad.</td>
+            <td style="border: 1px solid #000;">Pasarela de datos Unity, Telemática para activos no motorizados, Integración API, Control de carga.</td>
+            <td style="border: 1px solid #000;">Algoritmo de ruteo, Módulo de liquidación de fletes, App de conductor, Tracking en tiempo real para el cliente.</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #000; padding: 10px;">Precios & Costos</td>
+            <td style="border: 1px solid #000;">Suscripción accesible SaaS Pure-Play (sin inversión inicial en equipos).</td>
+            <td style="border: 1px solid #000;">Alto costo: Modelo de contrato multianual (Hardware + Licencia por unidad).</td>
+            <td style="border: 1px solid #000;">Medio-Alto: Basado en volumen de activos e integraciones de software requeridas.</td>
+            <td style="border: 1px solid #000;">Medio: Modelo SaaS escalable por número de usuarios o vehículos.</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #000; padding: 10px;">Canales de distribución (Web y/o Móvil)</td>
+            <td style="border: 1px solid #000;">Web + Mobile (BYOD - Bring Your Own Device).</td>
+            <td style="border: 1px solid #000;">Web + Hardware IoT propietario + Mobile.</td>
+            <td style="border: 1px solid #000;">Web + Cloud Integration + Mobile.</td>
+            <td style="border: 1px solid #000;">Web + Mobile + Integración con WhatsApp/SMS.</td>
+        </tr>
+        <tr>
+            <td rowspan="5" style="border: 1px solid #000; padding: 10px; font-weight: bold; text-align: center; writing-mode: vertical-lr; transform: rotate(180deg); background-color: #fdfdfd;">Análisis SWOT</td>
+            <td style="border: 1px solid #000; padding: 10px; font-size: 11px; background-color: #fdfdfd;" colspan="5">
+                Realice esto para su startup y sus competidores. Sus fortalezas deberían apoyar sus oportunidades y contribuir a lo que ustedes definen como su posible ventaja competitiva.
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #000; padding: 10px;">Fortalezas</td>
+            <td style="border: 1px solid #000;">Agilidad, validación visual inteligente, no requiere instalación física.</td>
+            <td style="border: 1px solid #000;">Precisión extrema de sensores, marca global consolidada, IA de cabina.</td>
+            <td style="border: 1px solid #000;">Flexibilidad de datos, compatible con flotas pre-existentes, soporte Enterprise.</td>
+            <td style="border: 1px solid #000;">Dominio del mercado regional, UX muy sencilla, integración de pagos locales.</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #000; padding: 10px;">Debilidades</td>
+            <td style="border: 1px solid #000;">Dependencia de la calidad de cámara del usuario y conectividad móvil.</td>
+            <td style="border: 1px solid #000;">Rigidez de hardware (cerrado), dependencia de red 5G/4G constante.</td>
+            <td style="border: 1px solid #000;">Complejidad de configuración inicial para unificar datos dispersos.</td>
+            <td style="border: 1px solid #000;">Menor enfoque en la validación profunda de integridad de datos (fraude).</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #000; padding: 10px;">Oportunidades</td>
+            <td style="border: 1px solid #000;">Automatización del "Checkout" logístico en empresas que hoy usan papel o Excel.</td>
+            <td style="border: 1px solid #000;">Expansión hacia la automatización total de almacenes con drones/robots.</td>
+            <td style="border: 1px solid #000;">Consolidación como el estándar de datos para seguros de flotas (Insurtech).</td>
+            <td style="border: 1px solid #000;">Expansión a mercados emergentes fuera de LATAM con desafíos similares.</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #000; padding: 10px;">Amenazas</td>
+            <td style="border: 1px solid #000;">Gigantes de IoT añadiendo capas de validación por software gratuitas.</td>
+            <td style="border: 1px solid #000;">Regulaciones de privacidad de datos biométricos más estrictas a nivel global.</td>
+            <td style="border: 1px solid #000;">Competidores que ofrezcan integración gratuita con APIs estandarizadas.</td>
+            <td style="border: 1px solid #000;">Entrada de actores globales (como Uber Direct) al espacio de última milla.</td>
+        </tr>
+    </tbody>
+</table>
 
 #### 2.1.2. Estrategias y tácticas frente a competidores
 
+**Estrategia de posicionamiento**
+CoBox Smart Vision se posiciona como una solución especializada en la validación automática de información operativa mediante inteligencia artificial, orientada a mejorar la confiabilidad de los datos en entornos logísticos.
+
+A diferencia de plataformas de gestión de flotas o sistemas de planificación logística, la propuesta no busca reemplazar soluciones existentes, sino resolver una brecha específica relacionada con la integridad y verificabilidad de los datos, especialmente en escenarios donde el ingreso manual de información genera errores o inconsistencias.
+
+Este posicionamiento permite enfocar la solución en segmentos que actualmente no cuentan con herramientas avanzadas de validación, particularmente pequeñas y medianas empresas de transporte de carga con procesos manuales o semi-digitalizados.
+
+**Estrategias frente a competidores**
+
+1. _Estrategia de diferenciación por especialización:_
+  En lugar de competir en amplitud funcional con plataformas como Samsara o Powerfleet, CoBox Smart Vision se enfoca en un dominio específico: la validación automática de datos operativos mediante evidencia visual.
+  Esta especialización permite desarrollar capacidades profundas en el uso de inteligencia artificial aplicada a la interpretación de imágenes y documentos, generando un valor que no es ofrecido por soluciones tradicionales centradas en la gestión o monitoreo.
+
+2. _Estrategia de entrada por segmento desatendido (PyMES):_
+  La solución se orienta inicialmente a pequeñas y medianas empresas de transporte de carga, las cuales presentan altos niveles de dependencia de procesos manuales y menor acceso a soluciones avanzadas debido a costos o complejidad de implementación.
+  Este segmento representa una oportunidad estratégica, ya que las soluciones existentes están principalmente diseñadas para empresas medianas y grandes con mayor capacidad de inversión en infraestructura y sistemas.
+
+3. _Estrategia de reducción de fricción de adopción:_
+  A diferencia de soluciones que requieren instalación de hardware especializado o procesos complejos de integración, CoBox Smart Vision prioriza un modelo basado en dispositivos móviles y captura de evidencia visual, reduciendo la barrera de entrada y facilitando la adopción por parte de usuarios en campo.
+  Este enfoque permite validar rápidamente la propuesta de valor sin necesidad de inversiones iniciales elevadas.
+
+**Tácticas frente a competidores**
+
+1. _Enfoque en casos de uso críticos:_
+  Priorizar escenarios específicos donde la validación automática de datos tenga mayor impacto, como el registro de kilometraje, validación de documentos logísticos y verificación de entregas, permitiendo demostrar valor tangible en etapas tempranas.
+
+2. _Validación temprana con usuarios reales:_
+  Realizar pruebas piloto con conductores y gestores logísticos para evaluar la facilidad de uso, la aceptación del modelo basado en evidencia visual y el impacto en la reducción de errores operativos.
+  
+3. _Simplificación extrema de la experiencia de usuario:_
+  Diseñar interfaces con flujos mínimos de interacción, donde el usuario capture evidencia en lugar de ingresar datos manualmente, reduciendo la carga cognitiva y facilitando la adopción en campo.
+
+4. _Enfoque en métricas de valor:_
+  Medir el impacto de la solución mediante indicadores concretos como reducción de errores, disminución del tiempo de registro y mejora en la confiabilidad de los datos, permitiendo sustentar el valor frente a alternativas existentes.
+
 ### 2.2. Entrevistas
-#### 2.2.1. Diseño de entrevistas
+
+#### 2.2.1 Diseño de entrevistas
+
+El diseño de entrevistas tiene como objetivo validar las hipótesis planteadas en el proceso Lean UX, particularmente aquellas relacionadas con la adopción de soluciones basadas en inteligencia artificial, la reducción del ingreso manual de datos y la confiabilidad de la información operativa.
+
+Se han definido dos segmentos objetivo para la recolección de información: gestores de operaciones logísticas y conductores de unidades de carga.
+
+---
+
+### Segmento 1: Gestión de operaciones logísticas
+
+1. ¿Cuál es su rol dentro de la empresa y cuáles son sus principales responsabilidades en la gestión de la flota?  
+2. ¿Cuántos vehículos administra y qué tipo de operaciones logísticas realiza (distribución, larga distancia, última milla)?  
+3. ¿Cómo se registran actualmente los datos operativos como kilometraje, consumo de combustible y entregas?  
+4. ¿Qué herramientas utiliza actualmente para gestionar y supervisar estas operaciones?  
+5. ¿Qué problemas o inconsistencias ha identificado en los datos reportados por los conductores?  
+6. ¿Qué impacto tienen estos errores o discrepancias en la operación y en la toma de decisiones?  
+7. ¿Cómo valida actualmente la veracidad de la información reportada desde campo?  
+8. ¿Qué tan importante es para usted contar con información verificable y auditada automáticamente?  
+9. ¿Qué tan dispuesto estaría a utilizar una solución que valide automáticamente los datos mediante el análisis de imágenes o evidencia visual?  
+10. ¿Qué preocupaciones tendría respecto al uso de sistemas automatizados basados en inteligencia artificial?  
+11. ¿Qué beneficios esperaría obtener de una solución que elimine la necesidad de validar manualmente la información?  
+12. ¿Qué factores serían determinantes para adoptar una nueva herramienta tecnológica en su operación (costo, facilidad de uso, precisión, integración, etc.)?  
+
+---
+
+### Segmento 2: Conductores / operadores de ruta
+
+1. ¿Cuánto tiempo lleva trabajando como conductor de transporte de carga y qué tipo de rutas realiza?  
+2. ¿Cómo registra actualmente el inicio y fin de cada viaje?  
+3. ¿Cómo registra el kilometraje y consumo de combustible durante sus recorridos?  
+4. ¿Cuánto tiempo le toma completar estos registros al finalizar un servicio?  
+5. ¿Qué dificultades ha tenido al registrar información durante o después de un viaje?  
+6. ¿Ha tenido problemas o conflictos relacionados con errores en los datos que registra?  
+7. ¿Qué tan cómodo se siente utilizando aplicaciones móviles en su trabajo diario?  
+8. ¿Preferiría capturar una fotografía del odómetro o documento en lugar de ingresar los datos manualmente? ¿Por qué?  
+9. ¿Qué tan fácil o difícil cree que sería utilizar una aplicación que valide automáticamente la información a partir de una imagen?  
+10. ¿Qué condiciones podrían dificultar el uso de este tipo de aplicación (iluminación, conectividad, tiempo, etc.)?  
+11. ¿Qué características considera importantes para que una aplicación sea fácil de usar durante sus rutas?  
+12. ¿Qué lo motivaría a completar correctamente el registro de información en cada servicio?  
+
 #### 2.2.2. Registro de entrevistas
 #### 2.2.3. Análisis de entrevistas
 
