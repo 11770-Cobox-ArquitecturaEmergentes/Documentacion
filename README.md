@@ -69,6 +69,33 @@
 | TB1     | 04/04/2026  |  Jhon Alexander Galvez Chambi  |  |
 | TB1     | 04/04/2026  |   Joaquín Pedraza Maldonado    |  |
 
+## Project Report Collaboration Insights
+
+| URL del repositorio del reporte |
+| :-----------------------------------: |
+| [https://github.com/11770-Cobox-ArquitecturaEmergentes/Documentacion](https://github.com/11770-Cobox-ArquitecturaEmergentes/Documentacion) |
+
+**AV1:**
+
+Para la elaboración de la entrega AV1 de este informe, el equipo se organizó mediante reuniones de coordinación a través de un canal de Discord. En estas reuniones se definió la distribución de actividades, se asignaron responsables por capítulo y se establecieron fechas de revisión periódica para asegurar el avance progresivo de cada integrante.
+
+| Integrante | Usuario Github | Detalle de avance |
+|------------|----------------|-------------------|
+| Diego Ivan Cabrera Buitron | `omele7` |  |
+| Joaquín Pedraza Maldonado | `JoaquinPedraza1` |  |
+| Ramiro Alexander Guzmán Chávez | `RamiroGuzmanCh` | |
+| Jhon Alexander Galvez Chambi | `Chaomeum` |  |
+
+**Report Repository Insights:** 
+
+En esta sección se presentan los analíticos de colaboración y los commits realizados en GitHub por los miembros del equipo dentro del repositorio del informe durante la fase AV1. Esta evidencia permite visualizar la participación de los integrantes y la evolución del trabajo colaborativo a lo largo del desarrollo del reporte.
+
+- Report Contributors:
+![Report Contributors](./assets/tb1/report_contributors.png)
+
+- Report Network:
+![Report Network](./assets/tb1/report_network.png)
+
 
 ## Contenido
 #### Tabla de contenidos
