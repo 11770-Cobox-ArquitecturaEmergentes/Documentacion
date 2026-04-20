@@ -221,7 +221,7 @@ A partir de esta base, el proyecto evoluciona hacia **CoBox Smart Vision**, una 
 
 Esta nueva propuesta considera las condiciones reales del entorno de operación, incluyendo escenarios de conectividad limitada y usuarios con distintos niveles de alfabetización digital, lo que implica priorizar simplicidad de uso, eficiencia en campo y consistencia en el registro de información.
 
-### 1.2.1 Antecedentes y problemática
+#### 1.2.1 Antecedentes y problemática
 
 En el sector logístico de transporte de carga, especialmente en pequeñas y medianas empresas, persiste una alta dependencia de procesos manuales y herramientas no integradas como hojas de cálculo, registros físicos y aplicaciones de mensajería. Esta situación genera fragmentación de la información, errores en el registro de datos y una limitada capacidad para auditar las operaciones de forma confiable.
 
@@ -241,14 +241,14 @@ Para estructurar la problemática, se aplica la técnica de las 5W + 2H:
 | **How** | Mediante el uso de registros manuales, fotografías no validadas y sistemas desconectados. |
 | **How Much** | Impacto en costos operativos, pérdida de eficiencia y riesgos de fraude (a validar en etapas de investigación). |
 
-### Objetivos de la solución
+##### Objetivos de la solución
 
 - Reducir la dependencia del ingreso manual de datos
 - Incrementar la confiabilidad de la información operativa
 - Automatizar la validación de evidencias en campo
 - Mejorar la trazabilidad de los servicios logísticos
 
-### Restricciones del proyecto
+##### Restricciones del proyecto
 
 - Operación en entornos con conectividad limitada
 - Usuarios con bajo nivel de alfabetización digital
