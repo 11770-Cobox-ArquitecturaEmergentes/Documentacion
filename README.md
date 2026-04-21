@@ -1006,6 +1006,18 @@ La estructura considera historias orientadas a la planificación y seguimiento d
 | US-29 | Consultar estado de validación y sincronización | Como conductor, deseo consultar el estado de mis registros para saber si fueron guardados, sincronizados o observados. | **Escenario 01: estado visible del registro**<br>Dado que el conductor ha realizado registros durante el servicio<br>Cuando consulta el detalle de sus evidencias y eventos<br>Entonces el sistema muestra el estado de cada registro.<br><br>**Escenario 02: registro observado**<br>Dado que un registro fue marcado con observación o error<br>Cuando el conductor revisa su estado<br>Entonces el sistema identifica el motivo y mantiene la trazabilidad correspondiente. | EP06 |
 
 ### 3.3. Impact Mapping
+En esta sección se presenta el Impact Mapping del sistema, el cual permite establecer la relación entre los objetivos de negocio, los actores involucrados, los cambios de comportamiento esperados y las funcionalidades necesarias para alcanzarlos.
+
+El proceso de elaboración se basó en los User Personas previamente definidos, identificando cómo cada uno contribuye al logro de los objetivos del negocio. A partir de ello, se definieron los impactos deseados en su comportamiento, los entregables que permiten generar dichos impactos y las User Stories que materializan estas funcionalidades.
+
+El Impact Mapping permite alinear el desarrollo del producto con los objetivos estratégicos, asegurando que cada funcionalidad aporte valor real al negocio y responda a las necesidades identificadas en el análisis previo.
+
+#### Segmento 1: Gestión de Operaciones Logísticas
+![To-Be Scenario Mapping - Gestor](assets/tb1/impactmap1.png)
+
+#### Segmento 2: Conductores de Transporte
+![To-Be Scenario Mapping - Conductor](assets/tb1/impactmap2.png)
+
 ### 3.4. Product Backlog
 
 ---
