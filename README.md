@@ -974,7 +974,28 @@ Para asegurar que esta arquitectura soporte la eficiencia, seguridad y operativi
 ##### 4.1.2.1. Primary Functionality (Primary User Stories)
 
 ##### 4.1.2.2. Quality Attribute Scenarios
+
 ##### 4.1.2.3. Constraints
+
+
+
+A continuación, se presenta la reestructuración de las restricciones (constraints) del sistema, fundamentadas en paradigmas arquitectónicos modernos, redes distribuidas e Inteligencia Artificial descentralizada.
+
+
+| ID   | Restricción Evolucionada (Constraint) | Justificación Científica / Tecnológica |
+|------|--------------------------------------|----------------------------------------|
+| **C-1** | **Autonomía Operativa Descentralizada (Edge Intelligence)** | El ecosistema debe ejecutar validaciones analíticas in situ sin depender de la nube. El uso de Modelos de Lenguaje Pequeños (SLMs) y arquitecturas multimodales (ej. OCR avanzado) permite procesar datos con latencias < 50 ms, operando como nodo autónomo. |
+| **C-2** | **Eficiencia Financiera mediante Optimización Multi-Nube** | La orquestación con contenedores (Kubernetes) permite balancear cargas entre instancias spot y bajo demanda (AWS, GCP), evitando vendor lock-in y optimizando costos. |
+| **C-3** | **Fusión de Sensores y Nodos Edge 6G** | La combinación de sensores y network slicing en 5G/6G permite decisiones en tiempo real sin depender de APIs externas, reduciendo vulnerabilidad y latencia. |
+| **C-4** | **Interfaces Multimodales y NLP** | Modelos generativos transforman lenguaje natural en operaciones automatizadas, reduciendo fricción y facilitando adopción por usuarios con baja alfabetización digital. |
+| **C-5** | **Trazabilidad Inmutable mediante Blockchain-IA** | Registros distribuidos + IA garantizan integridad, auditabilidad y cumplimiento normativo (ej. transporte farmacéutico), reduciendo fraude. |
+| **C-6** | **Interoperabilidad Asíncrona (Event-Driven & API Gateway)** | Arquitectura basada en eventos permite integración con sistemas legacy sin afectar rendimiento, asegurando bajo acoplamiento. |
+| **C-7** | **Compresión de Modelos ante Restricciones de Hardware** | Técnicas como cuantización (8 bits) y destilación de conocimiento reducen consumo de memoria, energía y calor en dispositivos móviles. |
+| **C-8** | **Soberanía de Datos y Zero Trust** | Procesamiento en el edge evita exposición de datos sensibles. La arquitectura Zero Trust reduce riesgos de ciberataques y violaciones de privacidad. |
+| **C-9** | **Transmisión Asíncrona de Datos Contenerizados** | Uso de data pipelines con caché local permite sincronización diferida cuando hay conectividad estable, garantizando integridad de datos. |
+| **C-10** | **Despliegue Continuo (MLOps) y OTA** | Permite actualizaciones sin detener operaciones mediante despliegues OTA y pruebas A/B, asegurando evolución continua del sistema. |
+
+---
 #### 4.1.3. Architectural Drivers Backlog
 #### 4.1.4. Architectural Design Decisions
 #### 4.1.5. Quality Attribute Scenario Refinements
