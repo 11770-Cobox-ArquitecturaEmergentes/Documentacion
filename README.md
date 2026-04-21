@@ -990,12 +990,12 @@ Las decisiones arquitectónicas se documentan y validan mediante modelos formale
 
 Para garantizar que la solución cumple con los escenarios de calidad definidos, se implementa una estrategia de observabilidad integral basada en herramientas como Prometheus y Grafana. Esto permite monitorear métricas en tiempo real, detectar anomalías y adaptar dinámicamente el comportamiento del sistema sin interrumpir la operación.
 
-#### 4.1.2. Attribute-Driven Design Inputs
-##### 4.1.2.1. Primary Functionality (Primary User Stories)
+## 4.1.2. Attribute-Driven Design Inputs
+### 4.1.2.1. Primary Functionality (Primary User Stories)
 
-##### 4.1.2.2. Quality Attribute Scenarios
+### 4.1.2.2. Quality Attribute Scenarios
 
-##### 4.1.2.3. Constraints
+## 4.1.2.3. Constraints
 
 
 
@@ -1016,8 +1016,8 @@ A continuación, se presenta la reestructuración de las restricciones (constrai
 | **C-10** | **Despliegue Continuo (MLOps) y OTA** | Permite actualizaciones sin detener operaciones mediante despliegues OTA y pruebas A/B, asegurando evolución continua del sistema. |
 
 ---
-#### 4.1.3. Architectural Drivers Backlog
-## 4.1.3 Architectural Drivers Backlog
+### 4.1.3. Architectural Drivers Backlog
+
 
 | Driver ID | Título | Descripción | Importancia | Architecture Technical Complexity |
 | :--- | :--- | :--- | :--- | :--- |
