@@ -954,16 +954,22 @@ A partir de los user personas definidos, se identificaron las tareas clave que c
 ### 4.1. Strategic-Level Attribute-Driven Design
 #### 4.1.1. Design Purpose
 
-El propósito fundamental del proceso de diseño arquitectónico de CoBox es definir la estructura técnica de la plataforma de colaboración en la nube de forma coherente con los objetivos de negocio y los requisitos funcionales y no funcionales identificados.  
-Este diseño busca establecer un marco robusto que permita una implementación eficiente y adaptable, asegurando seguridad, escalabilidad y facilidad de uso.
-
-Los propósitos clave incluyen:
-- **Traducir requisitos y objetivos de negocio en decisiones técnicas**: transformar las necesidades de startups y equipos distribuidos en componentes técnicos concretos (gestión de proyectos, sincronización de archivos, colaboración en tiempo real).  
-- **Satisfacer drivers arquitectónicos**: garantizar que la arquitectura soporte usabilidad, seguridad, rendimiento, escalabilidad y confiabilidad, considerando las restricciones de recursos y dependencias externas.  
-- **Definir entidades arquitectónicas y sus interacciones**: identificar módulos principales (Usuarios, Proyectos, Archivos, Notificaciones, Integraciones) y las interfaces de comunicación entre ellos.  
-- **Promover coherencia y mantenibilidad**: aplicar principios de diseño y patrones arquitectónicos (DDD, microservicios, RBAC, API Gateway) que faciliten la evolución futura del sistema.  
-- **Crear modelos y vistas arquitectónicas**: representar la solución en diagramas C4 (Contexto, Contenedor, Componente) y UML (Clases, ERD) como documentación guía para el desarrollo.  
-- **Seguir un proceso iterativo**: utilizar ADD (Attribute-Driven Design) y validar las decisiones arquitectónicas en función de los drivers, adaptando la solución conforme se avanza en las etapas de desarrollo.  
+El objetivo supremo del diseño arquitectónico de CoBox es definir un entramado técnico descentralizado y resiliente que traduzca las exigencias del ecosistema logístico en componentes de software escalables, amalgamando paradigmas emergentes con las severas limitaciones del trabajo de campo.
+Para asegurar que esta arquitectura soporte la eficiencia, seguridad y operatividad ininterrumpida, el Design Purpose (Propósito de Diseño) se estructura bajo los siguientes lineamientos fundamentales:
+1. Operatividad Descentralizada mediante Inteligencia en el Borde (Edge AI) Transformar la captura de datos en un proceso autónomo que no dependa de la conectividad constante a internet, resolviendo así las restricciones de las zonas rurales y las limitaciones del hardware móvil (Restricciones C-1, C-7 y C-9)
+. El diseño estipula la migración del cómputo analítico directamente a los smartphones mediante Modelos de Lenguaje Pequeños (SLMs) y Modelos de Visión-Lenguaje Multimodales (como NaViT)
+. Esto permite ejecutar tareas complejas —como la extracción óptica (OCR) de odómetros y validación de guías físicas— de manera estrictamente local, garantizando tiempos de respuesta inferiores a los 50 milisegundos y optimizando el consumo energético durante la conducción
+.
+2. Prevención de Fraudes y Resiliencia Estructural con Multi-Nube y Blockchain Satisfacer los drivers críticos de disponibilidad operativa y protección de información sensible. Para mitigar bloqueos de proveedores y latencias de red, la plataforma orquesta cargas de trabajo distribuidas simultáneamente entre Amazon Web Services (AWS) y Google Cloud Platform (GCP) apoyándose en enrutamiento simétrico
+. Paralelamente, para erradicar las discrepancias manuales y cumplir con las normativas legales de trazabilidad documental (Restricción C-5), la arquitectura entrelaza redes neuronales con tecnología Blockchain, creando libros mayores inmutables que certifican la autenticidad de cada entrega o carga de combustible mediante evidencias fotográficas blindadas criptográficamente
+.
+3. Modelado de Dominio (DDD) y Aislamiento de Funcionalidades Asegurar la coherencia y evolución del código fuente aplicando el Diseño Guiado por el Dominio (DDD). El ecosistema se segmenta lógicamente en contextos autónomos (Manejo de Flota, Entregas, Incidencias, Mantenimiento y Analítica), los cuales se materializan como microservicios hexagonales independientes
+. Para sortear los cuellos de botella de la comunicación síncrona, estos módulos interactúan a través de un bus de eventos (Kafka/RabbitMQ)
+. Asimismo, toda solicitud externa atraviesa un API Gateway centralizado que enruta el tráfico y aplica políticas de Control de Acceso Basado en Roles (RBAC), garantizando la privacidad de los datos según las leyes peruanas (Restricción C-8)
+.
+4. Validación Empírica Continua guiada por el Proceso ADD v3 Gobernar la evolución del sistema a través del método de Diseño Guiado por Atributos (ADD v3)
+. Las decisiones arquitectónicas y los límites de cada microservicio se modelan de manera exhaustiva empleando vistas formales de C4 y diagramas UML
+. Para validar que estas decisiones cumplan con los escenarios de calidad exigidos (e.g., tolerancia a fallos, soporte para concurrencia masiva), el diseño impone una observabilidad integral mediante telemetría avanzada (Prometheus y Grafana), permitiendo adaptar la solución dinámicamente frente a las variaciones del entorno logístico sin interrumpir las operaciones en curso
 #### 4.1.2. Attribute-Driven Design Inputs
 ##### 4.1.2.1. Primary Functionality (Primary User Stories)
 
