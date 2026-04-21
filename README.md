@@ -957,7 +957,7 @@ El objetivo supremo del diseño arquitectónico de **CoBox** es definir un entra
 
 Para asegurar que la arquitectura soporte la eficiencia, seguridad y operatividad ininterrumpida, el propósito de diseño se estructura bajo los siguientes lineamientos fundamentales:
 
-## 1. Operatividad Descentralizada mediante Inteligencia en el Borde (Edge AI)
+**1. Operatividad Descentralizada mediante Inteligencia en el Borde (Edge AI)**
 
 Se plantea transformar la captura de datos en un proceso autónomo que no dependa de la conectividad constante a internet. Este enfoque responde directamente a las limitaciones propias de zonas rurales y dispositivos móviles con recursos restringidos.
 
@@ -966,7 +966,7 @@ El diseño establece la migración del cómputo analítico hacia los smartphones
 Como resultado, el sistema logra tiempos de respuesta inferiores a 50 milisegundos, reduce el consumo energético y mantiene operatividad incluso en ausencia de conexión a red.
 
 
-## 2. Prevención de Fraudes y Resiliencia con Multi-Nube y Blockchain
+**2. Prevención de Fraudes y Resiliencia con Multi-Nube y Blockchain**
 
 La arquitectura aborda de forma directa los requerimientos críticos de disponibilidad operativa y protección de la información. Para evitar la dependencia de un único proveedor (vendor lock-in) y reducir riesgos asociados a latencias o caídas, se adopta un enfoque multi-nube que distribuye cargas entre Amazon Web Services (AWS) y Google Cloud Platform (GCP).
 
@@ -974,7 +974,7 @@ Adicionalmente, se incorpora tecnología Blockchain combinada con modelos de int
 
 De esta manera, se eliminan discrepancias manuales, se reduce el fraude y se asegura el cumplimiento de normativas regulatorias.
 
-## 3. Modelado de Dominio (DDD) y Aislamiento de Funcionalidades
+**3. Modelado de Dominio (DDD) y Aislamiento de Funcionalidades**
 
 Con el objetivo de asegurar la mantenibilidad y evolución del sistema, se adopta el enfoque de Diseño Guiado por el Dominio (Domain-Driven Design, DDD). El sistema se organiza en contextos delimitados que representan áreas clave del negocio, como manejo de flota, entregas, incidencias, mantenimiento y analítica.
 
@@ -982,7 +982,7 @@ Cada uno de estos contextos se implementa como un microservicio independiente ba
 
 La comunicación entre servicios se realiza mediante un enfoque orientado a eventos utilizando herramientas como Kafka o RabbitMQ, evitando cuellos de botella asociados a llamadas síncronas. Asimismo, todas las solicitudes externas son gestionadas a través de un API Gateway que centraliza el enrutamiento y aplica políticas de control de acceso basadas en roles (RBAC), garantizando la seguridad y privacidad de los datos.
 
-## 4. Validación Continua mediante ADD v3 y Observabilidad
+ **4. Validación Continua mediante ADD v3 y Observabilidad**
 
 La evolución de la arquitectura se gobierna mediante el proceso Attribute-Driven Design (ADD v3), el cual permite tomar decisiones estructuradas en función de atributos de calidad como rendimiento, disponibilidad y tolerancia a fallos.
 
