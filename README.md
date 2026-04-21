@@ -934,6 +934,18 @@ A partir de los user personas definidos, se identificaron las tareas clave que c
 
 #### 2.3.3. Empathy Mapping
 
+El Empathy Mapping es una herramienta utilizada para comprender mejor a los usuarios o clientes al explorar sus pensamientos, sentimientos, comportamientos y
+necesidades. Se organiza en secciones como ¿Qué escucha?, ¿Qué ve?, ¿Qué piensa y siente?, ¿Qué dice y hace?, Frustraciones y Motivaciones. Ayuda a los equipos de
+diseño a crear soluciones más alineadas con las experiencias y perspectivas de los usuarios.
+
+Empathy Map Segmento 1
+
+<img src="./assets/tb1/EmpathyMapSegmento1.png" alt="Empathy Mapping" />
+
+Empathy Map Segmento 2
+
+<img src="./assets/tb1/EmpathyMapSegmento2.png" alt="Empathy Mapping" />
+
 #### 2.3.4. As-is Scenario Mapping
 
 <img src="./assets/tb1/asismapp1.png" alt="As Is Scenario Mapping" />
