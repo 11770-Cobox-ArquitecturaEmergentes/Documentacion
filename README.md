@@ -936,7 +936,56 @@ A partir de los user personas definidos, se identificaron las tareas clave que c
 
 #### 2.3.4. As-is Scenario Mapping
 
+<img src="./assets/tb1/asismapp1.png" alt="As Is Scenario Mapping" />
+<img src="./assets/tb1/asismapp2.png" alt="As Is Scenario Mapping" />
+
+
 ### 2.4. Ubiquitous Language
+
+| Término en Inglés         | Término en Español         | Definición                                                                                                                      |
+|--------------------------|----------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Logistics Operation      | Operación logística        | Proceso de planificación, ejecución y control de servicios de transporte de carga, incluyendo rutas, entregas y registros.     |
+| Fleet                   | Flota                      | Conjunto de vehículos gestionados por una empresa de transporte para realizar servicios logísticos.                            |
+| Service Event           | Evento operativo           | Suceso relevante durante la operación logística (ej. inicio de ruta, carga, descarga, parada, incidente).                      |
+| Evidence Capture        | Captura de evidencia       | Proceso de registrar información visual (fotos, documentos) para validar datos operativos en campo.                            |
+| Smart Validation        | Validación inteligente     | Proceso automatizado de verificación de datos mediante inteligencia artificial, reduciendo errores y fraudes.                  |
+| Field Operator          | Operador de campo          | Persona encargada de ejecutar servicios logísticos y registrar eventos durante el recorrido (conductor/a).                     |
+| Operations Manager      | Gestor de operaciones      | Responsable de coordinar, supervisar y validar la información de las operaciones logísticas.                                   |
+| Manual Entry            | Ingreso manual             | Registro de datos realizado por el usuario sin automatización, susceptible a errores humanos.                                  |
+| Visual Evidence         | Evidencia visual           | Imagen o documento capturado para respaldar un evento operativo (ej. foto de odómetro, guía firmada).                         |
+| Offline Mode            | Modo offline               | Funcionalidad que permite operar la aplicación sin conexión a internet, sincronizando datos posteriormente.                    |
+| Route Traceability      | Trazabilidad de ruta       | Capacidad de seguir y auditar el recorrido y eventos de un servicio logístico.                                                 |
+| Anomaly Alert           | Alerta de anomalía         | Notificación generada automáticamente ante detección de inconsistencias o posibles fraudes en los datos operativos.            |
+| Dashboard               | Panel de control           | Vista gráfica que muestra indicadores clave, reportes y estado de las operaciones logísticas.                                  |
+| Proof of Delivery       | Comprobante de entrega     | Evidencia (visual o documental) que certifica la realización exitosa de una entrega.                                           |
+| Fuel Consumption        | Consumo de combustible     | Registro y control del uso de combustible por vehículo durante la operación.                                                   |
+| Mileage                 | Kilometraje                | Distancia recorrida por un vehículo, registrada para control y auditoría.                                                      |
+| User Persona            | Persona usuaria            | Perfil representativo de los usuarios objetivo, utilizado para guiar el diseño y validación de la solución.                    |
+| Needfinding             | Identificación de necesidades | Proceso de descubrir y documentar los requerimientos y problemas reales de los usuarios.                                   |
+| EventStorming           | EventStorming              | Técnica colaborativa para modelar procesos y eventos clave del dominio logístico.                                              |
+| Bounded Context         | Contexto delimitado        | Área específica del dominio donde un modelo es válido y consistente, sin ambigüedades.                                         |
+| Product Backlog         | Lista de producto          | Conjunto priorizado de funcionalidades, requisitos y tareas pendientes del producto.                                           |
+| Impact Mapping          | Mapeo de impacto           | Técnica para visualizar cómo las funcionalidades contribuyen a los objetivos del negocio.                                      |
+| Lean UX                 | Lean UX                    | Metodología ágil para diseñar experiencias de usuario centradas en la validación continua.                                     |
+| Stakeholder             | Interesado                 | Persona o grupo que tiene interés o se ve afectado por el proyecto CoBox.                                                     |
+| Compliance              | Cumplimiento normativo     | Adherencia a regulaciones y estándares aplicables al transporte y gestión de datos.                                            |
+| Service Report          | Reporte de servicio        | Documento o registro que resume los eventos, incidencias y resultados de una operación logística.                              |
+| Exception Handling      | Manejo de excepciones      | Proceso de registrar y gestionar eventos no planificados o incidentes durante la operación.                                   |
+| Synchronization         | Sincronización             | Proceso de actualizar y consolidar datos entre dispositivos y la plataforma central.                                           |
+| User Onboarding         | Incorporación de usuario   | Proceso de registro y capacitación inicial de nuevos usuarios en la plataforma.                                                |
+| Field Constraints       | Restricciones de campo     | Condiciones reales que afectan la operación, como conectividad limitada o uso de dispositivos en ambientes adversos.           |
+| Georeferenced Photo     | Foto georreferenciada      | Imagen capturada con información de ubicación, utilizada para validar eventos en campo.                                        |
+| Audit Trail             | Registro de auditoría      | Historial detallado de acciones y cambios realizados en la plataforma para control y trazabilidad.                             |
+| Service Assignment      | Asignación de servicio     | Proceso de designar rutas o tareas específicas a conductores o vehículos.                                                      |
+| Mobile Application      | Aplicación móvil           | Herramienta digital utilizada en campo para registrar eventos y evidencias durante la operación.                               |
+| Cloud Integration       | Integración en la nube     | Capacidad de la plataforma para conectarse y compartir datos con servicios cloud externos.                                     |
+| Evidence Validation     | Validación de evidencia    | Proceso de confirmar la autenticidad y relevancia de la evidencia capturada.                                                  |
+| Operational Efficiency  | Eficiencia operativa       | Medida de optimización de recursos y reducción de errores en la gestión logística.                                             |
+| Service Schedule        | Programación de servicios  | Planificación anticipada de rutas, entregas y tareas logísticas.                                                              |
+| Notification            | Notificación               | Mensaje enviado a usuarios para informar sobre eventos, alertas o tareas pendientes.                                           |
+| Exception Report        | Reporte de excepción       | Documento que detalla incidentes o eventos fuera de lo planificado durante la operación.                                       |
+| Evidence Sync           | Sincronización de evidencias| Proceso de actualizar y consolidar las evidencias capturadas entre dispositivos y la plataforma central.                      |
+
 
 ---
 
