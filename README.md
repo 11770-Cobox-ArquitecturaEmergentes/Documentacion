@@ -943,6 +943,19 @@ A partir de los user personas definidos, se identificaron las tareas clave que c
 ## Capítulo III: Requirements Specification
 
 ### 3.1. To-Be Scenario Mapping
+En esta sección se presenta el To-Be Scenario Mapping del sistema, el cual describe cómo se desarrollan las actividades de los usuarios en el escenario propuesto. Para su elaboración, el equipo partió del análisis del escenario actual (As-Is), realizando una etapa de preparación y lluvia de ideas individual, seguida de una revisión conjunta para identificar las fases del proceso y estructurarlas como columnas del mapa.
+
+A partir de este proceso, se definieron las actividades (Doing), pensamientos (Thinking) y emociones (Feeling) de cada User Persona a lo largo de las distintas fases del servicio. El resultado refleja un cambio significativo en la forma de interacción con el sistema, donde se reemplaza el registro manual de información por un enfoque basado en captura de evidencia y validación automática de datos.
+
+En comparación con el escenario actual, el To-Be Scenario introduce mejoras orientadas a reducir errores humanos, incrementar la confiabilidad de la información y facilitar la operación en campo, especialmente en entornos con conectividad limitada. Asimismo, se fortalece la trazabilidad de los servicios mediante el registro estructurado de evidencias, incidencias y estados operativos.
+
+A continuación, se presentan los To-Be Scenario Mapping correspondientes a cada segmento de usuario.
+
+#### Segmento 1: Gestión de Operaciones Logísticas
+![To-Be Scenario Mapping - Gestor](assets/tb1/tobesegmento1.png)
+
+#### Segmento 2: Conductores de Transporte
+![To-Be Scenario Mapping - Conductor](assets/tb1/tobesegmento2.png)
 ### 3.2. User Stories
 ### 3.3. Impact Mapping
 ### 3.4. Product Backlog
