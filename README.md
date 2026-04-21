@@ -953,23 +953,43 @@ A partir de los user personas definidos, se identificaron las tareas clave que c
 
 ### 4.1. Strategic-Level Attribute-Driven Design
 #### 4.1.1. Design Purpose
+El objetivo supremo del diseño arquitectónico de **CoBox** es definir un entramado técnico descentralizado y resiliente que traduzca las exigencias del ecosistema logístico en componentes de software escalables. Este enfoque integra paradigmas emergentes con las severas limitaciones del trabajo de campo, tales como conectividad intermitente, restricciones de hardware y condiciones operativas adversas.
 
-El objetivo supremo del diseño arquitectónico de CoBox es definir un entramado técnico descentralizado y resiliente que traduzca las exigencias del ecosistema logístico en componentes de software escalables, amalgamando paradigmas emergentes con las severas limitaciones del trabajo de campo.
-Para asegurar que esta arquitectura soporte la eficiencia, seguridad y operatividad ininterrumpida, el Design Purpose (Propósito de Diseño) se estructura bajo los siguientes lineamientos fundamentales:
-**1. Operatividad Descentralizada mediante Inteligencia en el Borde (Edge AI)** Transformar la captura de datos en un proceso autónomo que no dependa de la conectividad constante a internet, resolviendo así las restricciones de las zonas rurales y las limitaciones del hardware móvil (Restricciones C-1, C-7 y C-9)
-. El diseño estipula la migración del cómputo analítico directamente a los smartphones mediante Modelos de Lenguaje Pequeños (SLMs) y Modelos de Visión-Lenguaje Multimodales (como NaViT)
-. Esto permite ejecutar tareas complejas —como la extracción óptica (OCR) de odómetros y validación de guías físicas— de manera estrictamente local, garantizando tiempos de respuesta inferiores a los 50 milisegundos y optimizando el consumo energético durante la conducción
-.
-**2. Prevención de Fraudes y Resiliencia Estructural con Multi-Nube y Blockchain** Satisfacer los drivers críticos de disponibilidad operativa y protección de información sensible. Para mitigar bloqueos de proveedores y latencias de red, la plataforma orquesta cargas de trabajo distribuidas simultáneamente entre Amazon Web Services (AWS) y Google Cloud Platform (GCP) apoyándose en enrutamiento simétrico
-. Paralelamente, para erradicar las discrepancias manuales y cumplir con las normativas legales de trazabilidad documental (Restricción C-5), la arquitectura entrelaza redes neuronales con tecnología Blockchain, creando libros mayores inmutables que certifican la autenticidad de cada entrega o carga de combustible mediante evidencias fotográficas blindadas criptográficamente
-.
-**3. Modelado de Dominio (DDD) y Aislamiento de Funcionalidades Asegurar la coherencia y evolución del código fuente aplicando el Diseño Guiado por el Dominio (DDD).** El ecosistema se segmenta lógicamente en contextos autónomos (Manejo de Flota, Entregas, Incidencias, Mantenimiento y Analítica), los cuales se materializan como microservicios hexagonales independientes
-. Para sortear los cuellos de botella de la comunicación síncrona, estos módulos interactúan a través de un bus de eventos (Kafka/RabbitMQ)
-. Asimismo, toda solicitud externa atraviesa un API Gateway centralizado que enruta el tráfico y aplica políticas de Control de Acceso Basado en Roles (RBAC), garantizando la privacidad de los datos según las leyes peruanas (Restricción C-8)
-.
-**4. Validación Empírica Continua guiada por el Proceso ADD v3 Gobernar la evolución del sistema a través del método de Diseño Guiado por Atributos (ADD v3)**
-. Las decisiones arquitectónicas y los límites de cada microservicio se modelan de manera exhaustiva empleando vistas formales de C4 y diagramas UML
-. Para validar que estas decisiones cumplan con los escenarios de calidad exigidos (e.g., tolerancia a fallos, soporte para concurrencia masiva), el diseño impone una observabilidad integral mediante telemetría avanzada (Prometheus y Grafana), permitiendo adaptar la solución dinámicamente frente a las variaciones del entorno logístico sin interrumpir las operaciones en curso
+Para asegurar que la arquitectura soporte la eficiencia, seguridad y operatividad ininterrumpida, el propósito de diseño se estructura bajo los siguientes lineamientos fundamentales:
+
+## 1. Operatividad Descentralizada mediante Inteligencia en el Borde (Edge AI)
+
+Se plantea transformar la captura de datos en un proceso autónomo que no dependa de la conectividad constante a internet. Este enfoque responde directamente a las limitaciones propias de zonas rurales y dispositivos móviles con recursos restringidos.
+
+El diseño establece la migración del cómputo analítico hacia los smartphones mediante el uso de Modelos de Lenguaje Pequeños (SLMs) y modelos multimodales de visión-lenguaje como NaViT. Gracias a esta estrategia, tareas complejas como la extracción óptica de caracteres (OCR) de odómetros o la validación de guías físicas pueden ejecutarse de forma completamente local.
+
+Como resultado, el sistema logra tiempos de respuesta inferiores a 50 milisegundos, reduce el consumo energético y mantiene operatividad incluso en ausencia de conexión a red.
+
+
+## 2. Prevención de Fraudes y Resiliencia con Multi-Nube y Blockchain
+
+La arquitectura aborda de forma directa los requerimientos críticos de disponibilidad operativa y protección de la información. Para evitar la dependencia de un único proveedor (vendor lock-in) y reducir riesgos asociados a latencias o caídas, se adopta un enfoque multi-nube que distribuye cargas entre Amazon Web Services (AWS) y Google Cloud Platform (GCP).
+
+Adicionalmente, se incorpora tecnología Blockchain combinada con modelos de inteligencia artificial para garantizar la trazabilidad documental. Este enfoque permite construir registros inmutables que certifican la autenticidad de eventos logísticos, como entregas o cargas de combustible, mediante evidencias fotográficas protegidas criptográficamente.
+
+De esta manera, se eliminan discrepancias manuales, se reduce el fraude y se asegura el cumplimiento de normativas regulatorias.
+
+## 3. Modelado de Dominio (DDD) y Aislamiento de Funcionalidades
+
+Con el objetivo de asegurar la mantenibilidad y evolución del sistema, se adopta el enfoque de Diseño Guiado por el Dominio (Domain-Driven Design, DDD). El sistema se organiza en contextos delimitados que representan áreas clave del negocio, como manejo de flota, entregas, incidencias, mantenimiento y analítica.
+
+Cada uno de estos contextos se implementa como un microservicio independiente bajo una arquitectura hexagonal, lo que permite aislar la lógica de negocio y reducir el acoplamiento entre componentes.
+
+La comunicación entre servicios se realiza mediante un enfoque orientado a eventos utilizando herramientas como Kafka o RabbitMQ, evitando cuellos de botella asociados a llamadas síncronas. Asimismo, todas las solicitudes externas son gestionadas a través de un API Gateway que centraliza el enrutamiento y aplica políticas de control de acceso basadas en roles (RBAC), garantizando la seguridad y privacidad de los datos.
+
+## 4. Validación Continua mediante ADD v3 y Observabilidad
+
+La evolución de la arquitectura se gobierna mediante el proceso Attribute-Driven Design (ADD v3), el cual permite tomar decisiones estructuradas en función de atributos de calidad como rendimiento, disponibilidad y tolerancia a fallos.
+
+Las decisiones arquitectónicas se documentan y validan mediante modelos formales, incluyendo diagramas C4 y UML, lo que facilita la comprensión y evolución del sistema.
+
+Para garantizar que la solución cumple con los escenarios de calidad definidos, se implementa una estrategia de observabilidad integral basada en herramientas como Prometheus y Grafana. Esto permite monitorear métricas en tiempo real, detectar anomalías y adaptar dinámicamente el comportamiento del sistema sin interrumpir la operación.
+
 #### 4.1.2. Attribute-Driven Design Inputs
 ##### 4.1.2.1. Primary Functionality (Primary User Stories)
 
