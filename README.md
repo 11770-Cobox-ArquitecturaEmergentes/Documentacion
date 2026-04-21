@@ -885,7 +885,7 @@ A partir del análisis de entrevistas realizado en la sección 2.2.3, se definie
 
 **Segmento 1: Gestión de operaciones logísticas**
 
-User Persona: **Ricardo Valdivia — Coordinador de Operaciones**
+User Persona: **Ricardo Lozano — Coordinador de Operaciones**
 
 <img src="./assets/tb1/user_persona_1.png" alt="User Persona Coordinador de Operaciones" />
 
@@ -895,7 +895,7 @@ Este perfil representa a gestores que operan con herramientas fragmentadas, enfr
 
 **Segmento 2: Conductores de transporte**
 
-User Persona: **Edilberto Poma — Conductor de larga distancia**
+User Persona: **Luis Soto — Conductor de larga distancia**
 
 <img src="./assets/tb1/user_persona_2.png" alt="User Persona Conductor de larga distancia" />
 
@@ -906,7 +906,7 @@ Este perfil representa a conductores que trabajan en condiciones exigentes, con 
 
 A partir de los user personas definidos, se identificaron las tareas clave que cada perfil realiza dentro del proceso logístico, así como su frecuencia e importancia dentro de la operación.
 
-| Tareas / User Persona              | Ricardo Valdivia (Frec.) | Ricardo Valdivia (Imp.) | Edilberto Poma (Frec.) | Edilberto Poma (Imp.) |
+| Tareas / User Persona              | Ricardo Lozano (Frec.) | Ricardo Lozano (Imp.) | Luis Soto (Frec.) | Luis Soto (Imp.) |
 |----------------------------------|--------------------------|--------------------------|-------------------------|------------------------|
 | Planificar rutas                 | Alta                     | Alta                     | N/A                     | N/A                    |
 | Coordinar entregas              | Alta                     | Alta                     | Media                   | Alta                   |
@@ -924,9 +924,9 @@ A partir de los user personas definidos, se identificaron las tareas clave que c
 
 - Ambos perfiles dependen de tareas críticas relacionadas con el registro de kilometraje, consumo de combustible y verificación de entregas, las cuales presentan actualmente problemas de confiabilidad.
 
-- El perfil de gestión (Ricardo Valdivia) se enfoca en la consolidación, validación y análisis de la información, siendo altamente dependiente de la precisión de los datos para la toma de decisiones.
+- El perfil de gestión (Ricardo Lozano) se enfoca en la consolidación, validación y análisis de la información, siendo altamente dependiente de la precisión de los datos para la toma de decisiones.
 
-- El perfil operativo (Edilberto Poma) se enfoca en la ejecución del servicio, priorizando herramientas simples que reduzcan la carga de registro y permitan documentar eventos en campo de forma rápida.
+- El perfil operativo (Luis Soto) se enfoca en la ejecución del servicio, priorizando herramientas simples que reduzcan la carga de registro y permitan documentar eventos en campo de forma rápida.
 
 - Se identifica como punto crítico compartido la necesidad de contar con evidencia verificable que respalde los datos registrados, reduciendo conflictos operativos y mejorando la trazabilidad.
 
