@@ -1019,8 +1019,51 @@ El Impact Mapping permite alinear el desarrollo del producto con los objetivos e
 ![To-Be Scenario Mapping - Conductor](assets/tb1/impactmap2.png)
 
 ### 3.4. Product Backlog
+En esta sección se presenta el Product Backlog priorizado del proyecto. El orden de las historias responde al valor que aportan al negocio y al producto, priorizando primero aquellas que permiten comunicar la propuesta de valor, captar interés comercial y validar tempranamente el núcleo funcional de la solución.  
 
----
+Asimismo, el backlog incorpora historias orientadas a la operación en campo, validación automática, trazabilidad y análisis operativo, junto con las historias técnicas necesarias para soportar la interoperabilidad y el funcionamiento integral de la plataforma.
+
+| # Orden | User Story ID | Título | Descripción | Story Points (1/2/3/5/8) |
+|---------|---------------|--------|-------------|--------------------------|
+| 1 | US-22 | Consultar propuesta de valor del producto | Como visitante, deseo conocer la propuesta de valor del producto para evaluar si se adapta a mi operación logística. | 3 |
+| 2 | US-24 | Solicitar demostración comercial | Como visitante, deseo solicitar una demostración para conocer la solución aplicada a mi operación. | 5 |
+| 3 | US-23 | Consultar funcionalidades clave | Como visitante del segmento logístico, deseo consultar las funcionalidades clave del producto para comprender cómo mejora la trazabilidad y validación operativa. | 3 |
+| 4 | US-26 | Contactar al equipo comercial | Como visitante, deseo contactar al equipo comercial para resolver dudas sobre adopción, integración o precios. | 2 |
+| 5 | US-25 | Consultar evidencia de resultados y casos de uso | Como visitante, deseo consultar casos de uso y resultados esperados para confiar en la propuesta de la solución. | 3 |
+| 6 | US-03 | Consultar servicios asignados del día | Como conductor, deseo consultar mis servicios asignados del día para planificar mi jornada. | 5 |
+| 7 | US-04 | Registrar inicio de servicio | Como conductor, deseo registrar el inicio de un servicio para dejar constancia del momento de salida. | 3 |
+| 8 | US-06 | Capturar evidencia de odómetro | Como conductor, deseo capturar una imagen del odómetro para registrar el kilometraje sin ingresarlo manualmente. | 5 |
+| 9 | US-10 | Registrar captura guiada de evidencia | Como conductor, deseo recibir validaciones básicas al momento de capturar una evidencia para evitar registros inválidos. | 3 |
+| 10 | US-27 | Registrar evidencias sin conexión | Como conductor, deseo registrar evidencias y eventos sin conexión para continuar mi trabajo en zonas con cobertura limitada. | 8 |
+| 11 | US-28 | Sincronizar registros pendientes | Como conductor, deseo sincronizar automáticamente mis registros pendientes cuando la conectividad se restablece para conservar la continuidad operativa. | 5 |
+| 12 | US-29 | Consultar estado de validación y sincronización | Como conductor, deseo consultar el estado de mis registros para saber si fueron guardados, sincronizados o observados. | 3 |
+| 13 | US-11 | Registrar datos manuales de contingencia | Como conductor, deseo registrar datos manuales como contingencia cuando una evidencia no puede ser validada automáticamente para no detener la operación. | 3 |
+| 14 | US-13 | Reportar incidencia operativa | Como conductor, deseo reportar incidencias durante un servicio para dejar constancia de eventos que afectan la operación. | 3 |
+| 15 | US-14 | Registrar paradas no planificadas | Como conductor, deseo registrar paradas no planificadas para respaldar retrasos o desvíos ocurridos en ruta. | 5 |
+| 16 | US-01 | Consultar servicios programados | Como gestor, deseo consultar los servicios logísticos programados para supervisar la operación diaria. | 5 |
+| 17 | US-02 | Asignar conductor y unidad a servicio | Como gestor, deseo asignar un conductor y una unidad a un servicio para organizar su ejecución. | 5 |
+| 18 | US-07 | Extraer kilometraje automáticamente | Como gestor, deseo que el sistema extraiga automáticamente el kilometraje desde la evidencia visual para reducir errores humanos. | 8 |
+| 19 | US-08 | Validar evidencia de entrega | Como gestor, deseo que el sistema valide automáticamente la evidencia de entrega para contar con respaldo verificable del servicio. | 8 |
+| 20 | US-09 | Validar comprobante de combustible | Como gestor, deseo validar automáticamente comprobantes de combustible para detectar inconsistencias operativas. | 8 |
+| 21 | US-12 | Detectar anomalías operativas | Como gestor, deseo que el sistema detecte anomalías en kilometraje, combustible o evidencias para intervenir oportunamente. | 8 |
+| 22 | US-15 | Consultar incidencias y observaciones | Como gestor, deseo consultar incidencias y observaciones operativas para priorizar acciones correctivas. | 5 |
+| 23 | US-17 | Consultar trazabilidad completa del servicio | Como gestor, deseo consultar la trazabilidad completa de un servicio para auditar su ejecución con evidencias y eventos. | 8 |
+| 24 | US-18 | Visualizar alertas operativas | Como gestor, deseo visualizar alertas operativas para actuar rápidamente ante riesgos o inconsistencias. | 5 |
+| 25 | US-16 | Resolver incidencia con trazabilidad | Como gestor, deseo registrar la resolución de una incidencia para mantener un historial auditable del caso. | 3 |
+| 26 | US-19 | Consultar indicadores de confiabilidad | Como gestor, deseo consultar indicadores de confiabilidad de datos para evaluar la calidad del registro operativo. | 5 |
+| 27 | US-20 | Generar reporte de servicios validados | Como gestor, deseo generar reportes de servicios validados para sustentar decisiones y auditorías internas. | 5 |
+| 28 | US-21 | Comparar desempeño por unidad y conductor | Como gestor, deseo comparar el desempeño por unidad y conductor para identificar patrones operativos y oportunidades de mejora. | 5 |
+| 29 | US-05 | Consultar historial de servicios | Como gestor, deseo consultar el historial de servicios ejecutados para revisar el desempeño operativo. | 3 |
+| 30 | TS-02 | Gestión de servicios vía API | Como Developer, deseo consumir endpoints para registrar, consultar y actualizar servicios logísticos desde aplicaciones externas. | 5 |
+| 31 | TS-03 | Captura y validación de evidencias vía API | Como Developer, deseo consumir endpoints para cargar evidencias y consultar su estado de validación desde aplicaciones cliente. | 8 |
+| 32 | TS-04 | Gestión de incidencias y alertas vía API | Como Developer, deseo consumir endpoints para registrar incidencias y consultar alertas operativas integradas. | 5 |
+| 33 | TS-05 | Reportes e indicadores vía API | Como Developer, deseo consumir endpoints de indicadores y reportes para integrarlos con dashboards y servicios externos. | 5 |
+| 34 | TS-01 | Autenticación y autorización API | Como Developer, deseo implementar autenticación y autorización seguras para proteger el acceso a los servicios de la plataforma. | 5 |
+
+A continuación, se presenta el enlace al tablero de Trello donde se puede visualizar el Product Backlog de manera interactiva:
+
+[Product Backlog en Trello](https://trello.com/invite/b/65483fffcafdad61c4da7629/ATTI3fc72917563f03e2b9eb1a1fd770af39A7368F5C/cobox)
+
 
 ## Capítulo IV: Strategic-Level Software Design
 
