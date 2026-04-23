@@ -973,7 +973,63 @@ Para asegurar que esta arquitectura soporte la eficiencia, seguridad y operativi
 #### 4.1.2. Attribute-Driven Design Inputs
 ##### 4.1.2.1. Primary Functionality (Primary User Stories)
 
+### 1. Inteligencia en el Borde (Edge AI) para la Extracción Automática Al analizar las historias US-07 (Extraer kilometraje automáticamente)
+ y US-08 (Validar evidencia de entrega)
+, el diseño descarta el procesamiento en la nube tradicional. Para evitar que la aplicación dependa de la red y colapse en zonas rurales, apliqué Inteligencia en el Borde. Esto significa que el procesamiento de visión artificial (OCR) se ejecuta localmente en el hardware del dispositivo móvil del transportista mediante Modelos de Lenguaje Pequeños (SLMs), permitiendo validar el kilometraje y las guías de remisión en milisegundos y con cero consumo de datos
+.
+### 2. Arquitectura Orientada a Eventos (Offline-First) Las funcionalidades de US-27 (Registrar evidencias sin conexión)
+ y US-28 (Sincronizar registros pendientes)
+ exigían resolver la intermitencia de conectividad de la infraestructura de telecomunicaciones (Épica 06)
+. Para ello, apliqué un paradigma de persistencia local descentralizada con sincronización asíncrona. El teléfono móvil actúa como un nodo autónomo; cuando no hay señal, guarda los metadatos y, al detectar red, orquesta automáticamente la transmisión de los paquetes retenidos a través de colas de mensajes distribuidas (Event-Driven), garantizando cero pérdida de información
+.
+### 3. Blockchain para Trazabilidad y No Repudio La auditoría operativa es estricta, lo que se refleja en la historia US-17 (Consultar trazabilidad completa del servicio)
+. Para blindar cronológicamente eventos como asignación, inicio, validaciones e incidencias
+, apliqué la integración de bases de datos con libros mayores inmutables (Blockchain). Cada evidencia validada por la IA genera una firma criptográfica, haciendo que los registros sean a prueba de manipulaciones o fraudes, cumpliendo con las normativas legales de protección documental del sector transporte.
+### 4. Redes de Confianza Cero (Zero-Trust) y API Gateway Para el requisito TS-01 (Autenticación y autorización API)
+, que permite el acceso a sistemas de terceros, el diseño perimetral se fundamentó en una arquitectura API-First bajo el modelo de Zero-Trust. Esto implementa pasarelas de seguridad (API Gateways) que exigen la validación estricta de tokens de acceso e identidades para cualquier solicitud que intente interactuar con el backend de la plataforma, denegando el acceso de forma determinista ante permisos insuficientes
+.
+De esta forma, la selección de funcionalidades primarias (Primary User Stories) queda fusionada orgánicamente con los patrones de Edge Computing, Blockchain y sistemas distribuidos, dándole a CoBox el rigor de una arquitectura moderna, resiliente y de alta disponibilidad.
+
 ##### 4.1.2.2. Quality Attribute Scenarios
+
+
+A continuación, se definen los escenarios de atributos de calidad (Quality Attribute Scenarios) priorizados para la plataforma **CoBox**, los cuales actuarán como drivers arquitectónicos clave para la toma de decisiones del sistema, alineando las necesidades operativas de la logística con capacidades de Edge AI.
+
+
+
+
+
+| ID    | Atributo                      | Fuente                   | Estímulo                                      | Artefacto                          | Entorno                                      | Respuesta                                                                 | Medida                                             |
+|-------|------------------------------|--------------------------|-----------------------------------------------|------------------------------------|----------------------------------------------|---------------------------------------------------------------------------|----------------------------------------------------|
+| QA-01 | Disponibilidad / Resiliencia | Usuario (Conductor)      | Registro de evidencias sin conectividad       | Módulo Offline y Sincronización    | Operación en campo sin red                   | Almacena datos localmente y sincroniza al recuperar conexión              | 100% sincronización sin pérdida de datos           |
+| QA-02 | Rendimiento (Performance)    | Gestor / Sistema         | Procesamiento de imagen (odómetro)            | Módulo Edge AI / OCR               | Ejecución en tiempo real en dispositivo      | Extrae kilometraje automáticamente y lo valida                            | Procesamiento < 2 segundos                         |
+| QA-03 | Seguridad / Integridad       | Developer / App Externa  | Acceso a servicios de trazabilidad            | API Gateway + Autenticación        | Consumo de APIs por terceros                 | Valida credenciales y retorna token o acceso denegado                     | 0 accesos no autorizados; latencia < 1 s           |
+| QA-04 | Interoperabilidad            | Sistema / Developer      | Solicitud externa de datos/logística          | API RESTful                        | Integración con sistemas externos (ERP)      | Procesa solicitudes en JSON y responde con datos o errores estructurados  | 100% solicitudes válidas atendidas                 |
+| QA-05 | Usabilidad                   | Usuario (Conductor)      | Captura de imagen de evidencia                | Interfaz móvil (captura guiada)    | Uso en campo con presión operativa           | Valida calidad de imagen y solicita repetición si es necesario             | 90% éxito en el primer intento                     |
+| QA-06 | Escalabilidad                | Múltiples Conductores    | Pico de envíos concurrentes                   | Backend asíncrono / clústeres      | Reconexiones masivas o cierre de turnos      | Procesa solicitudes concurrentes sin colapsar                             | Soporta hasta 3x usuarios sin latencia > 3 s       |
+
+ Descripción Detallada de Escenarios
+
+ QA-01: Disponibilidad / Resiliencia
+El sistema garantiza operación offline, permitiendo capturar evidencias sin conexión. Los datos se almacenan localmente y se sincronizan automáticamente al restablecer conectividad, evitando pérdida de información.
+
+ QA-02: Rendimiento (Edge AI)
+El procesamiento de imágenes se ejecuta en el dispositivo (Edge AI), extrayendo automáticamente el kilometraje del odómetro en tiempo real, reduciendo latencia y errores humanos.
+
+ QA-03: Seguridad / Integridad
+El API Gateway controla el acceso mediante autenticación estricta. Solo solicitudes con credenciales válidas reciben acceso, bloqueando cualquier intento no autorizado.
+
+ QA-04: Interoperabilidad
+La API REST permite integración con sistemas externos (ERP, dashboards), procesando solicitudes en formato JSON y asegurando compatibilidad y manejo de errores.
+
+ QA-05: Usabilidad
+La app guía al usuario en la captura de evidencias, validando la calidad de imágenes en tiempo real y reduciendo errores operativos.
+
+QA-06: Escalabilidad
+El sistema maneja picos de carga mediante procesamiento asíncrono, soportando múltiples usuarios concurrentes sin degradación significativa del rendimiento.
+
+
+
 
 ##### 4.1.2.3. Constraints
 
@@ -996,7 +1052,7 @@ A continuación, se presenta la reestructuración de las restricciones (constrai
 | **C-10** | **Despliegue Continuo (MLOps) y OTA** | Permite actualizaciones sin detener operaciones mediante despliegues OTA y pruebas A/B, asegurando evolución continua del sistema. |
 
 ---
-#### 4.1.3. Architectural Drivers Backlog
+
 ## 4.1.3 Architectural Drivers Backlog
 
 | Driver ID | Título | Descripción | Importancia | Architecture Technical Complexity |
