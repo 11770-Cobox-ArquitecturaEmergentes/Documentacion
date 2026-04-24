@@ -1258,6 +1258,38 @@ Este enfoque asegura que CoBox no solo sea funcional, sino resiliente, escalable
 ### 4.2. Strategic-Level Domain-Driven Design
 #### 4.2.1. EventStorming
 #### 4.2.2. Candidate Context Discovery
+
+Se aplicó Event Storming para identificar los Bounded Contexts del sistema. El análisis se basó en funcionalidades, procesos y eventos clave del proyecto.
+
+**Técnicas utilizadas**
+
+ **Start-With-Value:**
+Gestión operativa de servicios logísticos
+Validación automática de evidencias
+Gestión de incidencias y trazabilidad
+Reportes y analítica operativa
+
+ **Look-For-Pivotal-Events:**
+• “Asignación de servicio a conductor”
+• “Captura de evidencia (odómetro, entrega, combustible)”
+• “Validación automática de datos”
+• “Registro de incidencia operativa”
+• “Sincronización offline de registros”
+• “Generación de reporte validado”
+
+ **Start-With-Simple:**
+Los eventos se agruparon por afinidad funcional y coherencia de reglas, delimitando áreas independientes y evitando solapamientos entre procesos.
+
+Finalmente, se delimitaron 5 bounded context:
+
+• Operaciones: gestión de servicios logísticos y asignaciones
+• Evidencias: captura y validación automática de datos operativos
+• Incidencias: registro y seguimiento de eventos e incidencias
+• Reportes: generación y consulta de reportes validados
+• Integración/API: exposición de servicios para apps y sistemas externos
+
+Cada contexto definido agrupa sus propios eventos, reglas y agregados, facilitando la evolución y el mantenimiento del sistema.
+
 #### 4.2.3. Domain Message Flows Modeling
 #### 4.2.4. Bounded Context Canvases
 #### 4.2.5. Context Mapping
