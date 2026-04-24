@@ -818,7 +818,6 @@ Asimismo, se identificaron inconsistencias recurrentes en los datos reportados, 
 
 Otro problema crítico identificado es la ausencia de mecanismos formales de validación de la información. La verificación de datos se realiza de manera manual y reactiva, generalmente solo cuando ocurre un conflicto, lo que limita la capacidad de control y auditoría de las operaciones.
 
----
 
 **2. Impacto en la operación logística**
 
@@ -1123,7 +1122,8 @@ El objetivo supremo del diseño arquitectónico de **CoBox** es definir un entra
 Para asegurar que la arquitectura soporte la eficiencia, seguridad y operatividad ininterrumpida, el propósito de diseño se estructura bajo los siguientes lineamientos fundamentales:
 
 El objetivo supremo del diseño arquitectónico de CoBox es definir un entramado técnico descentralizado y resiliente que traduzca las exigencias del ecosistema logístico en componentes de software escalables, amalgamando paradigmas emergentes con las severas limitaciones del trabajo de campo.Para asegurar que esta arquitectura soporte la eficiencia, seguridad y operatividad ininterrumpida, el Design Purpose (Propósito de Diseño) se estructura bajo los siguientes lineamientos fundamentales:.<br>.<br>
-**1. Operatividad Descentralizada mediante Inteligencia en el Borde (Edge AI)** Transformar la captura de datos en un proceso autónomo que no dependa de la conectividad constante a internet, resolviendo así las restricciones de las zonas rurales y las limitaciones del hardware móvil (Restricciones C-1, C-7 y C-9)
+**1. Operatividad Descentralizada mediante Inteligencia en el Borde (Edge AI)** 
+Transformar la captura de datos en un proceso autónomo que no dependa de la conectividad constante a internet, resolviendo así las restricciones de las zonas rurales y las limitaciones del hardware móvil (Restricciones C-1, C-7 y C-9)
 . El diseño estipula la migración del cómputo analítico directamente a los smartphones mediante Modelos de Lenguaje Pequeños (SLMs) y Modelos de Visión-Lenguaje Multimodales (como NaViT)
 . Esto permite ejecutar tareas complejas —como la extracción óptica (OCR) de odómetros y validación de guías físicas— de manera estrictamente local, garantizando tiempos de respuesta inferiores a los 50 milisegundos y optimizando el consumo energético durante la conducción.<br><br>
 **2. Prevención de Fraudes y Resiliencia Estructural con Multi-Nube y Blockchain** Satisfacer los drivers críticos de disponibilidad operativa y protección de información sensible. Para mitigar bloqueos de proveedores y latencias de red, la plataforma orquesta cargas de trabajo distribuidas simultáneamente entre Amazon Web Services (AWS) y Google Cloud Platform (GCP) apoyándose en enrutamiento simétrico
@@ -1134,26 +1134,21 @@ El objetivo supremo del diseño arquitectónico de CoBox es definir un entramado
 . Asimismo, toda solicitud externa atraviesa un API Gateway centralizado que enruta el tráfico y aplica políticas de Control de Acceso Basado en Roles (RBAC), garantizando la privacidad de los datos según las leyes peruanas (Restricción C-8).<br><br>
 .
 **4. Validación Empírica Continua guiada por el Proceso ADD v3 Gobernar la evolución del sistema a través del método de Diseño Guiado por Atributos (ADD v3)**
-. Las decisiones arquitectónicas y los límites de cada microservicio se modelan de manera exhaustiva empleando vistas formales de C4 y diagramas UML
+ Las decisiones arquitectónicas y los límites de cada microservicio se modelan de manera exhaustiva empleando vistas formales de C4 y diagramas UML
 . Para validar que estas decisiones cumplan con los escenarios de calidad exigidos (e.g., tolerancia a fallos, soporte para concurrencia masiva), el diseño impone una observabilidad integral mediante telemetría avanzada (Prometheus y Grafana), permitiendo adaptar la solución dinámicamente frente a las variaciones del entorno logístico sin interrumpir las operaciones en curso.<br><br>
 #### 4.1.2. Attribute-Driven Design Inputs
 #### 4.1.2.1. Primary Functionality (Primary User Stories)
 
-##### 1. Inteligencia en el Borde (Edge AI) para la Extracción Automática Al analizar las historias US-07 (Extraer kilometraje automáticamente)
- y US-08 (Validar evidencia de entrega)
-, el diseño descarta el procesamiento en la nube tradicional. Para evitar que la aplicación dependa de la red y colapse en zonas rurales, apliqué Inteligencia en el Borde. Esto significa que el procesamiento de visión artificial (OCR) se ejecuta localmente en el hardware del dispositivo móvil del transportista mediante Modelos de Lenguaje Pequeños (SLMs), permitiendo validar el kilometraje y las guías de remisión en milisegundos y con cero consumo de datos
-.
-##### 2. Arquitectura Orientada a Eventos (Offline-First) Las funcionalidades de US-27 (Registrar evidencias sin conexión)
- y US-28 (Sincronizar registros pendientes)
- exigían resolver la intermitencia de conectividad de la infraestructura de telecomunicaciones (Épica 06)
-. Para ello, apliqué un paradigma de persistencia local descentralizada con sincronización asíncrona. El teléfono móvil actúa como un nodo autónomo; cuando no hay señal, guarda los metadatos y, al detectar red, orquesta automáticamente la transmisión de los paquetes retenidos a través de colas de mensajes distribuidas (Event-Driven), garantizando cero pérdida de información
-.
-##### 3. Blockchain para Trazabilidad y No Repudio La auditoría operativa es estricta, lo que se refleja en la historia US-17 (Consultar trazabilidad completa del servicio)
-. Para blindar cronológicamente eventos como asignación, inicio, validaciones e incidencias
-, apliqué la integración de bases de datos con libros mayores inmutables (Blockchain). Cada evidencia validada por la IA genera una firma criptográfica, haciendo que los registros sean a prueba de manipulaciones o fraudes, cumpliendo con las normativas legales de protección documental del sector transporte.
+##### 1. Inteligencia en el Borde (Edge AI) para la Extracción Automática Al analizar las historias US-07 (Extraer kilometraje automáticamente) y US-08 (Validar evidencia de entrega)
+ El diseño descarta el procesamiento en la nube tradicional. Para evitar que la aplicación dependa de la red y colapse en zonas rurales, apliqué Inteligencia en el Borde. Esto significa que el procesamiento de visión artificial (OCR) se ejecuta localmente en el hardware del dispositivo móvil del transportista mediante Modelos de Lenguaje Pequeños (SLMs), permitiendo validar el kilometraje y las guías de remisión en milisegundos y con cero consumo de datos.
+ 
+##### 2. Arquitectura Orientada a Eventos (Offline-First) Las funcionalidades de US-27 (Registrar evidencias sin conexión) y US-28 (Sincronizar registros pendientes)
+ Exigían resolver la intermitencia de conectividad de la infraestructura de telecomunicaciones (Épica 06). Para ello, apliqué un paradigma de persistencia local descentralizada con sincronización asíncrona. El teléfono móvil actúa como un nodo autónomo; cuando no hay señal, guarda los metadatos y, al detectar red, orquesta automáticamente la transmisión de los paquetes retenidos a través de colas de mensajes distribuidas (Event-Driven), garantizando cero pérdida de información.
+
+##### 3. Blockchain para Trazabilidad y No Repudio La auditoría operativa es estricta, lo que se refleja en la historia US-17 (Consultar trazabilidad completa del servicio). 
+Para blindar cronológicamente eventos como asignación, inicio, validaciones e incidencias, apliqué la integración de bases de datos con libros mayores inmutables (Blockchain). Cada evidencia validada por la IA genera una firma criptográfica, haciendo que los registros sean a prueba de manipulaciones o fraudes, cumpliendo con las normativas legales de protección documental del sector transporte.
 ##### 4. Redes de Confianza Cero (Zero-Trust) y API Gateway Para el requisito TS-01 (Autenticación y autorización API)
-, que permite el acceso a sistemas de terceros, el diseño perimetral se fundamentó en una arquitectura API-First bajo el modelo de Zero-Trust. Esto implementa pasarelas de seguridad (API Gateways) que exigen la validación estricta de tokens de acceso e identidades para cualquier solicitud que intente interactuar con el backend de la plataforma, denegando el acceso de forma determinista ante permisos insuficientes
-.
+Que permite el acceso a sistemas de terceros, el diseño perimetral se fundamentó en una arquitectura API-First bajo el modelo de Zero-Trust. Esto implementa pasarelas de seguridad (API Gateways) que exigen la validación estricta de tokens de acceso e identidades para cualquier solicitud que intente interactuar con el backend de la plataforma, denegando el acceso de forma determinista ante permisos insuficientes.
 De esta forma, la selección de funcionalidades primarias (Primary User Stories) queda fusionada orgánicamente con los patrones de Edge Computing, Blockchain y sistemas distribuidos, dándole a CoBox el rigor de una arquitectura moderna, resiliente y de alta disponibilidad.
 
 ##### 4.1.2.2. Quality Attribute Scenarios
@@ -1260,7 +1255,7 @@ El uso de Edge AI reduce la dependencia de la conectividad, mejorando la disponi
 
 Finalmente, la arquitectura de microservicios permite escalar el sistema de manera independiente según la carga, asumiendo como trade-off una mayor complejidad en la coordinación y consistencia distribuida.
 
-Este enfoque asegura que CoBox no solo sea funcional, sino resiliente, escalable y alineado con las condiciones reales del entorno logístico. :contentReference[oaicite:0]{index=0}
+Este enfoque asegura que CoBox no solo sea funcional, sino resiliente, escalable y alineado con las condiciones reales del entorno logístico.
 
 ### 4.2. Strategic-Level Domain-Driven Design
 #### 4.2.1. EventStorming
