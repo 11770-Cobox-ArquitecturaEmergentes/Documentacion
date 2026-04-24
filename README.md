@@ -885,7 +885,7 @@ A partir del análisis de entrevistas realizado en la sección 2.2.3, se definie
 
 **Segmento 1: Gestión de operaciones logísticas**
 
-User Persona: **Ricardo Valdivia — Coordinador de Operaciones**
+User Persona: **Ricardo Lozano — Coordinador de Operaciones**
 
 <img src="./assets/tb1/user_persona_1.png" alt="User Persona Coordinador de Operaciones" />
 
@@ -895,7 +895,7 @@ Este perfil representa a gestores que operan con herramientas fragmentadas, enfr
 
 **Segmento 2: Conductores de transporte**
 
-User Persona: **Edilberto Poma — Conductor de larga distancia**
+User Persona: **Luis Soto — Conductor de larga distancia**
 
 <img src="./assets/tb1/user_persona_2.png" alt="User Persona Conductor de larga distancia" />
 
@@ -906,7 +906,7 @@ Este perfil representa a conductores que trabajan en condiciones exigentes, con 
 
 A partir de los user personas definidos, se identificaron las tareas clave que cada perfil realiza dentro del proceso logístico, así como su frecuencia e importancia dentro de la operación.
 
-| Tareas / User Persona              | Ricardo Valdivia (Frec.) | Ricardo Valdivia (Imp.) | Edilberto Poma (Frec.) | Edilberto Poma (Imp.) |
+| Tareas / User Persona              | Ricardo Lozano (Frec.) | Ricardo Lozano (Imp.) | Luis Soto (Frec.) | Luis Soto (Imp.) |
 |----------------------------------|--------------------------|--------------------------|-------------------------|------------------------|
 | Planificar rutas                 | Alta                     | Alta                     | N/A                     | N/A                    |
 | Coordinar entregas              | Alta                     | Alta                     | Media                   | Alta                   |
@@ -924,9 +924,9 @@ A partir de los user personas definidos, se identificaron las tareas clave que c
 
 - Ambos perfiles dependen de tareas críticas relacionadas con el registro de kilometraje, consumo de combustible y verificación de entregas, las cuales presentan actualmente problemas de confiabilidad.
 
-- El perfil de gestión (Ricardo Valdivia) se enfoca en la consolidación, validación y análisis de la información, siendo altamente dependiente de la precisión de los datos para la toma de decisiones.
+- El perfil de gestión (Ricardo Lozano) se enfoca en la consolidación, validación y análisis de la información, siendo altamente dependiente de la precisión de los datos para la toma de decisiones.
 
-- El perfil operativo (Edilberto Poma) se enfoca en la ejecución del servicio, priorizando herramientas simples que reduzcan la carga de registro y permitan documentar eventos en campo de forma rápida.
+- El perfil operativo (Luis Soto) se enfoca en la ejecución del servicio, priorizando herramientas simples que reduzcan la carga de registro y permitan documentar eventos en campo de forma rápida.
 
 - Se identifica como punto crítico compartido la necesidad de contar con evidencia verificable que respalde los datos registrados, reduciendo conflictos operativos y mejorando la trazabilidad.
 
@@ -936,23 +936,193 @@ A partir de los user personas definidos, se identificaron las tareas clave que c
 
 #### 2.3.4. As-is Scenario Mapping
 
+<img src="./assets/tb1/asismapp1.png" alt="As Is Scenario Mapping" />
+<img src="./assets/tb1/asismapp2.png" alt="As Is Scenario Mapping" />
+
+
 ### 2.4. Ubiquitous Language
+
+| Término en Inglés         | Término en Español         | Definición                                                                                                                      |
+|--------------------------|----------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Logistics Operation      | Operación logística        | Proceso de planificación, ejecución y control de servicios de transporte de carga, incluyendo rutas, entregas y registros.     |
+| Fleet                   | Flota                      | Conjunto de vehículos gestionados por una empresa de transporte para realizar servicios logísticos.                            |
+| Service Event           | Evento operativo           | Suceso relevante durante la operación logística (ej. inicio de ruta, carga, descarga, parada, incidente).                      |
+| Evidence Capture        | Captura de evidencia       | Proceso de registrar información visual (fotos, documentos) para validar datos operativos en campo.                            |
+| Smart Validation        | Validación inteligente     | Proceso automatizado de verificación de datos mediante inteligencia artificial, reduciendo errores y fraudes.                  |
+| Field Operator          | Operador de campo          | Persona encargada de ejecutar servicios logísticos y registrar eventos durante el recorrido (conductor/a).                     |
+| Operations Manager      | Gestor de operaciones      | Responsable de coordinar, supervisar y validar la información de las operaciones logísticas.                                   |
+| Manual Entry            | Ingreso manual             | Registro de datos realizado por el usuario sin automatización, susceptible a errores humanos.                                  |
+| Visual Evidence         | Evidencia visual           | Imagen o documento capturado para respaldar un evento operativo (ej. foto de odómetro, guía firmada).                         |
+| Offline Mode            | Modo offline               | Funcionalidad que permite operar la aplicación sin conexión a internet, sincronizando datos posteriormente.                    |
+| Route Traceability      | Trazabilidad de ruta       | Capacidad de seguir y auditar el recorrido y eventos de un servicio logístico.                                                 |
+| Anomaly Alert           | Alerta de anomalía         | Notificación generada automáticamente ante detección de inconsistencias o posibles fraudes en los datos operativos.            |
+| Dashboard               | Panel de control           | Vista gráfica que muestra indicadores clave, reportes y estado de las operaciones logísticas.                                  |
+| Proof of Delivery       | Comprobante de entrega     | Evidencia (visual o documental) que certifica la realización exitosa de una entrega.                                           |
+| Fuel Consumption        | Consumo de combustible     | Registro y control del uso de combustible por vehículo durante la operación.                                                   |
+| Mileage                 | Kilometraje                | Distancia recorrida por un vehículo, registrada para control y auditoría.                                                      |
+| User Persona            | Persona usuaria            | Perfil representativo de los usuarios objetivo, utilizado para guiar el diseño y validación de la solución.                    |
+| Needfinding             | Identificación de necesidades | Proceso de descubrir y documentar los requerimientos y problemas reales de los usuarios.                                   |
+| EventStorming           | EventStorming              | Técnica colaborativa para modelar procesos y eventos clave del dominio logístico.                                              |
+| Bounded Context         | Contexto delimitado        | Área específica del dominio donde un modelo es válido y consistente, sin ambigüedades.                                         |
+| Product Backlog         | Lista de producto          | Conjunto priorizado de funcionalidades, requisitos y tareas pendientes del producto.                                           |
+| Impact Mapping          | Mapeo de impacto           | Técnica para visualizar cómo las funcionalidades contribuyen a los objetivos del negocio.                                      |
+| Lean UX                 | Lean UX                    | Metodología ágil para diseñar experiencias de usuario centradas en la validación continua.                                     |
+| Stakeholder             | Interesado                 | Persona o grupo que tiene interés o se ve afectado por el proyecto CoBox.                                                     |
+| Compliance              | Cumplimiento normativo     | Adherencia a regulaciones y estándares aplicables al transporte y gestión de datos.                                            |
+| Service Report          | Reporte de servicio        | Documento o registro que resume los eventos, incidencias y resultados de una operación logística.                              |
+| Exception Handling      | Manejo de excepciones      | Proceso de registrar y gestionar eventos no planificados o incidentes durante la operación.                                   |
+| Synchronization         | Sincronización             | Proceso de actualizar y consolidar datos entre dispositivos y la plataforma central.                                           |
+| User Onboarding         | Incorporación de usuario   | Proceso de registro y capacitación inicial de nuevos usuarios en la plataforma.                                                |
+| Field Constraints       | Restricciones de campo     | Condiciones reales que afectan la operación, como conectividad limitada o uso de dispositivos en ambientes adversos.           |
+| Georeferenced Photo     | Foto georreferenciada      | Imagen capturada con información de ubicación, utilizada para validar eventos en campo.                                        |
+| Audit Trail             | Registro de auditoría      | Historial detallado de acciones y cambios realizados en la plataforma para control y trazabilidad.                             |
+| Service Assignment      | Asignación de servicio     | Proceso de designar rutas o tareas específicas a conductores o vehículos.                                                      |
+| Mobile Application      | Aplicación móvil           | Herramienta digital utilizada en campo para registrar eventos y evidencias durante la operación.                               |
+| Cloud Integration       | Integración en la nube     | Capacidad de la plataforma para conectarse y compartir datos con servicios cloud externos.                                     |
+| Evidence Validation     | Validación de evidencia    | Proceso de confirmar la autenticidad y relevancia de la evidencia capturada.                                                  |
+| Operational Efficiency  | Eficiencia operativa       | Medida de optimización de recursos y reducción de errores en la gestión logística.                                             |
+| Service Schedule        | Programación de servicios  | Planificación anticipada de rutas, entregas y tareas logísticas.                                                              |
+| Notification            | Notificación               | Mensaje enviado a usuarios para informar sobre eventos, alertas o tareas pendientes.                                           |
+| Exception Report        | Reporte de excepción       | Documento que detalla incidentes o eventos fuera de lo planificado durante la operación.                                       |
+| Evidence Sync           | Sincronización de evidencias| Proceso de actualizar y consolidar las evidencias capturadas entre dispositivos y la plataforma central.                      |
+
 
 ---
 
 ## Capítulo III: Requirements Specification
 
 ### 3.1. To-Be Scenario Mapping
-### 3.2. User Stories
-### 3.3. Impact Mapping
-### 3.4. Product Backlog
+En esta sección se presenta el To-Be Scenario Mapping del sistema, el cual describe cómo se desarrollan las actividades de los usuarios en el escenario propuesto. Para su elaboración, el equipo partió del análisis del escenario actual (As-Is), realizando una etapa de preparación y lluvia de ideas individual, seguida de una revisión conjunta para identificar las fases del proceso y estructurarlas como columnas del mapa.
 
----
+A partir de este proceso, se definieron las actividades (Doing), pensamientos (Thinking) y emociones (Feeling) de cada User Persona a lo largo de las distintas fases del servicio. El resultado refleja un cambio significativo en la forma de interacción con el sistema, donde se reemplaza el registro manual de información por un enfoque basado en captura de evidencia y validación automática de datos.
+
+En comparación con el escenario actual, el To-Be Scenario introduce mejoras orientadas a reducir errores humanos, incrementar la confiabilidad de la información y facilitar la operación en campo, especialmente en entornos con conectividad limitada. Asimismo, se fortalece la trazabilidad de los servicios mediante el registro estructurado de evidencias, incidencias y estados operativos.
+
+A continuación, se presentan los To-Be Scenario Mapping correspondientes a cada segmento de usuario.
+
+#### Segmento 1: Gestión de Operaciones Logísticas
+![To-Be Scenario Mapping - Gestor](assets/tb1/tobesegmento1.png)
+
+#### Segmento 2: Conductores de Transporte
+![To-Be Scenario Mapping - Conductor](assets/tb1/tobesegmento2.png)
+### 3.2. User Stories
+En esta sección se presentan los Epics y User Stories del proyecto, definidos a partir de las necesidades identificadas en los segmentos de gestión de operaciones logísticas y conductores de unidades de carga. Las historias cubren tanto las funcionalidades principales del producto digital como las necesidades del sitio web estático y los componentes técnicos requeridos para soportar la solución.  
+
+La estructura considera historias orientadas a la planificación y seguimiento de servicios, captura y validación de evidencias, gestión de incidencias, generación de reportes y exposición de servicios mediante API, con el propósito de asegurar trazabilidad, confiabilidad de la información y una experiencia de uso adecuada para contextos operativos reales.
+
+| Epic/Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+|---------------|--------|-------------|-------------------------|---------------------------|
+| EP01 | Gestión operativa de servicios | Centraliza la planificación, consulta y seguimiento de servicios logísticos para gestores y conductores. | No aplica. | — |
+| EP02 | Captura y validación inteligente | Automatiza el registro y validación de información operativa a partir de evidencia visual y datos contextuales. | No aplica. | — |
+| EP03 | Incidencias y trazabilidad | Permite registrar eventos operativos, anomalías y evidencias para mejorar la auditoría y resolución de conflictos. | No aplica. | — |
+| EP04 | Reportes y control operativo | Proporciona reportes, alertas e indicadores basados en datos validados para la toma de decisiones. | No aplica. | — |
+| EP-LP | Sitio web estático | Presenta la propuesta de valor, beneficios, segmentos y mecanismos de contacto del producto. | No aplica. | — |
+| EP-API | API RESTful e integración | Expone servicios interoperables para aplicaciones web, móvil e integraciones externas. | No aplica. | — |
+| EP06 | Operación offline y sincronización | Asegura continuidad operativa en campo con conectividad limitada y sincronización posterior. | No aplica. | — |
+| US-01 | Consultar servicios programados | Como gestor, deseo consultar los servicios logísticos programados para supervisar la operación diaria. | **Escenario 01: consulta de servicios**<br>Dado que el gestor accede a la información operativa<br>Cuando consulta los servicios de un periodo determinado<br>Entonces el sistema muestra la lista de servicios con unidad, conductor, ruta y estado.<br><br>**Escenario 02: filtrado por estado**<br>Dado que existen servicios en distintos estados<br>Cuando el gestor aplica un filtro por estado<br>Entonces el sistema presenta solo los servicios que cumplen la condición. | EP01 |
+| US-02 | Asignar conductor y unidad a servicio | Como gestor, deseo asignar un conductor y una unidad a un servicio para organizar su ejecución. | **Escenario 01: asignación válida**<br>Dado que existe un servicio pendiente y recursos disponibles<br>Cuando el gestor registra la asignación<br>Entonces el sistema guarda la relación entre servicio, conductor y unidad.<br><br>**Escenario 02: recurso no disponible**<br>Dado que la unidad o el conductor ya están comprometidos en otro servicio superpuesto<br>Cuando el gestor intenta asignarlos<br>Entonces el sistema rechaza la operación e informa la inconsistencia. | EP01 |
+| US-03 | Consultar servicios asignados del día | Como conductor, deseo consultar mis servicios asignados del día para planificar mi jornada. | **Escenario 01: consulta diaria**<br>Dado que el conductor tiene servicios asignados<br>Cuando accede a su información operativa<br>Entonces el sistema muestra los servicios del día con destino, horario y estado.<br><br>**Escenario 02: ausencia de asignaciones**<br>Dado que el conductor no tiene servicios asignados<br>Cuando consulta su jornada<br>Entonces el sistema informa que no existen servicios registrados para el periodo. | EP01 |
+| US-04 | Registrar inicio de servicio | Como conductor, deseo registrar el inicio de un servicio para dejar constancia del momento de salida. | **Escenario 01: inicio válido**<br>Dado que el conductor tiene un servicio asignado en estado pendiente<br>Cuando registra el inicio del servicio<br>Entonces el sistema cambia el estado a en proceso y almacena la fecha y hora del registro.<br><br>**Escenario 02: servicio no asignado**<br>Dado que el conductor intenta iniciar un servicio no asignado a su perfil<br>Cuando procesa la acción<br>Entonces el sistema rechaza el registro. | EP01 |
+| US-05 | Consultar historial de servicios | Como gestor, deseo consultar el historial de servicios ejecutados para revisar el desempeño operativo. | **Escenario 01: consulta histórica**<br>Dado que existen servicios registrados en el historial<br>Cuando el gestor consulta un rango de fechas<br>Entonces el sistema muestra los servicios con su resultado, evidencias y observaciones.<br><br>**Escenario 02: sin resultados**<br>Dado que no existen servicios en el rango solicitado<br>Cuando el gestor realiza la consulta<br>Entonces el sistema informa que no se encontraron registros. | EP01 |
+| US-06 | Capturar evidencia de odómetro | Como conductor, deseo capturar una imagen del odómetro para registrar el kilometraje sin ingresarlo manualmente. | **Escenario 01: captura válida**<br>Dado que el conductor se encuentra en un punto de control del servicio<br>Cuando registra una fotografía del odómetro<br>Entonces el sistema almacena la evidencia y la asocia al servicio correspondiente.<br><br>**Escenario 02: evidencia no disponible**<br>Dado que no se adjunta una imagen válida<br>Cuando el conductor intenta continuar el proceso<br>Entonces el sistema informa que la evidencia requerida no ha sido registrada. | EP02 |
+| US-07 | Extraer kilometraje automáticamente | Como gestor, deseo que el sistema extraiga automáticamente el kilometraje desde la evidencia visual para reducir errores humanos. | **Escenario 01: extracción exitosa**<br>Dado que existe una imagen legible del odómetro<br>Cuando el sistema procesa la evidencia<br>Entonces el sistema obtiene el valor de kilometraje y lo registra como dato validado.<br><br>**Escenario 02: extracción fallida**<br>Dado que la imagen no cumple condiciones mínimas de lectura<br>Cuando el sistema intenta procesarla<br>Entonces el sistema marca la evidencia como no validada y solicita una nueva captura o revisión. | EP02 |
+| US-08 | Validar evidencia de entrega | Como gestor, deseo que el sistema valide automáticamente la evidencia de entrega para contar con respaldo verificable del servicio. | **Escenario 01: validación exitosa**<br>Dado que el conductor registra evidencia de una entrega<br>Cuando el sistema analiza la evidencia y el contexto del servicio<br>Entonces el sistema marca la entrega como validada.<br><br>**Escenario 02: inconsistencia detectada**<br>Dado que la evidencia registrada no coincide con el contexto del servicio<br>Cuando el sistema procesa la evidencia<br>Entonces el sistema marca la entrega como observada y genera una alerta de revisión. | EP02 |
+| US-09 | Validar comprobante de combustible | Como gestor, deseo validar automáticamente comprobantes de combustible para detectar inconsistencias operativas. | **Escenario 01: comprobante coherente**<br>Dado que existe un comprobante asociado a un servicio activo<br>Cuando el sistema procesa la evidencia y contrasta fecha, unidad y contexto operativo<br>Entonces el sistema registra el comprobante como consistente.<br><br>**Escenario 02: comprobante inconsistente**<br>Dado que la evidencia presenta datos incompatibles con el servicio<br>Cuando el sistema ejecuta la validación<br>Entonces el sistema genera una observación y conserva trazabilidad del caso. | EP02 |
+| US-10 | Registrar captura guiada de evidencia | Como conductor, deseo recibir validaciones básicas al momento de capturar una evidencia para evitar registros inválidos. | **Escenario 01: captura aceptada**<br>Dado que el conductor registra una imagen utilizable<br>Cuando el sistema revisa criterios mínimos de calidad<br>Entonces el sistema confirma el registro de la evidencia.<br><br>**Escenario 02: captura observada**<br>Dado que la imagen presenta problemas de calidad<br>Cuando el sistema verifica la evidencia<br>Entonces el sistema informa que la captura requiere repetición. | EP02 |
+| US-11 | Registrar datos manuales de contingencia | Como conductor, deseo registrar datos manuales como contingencia cuando una evidencia no puede ser validada automáticamente para no detener la operación. | **Escenario 01: contingencia permitida**<br>Dado que el sistema no logra validar una evidencia<br>Cuando el conductor registra el dato manual con justificación<br>Entonces el sistema guarda la información con estado pendiente de revisión.<br><br>**Escenario 02: contingencia sin justificación**<br>Dado que el conductor omite la justificación requerida<br>Cuando intenta registrar el dato manual<br>Entonces el sistema rechaza el registro. | EP02 |
+| US-12 | Detectar anomalías operativas | Como gestor, deseo que el sistema detecte anomalías en kilometraje, combustible o evidencias para intervenir oportunamente. | **Escenario 01: anomalía detectada**<br>Dado que existe una discrepancia significativa entre los datos operativos y el contexto del servicio<br>Cuando el sistema ejecuta la validación automática<br>Entonces el sistema genera una alerta de anomalía con trazabilidad del caso.<br><br>**Escenario 02: operación consistente**<br>Dado que los datos registrados son coherentes<br>Cuando el sistema finaliza la validación<br>Entonces el sistema no genera alertas. | EP02 |
+| US-13 | Reportar incidencia operativa | Como conductor, deseo reportar incidencias durante un servicio para dejar constancia de eventos que afectan la operación. | **Escenario 01: registro exitoso**<br>Dado que ocurre un evento durante la ejecución del servicio<br>Cuando el conductor registra la incidencia con categoría y evidencia opcional<br>Entonces el sistema guarda la incidencia y la asocia al servicio.<br><br>**Escenario 02: datos incompletos**<br>Dado que falta la información mínima del incidente<br>Cuando el conductor intenta registrar la incidencia<br>Entonces el sistema rechaza la operación. | EP03 |
+| US-14 | Registrar paradas no planificadas | Como conductor, deseo registrar paradas no planificadas para respaldar retrasos o desvíos ocurridos en ruta. | **Escenario 01: parada registrada**<br>Dado que el conductor se ve obligado a detener el recorrido<br>Cuando registra la parada con motivo<br>Entonces el sistema guarda la hora, ubicación disponible y justificación.<br><br>**Escenario 02: sincronización posterior**<br>Dado que la conectividad es limitada al momento del registro<br>Cuando la conexión se restablece<br>Entonces el sistema sincroniza la parada pendiente sin perder trazabilidad. | EP03 |
+| US-15 | Consultar incidencias y observaciones | Como gestor, deseo consultar incidencias y observaciones operativas para priorizar acciones correctivas. | **Escenario 01: consulta de incidencias**<br>Dado que existen incidencias y observaciones registradas<br>Cuando el gestor accede al módulo correspondiente<br>Entonces el sistema muestra los casos con estado, severidad y servicio relacionado.<br><br>**Escenario 02: filtrado por prioridad**<br>Dado que existen múltiples casos abiertos<br>Cuando el gestor filtra por severidad o estado<br>Entonces el sistema presenta solo los registros que cumplen el filtro. | EP03 |
+| US-16 | Resolver incidencia con trazabilidad | Como gestor, deseo registrar la resolución de una incidencia para mantener un historial auditable del caso. | **Escenario 01: cierre de incidencia**<br>Dado que una incidencia cuenta con análisis y acción correctiva<br>Cuando el gestor registra su resolución<br>Entonces el sistema cambia el estado a resuelta y almacena la evidencia de cierre.<br><br>**Escenario 02: cierre inválido**<br>Dado que la incidencia no contiene información mínima de resolución<br>Cuando el gestor intenta cerrarla<br>Entonces el sistema rechaza la operación. | EP03 |
+| US-17 | Consultar trazabilidad completa del servicio | Como gestor, deseo consultar la trazabilidad completa de un servicio para auditar su ejecución con evidencias y eventos. | **Escenario 01: trazabilidad disponible**<br>Dado que un servicio tiene eventos registrados<br>Cuando el gestor consulta el detalle del servicio<br>Entonces el sistema muestra cronológicamente asignación, inicio, evidencias, incidencias, validaciones y cierre.<br><br>**Escenario 02: servicio con información parcial**<br>Dado que existen registros incompletos o pendientes<br>Cuando se consulta la trazabilidad<br>Entonces el sistema identifica los elementos faltantes o pendientes de revisión. | EP03 |
+| US-18 | Visualizar alertas operativas | Como gestor, deseo visualizar alertas operativas para actuar rápidamente ante riesgos o inconsistencias. | **Escenario 01: alertas activas**<br>Dado que existen anomalías o incidencias relevantes<br>Cuando el gestor consulta el panel operativo<br>Entonces el sistema muestra las alertas activas priorizadas por severidad.<br><br>**Escenario 02: sin alertas**<br>Dado que no existen alertas activas<br>Cuando el gestor consulta el panel<br>Entonces el sistema informa el estado normal de la operación. | EP04 |
+| US-19 | Consultar indicadores de confiabilidad | Como gestor, deseo consultar indicadores de confiabilidad de datos para evaluar la calidad del registro operativo. | **Escenario 01: indicadores disponibles**<br>Dado que existen servicios procesados en un periodo<br>Cuando el gestor consulta los indicadores<br>Entonces el sistema muestra métricas de validación, observaciones y registros en contingencia.<br><br>**Escenario 02: filtro temporal**<br>Dado que el gestor define un rango de fechas<br>Cuando se procesa la consulta<br>Entonces el sistema recalcula los indicadores para el periodo solicitado. | EP04 |
+| US-20 | Generar reporte de servicios validados | Como gestor, deseo generar reportes de servicios validados para sustentar decisiones y auditorías internas. | **Escenario 01: generación de reporte**<br>Dado que existen datos validados en un periodo determinado<br>Cuando el gestor solicita un reporte<br>Entonces el sistema genera el consolidado correspondiente.<br><br>**Escenario 02: ausencia de datos**<br>Dado que no existen registros en el periodo solicitado<br>Cuando el gestor genera el reporte<br>Entonces el sistema informa que no hay información disponible. | EP04 |
+| US-21 | Comparar desempeño por unidad y conductor | Como gestor, deseo comparar el desempeño por unidad y conductor para identificar patrones operativos y oportunidades de mejora. | **Escenario 01: comparación disponible**<br>Dado que existen registros suficientes de operación<br>Cuando el gestor consulta la comparación por periodo<br>Entonces el sistema muestra métricas comparativas entre unidades y conductores.<br><br>**Escenario 02: datos insuficientes**<br>Dado que no existen registros suficientes para la comparación<br>Cuando se solicita el análisis<br>Entonces el sistema informa la insuficiencia de datos. | EP04 |
+| US-22 | Consultar propuesta de valor del producto | Como visitante, deseo conocer la propuesta de valor del producto para evaluar si se adapta a mi operación logística. | **Escenario 01: acceso a contenido principal**<br>Dado que el visitante accede al sitio web<br>Cuando consulta la información del producto<br>Entonces el sistema presenta el problema que resuelve, beneficios y diferenciadores de la solución.<br><br>**Escenario 02: navegación por secciones**<br>Dado que el visitante desea mayor detalle<br>Cuando accede a secciones informativas del sitio<br>Entonces el sistema presenta contenido coherente para cada segmento objetivo. | EP-LP |
+| US-23 | Consultar funcionalidades clave | Como visitante del segmento logístico, deseo consultar las funcionalidades clave del producto para comprender cómo mejora la trazabilidad y validación operativa. | **Escenario 01: consulta de funcionalidades**<br>Dado que el visitante accede a la sección de funcionalidades<br>Cuando revisa la información disponible<br>Entonces el sistema presenta capacidades como captura visual, validación automática, operación offline y reportes.<br><br>**Escenario 02: contenido segmentado**<br>Dado que el visitante pertenece a un segmento específico<br>Cuando consulta casos de uso o beneficios<br>Entonces el sistema presenta contenido alineado a su contexto. | EP-LP |
+| US-24 | Solicitar demostración comercial | Como visitante, deseo solicitar una demostración para conocer la solución aplicada a mi operación. | **Escenario 01: solicitud exitosa**<br>Dado que el visitante registra datos válidos de contacto<br>Cuando envía la solicitud de demostración<br>Entonces el sistema confirma la recepción de la solicitud.<br><br>**Escenario 02: datos inválidos**<br>Dado que faltan datos obligatorios en la solicitud<br>Cuando el sistema procesa el formulario<br>Entonces el sistema informa los errores detectados. | EP-LP |
+| US-25 | Consultar evidencia de resultados y casos de uso | Como visitante, deseo consultar casos de uso y resultados esperados para confiar en la propuesta de la solución. | **Escenario 01: revisión de casos de uso**<br>Dado que el visitante accede a la sección correspondiente<br>Cuando consulta la información disponible<br>Entonces el sistema presenta escenarios de uso, beneficios y resultados esperados.<br><br>**Escenario 02: navegación temática**<br>Dado que el visitante busca un problema específico<br>Cuando explora el contenido del sitio<br>Entonces el sistema presenta información agrupada por necesidad o segmento. | EP-LP |
+| US-26 | Contactar al equipo comercial | Como visitante, deseo contactar al equipo comercial para resolver dudas sobre adopción, integración o precios. | **Escenario 01: envío exitoso**<br>Dado que el visitante completa la información requerida<br>Cuando envía su consulta<br>Entonces el sistema registra el mensaje y confirma su recepción.<br><br>**Escenario 02: validación de campos**<br>Dado que el visitante omite información obligatoria<br>Cuando intenta enviar la consulta<br>Entonces el sistema informa los campos pendientes. | EP-LP |
+| TS-01 | Autenticación y autorización API | Como Developer, deseo implementar autenticación y autorización seguras para proteger el acceso a los servicios de la plataforma. | **Escenario 01: autenticación válida**<br>Dado que se envían credenciales válidas a la API<br>Cuando el servicio procesa la solicitud<br>Entonces el sistema retorna un token de acceso y el estado correspondiente de éxito.<br><br>**Escenario 02: autenticación fallida**<br>Dado que las credenciales son inválidas<br>Cuando la API procesa la solicitud<br>Entonces el sistema retorna un error de autenticación.<br><br>**Escenario 03: acceso no autorizado**<br>Dado que el token no posee permisos suficientes para el recurso solicitado<br>Cuando se intenta acceder al endpoint<br>Entonces el sistema retorna una respuesta de acceso denegado. | EP-API |
+| TS-02 | Gestión de servicios vía API | Como Developer, deseo consumir endpoints para registrar, consultar y actualizar servicios logísticos desde aplicaciones externas. | **Escenario 01: consulta de servicios**<br>Dado que existe una solicitud autorizada<br>Cuando se consulta el endpoint de servicios<br>Entonces la API retorna la información solicitada.<br><br>**Escenario 02: creación de servicio**<br>Dado que se envían datos válidos del servicio<br>Cuando la API procesa la solicitud<br>Entonces el sistema registra el servicio y retorna el identificador creado.<br><br>**Escenario 03: datos inválidos**<br>Dado que la solicitud contiene datos inconsistentes<br>Cuando la API valida la entrada<br>Entonces el sistema retorna una respuesta de error. | EP-API |
+| TS-03 | Captura y validación de evidencias vía API | Como Developer, deseo consumir endpoints para cargar evidencias y consultar su estado de validación desde aplicaciones cliente. | **Escenario 01: carga exitosa de evidencia**<br>Dado que se envía una evidencia válida con metadatos requeridos<br>Cuando la API procesa la solicitud<br>Entonces el sistema almacena la evidencia y retorna su estado inicial.<br><br>**Escenario 02: consulta de validación**<br>Dado que la evidencia ya fue procesada<br>Cuando se consulta su estado<br>Entonces la API retorna el resultado de validación correspondiente.<br><br>**Escenario 03: evidencia inválida**<br>Dado que el archivo o metadato incumple las reglas del servicio<br>Cuando la API procesa la solicitud<br>Entonces el sistema retorna un error de validación. | EP-API |
+| TS-04 | Gestión de incidencias y alertas vía API | Como Developer, deseo consumir endpoints para registrar incidencias y consultar alertas operativas integradas. | **Escenario 01: registro de incidencia**<br>Dado que se envían datos válidos de una incidencia<br>Cuando la API procesa la solicitud<br>Entonces el sistema registra el caso y retorna su identificador.<br><br>**Escenario 02: consulta de alertas**<br>Dado que existen alertas generadas por la operación<br>Cuando se consulta el endpoint correspondiente<br>Entonces la API retorna las alertas con su severidad y estado.<br><br>**Escenario 03: cierre de incidencia**<br>Dado que una incidencia contiene la información mínima de resolución<br>Cuando se envía la actualización<br>Entonces la API cambia el estado del caso a resuelto. | EP-API |
+| TS-05 | Reportes e indicadores vía API | Como Developer, deseo consumir endpoints de indicadores y reportes para integrarlos con dashboards y servicios externos. | **Escenario 01: consulta de indicadores**<br>Dado que se envía una solicitud autorizada con filtros válidos<br>Cuando la API procesa la consulta<br>Entonces el sistema retorna métricas agregadas del periodo solicitado.<br><br>**Escenario 02: generación de reporte**<br>Dado que existen datos para el periodo requerido<br>Cuando se solicita un reporte<br>Entonces la API retorna el recurso generado o su referencia de descarga.<br><br>**Escenario 03: parámetros inválidos**<br>Dado que la solicitud contiene filtros inconsistentes<br>Cuando la API valida los parámetros<br>Entonces el sistema retorna un error. | EP-API |
+| US-27 | Registrar evidencias sin conexión | Como conductor, deseo registrar evidencias y eventos sin conexión para continuar mi trabajo en zonas con cobertura limitada. | **Escenario 01: registro offline**<br>Dado que el dispositivo no cuenta con conectividad<br>Cuando el conductor registra una evidencia o evento<br>Entonces el sistema almacena la información localmente con estado pendiente de sincronización.<br><br>**Escenario 02: consulta de pendientes**<br>Dado que existen registros almacenados localmente<br>Cuando el conductor revisa el estado de sus registros<br>Entonces el sistema identifica cuáles permanecen pendientes de sincronizar. | EP06 |
+| US-28 | Sincronizar registros pendientes | Como conductor, deseo sincronizar automáticamente mis registros pendientes cuando la conectividad se restablece para conservar la continuidad operativa. | **Escenario 01: sincronización exitosa**<br>Dado que existen registros pendientes y la conectividad se restablece<br>Cuando el sistema ejecuta la sincronización<br>Entonces el sistema envía los datos pendientes y actualiza su estado a sincronizado.<br><br>**Escenario 02: conflicto de sincronización**<br>Dado que ocurre un error durante el envío de un registro pendiente<br>Cuando el sistema procesa la sincronización<br>Entonces el sistema conserva el registro, informa el estado fallido y permite reintento. | EP06 |
+| US-29 | Consultar estado de validación y sincronización | Como conductor, deseo consultar el estado de mis registros para saber si fueron guardados, sincronizados o observados. | **Escenario 01: estado visible del registro**<br>Dado que el conductor ha realizado registros durante el servicio<br>Cuando consulta el detalle de sus evidencias y eventos<br>Entonces el sistema muestra el estado de cada registro.<br><br>**Escenario 02: registro observado**<br>Dado que un registro fue marcado con observación o error<br>Cuando el conductor revisa su estado<br>Entonces el sistema identifica el motivo y mantiene la trazabilidad correspondiente. | EP06 |
+
+### 3.3. Impact Mapping
+En esta sección se presenta el Impact Mapping del sistema, el cual permite establecer la relación entre los objetivos de negocio, los actores involucrados, los cambios de comportamiento esperados y las funcionalidades necesarias para alcanzarlos.
+
+El proceso de elaboración se basó en los User Personas previamente definidos, identificando cómo cada uno contribuye al logro de los objetivos del negocio. A partir de ello, se definieron los impactos deseados en su comportamiento, los entregables que permiten generar dichos impactos y las User Stories que materializan estas funcionalidades.
+
+El Impact Mapping permite alinear el desarrollo del producto con los objetivos estratégicos, asegurando que cada funcionalidad aporte valor real al negocio y responda a las necesidades identificadas en el análisis previo.
+
+#### Segmento 1: Gestión de Operaciones Logísticas
+![To-Be Scenario Mapping - Gestor](assets/tb1/impactmap1.png)
+
+#### Segmento 2: Conductores de Transporte
+![To-Be Scenario Mapping - Conductor](assets/tb1/impactmap2.png)
+
+### 3.4. Product Backlog
+En esta sección se presenta el Product Backlog priorizado del proyecto. El orden de las historias responde al valor que aportan al negocio y al producto, priorizando primero aquellas que permiten comunicar la propuesta de valor, captar interés comercial y validar tempranamente el núcleo funcional de la solución.  
+
+Asimismo, el backlog incorpora historias orientadas a la operación en campo, validación automática, trazabilidad y análisis operativo, junto con las historias técnicas necesarias para soportar la interoperabilidad y el funcionamiento integral de la plataforma.
+
+| # Orden | User Story ID | Título | Descripción | Story Points (1/2/3/5/8) |
+|---------|---------------|--------|-------------|--------------------------|
+| 1 | US-22 | Consultar propuesta de valor del producto | Como visitante, deseo conocer la propuesta de valor del producto para evaluar si se adapta a mi operación logística. | 3 |
+| 2 | US-24 | Solicitar demostración comercial | Como visitante, deseo solicitar una demostración para conocer la solución aplicada a mi operación. | 5 |
+| 3 | US-23 | Consultar funcionalidades clave | Como visitante del segmento logístico, deseo consultar las funcionalidades clave del producto para comprender cómo mejora la trazabilidad y validación operativa. | 3 |
+| 4 | US-26 | Contactar al equipo comercial | Como visitante, deseo contactar al equipo comercial para resolver dudas sobre adopción, integración o precios. | 2 |
+| 5 | US-25 | Consultar evidencia de resultados y casos de uso | Como visitante, deseo consultar casos de uso y resultados esperados para confiar en la propuesta de la solución. | 3 |
+| 6 | US-03 | Consultar servicios asignados del día | Como conductor, deseo consultar mis servicios asignados del día para planificar mi jornada. | 5 |
+| 7 | US-04 | Registrar inicio de servicio | Como conductor, deseo registrar el inicio de un servicio para dejar constancia del momento de salida. | 3 |
+| 8 | US-06 | Capturar evidencia de odómetro | Como conductor, deseo capturar una imagen del odómetro para registrar el kilometraje sin ingresarlo manualmente. | 5 |
+| 9 | US-10 | Registrar captura guiada de evidencia | Como conductor, deseo recibir validaciones básicas al momento de capturar una evidencia para evitar registros inválidos. | 3 |
+| 10 | US-27 | Registrar evidencias sin conexión | Como conductor, deseo registrar evidencias y eventos sin conexión para continuar mi trabajo en zonas con cobertura limitada. | 8 |
+| 11 | US-28 | Sincronizar registros pendientes | Como conductor, deseo sincronizar automáticamente mis registros pendientes cuando la conectividad se restablece para conservar la continuidad operativa. | 5 |
+| 12 | US-29 | Consultar estado de validación y sincronización | Como conductor, deseo consultar el estado de mis registros para saber si fueron guardados, sincronizados o observados. | 3 |
+| 13 | US-11 | Registrar datos manuales de contingencia | Como conductor, deseo registrar datos manuales como contingencia cuando una evidencia no puede ser validada automáticamente para no detener la operación. | 3 |
+| 14 | US-13 | Reportar incidencia operativa | Como conductor, deseo reportar incidencias durante un servicio para dejar constancia de eventos que afectan la operación. | 3 |
+| 15 | US-14 | Registrar paradas no planificadas | Como conductor, deseo registrar paradas no planificadas para respaldar retrasos o desvíos ocurridos en ruta. | 5 |
+| 16 | US-01 | Consultar servicios programados | Como gestor, deseo consultar los servicios logísticos programados para supervisar la operación diaria. | 5 |
+| 17 | US-02 | Asignar conductor y unidad a servicio | Como gestor, deseo asignar un conductor y una unidad a un servicio para organizar su ejecución. | 5 |
+| 18 | US-07 | Extraer kilometraje automáticamente | Como gestor, deseo que el sistema extraiga automáticamente el kilometraje desde la evidencia visual para reducir errores humanos. | 8 |
+| 19 | US-08 | Validar evidencia de entrega | Como gestor, deseo que el sistema valide automáticamente la evidencia de entrega para contar con respaldo verificable del servicio. | 8 |
+| 20 | US-09 | Validar comprobante de combustible | Como gestor, deseo validar automáticamente comprobantes de combustible para detectar inconsistencias operativas. | 8 |
+| 21 | US-12 | Detectar anomalías operativas | Como gestor, deseo que el sistema detecte anomalías en kilometraje, combustible o evidencias para intervenir oportunamente. | 8 |
+| 22 | US-15 | Consultar incidencias y observaciones | Como gestor, deseo consultar incidencias y observaciones operativas para priorizar acciones correctivas. | 5 |
+| 23 | US-17 | Consultar trazabilidad completa del servicio | Como gestor, deseo consultar la trazabilidad completa de un servicio para auditar su ejecución con evidencias y eventos. | 8 |
+| 24 | US-18 | Visualizar alertas operativas | Como gestor, deseo visualizar alertas operativas para actuar rápidamente ante riesgos o inconsistencias. | 5 |
+| 25 | US-16 | Resolver incidencia con trazabilidad | Como gestor, deseo registrar la resolución de una incidencia para mantener un historial auditable del caso. | 3 |
+| 26 | US-19 | Consultar indicadores de confiabilidad | Como gestor, deseo consultar indicadores de confiabilidad de datos para evaluar la calidad del registro operativo. | 5 |
+| 27 | US-20 | Generar reporte de servicios validados | Como gestor, deseo generar reportes de servicios validados para sustentar decisiones y auditorías internas. | 5 |
+| 28 | US-21 | Comparar desempeño por unidad y conductor | Como gestor, deseo comparar el desempeño por unidad y conductor para identificar patrones operativos y oportunidades de mejora. | 5 |
+| 29 | US-05 | Consultar historial de servicios | Como gestor, deseo consultar el historial de servicios ejecutados para revisar el desempeño operativo. | 3 |
+| 30 | TS-02 | Gestión de servicios vía API | Como Developer, deseo consumir endpoints para registrar, consultar y actualizar servicios logísticos desde aplicaciones externas. | 5 |
+| 31 | TS-03 | Captura y validación de evidencias vía API | Como Developer, deseo consumir endpoints para cargar evidencias y consultar su estado de validación desde aplicaciones cliente. | 8 |
+| 32 | TS-04 | Gestión de incidencias y alertas vía API | Como Developer, deseo consumir endpoints para registrar incidencias y consultar alertas operativas integradas. | 5 |
+| 33 | TS-05 | Reportes e indicadores vía API | Como Developer, deseo consumir endpoints de indicadores y reportes para integrarlos con dashboards y servicios externos. | 5 |
+| 34 | TS-01 | Autenticación y autorización API | Como Developer, deseo implementar autenticación y autorización seguras para proteger el acceso a los servicios de la plataforma. | 5 |
+
+A continuación, se presenta el enlace al tablero de Trello donde se puede visualizar el Product Backlog de manera interactiva:
+
+[Product Backlog en Trello](https://trello.com/invite/b/65483fffcafdad61c4da7629/ATTI3fc72917563f03e2b9eb1a1fd770af39A7368F5C/cobox)
+
 
 ## Capítulo IV: Strategic-Level Software Design
 
 ### 4.1. Strategic-Level Attribute-Driven Design
 #### 4.1.1. Design Purpose
+El objetivo supremo del diseño arquitectónico de **CoBox** es definir un entramado técnico descentralizado y resiliente que traduzca las exigencias del ecosistema logístico en componentes de software escalables. Este enfoque integra paradigmas emergentes con las severas limitaciones del trabajo de campo, tales como conectividad intermitente, restricciones de hardware y condiciones operativas adversas.
+
+Para asegurar que la arquitectura soporte la eficiencia, seguridad y operatividad ininterrumpida, el propósito de diseño se estructura bajo los siguientes lineamientos fundamentales:
+
+**1. Operatividad Descentralizada mediante Inteligencia en el Borde (Edge AI)**
 
 El objetivo supremo del diseño arquitectónico de CoBox es definir un entramado técnico descentralizado y resiliente que traduzca las exigencias del ecosistema logístico en componentes de software escalables, amalgamando paradigmas emergentes con las severas limitaciones del trabajo de campo.Para asegurar que esta arquitectura soporte la eficiencia, seguridad y operatividad ininterrumpida, el Design Purpose (Propósito de Diseño) se estructura bajo los siguientes lineamientos fundamentales:.<br>.<br>
 **1. Operatividad Descentralizada mediante Inteligencia en el Borde (Edge AI)** Transformar la captura de datos en un proceso autónomo que no dependa de la conectividad constante a internet, resolviendo así las restricciones de las zonas rurales y las limitaciones del hardware móvil (Restricciones C-1, C-7 y C-9)
