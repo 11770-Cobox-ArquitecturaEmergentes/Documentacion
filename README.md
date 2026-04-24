@@ -1141,7 +1141,7 @@ El objetivo supremo del diseño arquitectónico de CoBox es definir un entramado
 #### 4.1.2. Attribute-Driven Design Inputs
 #### 4.1.2.1. Primary Functionality (Primary User Stories)
 
-### 1. Inteligencia en el Borde (Edge AI) para la Extracción Automática Al analizar las historias US-07 (Extraer kilometraje automáticamente)
+##### 1. Inteligencia en el Borde (Edge AI) para la Extracción Automática Al analizar las historias US-07 (Extraer kilometraje automáticamente)
  y US-08 (Validar evidencia de entrega)
 , el diseño descarta el procesamiento en la nube tradicional. Para evitar que la aplicación dependa de la red y colapse en zonas rurales, apliqué Inteligencia en el Borde. Esto significa que el procesamiento de visión artificial (OCR) se ejecuta localmente en el hardware del dispositivo móvil del transportista mediante Modelos de Lenguaje Pequeños (SLMs), permitiendo validar el kilometraje y las guías de remisión en milisegundos y con cero consumo de datos
 .
