@@ -1124,43 +1124,82 @@ Para asegurar que la arquitectura soporte la eficiencia, seguridad y operativida
 
 **1. Operatividad Descentralizada mediante Inteligencia en el Borde (Edge AI)**
 
-Se plantea transformar la captura de datos en un proceso autónomo que no dependa de la conectividad constante a internet. Este enfoque responde directamente a las limitaciones propias de zonas rurales y dispositivos móviles con recursos restringidos.
+El objetivo supremo del diseño arquitectónico de CoBox es definir un entramado técnico descentralizado y resiliente que traduzca las exigencias del ecosistema logístico en componentes de software escalables, amalgamando paradigmas emergentes con las severas limitaciones del trabajo de campo.Para asegurar que esta arquitectura soporte la eficiencia, seguridad y operatividad ininterrumpida, el Design Purpose (Propósito de Diseño) se estructura bajo los siguientes lineamientos fundamentales:.<br>.<br>
+**1. Operatividad Descentralizada mediante Inteligencia en el Borde (Edge AI)** Transformar la captura de datos en un proceso autónomo que no dependa de la conectividad constante a internet, resolviendo así las restricciones de las zonas rurales y las limitaciones del hardware móvil (Restricciones C-1, C-7 y C-9)
+. El diseño estipula la migración del cómputo analítico directamente a los smartphones mediante Modelos de Lenguaje Pequeños (SLMs) y Modelos de Visión-Lenguaje Multimodales (como NaViT)
+. Esto permite ejecutar tareas complejas —como la extracción óptica (OCR) de odómetros y validación de guías físicas— de manera estrictamente local, garantizando tiempos de respuesta inferiores a los 50 milisegundos y optimizando el consumo energético durante la conducción.<br><br>
+**2. Prevención de Fraudes y Resiliencia Estructural con Multi-Nube y Blockchain** Satisfacer los drivers críticos de disponibilidad operativa y protección de información sensible. Para mitigar bloqueos de proveedores y latencias de red, la plataforma orquesta cargas de trabajo distribuidas simultáneamente entre Amazon Web Services (AWS) y Google Cloud Platform (GCP) apoyándose en enrutamiento simétrico
+. Paralelamente, para erradicar las discrepancias manuales y cumplir con las normativas legales de trazabilidad documental (Restricción C-5), la arquitectura entrelaza redes neuronales con tecnología Blockchain, creando libros mayores inmutables que certifican la autenticidad de cada entrega o carga de combustible mediante evidencias fotográficas blindadas criptográficamente.<br><br>
+.
+**3. Modelado de Dominio (DDD) y Aislamiento de Funcionalidades Asegurar la coherencia y evolución del código fuente aplicando el Diseño Guiado por el Dominio (DDD).** El ecosistema se segmenta lógicamente en contextos autónomos (Manejo de Flota, Entregas, Incidencias, Mantenimiento y Analítica), los cuales se materializan como microservicios hexagonales independientes
+. Para sortear los cuellos de botella de la comunicación síncrona, estos módulos interactúan a través de un bus de eventos (Kafka/RabbitMQ)
+. Asimismo, toda solicitud externa atraviesa un API Gateway centralizado que enruta el tráfico y aplica políticas de Control de Acceso Basado en Roles (RBAC), garantizando la privacidad de los datos según las leyes peruanas (Restricción C-8).<br><br>
+.
+**4. Validación Empírica Continua guiada por el Proceso ADD v3 Gobernar la evolución del sistema a través del método de Diseño Guiado por Atributos (ADD v3)**
+. Las decisiones arquitectónicas y los límites de cada microservicio se modelan de manera exhaustiva empleando vistas formales de C4 y diagramas UML
+. Para validar que estas decisiones cumplan con los escenarios de calidad exigidos (e.g., tolerancia a fallos, soporte para concurrencia masiva), el diseño impone una observabilidad integral mediante telemetría avanzada (Prometheus y Grafana), permitiendo adaptar la solución dinámicamente frente a las variaciones del entorno logístico sin interrumpir las operaciones en curso.<br><br>
+#### 4.1.2. Attribute-Driven Design Inputs
+##### 4.1.2.1. Primary Functionality (Primary User Stories)
 
-El diseño establece la migración del cómputo analítico hacia los smartphones mediante el uso de Modelos de Lenguaje Pequeños (SLMs) y modelos multimodales de visión-lenguaje como NaViT. Gracias a esta estrategia, tareas complejas como la extracción óptica de caracteres (OCR) de odómetros o la validación de guías físicas pueden ejecutarse de forma completamente local.
+### 1. Inteligencia en el Borde (Edge AI) para la Extracción Automática Al analizar las historias US-07 (Extraer kilometraje automáticamente)
+ y US-08 (Validar evidencia de entrega)
+, el diseño descarta el procesamiento en la nube tradicional. Para evitar que la aplicación dependa de la red y colapse en zonas rurales, apliqué Inteligencia en el Borde. Esto significa que el procesamiento de visión artificial (OCR) se ejecuta localmente en el hardware del dispositivo móvil del transportista mediante Modelos de Lenguaje Pequeños (SLMs), permitiendo validar el kilometraje y las guías de remisión en milisegundos y con cero consumo de datos
+.
+### 2. Arquitectura Orientada a Eventos (Offline-First) Las funcionalidades de US-27 (Registrar evidencias sin conexión)
+ y US-28 (Sincronizar registros pendientes)
+ exigían resolver la intermitencia de conectividad de la infraestructura de telecomunicaciones (Épica 06)
+. Para ello, apliqué un paradigma de persistencia local descentralizada con sincronización asíncrona. El teléfono móvil actúa como un nodo autónomo; cuando no hay señal, guarda los metadatos y, al detectar red, orquesta automáticamente la transmisión de los paquetes retenidos a través de colas de mensajes distribuidas (Event-Driven), garantizando cero pérdida de información
+.
+### 3. Blockchain para Trazabilidad y No Repudio La auditoría operativa es estricta, lo que se refleja en la historia US-17 (Consultar trazabilidad completa del servicio)
+. Para blindar cronológicamente eventos como asignación, inicio, validaciones e incidencias
+, apliqué la integración de bases de datos con libros mayores inmutables (Blockchain). Cada evidencia validada por la IA genera una firma criptográfica, haciendo que los registros sean a prueba de manipulaciones o fraudes, cumpliendo con las normativas legales de protección documental del sector transporte.
+### 4. Redes de Confianza Cero (Zero-Trust) y API Gateway Para el requisito TS-01 (Autenticación y autorización API)
+, que permite el acceso a sistemas de terceros, el diseño perimetral se fundamentó en una arquitectura API-First bajo el modelo de Zero-Trust. Esto implementa pasarelas de seguridad (API Gateways) que exigen la validación estricta de tokens de acceso e identidades para cualquier solicitud que intente interactuar con el backend de la plataforma, denegando el acceso de forma determinista ante permisos insuficientes
+.
+De esta forma, la selección de funcionalidades primarias (Primary User Stories) queda fusionada orgánicamente con los patrones de Edge Computing, Blockchain y sistemas distribuidos, dándole a CoBox el rigor de una arquitectura moderna, resiliente y de alta disponibilidad.
 
-Como resultado, el sistema logra tiempos de respuesta inferiores a 50 milisegundos, reduce el consumo energético y mantiene operatividad incluso en ausencia de conexión a red.
+##### 4.1.2.2. Quality Attribute Scenarios
 
 
-**2. Prevención de Fraudes y Resiliencia con Multi-Nube y Blockchain**
+A continuación, se definen los escenarios de atributos de calidad (Quality Attribute Scenarios) priorizados para la plataforma **CoBox**, los cuales actuarán como drivers arquitectónicos clave para la toma de decisiones del sistema, alineando las necesidades operativas de la logística con capacidades de Edge AI.
 
-La arquitectura aborda de forma directa los requerimientos críticos de disponibilidad operativa y protección de la información. Para evitar la dependencia de un único proveedor (vendor lock-in) y reducir riesgos asociados a latencias o caídas, se adopta un enfoque multi-nube que distribuye cargas entre Amazon Web Services (AWS) y Google Cloud Platform (GCP).
 
-Adicionalmente, se incorpora tecnología Blockchain combinada con modelos de inteligencia artificial para garantizar la trazabilidad documental. Este enfoque permite construir registros inmutables que certifican la autenticidad de eventos logísticos, como entregas o cargas de combustible, mediante evidencias fotográficas protegidas criptográficamente.
 
-De esta manera, se eliminan discrepancias manuales, se reduce el fraude y se asegura el cumplimiento de normativas regulatorias.
 
-**3. Modelado de Dominio (DDD) y Aislamiento de Funcionalidades**
 
-Con el objetivo de asegurar la mantenibilidad y evolución del sistema, se adopta el enfoque de Diseño Guiado por el Dominio (Domain-Driven Design, DDD). El sistema se organiza en contextos delimitados que representan áreas clave del negocio, como manejo de flota, entregas, incidencias, mantenimiento y analítica.
+| ID    | Atributo                      | Fuente                   | Estímulo                                      | Artefacto                          | Entorno                                      | Respuesta                                                                 | Medida                                             |
+|-------|------------------------------|--------------------------|-----------------------------------------------|------------------------------------|----------------------------------------------|---------------------------------------------------------------------------|----------------------------------------------------|
+| QA-01 | Disponibilidad / Resiliencia | Usuario (Conductor)      | Registro de evidencias sin conectividad       | Módulo Offline y Sincronización    | Operación en campo sin red                   | Almacena datos localmente y sincroniza al recuperar conexión              | 100% sincronización sin pérdida de datos           |
+| QA-02 | Rendimiento (Performance)    | Gestor / Sistema         | Procesamiento de imagen (odómetro)            | Módulo Edge AI / OCR               | Ejecución en tiempo real en dispositivo      | Extrae kilometraje automáticamente y lo valida                            | Procesamiento < 2 segundos                         |
+| QA-03 | Seguridad / Integridad       | Developer / App Externa  | Acceso a servicios de trazabilidad            | API Gateway + Autenticación        | Consumo de APIs por terceros                 | Valida credenciales y retorna token o acceso denegado                     | 0 accesos no autorizados; latencia < 1 s           |
+| QA-04 | Interoperabilidad            | Sistema / Developer      | Solicitud externa de datos/logística          | API RESTful                        | Integración con sistemas externos (ERP)      | Procesa solicitudes en JSON y responde con datos o errores estructurados  | 100% solicitudes válidas atendidas                 |
+| QA-05 | Usabilidad                   | Usuario (Conductor)      | Captura de imagen de evidencia                | Interfaz móvil (captura guiada)    | Uso en campo con presión operativa           | Valida calidad de imagen y solicita repetición si es necesario             | 90% éxito en el primer intento                     |
+| QA-06 | Escalabilidad                | Múltiples Conductores    | Pico de envíos concurrentes                   | Backend asíncrono / clústeres      | Reconexiones masivas o cierre de turnos      | Procesa solicitudes concurrentes sin colapsar                             | Soporta hasta 3x usuarios sin latencia > 3 s       |
 
-Cada uno de estos contextos se implementa como un microservicio independiente bajo una arquitectura hexagonal, lo que permite aislar la lógica de negocio y reducir el acoplamiento entre componentes.
+ Descripción Detallada de Escenarios
 
-La comunicación entre servicios se realiza mediante un enfoque orientado a eventos utilizando herramientas como Kafka o RabbitMQ, evitando cuellos de botella asociados a llamadas síncronas. Asimismo, todas las solicitudes externas son gestionadas a través de un API Gateway que centraliza el enrutamiento y aplica políticas de control de acceso basadas en roles (RBAC), garantizando la seguridad y privacidad de los datos.
+ QA-01: Disponibilidad / Resiliencia
+El sistema garantiza operación offline, permitiendo capturar evidencias sin conexión. Los datos se almacenan localmente y se sincronizan automáticamente al restablecer conectividad, evitando pérdida de información.
 
- **4. Validación Continua mediante ADD v3 y Observabilidad**
+ QA-02: Rendimiento (Edge AI)
+El procesamiento de imágenes se ejecuta en el dispositivo (Edge AI), extrayendo automáticamente el kilometraje del odómetro en tiempo real, reduciendo latencia y errores humanos.
 
-La evolución de la arquitectura se gobierna mediante el proceso Attribute-Driven Design (ADD v3), el cual permite tomar decisiones estructuradas en función de atributos de calidad como rendimiento, disponibilidad y tolerancia a fallos.
+ QA-03: Seguridad / Integridad
+El API Gateway controla el acceso mediante autenticación estricta. Solo solicitudes con credenciales válidas reciben acceso, bloqueando cualquier intento no autorizado.
 
-Las decisiones arquitectónicas se documentan y validan mediante modelos formales, incluyendo diagramas C4 y UML, lo que facilita la comprensión y evolución del sistema.
+ QA-04: Interoperabilidad
+La API REST permite integración con sistemas externos (ERP, dashboards), procesando solicitudes en formato JSON y asegurando compatibilidad y manejo de errores.
 
-Para garantizar que la solución cumple con los escenarios de calidad definidos, se implementa una estrategia de observabilidad integral basada en herramientas como Prometheus y Grafana. Esto permite monitorear métricas en tiempo real, detectar anomalías y adaptar dinámicamente el comportamiento del sistema sin interrumpir la operación.
+ QA-05: Usabilidad
+La app guía al usuario en la captura de evidencias, validando la calidad de imágenes en tiempo real y reduciendo errores operativos.
 
-## 4.1.2. Attribute-Driven Design Inputs
-### 4.1.2.1. Primary Functionality (Primary User Stories)
+QA-06: Escalabilidad
+El sistema maneja picos de carga mediante procesamiento asíncrono, soportando múltiples usuarios concurrentes sin degradación significativa del rendimiento.
 
-### 4.1.2.2. Quality Attribute Scenarios
 
-## 4.1.2.3. Constraints
+
+
+##### 4.1.2.3. Constraints
 
 
 
@@ -1181,8 +1220,8 @@ A continuación, se presenta la reestructuración de las restricciones (constrai
 | **C-10** | **Despliegue Continuo (MLOps) y OTA** | Permite actualizaciones sin detener operaciones mediante despliegues OTA y pruebas A/B, asegurando evolución continua del sistema. |
 
 ---
-### 4.1.3. Architectural Drivers Backlog
 
+## 4.1.3 Architectural Drivers Backlog
 
 | Driver ID | Título | Descripción | Importancia | Architecture Technical Complexity |
 | :--- | :--- | :--- | :--- | :--- |
@@ -1194,7 +1233,37 @@ A continuación, se presenta la reestructuración de las restricciones (constrai
 | **DR-06** | **Observabilidad (Telemetría Distribuida y Analizabilidad)** | Atributo que permite el diagnóstico y monitoreo proactivo del estado interno de los microservicios en la topología multi-nube. Para garantizar la analizabilidad (ISO 25010), exige la inserción de agentes de telemetría (Prometheus, Grafana) para la recolección empírica de métricas de concurrencia, latencia y uso de recursos, facilitando la resolución de incidentes en tiempo real. | Alta | Media |
 | **DR-07** | **Escalabilidad (Elasticidad Computacional)** | Capacidad de la arquitectura para absorber incrementos abruptos de carga transaccional o expansión en el volumen de la flota sin degradar los tiempos de respuesta. Implica la contenerización de las cargas de trabajo e implementación de autoescalado basado en orquestación, asegurando la resiliencia en la asignación dinámica de recursos de cómputo (ISO 25010). | Alta | Alta |
 #### 4.1.4. Architectural Design Decisions
+| Driver ID | Título                                    | Decisión Arquitectónica                       | Pros                                                                                                                                                                | Contras                                                                                                                                                                   |
+| --------- | ----------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AD-01** | Procesamiento Offline / Baja conectividad | **Edge AI (Procesamiento en el dispositivo)** | - Latencia mínima (milisegundos).<br>- No depende de conexión a internet.<br>- Reduce carga del backend.<br>- Alta disponibilidad en campo.                         | - Mayor complejidad (MLOps, optimización de modelos).<br>- Requiere hardware móvil con capacidad (NPU).<br>- Mayor consumo energético en dispositivos.                    |
+| **AD-02** | Disponibilidad / Resiliencia              | **Arquitectura Event-Driven (Offline-First)** | - Sistema no se bloquea sin red.<br>- Persistencia local garantiza cero pérdida de datos.<br>- Escala bien ante reconexiones masivas.<br>- Alta disponibilidad.     | - Consistencia eventual (no inmediata).<br>- Alta complejidad (manejo de eventos, conflictos).<br>- Requiere infraestructura de mensajería (Kafka/RabbitMQ).              |
+| **AD-03** | Seguridad / Trazabilidad                  | **Blockchain para registros inmutables**      | - Integridad de datos garantizada.<br>- Previene fraude y manipulación.<br>- Trazabilidad completa (no repudio).                                                    | - Alta latencia en transacciones.<br>- Costos elevados de infraestructura.<br>- Escalabilidad limitada (crecimiento del ledger).<br>- Alta complejidad (smart contracts). |
+| **AD-04** | Seguridad / Control de acceso             | **Zero-Trust + API Gateway**                  | - Seguridad perimetral robusta.<br>- Validación estricta de identidad (JWT).<br>- Control centralizado (RBAC, rate limiting).<br>- Protege contra ataques externos. | - Incremento de latencia (validaciones).<br>- Punto crítico (si el gateway falla, afecta todo).<br>- Complejidad media en configuración.                                  |
+| **AD-05** | Escalabilidad / Mantenibilidad            | **Microservicios con DDD (Hexagonal)**        | - Escalabilidad independiente por servicio.<br>- Aislamiento de fallos.<br>- Alta mantenibilidad por bounded contexts.<br>- Flexibilidad tecnológica.               | - Complejidad muy alta (orquestación, comunicación).<br>- Costos mayores de infraestructura.<br>- Consistencia eventual.<br>- Necesidad de patrones distribuidos (Saga).  |
+
+
 #### 4.1.5. Quality Attribute Scenario Refinements
+
+## 4.1.5 Quality Attribute Scenario Refinements
+
+| ID     | Atributo                     | Fuente                                      | Estímulo                                                                 | Artefacto                                                                 | Entorno                                                                 | Respuesta Refinada                                                                                                                                                                                                                                                                              | Medida Refinada                                                                                                                        |
+|--------|-----------------------------|---------------------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| QA-01  | Disponibilidad / Resiliencia | Dispositivo móvil del conductor (Nodo Edge) | Caída abrupta de la conexión de red (4G/3G) durante el registro         | Arquitectura Orientada a Eventos (Offline-First con almacenamiento local) | Operación en rutas rurales con conectividad intermitente                | El sistema persiste el evento en almacenamiento local embebido (SQLite/Realm) mediante patrón *Store-and-Forward*. Al restablecer conexión, sincroniza de forma asíncrona mediante un *Message Broker* evitando pérdida de datos.                                                               | Persistencia < 50 ms. Sincronización completa < 5 s. Pérdida de datos = 0%.                                                             |
+| QA-02  | Rendimiento (Performance)   | Sistema / Usuario operario                  | Captura y procesamiento de imagen (odómetro o documento)                | Edge AI (Modelos SLM cuantificados)                                      | Dispositivo móvil con recursos limitados                               | El procesamiento se ejecuta localmente en la NPU del dispositivo usando modelos cuantificados (INT8), extrayendo texto sin enviar imágenes completas al backend.                                                                                                                                | Latencia < 150 ms. RAM < 200 MB. Precisión OCR ≥ 95%.                                                                                   |
+| QA-03  | Seguridad / Integridad      | Actor malicioso / Usuario externo           | Intento de acceso no autorizado o manipulación de datos                 | Zero-Trust + API Gateway + Blockchain                                    | Redes públicas e integraciones externas                                | El API Gateway valida cada solicitud mediante JWT bajo modelo Zero-Trust. Cada transacción válida genera un hash criptográfico registrado en Blockchain, garantizando inmutabilidad.                                                                                                          | Validación < 50 ms. Integridad de datos garantizada (0% alteración post-registro).                                                     |
+| QA-04  | Escalabilidad              | Sistema (Alta concurrencia)                 | Reconexión simultánea de múltiples nodos (flota completa)               | Microservicios + Orquestación (Kubernetes)                               | Pico de carga 3x superior a lo normal                                  | El sistema escala horizontalmente creando nuevas réplicas de microservicios y distribuyendo carga mediante colas de mensajería, evitando saturación del sistema.                                                                                                                               | Escalado < 60 s. Throughput > 5000 TPS. Latencia < 300 ms.                                                                             |
+| QA-05  | Consistencia               | Microservicios internos                     | Actualización distribuida de estado de entrega                          | Event-Driven + DDD + Patrón Saga                                         | Sistema distribuido con múltiples contextos                            | El microservicio emite eventos de dominio mediante patrón *Outbox*. Otros servicios consumen eventos y actualizan estado de forma eventual. Se aplican compensaciones en caso de fallos.                                                                                                        | Consistencia eventual < 500 ms (p99). Inconsistencia = 0% con idempotencia y DLQ.                                                      |
+| QA-06  | Usabilidad en Campo        | Conductor                                  | Registro de evidencia en condiciones adversas                           | Interfaz móvil + Edge AI                                                 | Campo operativo (fatiga, baja señal, estrés)                           | El sistema valida en tiempo real calidad de captura (iluminación, enfoque) y proporciona retroalimentación inmediata para corrección antes del envío.                                                                                                                                          | Feedback < 50 ms. Reducción de errores de captura < 2%.                                                                                 |
+
+### Justificación de Impacto Arquitectónico
+
+La refinación de los escenarios de atributos de calidad permite transformar requerimientos abstractos en criterios medibles y verificables, alineando directamente los drivers arquitectónicos con el comportamiento real del sistema.
+
+El uso de Edge AI reduce la dependencia de la conectividad, mejorando la disponibilidad y el rendimiento en campo. La arquitectura orientada a eventos permite tolerancia a fallos de red mediante consistencia eventual controlada. La integración de Blockchain garantiza la integridad de la información, mientras que el enfoque Zero-Trust fortalece la seguridad perimetral.
+
+Finalmente, la arquitectura de microservicios permite escalar el sistema de manera independiente según la carga, asumiendo como trade-off una mayor complejidad en la coordinación y consistencia distribuida.
+
+Este enfoque asegura que CoBox no solo sea funcional, sino resiliente, escalable y alineado con las condiciones reales del entorno logístico. :contentReference[oaicite:0]{index=0}
 
 ### 4.2. Strategic-Level Domain-Driven Design
 #### 4.2.1. EventStorming
