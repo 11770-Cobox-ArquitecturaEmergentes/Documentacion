@@ -1320,6 +1320,7 @@ Este modelado aporta un mejor entendimiento del sistema, reduce el acoplamiento 
 
 #### 4.2.4. Bounded Context Canvases
 #### 4.2.5. Context Mapping
+[![mermaid-diagram-(8).png](https://i.postimg.cc/hj0LSWp5/mermaid-diagram-(8).png)](https://postimg.cc/vgcgzjRr)
 
 ### 4.3. Software Architecture
 #### 4.3.1. Software Architecture System Landscape Diagram
