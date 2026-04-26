@@ -194,8 +194,9 @@ Visión: Consolidarse como una startup referente en soluciones digitales para el
 #### 1.1.2. Perfiles de integrantes del equipo
 
 **Diego Cabrera -Ingeniería de Software**
-<img src="./assets/fotos/diego.png" alt="Diego Cabrera" height="200"/>
-Estudio Ing. Software. Me considero que soy una persona creativa, entusiasta en aprender cosas nuevas. Me gusta ayudar a los demás y aprender de manera constante 
+
+Estudio Ing. Software. Me considero que soy una persona creativa, entusiasta en aprender cosas nuevas. Me gusta ayudar a los demás y aprender de manera constante  <br>
+<img src="./assets/fotos/diego.png" alt="Diego Cabrera" height="150"/>
 
 **Joaquin Pedraza Maldonado – Ingeniería de Software – U202218514**  
 <img src="./assets/fotos/joaquin.png" alt="Joaquin Pedraza" height="200"/>
