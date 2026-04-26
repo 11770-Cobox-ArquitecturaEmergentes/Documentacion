@@ -1291,6 +1291,33 @@ Finalmente, se delimitaron 5 bounded context:
 Cada contexto definido agrupa sus propios eventos, reglas y agregados, facilitando la evolución y el mantenimiento del sistema.
 
 #### 4.2.3. Domain Message Flows Modeling
+
+Se modelaron las interacciones entre los Bounded Contexts identificados en el sistema, con el objetivo de visualizar cómo colaboran para resolver escenarios clave del negocio logístico. El análisis considera comandos, eventos, reglas de negocio, agregados, vistas y la posible integración con sistemas externos.
+
+Para este modelado se utilizó la técnica de Domain Storytelling, que permite representar de manera clara las acciones de los actores principales y los flujos de mensajes entre contextos, facilitando la comprensión de la dinámica operativa del sistema.
+
+Enfoque utilizado:
+
+- Se partió del modelo de Event Storming definido en etapas previas del proyecto.
+- Se seleccionaron los casos de uso más relevantes, como la asignación de servicios, registro de evidencias y validación de información operativa.
+- Se describieron los flujos considerando:
+o Actores: gestores de operaciones y conductores de carga.
+o Bounded Contexts: Gestión de Operaciones, Ejecución en Campo y Validación Automática.
+o Comandos: asignar servicio, registrar evidencia, reportar incidente.
+o Eventos: ServiceAssigned, EvidenceCaptured, EvidenceValidated, IncidentReported, ServiceCompleted.
+o Reglas: validación automática de evidencias, control de integridad de datos.
+o Vistas: dashboards analíticos para gestores, historial de servicios para conductores.
+o Integración: posible conexión con sistemas de gestión existentes y dispositivos móviles.
+
+Resultados:
+
+- Se modelaron flujos representativos que cubren desde la asignación de un servicio hasta la validación y cierre del mismo.
+- Se incluyeron los principales Bounded Contexts, reflejando la colaboración entre Gestión de Operaciones, Ejecución en Campo y Validación Automática.
+- Se describió el flujo completo: el gestor asigna un servicio, el conductor registra evidencias en campo, el sistema valida automáticamente la información y se actualiza el estado del servicio.
+- Se identificaron puntos de integración y transferencia de mensajes entre contextos, asegurando trazabilidad y consistencia de la información.
+
+Este modelado aporta un mejor entendimiento del sistema, reduce el acoplamiento entre contextos y sienta las bases para el diseño de APIs, eventos y la arquitectura evolutiva del producto.
+
 #### 4.2.4. Bounded Context Canvases
 #### 4.2.5. Context Mapping
 
