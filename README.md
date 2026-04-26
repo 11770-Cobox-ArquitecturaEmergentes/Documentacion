@@ -1257,6 +1257,7 @@ Este enfoque asegura que CoBox no solo sea funcional, sino resiliente, escalable
 
 ### 4.2. Strategic-Level Domain-Driven Design
 #### 4.2.1. EventStorming
+![To-Be Scenario Mapping - Conductor](assets/tb1/eventstorming.png)
 #### 4.2.2. Candidate Context Discovery
 
 Se aplicó Event Storming para identificar los Bounded Contexts del sistema. El análisis se basó en funcionalidades, procesos y eventos clave del proyecto.
