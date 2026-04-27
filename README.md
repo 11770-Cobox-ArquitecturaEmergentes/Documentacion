@@ -64,10 +64,19 @@
 
 | Versión | Fecha       | Autor                          | Descripción                                                                 |
 |---------|-------------|--------------------------------|-----------------------------------------------------------------------------|
-| TB1     | 09/04/2026  | Ramiro Alexander Guzmán Chávez |  |
-| TB1     | 09/04/2026  |   Diego Ivan Cabrera Buitron   |  |
-| TB1     | 04/04/2026  |  Jhon Alexander Galvez Chambi  |  |
-| TB1     | 04/04/2026  |   Joaquín Pedraza Maldonado    |  |
+| TB1     | 13/04/2026  | Ramiro Alexander Guzmán Chávez |  |
+| TB1     | 13/04/2026  |   Diego Ivan Cabrera Buitron   |  |
+| TB1     | 13/04/2026  |  Jhon Alexander Galvez Chambi  |  |
+| TB1     | 17/04/2026  |   Joaquín Pedraza Maldonado    |  |
+| TB1     | 18/04/2026  | Ramiro Alexander Guzmán Chávez |  |
+| TB1     | 19/04/2026  |   Diego Ivan Cabrera Buitron   |  |
+| TB1     | 19/04/2026  |  Jhon Alexander Galvez Chambi  |  |
+| TB1     | 20/04/2026  |   Joaquín Pedraza Maldonado    |  |
+| TB1     | 20/04/2026  | Ramiro Alexander Guzmán Chávez |  |
+| TB1     | 23/04/2026  |   Diego Ivan Cabrera Buitron   |  |
+| TB1     | 24/04/2026  |  Jhon Alexander Galvez Chambi  |  |
+| TB1     | 26/04/2026  |   Joaquín Pedraza Maldonado    |  |
+
 
 ## Project Report Collaboration Insights
 
@@ -81,10 +90,10 @@ Para la elaboración de la entrega AV1 de este informe, el equipo se organizó m
 
 | Integrante | Usuario Github | Detalle de avance |
 |------------|----------------|-------------------|
-| Diego Ivan Cabrera Buitron | `omele7` |  |
-| Joaquín Pedraza Maldonado | `JoaquinPedraza1` |  |
-| Ramiro Alexander Guzmán Chávez | `RamiroGuzmanCh` | |
-| Jhon Alexander Galvez Chambi | `Chaomeum` |  |
+| Diego Ivan Cabrera Buitron | `omele7` | Desarrollo del Capitulo II (secciones 2.3.2 hasta 2.4), |
+| Joaquín Pedraza Maldonado | `JoaquinPedraza1` | Desarrollo del Capitulo IV, secciones  |
+| Ramiro Alexander Guzmán Chávez | `RamiroGuzmanCh` | Desarrollo del Capitulo III, colaboro en Capitulo IV |
+| Jhon Alexander Galvez Chambi | `Chaomeum` | Desarrollo de los Capitulos I y II (hasta seccion 2.3.1), registro de 2 entrevistas y colaboracion en Capitulo IV |
 
 **Report Repository Insights:** 
 
