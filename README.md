@@ -193,6 +193,11 @@ Visión: Consolidarse como una startup referente en soluciones digitales para el
 
 #### 1.1.2. Perfiles de integrantes del equipo
 
+**Diego Cabrera -Ingeniería de Software**
+
+Estudio Ing. Software. Me considero que soy una persona creativa, entusiasta en aprender cosas nuevas. Me gusta ayudar a los demás y aprender de manera constante  <br>
+<img src="./assets/fotos/diego.png" alt="Diego Cabrera" height="150"/>
+
 **Joaquin Pedraza Maldonado – Ingeniería de Software – U202218514**  
 <img src="./assets/fotos/joaquin.png" alt="Joaquin Pedraza" height="200"/>
 
@@ -1128,7 +1133,7 @@ Transformar la captura de datos en un proceso autónomo que no dependa de la con
 . Paralelamente, para erradicar las discrepancias manuales y cumplir con las normativas legales de trazabilidad documental (Restricción C-5), la arquitectura entrelaza redes neuronales con tecnología Blockchain, creando libros mayores inmutables que certifican la autenticidad de cada entrega o carga de combustible mediante evidencias fotográficas blindadas criptográficamente.<br><br>
 .
 **3. Modelado de Dominio (DDD) y Aislamiento de Funcionalidades Asegurar la coherencia y evolución del código fuente aplicando el Diseño Guiado por el Dominio (DDD).** El ecosistema se segmenta lógicamente en contextos autónomos (Manejo de Flota, Entregas, Incidencias, Mantenimiento y Analítica), los cuales se materializan como microservicios hexagonales independientes
-. Para sortear los cuellos de botella de la comunicación síncrona, estos módulos interactúan a través de un bus de eventos (Kafka/RabbitMQ)
+. Para sortear los cuellos de botella de la comunicación síncrona, estos módulos interactúan a través de un bus de eventos (RabbitMQ)
 . Asimismo, toda solicitud externa atraviesa un API Gateway centralizado que enruta el tráfico y aplica políticas de Control de Acceso Basado en Roles (RBAC), garantizando la privacidad de los datos según las leyes peruanas (Restricción C-8).<br><br>
 .
 **4. Validación Empírica Continua guiada por el Proceso ADD v3 Gobernar la evolución del sistema a través del método de Diseño Guiado por Atributos (ADD v3)**
@@ -1219,7 +1224,7 @@ A continuación, se presenta la reestructuración de las restricciones (constrai
 | **DR-01** | **Disponibilidad (Alta Disponibilidad Multi-Nube)** | Capacidad del sistema logístico para mantener una operatividad ininterrumpida ante fallos de infraestructura, orquestando instancias redundantes en un entorno multi-nube (AWS y GCP). Requiere enrutamiento BGP simétrico y bases de datos distribuidas (ej. CockroachDB) para evitar el bloqueo de proveedores y garantizar el atributo de fiabilidad funcional (ISO 25010). | Alta | Alta |
 | **DR-02** | **Rendimiento bajo Conectividad Limitada (Operatividad Offline / Edge AI)** | Capacidad de la aplicación móvil para ejecutar inferencias analíticas complejas in situ con latencias inferiores a 50 milisegundos. Cumpliendo con la eficiencia de desempeño (ISO 25010), el sistema debe procesar visión artificial multimodal (OCR) sin conexión a internet y sincronizar la telemetría asíncronamente mediante firmas criptográficas locales al recuperar la cobertura. | Alta | Alta |
 | **DR-03** | **Seguridad y No Repudio (Trazabilidad inmutable)** | Grado en el que la plataforma mitiga la manipulación de datos sensibles (kilometraje, evidencias fotográficas) para cumplir con normativas estrictas del sector transporte. Exige la integración de redes neuronales con registros inmutables basados en Blockchain, asegurando la autenticidad, integridad y el no repudio de la información procesada (ISO 25010). | Alta | Alta |
-| **DR-04** | **Mantenibilidad (Aislamiento Estructural y Modularidad)** | Capacidad del ecosistema para evolucionar sin disrupciones operativas, fundamentado en la mantenibilidad y modificabilidad (ISO 25010). Impone la partición estricta de la arquitectura bajo el paradigma de Diseño Guiado por el Dominio (DDD), aislando las lógicas de negocio en microservicios independientes (Contextos Delimitados) que interactúan asíncronamente mediante *message brokers* (ej. Kafka/RabbitMQ). | Alta | Media |
+| **DR-04** | **Mantenibilidad (Aislamiento Estructural y Modularidad)** | Capacidad del ecosistema para evolucionar sin disrupciones operativas, fundamentado en la mantenibilidad y modificabilidad (ISO 25010). Impone la partición estricta de la arquitectura bajo el paradigma de Diseño Guiado por el Dominio (DDD), aislando las lógicas de negocio en microservicios independientes (Contextos Delimitados) que interactúan asíncronamente mediante *message brokers* (ej. RabbitMQ). | Alta | Media |
 | **DR-05** | **Interoperabilidad (Integración B2B y API-First)** | Capacidad técnica del sistema para intercambiar datos de manera eficiente con infraestructuras heredadas de clientes (sistemas ERP) y proveedores logísticos externos. Se sustenta en el estándar de compatibilidad e interoperabilidad (ISO 25010), requiriendo un patrón de *API Gateway* centralizado que enrute solicitudes, aplique límites de tasa (*rate limiting*) y estandarice contratos JSON/REST. | Media | Media |
 | **DR-06** | **Observabilidad (Telemetría Distribuida y Analizabilidad)** | Atributo que permite el diagnóstico y monitoreo proactivo del estado interno de los microservicios en la topología multi-nube. Para garantizar la analizabilidad (ISO 25010), exige la inserción de agentes de telemetría (Prometheus, Grafana) para la recolección empírica de métricas de concurrencia, latencia y uso de recursos, facilitando la resolución de incidentes en tiempo real. | Alta | Media |
 | **DR-07** | **Escalabilidad (Elasticidad Computacional)** | Capacidad de la arquitectura para absorber incrementos abruptos de carga transaccional o expansión en el volumen de la flota sin degradar los tiempos de respuesta. Implica la contenerización de las cargas de trabajo e implementación de autoescalado basado en orquestación, asegurando la resiliencia en la asignación dinámica de recursos de cómputo (ISO 25010). | Alta | Alta |
@@ -1227,7 +1232,7 @@ A continuación, se presenta la reestructuración de las restricciones (constrai
 | Driver ID | Título                                    | Decisión Arquitectónica                       | Pros                                                                                                                                                                | Contras                                                                                                                                                                   |
 | --------- | ----------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **AD-01** | Procesamiento Offline / Baja conectividad | **Edge AI (Procesamiento en el dispositivo)** | - Latencia mínima (milisegundos).<br>- No depende de conexión a internet.<br>- Reduce carga del backend.<br>- Alta disponibilidad en campo.                         | - Mayor complejidad (MLOps, optimización de modelos).<br>- Requiere hardware móvil con capacidad (NPU).<br>- Mayor consumo energético en dispositivos.                    |
-| **AD-02** | Disponibilidad / Resiliencia              | **Arquitectura Event-Driven (Offline-First)** | - Sistema no se bloquea sin red.<br>- Persistencia local garantiza cero pérdida de datos.<br>- Escala bien ante reconexiones masivas.<br>- Alta disponibilidad.     | - Consistencia eventual (no inmediata).<br>- Alta complejidad (manejo de eventos, conflictos).<br>- Requiere infraestructura de mensajería (Kafka/RabbitMQ).              |
+| **AD-02** | Disponibilidad / Resiliencia              | **Arquitectura Event-Driven (Offline-First)** | - Sistema no se bloquea sin red.<br>- Persistencia local garantiza cero pérdida de datos.<br>- Escala bien ante reconexiones masivas.<br>- Alta disponibilidad.     | - Consistencia eventual (no inmediata).<br>- Alta complejidad (manejo de eventos, conflictos).<br>- Requiere infraestructura de mensajería (RabbitMQ).              |
 | **AD-03** | Seguridad / Trazabilidad                  | **Blockchain para registros inmutables**      | - Integridad de datos garantizada.<br>- Previene fraude y manipulación.<br>- Trazabilidad completa (no repudio).                                                    | - Alta latencia en transacciones.<br>- Costos elevados de infraestructura.<br>- Escalabilidad limitada (crecimiento del ledger).<br>- Alta complejidad (smart contracts). |
 | **AD-04** | Seguridad / Control de acceso             | **Zero-Trust + API Gateway**                  | - Seguridad perimetral robusta.<br>- Validación estricta de identidad (JWT).<br>- Control centralizado (RBAC, rate limiting).<br>- Protege contra ataques externos. | - Incremento de latencia (validaciones).<br>- Punto crítico (si el gateway falla, afecta todo).<br>- Complejidad media en configuración.                                  |
 | **AD-05** | Escalabilidad / Mantenibilidad            | **Microservicios con DDD (Hexagonal)**        | - Escalabilidad independiente por servicio.<br>- Aislamiento de fallos.<br>- Alta mantenibilidad por bounded contexts.<br>- Flexibilidad tecnológica.               | - Complejidad muy alta (orquestación, comunicación).<br>- Costos mayores de infraestructura.<br>- Consistencia eventual.<br>- Necesidad de patrones distribuidos (Saga).  |
@@ -1257,6 +1262,7 @@ Este enfoque asegura que CoBox no solo sea funcional, sino resiliente, escalable
 
 ### 4.2. Strategic-Level Domain-Driven Design
 #### 4.2.1. EventStorming
+![To-Be Scenario Mapping - Conductor](assets/tb1/eventstorming.png)
 #### 4.2.2. Candidate Context Discovery
 
 Se aplicó Event Storming para identificar los Bounded Contexts del sistema. El análisis se basó en funcionalidades, procesos y eventos clave del proyecto.
@@ -1282,11 +1288,24 @@ Los eventos se agruparon por afinidad funcional y coherencia de reglas, delimita
 
 Finalmente, se delimitaron 5 bounded context:
 
-• Operaciones: gestión de servicios logísticos y asignaciones
-• Evidencias: captura y validación automática de datos operativos
-• Incidencias: registro y seguimiento de eventos e incidencias
-• Reportes: generación y consulta de reportes validados
-• Integración/API: exposición de servicios para apps y sistemas externos
+**Fleet Management Context (Gestión de Flota)**
+
+Descripción:
+Este contexto se encarga de la administración completa de las unidades de transporte. Permite registrar vehículos, asignarlos a rutas, actualizar su estado (activo, mantenimiento) y consultar su historial operativo
+
+**Delivery Management Context (Gestión de Entregas)**
+
+Descripción:
+Gestiona todo el ciclo de vida de las entregas realizadas por los conductores, incluyendo asignación, ejecución y validación mediante evidencia.<br>
+
+•Incidencias: registro y seguimiento de eventos e incidencias<br>
+
+Evidencias: captura y validación automática de datos operativos<br>
+
+
+
+• Reportes: generación y consulta de reportes validados<br>
+
 
 Cada contexto definido agrupa sus propios eventos, reglas y agregados, facilitando la evolución y el mantenimiento del sistema.
 
@@ -1300,14 +1319,14 @@ Enfoque utilizado:
 
 - Se partió del modelo de Event Storming definido en etapas previas del proyecto.
 - Se seleccionaron los casos de uso más relevantes, como la asignación de servicios, registro de evidencias y validación de información operativa.
-- Se describieron los flujos considerando:
-o Actores: gestores de operaciones y conductores de carga.
-o Bounded Contexts: Gestión de Operaciones, Ejecución en Campo y Validación Automática.
-o Comandos: asignar servicio, registrar evidencia, reportar incidente.
-o Eventos: ServiceAssigned, EvidenceCaptured, EvidenceValidated, IncidentReported, ServiceCompleted.
-o Reglas: validación automática de evidencias, control de integridad de datos.
-o Vistas: dashboards analíticos para gestores, historial de servicios para conductores.
-o Integración: posible conexión con sistemas de gestión existentes y dispositivos móviles.
+- Se describieron los flujos considerando:<br>
+o Actores: gestores de operaciones y conductores de carga.<br>
+o Bounded Contexts: Flotas, Incidentes,mantenimiento , delivery, evidencias.<br>
+o Comandos: asignar servicio, registrar evidencia, reportar incidente.<br>
+o Eventos: ServiceAssigned, EvidenceCaptured, EvidenceValidated, IncidentReported, ServiceCompleted.<br>
+o Reglas: validación automática de evidencias, control de integridad de datos.<br>
+o Vistas: dashboards analíticos para gestores, historial de servicios para conductores.<br>
+o Integración: posible conexión con sistemas de gestión existentes y dispositivos móviles.<br>
 
 Resultados:
 
@@ -1330,6 +1349,7 @@ Este modelado aporta un mejor entendimiento del sistema, reduce el acoplamiento 
 
 #### 4.2.4. Bounded Context Canvases
 #### 4.2.5. Context Mapping
+![To-Be Scenario Mapping - Conductor](assets/tb1/mermaidcontext.png)
 
 ### 4.3. Software Architecture
 #### 4.3.1. Software Architecture System Landscape Diagram
