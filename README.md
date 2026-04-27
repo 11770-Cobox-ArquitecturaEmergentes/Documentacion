@@ -1288,13 +1288,12 @@ Los eventos se agruparon por afinidad funcional y coherencia de reglas, delimita
 
 Finalmente, se delimitaron 5 bounded context:
 
-#####Fleet Management Context (Gestión de Flota)
+**Fleet Management Context (Gestión de Flota)**
 
 Descripción:
 Este contexto se encarga de la administración completa de las unidades de transporte. Permite registrar vehículos, asignarlos a rutas, actualizar su estado (activo, mantenimiento) y consultar su historial operativo
 
-
-######Delivery Management Context (Gestión de Entregas)
+**Delivery Management Context (Gestión de Entregas)**
 
 Descripción:
 Gestiona todo el ciclo de vida de las entregas realizadas por los conductores, incluyendo asignación, ejecución y validación mediante evidencia.<br>
