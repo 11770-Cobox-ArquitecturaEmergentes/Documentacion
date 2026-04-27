@@ -1367,6 +1367,26 @@ Este modelado aporta un mejor entendimiento del sistema, reduce el acoplamiento 
 <img src="./assets/tb1/story5.png" alt="story flow" />
 
 #### 4.2.4. Bounded Context Canvases
+- **Fleet Management**
+
+  ![To-Be Scenario Mapping - Conductor](assets/tb1/fleetManagement.png)
+
+- **Delivery Management**
+
+  ![To-Be Scenario Mapping - Conductor](assets/tb1/deliveryManagement.png)
+
+- **Incident Management**
+
+  ![To-Be Scenario Mapping - Conductor](assets/tb1/incidentManagement.png)
+
+- **Evidence Management**
+
+  ![To-Be Scenario Mapping - Conductor](assets/tb1/evidenceManagement.png)
+
+- **Reports Management**
+
+  ![To-Be Scenario Mapping - Conductor](assets/tb1/reportsManagement.png)
+
 #### 4.2.5. Context Mapping
 ![To-Be Scenario Mapping - Conductor](assets/tb1/mermaidcontext.png)
 
