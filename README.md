@@ -64,18 +64,18 @@
 
 | Versión | Fecha       | Autor                          | Descripción                                                                 |
 |---------|-------------|--------------------------------|-----------------------------------------------------------------------------|
-| TB1     | 13/04/2026  | Ramiro Alexander Guzmán Chávez |  |
-| TB1     | 13/04/2026  |   Diego Ivan Cabrera Buitron   |  |
-| TB1     | 13/04/2026  |  Jhon Alexander Galvez Chambi  |  |
-| TB1     | 17/04/2026  |   Joaquín Pedraza Maldonado    |  |
-| TB1     | 18/04/2026  | Ramiro Alexander Guzmán Chávez |  |
-| TB1     | 19/04/2026  |   Diego Ivan Cabrera Buitron   |  |
-| TB1     | 19/04/2026  |  Jhon Alexander Galvez Chambi  |  |
-| TB1     | 20/04/2026  |   Joaquín Pedraza Maldonado    |  |
-| TB1     | 20/04/2026  | Ramiro Alexander Guzmán Chávez |  |
-| TB1     | 23/04/2026  |   Diego Ivan Cabrera Buitron   |  |
-| TB1     | 24/04/2026  |  Jhon Alexander Galvez Chambi  |  |
-| TB1     | 26/04/2026  |   Joaquín Pedraza Maldonado    |  |
+| AV1 | 09/04/2026  | Jhon Alexander Galvez Chambi | Elaboración inicial del Capítulo I: Introducción, incluyendo Startup Profile, Solution Profile y Segmentos objetivo. |
+| AV1 | 10/04/2026  | Jhon Alexander Galvez Chambi | Desarrollo inicial del Capítulo II: Requirements Elicitation & Analysis, desde Competidores hasta User Personas. |
+| AV1 | 12/04/2026  | Diego Iván Cabrera Buitrón | Desarrollo de las secciones 2.3.2. User Task Matrix, 2.3.3. Empathy Mapping y 2.3.4. As-is Scenario Mapping. |
+| AV1 | 13/04/2026  | Diego Iván Cabrera Buitrón | Desarrollo de la sección 2.4. Ubiquitous Language y revisión de consistencia del Capítulo II. |
+| AV1 | 15/04/2026  | Ramiro Alexander Guzmán Chávez | Desarrollo del Capítulo III: Requirements Specification, iniciando con 3.1. To-Be Scenario Mapping y 3.2. User Stories. |
+| AV1 | 17/04/2026  | Ramiro Alexander Guzmán Chávez | Desarrollo de las secciones 3.3. Impact Mapping y 3.4. Product Backlog, con revisión del Capítulo III. |
+| AV1 | 18/04/2026  | Joaquín Pedraza Maldonado | Desarrollo de la sección 4.1. Strategic-Level Attribute-Driven Design y sus subsecciones principales. |
+| AV1 | 20/04/2026  | Joaquín Pedraza Maldonado | Desarrollo de la sección 4.2.1. EventStorming como parte del Strategic-Level Domain-Driven Design. |
+| AV1 | 21/04/2026  | Diego Iván Cabrera Buitrón | Desarrollo de las secciones 4.2.2. Candidate Context Discovery y 4.2.3. Domain Message Flows Modeling. |
+| AV1 | 23/04/2026  | Ramiro Alexander Guzmán Chávez | Colaboración en la sección 4.2.4. Bounded Context Canvases y revisión de alineamiento con el Capítulo III. |
+| AV1 | 24/04/2026  | Jhon Alexander Galvez Chambi | Colaboración en la sección 4.3. Software Architecture y sus diagramas de arquitectura de software. |
+| AV1 | 26/04/2026  | Joaquín Pedraza Maldonado | Revisión final del Capítulo IV, actualización del Project Report Collaboration Insights y validación general del informe AV1. |
 
 
 ## Project Report Collaboration Insights
@@ -88,12 +88,12 @@
 
 Para la elaboración de la entrega AV1 de este informe, el equipo se organizó mediante reuniones de coordinación a través de un canal de Discord. En estas reuniones se definió la distribución de actividades, se asignaron responsables por capítulo y se establecieron fechas de revisión periódica para asegurar el avance progresivo de cada integrante.
 
-| Integrante | Usuario Github | Detalle de avance |
+| Integrante | Usuario GitHub | Detalle de avance |
 |------------|----------------|-------------------|
-| Diego Ivan Cabrera Buitron | `omele7` | Desarrollo del Capitulo II (secciones 2.3.2 hasta 2.4), |
-| Joaquín Pedraza Maldonado | `JoaquinPedraza1` | Desarrollo del Capitulo IV, secciones  |
-| Ramiro Alexander Guzmán Chávez | `RamiroGuzmanCh` | Desarrollo del Capitulo III, colaboro en Capitulo IV |
-| Jhon Alexander Galvez Chambi | `Chaomeum` | Desarrollo de los Capitulos I y II (hasta seccion 2.3.1), registro de 2 entrevistas y colaboracion en Capitulo IV |
+| Diego Iván Cabrera Buitrón | `omele7` | Desarrollo del Capítulo II (secciones 2.3.2. User Task Matrix hasta 2.4. Ubiquitous Language) y del Capítulo IV (secciones 4.2.2. Candidate Context Discovery y 4.2.3. Domain Message Flows Modeling). |
+| Joaquín Pedraza Maldonado | `JoaquinPedraza1` | Desarrollo del Capítulo IV (secciones 4.1. Strategic-Level Attribute-Driven Design y 4.2.1. EventStorming). |
+| Ramiro Alexander Guzmán Chávez | `RamiroGuzmanCh` | Desarrollo del Capítulo III y colaboración en el Capítulo IV (sección 4.2.4. Bounded Context Canvases). |
+| Jhon Alexander Galvez Chambi | `Chaomeum` | Desarrollo de los Capítulos I y II (hasta la sección 2.3.1. User Personas) y colaboración en el Capítulo IV (sección 4.3. Software Architecture). |
 
 **Report Repository Insights:** 
 
@@ -182,8 +182,8 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |----------------------|---------------------|--------------|
-| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | | |
-| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | | |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **AV1**<br><br> Jhon Alexander Galvez Chambi: participé en la coordinación inicial del informe y comuniqué al equipo los avances relacionados con el Capítulo I: Introducción, así como con el desarrollo inicial del Capítulo II hasta la sección 2.3.1. User Personas. Además, colaboré en la explicación de los elementos trabajados en la sección 4.3. Software Architecture.<br><br> Diego Iván Cabrera Buitrón: comuniqué los avances del Capítulo II desde la sección 2.3.2. User Task Matrix hasta 2.4. Ubiquitous Language, explicando cómo estos artefactos permitían comprender las necesidades de los usuarios y establecer un lenguaje común para el dominio del proyecto. También sustenté mis aportes al Capítulo IV en las secciones 4.2.2. Candidate Context Discovery y 4.2.3. Domain Message Flows Modeling.<br><br> Ramiro Alexander Guzmán Chávez: expuse al equipo los avances del Capítulo III: Requirements Specification, incluyendo To-Be Scenario Mapping, User Stories, Impact Mapping y Product Backlog. Asimismo, comuniqué la relación entre estos artefactos y la sección 4.2.4. Bounded Context Canvases del Capítulo IV.<br><br> Joaquín Pedraza Maldonado: comuniqué los avances del Capítulo IV, principalmente en la sección 4.1. Strategic-Level Attribute-Driven Design y en 4.2.1. EventStorming, explicando las decisiones arquitectónicas, los drivers y la relación entre los eventos del dominio y el diseño estratégico del sistema.<br><br> Como equipo, realizamos reuniones de coordinación mediante Discord para presentar avances, resolver dudas, revisar la distribución de capítulos y asegurar que los aportes individuales mantuvieran coherencia con la estructura general del informe. | **AV1**<br><br> Durante esta entrega, el equipo comunicó oralmente sus avances de manera organizada y objetiva, usando reuniones de coordinación para explicar decisiones, justificar contenidos y alinear criterios entre los capítulos del informe. La participación de cada integrante permitió compartir resultados desde distintas áreas del proyecto, como investigación, requerimientos, análisis de dominio y arquitectura de software. Como resultado, se logró una comunicación efectiva orientada a mantener coherencia entre la problemática, los requerimientos, el diseño estratégico y la arquitectura propuesta para CoBox Smart Vision. |
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **AV1**<br><br> Jhon Alexander Galvez Chambi: redacté el Capítulo I: Introducción, incluyendo Startup Profile, Solution Profile y Segmentos objetivo. También desarrollé el contenido inicial del Capítulo II hasta la sección 2.3.1. User Personas y colaboré en la sección 4.3. Software Architecture, aportando a la documentación de los diagramas y decisiones arquitectónicas.<br><br> Diego Iván Cabrera Buitrón: redacté las secciones 2.3.2. User Task Matrix, 2.3.3. Empathy Mapping, 2.3.4. As-is Scenario Mapping y 2.4. Ubiquitous Language. Además, desarrollé las secciones 4.2.2. Candidate Context Discovery y 4.2.3. Domain Message Flows Modeling, alineando el análisis de dominio con el diseño estratégico del sistema.<br><br> Ramiro Alexander Guzmán Chávez: redacté el Capítulo III: Requirements Specification, incluyendo 3.1. To-Be Scenario Mapping, 3.2. User Stories, 3.3. Impact Mapping y 3.4. Product Backlog. También colaboré en la sección 4.2.4. Bounded Context Canvases, relacionando los requerimientos con los contextos delimitados del dominio.<br><br> Joaquín Pedraza Maldonado: redacté la sección 4.1. Strategic-Level Attribute-Driven Design y sus subsecciones principales, así como la sección 4.2.1. EventStorming. Además, participé en la revisión final del Capítulo IV, la actualización del Project Report Collaboration Insights y la validación general del informe AV1.<br><br> El equipo documentó el avance en el Registro de Versiones del Informe, la Tabla de Contenidos y el Project Report Collaboration Insights, evidenciando de forma escrita la organización, los responsables y la evolución del trabajo desarrollado entre el 09/04/2026 y el 26/04/2026. | **AV1**<br><br> El informe evidencia una comunicación escrita estructurada y objetiva, ya que cada sección fue redactada siguiendo una secuencia lógica desde la introducción del problema hasta la especificación de requerimientos y el diseño arquitectónico. La tabla de contenidos, el registro de versiones y la tabla de colaboración permiten identificar con claridad los aportes de cada integrante y su relación con los capítulos desarrollados. En conjunto, la documentación permite que audiencias con distintos niveles de especialización comprendan el contexto del proyecto, las necesidades identificadas, los requerimientos definidos y las decisiones de diseño propuestas. |
 
 ## Capítulo I: Introducción
 
@@ -654,6 +654,8 @@ Se han definido dos segmentos objetivo para la recolección de información: ges
 
 #### 2.2.2. Registro de entrevistas
 
+**Enlace a las entrevistas en Microsoft Stream:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323270_upc_edu_pe/IQDzsbxvw7NXRI0oXSHTg3aYAX9OIPDS18ivmeaY0yGlTlU?e=K1jGSa
+
 **Segmento 1: Gestión de operaciones logísticas**
 
 **Entrevista #1**
@@ -663,6 +665,7 @@ Se han definido dos segmentos objetivo para la recolección de información: ges
 | Detalle       | Información                                      |
 |---------------|--------------------------------------------------|
 | Entrevistado  | Ricardo Valdivia Quispe                          |
+| Imagen | <p align="center"><img src="./assets/entrevistas/Entrevista1.png" width="200"/></p> |
 | Rol           | Coordinador de Operaciones                       |
 | Empresa       | Transportes Valdivia SAC                         |
 | Edad          | 38 años                                          |
@@ -690,6 +693,7 @@ Muestra disposición media-alta ante una solución de captura visual y validaci�
 | Detalle       | Información                                          |
 |---------------|------------------------------------------------------|
 | Entrevistada  | Miriam Ccori Huanca                                  |
+| Imagen | <p align="center"><img src="./assets/entrevistas/Entrevista2.png" width="200"/></p> |
 | Rol           | Jefa de Operaciones                                  |
 | Empresa       | Grupo Ccori Logística EIRL                           |
 | Edad          | 44 años                                              |
@@ -717,6 +721,7 @@ Muestra alta disposición hacia una solución de captura visual y validación au
 | Detalle       | Información                                           |
 |---------------|-------------------------------------------------------|
 | Entrevistado  | Jorge Mamani Apaza                                    |
+| Imagen | <p align="center"><img src="./assets/entrevistas/Entrevista3.png" width="200"/></p> |
 | Rol           | Gerente General y fundador                            |
 | Empresa       | Trans Mamani Cargo SAC                                |
 | Edad          | 52 años                                               |
@@ -746,6 +751,7 @@ Su disposición ante tecnología es escéptica pero pragmática: no rechaza la s
 | Detalle       | Información                                         |
 |---------------|-----------------------------------------------------|
 | Entrevistado  | Edilberto Poma Condori                              |
+| Imagen | <p align="center"><img src="./assets/entrevistas/Entrevista4.png" width="200"/></p> |
 | Rol           | Conductor de larga distancia                        |
 | Ruta          | Lima–Arequipa–Juliaca                               |
 | Edad          | 46 años                                             |
@@ -773,6 +779,7 @@ Su motivación para adoptar la solución no es económica sino de justicia labor
 | Detalle       | Información                                          |
 |---------------|------------------------------------------------------|
 | Entrevistada  | Yadira Ríos Solano                                   |
+| Imagen | <p align="center"><img src="./assets/entrevistas/Entrevista5.png" width="200"/></p> |
 | Rol           | Conductora de reparto urbano                         |
 | Ruta          | Lima Metropolitana — reparto multípunto              |
 | Edad          | 34 años                                              |
@@ -800,6 +807,7 @@ Una observación de campo relevante que aporta: en algunos almacenes de mercados
 | Detalle       | Información                                                  |
 |---------------|--------------------------------------------------------------|
 | Entrevistado  | Hipólito Ccama Luque                                         |
+| Imagen | <p align="center"><img src="./assets/entrevistas/Entrevista6.png" width="200"/></p> |
 | Rol           | Conductor de carga pesada                                    |
 | Ruta          | Lima–Ica–Nasca                                               |
 | Edad          | 41 años                                                      |
@@ -1373,7 +1381,168 @@ Este modelado aporta un mejor entendimiento del sistema, reduce el acoplamiento 
 ![To-Be Scenario Mapping - Conductor](assets/tb1/mermaidcontext.png)
 
 ### 4.3. Software Architecture
+
+La arquitectura de software de **CoBox Smart Vision** representa la evolución de la plataforma CoBox hacia una solución distribuida orientada a la auditoría logística inteligente, incorporando capacidades avanzadas de visión computacional, validación automática de evidencias y operación móvil resiliente en campo.
+
+A diferencia de una implementación centralizada tradicional, CoBox Smart Vision se construye sobre la base arquitectónica previamente establecida en CoBox, la cual adopta principios de **microservicios**, **Attribute-Driven Design (ADD)** y despliegue contenerizado en nube. Sobre dicha base se incorporan nuevos dominios funcionales especializados en procesamiento de evidencias visuales, validación inteligente de información operativa, sincronización offline-first y trazabilidad ampliada de eventos logísticos.
+
+La solución atiende principalmente a dos perfiles de usuario. El **Gestor de Operaciones** supervisa servicios, incidencias, métricas operativas, evidencias y reportes mediante interfaces web orientadas al control de la operación. El **Conductor** interactúa con una aplicación móvil para registrar eventos de ruta, capturar evidencias visuales, reportar incidencias y sincronizar información durante la ejecución del servicio, incluso en escenarios de conectividad intermitente.
+
+Desde la perspectiva tecnológica, la arquitectura mantiene un enfoque **cloud-native híbrido y escalable**. La capa backend se compone de servicios desarrollados con **Java 21 y Spring Boot 3.4**, expuestos mediante APIs REST y gestionados a través de un **API Gateway**, complementados por mecanismos de enrutamiento, seguridad perimetral y control de tráfico mediante **NGINX Reverse Proxy** y políticas de rate limiting. La capa web se implementa con **React TypeScript**, mientras que la solución móvil multiplataforma se desarrolla con **Flutter**.
+
+En infraestructura, **AWS** continúa como proveedor principal para ejecución de servicios, contenedores, almacenamiento de evidencias y persistencia operacional mediante servicios como **Amazon EC2**, **Amazon ECR**, **Amazon S3** y **Amazon Aurora PostgreSQL**. De forma complementaria, **Google Cloud Platform** aporta capacidades especializadas de inteligencia artificial mediante **Vertex AI Vision** y **Document AI**, orientadas al análisis de imágenes, extracción documental y validación automática de registros operativos.
+
+La arquitectura prioriza atributos de calidad críticos para el dominio logístico: escalabilidad horizontal, alta disponibilidad, operación offline-first, sincronización confiable, seguridad de extremo a extremo, observabilidad técnica, trazabilidad auditable y evolución incremental de servicios. Para monitoreo y diagnóstico se emplea una pila de observabilidad basada en **Prometheus** y **Grafana**. Las credenciales, tokens y secretos operativos se gestionan mediante variables de entorno o servicios especializados de secret management, evitando su exposición en código fuente o artefactos desplegables.
+
 #### 4.3.1. Software Architecture System Landscape Diagram
+
+El diagrama de paisaje del sistema presenta a **CoBox Smart Vision** dentro del ecosistema empresarial y tecnológico donde opera la organización logística. En este nivel se identifican los actores principales, la plataforma central y los sistemas externos estratégicos que habilitan identidad digital, capacidades inteligentes, comunicaciones operativas e infraestructura cloud.
+
+A diferencia de una representación centrada únicamente en infraestructura, el paisaje del sistema busca mostrar cómo CoBox Smart Vision articula la relación entre la operación logística diaria, la supervisión gerencial y los servicios especializados necesarios para una operación moderna basada en trazabilidad y validación automática de información.
+
+CoBox Smart Vision se posiciona como el núcleo digital de la operación: centraliza servicios logísticos, evidencias, incidencias, validaciones y reportes; mientras se integra con proveedores externos para autenticación, inteligencia artificial, notificaciones e infraestructura escalable.
+
+---
+
+**Elementos principales del diagrama**
+
+- **Gestor de Operaciones**: usuario responsable de supervisar servicios, revisar incidencias, validar evidencias y consultar indicadores operativos.
+- **Conductor**: usuario de campo encargado de registrar eventos, capturar evidencias y sincronizar información desde la aplicación móvil.
+- **Administrador de Plataforma**: usuario interno responsable de configuración, catálogos, usuarios, políticas y monitoreo funcional.
+- **CoBox Smart Vision**: plataforma principal de gestión logística inteligente, trazabilidad y auditoría automatizada.
+- **Auth0 Identity Provider**: proveedor externo IAM para autenticación y emisión de tokens de acceso.
+- **Google Cloud AI Services**: servicios especializados de IA (Vertex AI Vision / Document AI) para procesamiento visual y documental.
+- **Notification Services**: servicios de correo, SMS o mensajería para alertas operativas y notificaciones.
+- **AWS Cloud Platform**: infraestructura principal de ejecución, almacenamiento y persistencia.
+- **Observability Platform**: monitoreo técnico, métricas, dashboards y diagnóstico operativo.
+
+---
+
+**Justificación de decisiones**
+
+El paisaje del sistema refleja una evolución arquitectónica respecto a versiones previas de CoBox. La autenticación deja de ser una responsabilidad interna y se desacopla hacia un proveedor IAM especializado, reduciendo complejidad operativa y fortaleciendo seguridad. Asimismo, la inteligencia artificial se consume como capacidad externa administrada, evitando construir y mantener modelos propios en una primera etapa.
+
+AWS se mantiene como plataforma principal por continuidad operativa e inversión previa, mientras que GCP se incorpora selectivamente como proveedor especializado de visión computacional. Esta estrategia multi-cloud pragmática maximiza capacidades sin introducir sobrearquitectura innecesaria.
+
+<img src="./assets/tb1/c4_landscape_diagram.png" alt="Software Architecture System Landscape Diagram" />
+
 #### 4.3.2. Software Architecture Context Level Diagrams
+
+El diagrama de contexto presenta a **CoBox Smart Vision** como el sistema central dentro de la solución, delimitando sus relaciones directas con los usuarios principales y con los sistemas externos que habilitan capacidades transversales. En este nivel no se detallan bases de datos, contenedores internos ni mecanismos de despliegue, ya que dichos elementos corresponden a los diagramas de contenedores y despliegue.
+
+CoBox Smart Vision concentra las capacidades de gestión logística, registro de eventos operativos, captura de evidencias, validación automática, trazabilidad, incidencias, reportes y auditoría. El **Gestor de Operaciones** interactúa con el sistema para supervisar servicios, revisar alertas, consultar reportes y validar información operativa. El **Conductor** utiliza el sistema durante la ejecución del servicio para registrar eventos, capturar evidencias visuales, reportar incidencias y sincronizar información desde campo. El **Administrador de Plataforma** gestiona configuraciones operativas, catálogos, usuarios y parámetros del sistema.
+
+En cuanto a sistemas externos, **Auth0 Identity Provider** se encarga de la autenticación y emisión de tokens bajo estándares OAuth2/OIDC. **Google Cloud AI Services** provee capacidades especializadas para visión computacional y procesamiento documental. **Notification Services** permite el envío de alertas o comunicaciones operativas. **AWS Cloud Platform** representa la plataforma principal donde se ejecutan y hospedan los componentes internos de CoBox Smart Vision. Finalmente, la **Observability Platform** permite monitorear el estado técnico de la solución, sus servicios y métricas operativas de infraestructura.
+
+---
+
+**Elementos principales del diagrama**
+
+- **CoBox Smart Vision**: sistema central de gestión logística inteligente, validación automática de evidencias, trazabilidad operativa, incidencias y reportes.
+- **Gestor de Operaciones**: actor responsable de supervisar servicios, consultar alertas, revisar evidencias y tomar decisiones operativas.
+- **Conductor**: actor responsable de registrar eventos, capturar evidencias visuales, reportar incidencias y sincronizar información en campo.
+- **Administrador de Plataforma**: actor responsable de configurar parámetros operativos, catálogos, usuarios y políticas funcionales.
+- **Auth0 Identity Provider**: sistema externo encargado de autenticación, autorización y emisión de tokens OAuth2/OIDC.
+- **Google Cloud AI Services**: proveedor externo de capacidades de inteligencia artificial para análisis visual y documental.
+- **Notification Services**: sistema externo para envío de notificaciones operativas por correo, SMS o canales equivalentes.
+- **AWS Cloud Platform**: plataforma principal de infraestructura donde se ejecuta la solución.
+- **Observability Platform**: sistema externo o transversal para monitoreo técnico, métricas y dashboards operativos.
+
+---
+
+**Justificación de decisiones**
+
+El contexto arquitectónico separa explícitamente las responsabilidades internas de CoBox Smart Vision de las capacidades delegadas a proveedores especializados. La autenticación se desacopla mediante Auth0, evitando mantener un servicio IAM propio y reduciendo riesgos de seguridad asociados a la gestión interna de credenciales. La validación inteligente se apoya en Google Cloud AI Services, permitiendo incorporar visión computacional y procesamiento documental sin entrenar ni desplegar modelos propios en esta etapa.
+
+AWS se mantiene como plataforma principal de ejecución por continuidad con la arquitectura previa de CoBox, mientras que la observabilidad se modela como una capacidad transversal necesaria para operar microservicios, API Gateway, reverse proxy y procesos de validación asíncrona. Esta separación permite evolucionar la arquitectura sin perder trazabilidad con la base existente de microservicios y despliegue contenerizado.
+
+<img src="./assets/tb1/c4_context_diagram.png" alt="Software Architecture Context Level Diagram" />
+
 #### 4.3.3. Software Architecture Container Level Diagrams
+
+El diagrama de contenedores representa la evolución de CoBox desde una arquitectura de microservicios previamente validada hacia **CoBox Smart Vision**, incorporando nuevos contenedores especializados para captura de evidencias, validación inteligente, sincronización offline y auditoría operativa.
+
+A diferencia de una arquitectura monolítica modular, CoBox Smart Vision mantiene una separación por servicios alineada con los bounded contexts definidos en el análisis de dominio. Esta decisión permite conservar la base arquitectónica existente de CoBox, basada en microservicios desplegados con Docker, API Gateway, NGINX Reverse Proxy y mecanismos de control de tráfico, incorporando nuevas capacidades sin representar un retroceso arquitectónico.
+
+La solución se organiza alrededor de aplicaciones cliente, capa de entrada, microservicios de dominio, servicios transversales, almacenamiento, integración con IA y observabilidad. La aplicación web permite a los gestores supervisar servicios, alertas, incidencias, evidencias y reportes. La aplicación móvil Flutter permite a los conductores capturar evidencias, registrar eventos operativos y sincronizar información en escenarios de conectividad limitada.
+
+---
+
+**Elementos principales del diagrama**
+
+- **Web Application**: aplicación React TypeScript utilizada por gestores de operaciones para supervisión, análisis, reportes, evidencias e incidencias.
+- **Mobile Application**: aplicación Flutter utilizada por conductores para captura de evidencias, registro de eventos, operación offline y sincronización posterior.
+- **NGINX Reverse Proxy**: componente de entrada para terminación HTTPS, enrutamiento inicial y protección perimetral.
+- **API Gateway**: punto central de exposición de APIs, enrutamiento hacia microservicios, control de acceso, rate limiting y agregación de solicitudes.
+- **Auth0 Identity Provider**: proveedor externo IAM para autenticación y emisión de tokens OAuth2/OIDC.
+- **Fleet Management Service**: microservicio responsable de vehículos, estados de flota, asignaciones y datos operativos de unidades.
+- **Delivery Management Service**: microservicio responsable del ciclo de vida de servicios logísticos y entregas.
+- **Evidence Management Service**: microservicio especializado en captura, registro, almacenamiento y consulta de evidencias visuales y documentales.
+- **AI Validation Service**: microservicio orquestador de validaciones automáticas mediante Vertex AI Vision y Document AI.
+- **Incident Management Service**: microservicio responsable del registro, seguimiento y resolución de incidencias operativas.
+- **Reporting & Analytics Service**: microservicio responsable de reportes validados, indicadores operativos y consultas analíticas.
+- **Maintenance Service**: microservicio responsable del historial de mantenimiento y estado operativo de unidades.
+- **Operational Database**: base de datos PostgreSQL / Amazon Aurora PostgreSQL para persistencia operacional, transaccional y de auditoría.
+- **Evidence Storage**: Amazon S3 para almacenamiento seguro de imágenes, documentos y evidencias asociadas a servicios.
+- **Observability Stack**: Prometheus y Grafana para monitoreo técnico, métricas, dashboards y diagnóstico de servicios.
+
+---
+
+**Justificación de decisiones**
+
+El uso de microservicios permite preservar la arquitectura base de CoBox y extenderla con capacidades especializadas de Smart Vision sin concentrar toda la lógica en un único backend. Los bounded contexts se reflejan como servicios independientes o especializados, reduciendo acoplamiento entre gestión de flota, entregas, evidencias, incidencias, mantenimiento y reportes.
+
+La autenticación se desacopla mediante **Auth0**, reemplazando progresivamente el IAM propio basado en JWT por un proveedor especializado. El API Gateway conserva la responsabilidad de validar tokens, aplicar políticas de acceso y enrutar solicitudes hacia los microservicios correspondientes.
+
+El **Evidence Management Service** y el **AI Validation Service** representan la evolución central de Smart Vision, ya que incorporan el flujo de captura, almacenamiento, procesamiento y validación automática de evidencias. La aplicación móvil mantiene almacenamiento local para soportar operación offline y sincronización posterior, mientras que la validación avanzada se ejecuta mediante servicios administrados de IA en GCP.
+
+<img src="./assets/tb1/c4_container_diagram.png" alt="Software Architecture Container Level Diagram" />
+
 #### 4.3.4. Software Architecture Deployment Diagrams
+
+El diagrama de despliegue describe la distribución física y lógica de los componentes de **CoBox Smart Vision**, representando la evolución de la plataforma CoBox hacia una solución distribuida basada en microservicios, identidad desacoplada, operación móvil offline-first e integración multi-cloud para capacidades inteligentes.
+
+La arquitectura se despliega principalmente sobre **AWS**, donde residen los componentes propios de CoBox Smart Vision: capa de entrada, gateway de APIs, microservicios de dominio, almacenamiento operacional, evidencias y observabilidad. De forma complementaria, **Google Cloud Platform** se integra como proveedor externo especializado para procesamiento visual y documental mediante servicios administrados de IA. Asimismo, **Auth0** se incorpora como plataforma externa de identidad y acceso, reemplazando progresivamente el servicio IAM propietario implementado en versiones anteriores.
+
+Los usuarios interactúan desde dos canales principales. El **Gestor de Operaciones** accede mediante navegador web a la aplicación administrativa, mientras que el **Conductor** utiliza una aplicación móvil Flutter instalada en dispositivos Android o iOS. Esta aplicación mantiene almacenamiento local seguro para operar en escenarios sin conectividad y sincroniza registros pendientes cuando la red se restablece.
+
+En el perímetro cloud, las solicitudes ingresan por un **NGINX Reverse Proxy**, responsable de terminación HTTPS y protección inicial, para luego ser dirigidas hacia el **API Gateway**, donde se aplican validaciones de tokens, políticas de acceso, rate limiting y enrutamiento hacia los microservicios correspondientes.
+
+Los servicios de dominio se ejecutan como contenedores Docker sobre nodos EC2, permitiendo despliegue independiente, replicabilidad controlada y evolución incremental. La persistencia transaccional se mantiene en **Amazon Aurora PostgreSQL**, mientras que las evidencias visuales y documentales se almacenan en **Amazon S3**. La plataforma incorpora monitoreo técnico mediante **Prometheus** y **Grafana**, recolectando métricas de gateway, reverse proxy y microservicios.
+
+---
+
+**Elementos principales del diagrama**
+
+- **Operations Workstation**: estación de trabajo del Gestor de Operaciones con acceso web.
+- **Mobile Device**: dispositivo Android/iOS del Conductor con aplicación Flutter.
+- **Local Offline Storage**: almacenamiento local cifrado para registros pendientes y evidencias temporales.
+- **Auth0 Cloud**: plataforma externa de autenticación y autorización.
+- **NGINX Reverse Proxy**: entrada HTTPS y protección perimetral.
+- **API Gateway**: punto central de APIs, rate limiting y routing interno.
+- **Application Services Node**: host EC2 con contenedores de microservicios.
+- **Fleet Management Service**: servicio de gestión de flota.
+- **Delivery Management Service**: servicio de gestión de entregas.
+- **Evidence Management Service**: servicio de evidencias visuales y documentales.
+- **AI Validation Service**: servicio orquestador de validaciones inteligentes.
+- **Incident Management Service**: servicio de incidencias operativas.
+- **Reporting & Analytics Service**: servicio de reportes e indicadores.
+- **Maintenance Service**: servicio de mantenimiento de unidades.
+- **Amazon ECR**: registro de imágenes Docker.
+- **Amazon Aurora PostgreSQL**: base de datos operacional.
+- **Amazon S3**: almacenamiento de evidencias.
+- **Observability Node**: Prometheus y Grafana.
+- **Google Cloud AI Platform**: Vertex AI Vision y Document AI.
+
+---
+
+**Justificación de decisiones**
+
+El despliegue conserva la línea evolutiva de CoBox basada en contenedores y separación de servicios, evitando un retroceso hacia arquitecturas monolíticas. El uso de **EC2 + Docker + ECR** resulta suficiente para el alcance académico y operativo del proyecto, sin introducir complejidad adicional asociada a orquestadores como Kubernetes.
+
+La autenticación se externaliza hacia **Auth0**, reduciendo carga de mantenimiento interno y fortaleciendo controles de acceso. La combinación **AWS + GCP** responde a una estrategia pragmática: AWS como plataforma principal de operación y GCP como proveedor especializado de IA. La aplicación móvil mantiene almacenamiento local para asegurar continuidad operativa en rutas con conectividad limitada.
+
+La arquitectura propuesta permite escalar horizontalmente la capa de servicios, incorporar nuevos bounded contexts y evolucionar capacidades inteligentes sin rediseñar la plataforma base.
+
+<img src="./assets/tb1/c4_deployment_diagram.png" alt="Software Architecture Container Level Diagram" />
+
