@@ -1146,6 +1146,8 @@ A continuación, se presenta el enlace al tablero de Trello donde se puede visua
 
 [Product Backlog en Trello](https://trello.com/invite/b/65483fffcafdad61c4da7629/ATTI3fc72917563f03e2b9eb1a1fd770af39A7368F5C/cobox)
 
+[Product Backlog en Trello](./assets/tb1/product_backlog_trello.png)
+
 
 ## Capítulo IV: Strategic-Level Software Design
 
