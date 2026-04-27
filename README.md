@@ -1286,28 +1286,47 @@ Reportes y analítica operativa
  **Start-With-Simple:**
 Los eventos se agruparon por afinidad funcional y coherencia de reglas, delimitando áreas independientes y evitando solapamientos entre procesos.
 
-Finalmente, se delimitaron 5 bounded context:
 
-**Fleet Management Context (Gestión de Flota)**
+### Finalmente, se delimitaron **cinco (5) Bounded Contexts**, cada uno responsable de un conjunto específico de funcionalidades, reglas de negocio y eventos dentro del sistema:
 
-Descripción:
-Este contexto se encarga de la administración completa de las unidades de transporte. Permite registrar vehículos, asignarlos a rutas, actualizar su estado (activo, mantenimiento) y consultar su historial operativo
+---
 
-**Delivery Management Context (Gestión de Entregas)**
+### **1. Fleet Management**
 
-Descripción:
-Gestiona todo el ciclo de vida de las entregas realizadas por los conductores, incluyendo asignación, ejecución y validación mediante evidencia.<br>
+**Descripción:**  
+Este contexto se encarga de la **gestión integral de la flota de transporte**, permitiendo el registro, actualización y control de los vehículos. Incluye la asignación de unidades a rutas, la gestión de estados (activo, en mantenimiento, inactivo) y la consulta del historial operativo, asegurando la disponibilidad y trazabilidad de los recursos logísticos.
 
-•Incidencias: registro y seguimiento de eventos e incidencias<br>
+---
 
-Evidencias: captura y validación automática de datos operativos<br>
+### **2. Delivery Management**
 
+**Descripción:**  
+Gestiona el **ciclo completo de las entregas**, desde su asignación hasta su finalización. Incluye la ejecución por parte de los conductores, el seguimiento del estado de las entregas y la validación mediante evidencias, garantizando el cumplimiento de las operaciones logísticas.
 
+---
 
-• Reportes: generación y consulta de reportes validados<br>
+### **3. Incident Management**
 
+**Descripción:**  
+Este contexto permite el **registro, clasificación, seguimiento y resolución de incidencias operativas** que ocurren durante la ejecución de las entregas o la operación de la flota. Facilita la trazabilidad de los eventos y el control de su impacto en el servicio.
 
-Cada contexto definido agrupa sus propios eventos, reglas y agregados, facilitando la evolución y el mantenimiento del sistema.
+---
+
+### **4. Evidence Management**
+
+**Descripción:**  
+Se encarga de la **captura, almacenamiento y validación automática de evidencias operativas**, como odómetro, combustible o confirmaciones de entrega. Este contexto garantiza la integridad, consistencia y disponibilidad de los datos utilizados para validar las operaciones.
+
+---
+
+### **5. Reports Management**
+
+**Descripción:**  
+Responsable de la **generación, consulta y análisis de reportes operativos**, permitiendo la toma de decisiones basada en información validada. Incluye la construcción de métricas, dashboards e indicadores clave del desempeño del sistema.
+
+---
+
+Cada contexto definido agrupa sus propios **eventos, reglas de negocio y agregados**, lo que facilita la **modularidad, escalabilidad y mantenibilidad** del sistema.
 
 #### 4.2.3. Domain Message Flows Modeling
 
