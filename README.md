@@ -1321,7 +1321,7 @@ Enfoque utilizado:
 - Se seleccionaron los casos de uso más relevantes, como la asignación de servicios, registro de evidencias y validación de información operativa.
 - Se describieron los flujos considerando:<br>
 o Actores: gestores de operaciones y conductores de carga.<br>
-o Bounded Contexts: Flotas, Incidentes,mantenimiento , delivery.<br>
+o Bounded Contexts: Flotas, Incidentes,mantenimiento , delivery, evidencias.<br>
 o Comandos: asignar servicio, registrar evidencia, reportar incidente.<br>
 o Eventos: ServiceAssigned, EvidenceCaptured, EvidenceValidated, IncidentReported, ServiceCompleted.<br>
 o Reglas: validación automática de evidencias, control de integridad de datos.<br>
