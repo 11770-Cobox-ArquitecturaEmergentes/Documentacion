@@ -1318,6 +1318,16 @@ Resultados:
 
 Este modelado aporta un mejor entendimiento del sistema, reduce el acoplamiento entre contextos y sienta las bases para el diseño de APIs, eventos y la arquitectura evolutiva del producto.
 
+<img src="./assets/tb1/story1.png" alt="story flow" />
+
+<img src="./assets/tb1/story2.png" alt="story flow" />
+
+<img src="./assets/tb1/story3.png" alt="story flow" />
+
+<img src="./assets/tb1/story4.png" alt="story flow" />
+
+<img src="./assets/tb1/story5.png" alt="story flow" />
+
 #### 4.2.4. Bounded Context Canvases
 #### 4.2.5. Context Mapping
 
