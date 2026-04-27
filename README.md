@@ -1306,14 +1306,14 @@ Enfoque utilizado:
 
 - Se partió del modelo de Event Storming definido en etapas previas del proyecto.
 - Se seleccionaron los casos de uso más relevantes, como la asignación de servicios, registro de evidencias y validación de información operativa.
-- Se describieron los flujos considerando:
-o Actores: gestores de operaciones y conductores de carga.
-o Bounded Contexts: Gestión de Operaciones, Ejecución en Campo y Validación Automática.
-o Comandos: asignar servicio, registrar evidencia, reportar incidente.
-o Eventos: ServiceAssigned, EvidenceCaptured, EvidenceValidated, IncidentReported, ServiceCompleted.
-o Reglas: validación automática de evidencias, control de integridad de datos.
-o Vistas: dashboards analíticos para gestores, historial de servicios para conductores.
-o Integración: posible conexión con sistemas de gestión existentes y dispositivos móviles.
+- Se describieron los flujos considerando:<br>
+o Actores: gestores de operaciones y conductores de carga.<br>
+o Bounded Contexts: Flotas, Incidentes,mantenimiento , delivery.<br>
+o Comandos: asignar servicio, registrar evidencia, reportar incidente.<br>
+o Eventos: ServiceAssigned, EvidenceCaptured, EvidenceValidated, IncidentReported, ServiceCompleted.<br>
+o Reglas: validación automática de evidencias, control de integridad de datos.<br>
+o Vistas: dashboards analíticos para gestores, historial de servicios para conductores.<br>
+o Integración: posible conexión con sistemas de gestión existentes y dispositivos móviles.<br>
 
 Resultados:
 
