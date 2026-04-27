@@ -1309,11 +1309,24 @@ Los eventos se agruparon por afinidad funcional y coherencia de reglas, delimita
 
 Finalmente, se delimitaron 5 bounded context:
 
-• Operaciones: gestión de servicios logísticos y asignaciones
-• Evidencias: captura y validación automática de datos operativos
-• Incidencias: registro y seguimiento de eventos e incidencias
-• Reportes: generación y consulta de reportes validados
-• Integración/API: exposición de servicios para apps y sistemas externos
+**Fleet Management Context (Gestión de Flota)**
+
+Descripción:
+Este contexto se encarga de la administración completa de las unidades de transporte. Permite registrar vehículos, asignarlos a rutas, actualizar su estado (activo, mantenimiento) y consultar su historial operativo
+
+**Delivery Management Context (Gestión de Entregas)**
+
+Descripción:
+Gestiona todo el ciclo de vida de las entregas realizadas por los conductores, incluyendo asignación, ejecución y validación mediante evidencia.<br>
+
+•Incidencias: registro y seguimiento de eventos e incidencias<br>
+
+Evidencias: captura y validación automática de datos operativos<br>
+
+
+
+• Reportes: generación y consulta de reportes validados<br>
+
 
 Cada contexto definido agrupa sus propios eventos, reglas y agregados, facilitando la evolución y el mantenimiento del sistema.
 
@@ -1327,14 +1340,14 @@ Enfoque utilizado:
 
 - Se partió del modelo de Event Storming definido en etapas previas del proyecto.
 - Se seleccionaron los casos de uso más relevantes, como la asignación de servicios, registro de evidencias y validación de información operativa.
-- Se describieron los flujos considerando:
-o Actores: gestores de operaciones y conductores de carga.
-o Bounded Contexts: Gestión de Operaciones, Ejecución en Campo y Validación Automática.
-o Comandos: asignar servicio, registrar evidencia, reportar incidente.
-o Eventos: ServiceAssigned, EvidenceCaptured, EvidenceValidated, IncidentReported, ServiceCompleted.
-o Reglas: validación automática de evidencias, control de integridad de datos.
-o Vistas: dashboards analíticos para gestores, historial de servicios para conductores.
-o Integración: posible conexión con sistemas de gestión existentes y dispositivos móviles.
+- Se describieron los flujos considerando:<br>
+o Actores: gestores de operaciones y conductores de carga.<br>
+o Bounded Contexts: Flotas, Incidentes,mantenimiento , delivery, evidencias.<br>
+o Comandos: asignar servicio, registrar evidencia, reportar incidente.<br>
+o Eventos: ServiceAssigned, EvidenceCaptured, EvidenceValidated, IncidentReported, ServiceCompleted.<br>
+o Reglas: validación automática de evidencias, control de integridad de datos.<br>
+o Vistas: dashboards analíticos para gestores, historial de servicios para conductores.<br>
+o Integración: posible conexión con sistemas de gestión existentes y dispositivos móviles.<br>
 
 Resultados:
 
@@ -1344,6 +1357,16 @@ Resultados:
 - Se identificaron puntos de integración y transferencia de mensajes entre contextos, asegurando trazabilidad y consistencia de la información.
 
 Este modelado aporta un mejor entendimiento del sistema, reduce el acoplamiento entre contextos y sienta las bases para el diseño de APIs, eventos y la arquitectura evolutiva del producto.
+
+<img src="./assets/tb1/story1.png" alt="story flow" />
+
+<img src="./assets/tb1/story2.png" alt="story flow" />
+
+<img src="./assets/tb1/story3.png" alt="story flow" />
+
+<img src="./assets/tb1/story4.png" alt="story flow" />
+
+<img src="./assets/tb1/story5.png" alt="story flow" />
 
 #### 4.2.4. Bounded Context Canvases
 #### 4.2.5. Context Mapping
