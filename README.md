@@ -1432,10 +1432,10 @@ El proceso de elaboración se basó en los User Personas previamente definidos, 
 El Impact Mapping permite alinear el desarrollo del producto con los objetivos estratégicos, asegurando que cada funcionalidad aporte valor real al negocio y responda a las necesidades identificadas en el análisis previo.
 
 #### Segmento 1: Gestión de Operaciones Logísticas
-![To-Be Scenario Mapping - Gestor](assets/tb1/impactmap1.png)
+![To-Be Scenario Mapping - Gestor](assets/tb1/map1.png)
 
 #### Segmento 2: Conductores de Transporte
-![To-Be Scenario Mapping - Conductor](assets/tb1/impactmap2.png)
+![To-Be Scenario Mapping - Conductor](assets/tb1/map2.png)
 
 ### 3.4. Product Backlog
 
