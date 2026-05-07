@@ -583,24 +583,29 @@ Este segmento está compuesto por conductores y operadores de campo encargados d
 
 ### 2.1. Competidores
 
-Se han identificado tres competidores relevantes dentro del dominio de soluciones digitales para gestión de flotas y operaciones logísticas, los cuales representan alternativas actuales en el mercado y permiten establecer un contraste con la propuesta de CoBox Smart Vision.
+Para analizar el entorno competitivo de CoBox Smart Vision, se identificaron tres soluciones digitales vinculadas a la gestión de flotas, trazabilidad logística, telemática, optimización de rutas y control operativo. Estas alternativas permiten contrastar cómo el mercado aborda problemas relacionados con visibilidad, eficiencia, evidencia de operación y control de servicios logísticos.
+
+El análisis considera competidores directos e indirectos. Samsara y Powerfleet representan soluciones con fuerte orientación a telemática, conectividad de activos, monitoreo e integración de datos de flota, usualmente asociadas a empresas con mayor capacidad de inversión tecnológica. Driv.in representa una alternativa SaaS más cercana al contexto latinoamericano, enfocada en optimización logística, última milla, ruteo y control de entregas.
+
+A diferencia de estas soluciones, CoBox Smart Vision se posiciona inicialmente como una capa accesible de auditoría operativa basada en evidencia visual verificable. Su foco no es reemplazar un TMS, ERP o sistema de telemetría por hardware, sino validar evidencias críticas capturadas en campo —como odómetros, comprobantes de combustible, documentos de entrega e incidencias— para reducir errores manuales, discrepancias operativas y reprocesos administrativos en PyMES de transporte de carga.
 
 **Competidor 1: Samsara**  
 Web: https://www.samsara.com/mx  
 
-Plataforma líder en la Nube de Operaciones Conectadas que utiliza IA de vanguardia para transformar la seguridad y eficiencia operativa. Más allá de la telemática tradicional, destaca por sus cámaras con visión computacional que previenen accidentes en tiempo real y su ecosistema integral que centraliza datos de seguridad, cumplimiento (ELD) y mantenimiento en una sola interfaz inteligente.
+Samsara es una plataforma orientada a operaciones conectadas, telemática, seguridad vial, monitoreo de activos y análisis de datos operativos. Su propuesta se apoya en dispositivos, sensores, cámaras y software para ofrecer visibilidad sobre flotas y operaciones. Su fortaleza principal se encuentra en la integración de hardware, datos en tiempo real y herramientas de seguridad; sin embargo, su enfoque puede implicar mayor complejidad y costo de adopción para PyMES que no cuentan con infraestructura tecnológica avanzada.
 
 **Competidor 2: Powerfleet**  
 Web: https://www.fleetcomplete.com/es/  
 
-Powerfleet es una solución global especializada en la unificación de datos de flotas mixtas. Su ventaja competitiva es la plataforma Unity, que integra datos de hardware propietario, sensores de terceros y sistemas originales de fabricantes (OEMs). Se enfoca en la visibilidad total del ciclo de vida del activo, permitiendo una integración profunda con ERPs corporativos mediante APIs robustas.
+Powerfleet representa una solución de gestión de flotas y activos conectados, enfocada en telemática, integración de datos, monitoreo operativo y administración de activos móviles. Su valor diferencial se encuentra en la consolidación de información proveniente de vehículos, sensores, dispositivos y plataformas externas. No obstante, este enfoque está más orientado a organizaciones que requieren integración profunda de datos y gestión de flotas con mayor nivel de madurez tecnológica.
 
 **Competidor 3: Driv.in**  
 Web: https://driv.in/  
 
-Driv.in es un TMS SaaS especializado en la optimización de la última milla y distribución urbana en Latinoamérica. Su núcleo es un potente algoritmo de ruteo dinámico que reduce costos logísticos y emisiones. Sobresale por su capacidad de gestionar la experiencia del cliente final (notificaciones y ETAs precisas) y herramientas de control de entregas (Proof of Delivery) adaptadas a la realidad operativa de la región.
+Driv.in es una solución SaaS especializada en gestión de transporte, optimización de rutas, última milla, seguimiento de entregas y experiencia del cliente final en operaciones logísticas. Su fortaleza se encuentra en la planificación y control de distribución, especialmente en contextos de operación urbana y regional. Sin embargo, su foco principal se orienta a la optimización logística y control de entrega, no necesariamente a la validación automática de evidencias visuales críticas para auditoría operativa en PyMES de transporte de carga.
 
-A pesar de las capacidades de estos competidores, ninguno de ellos se enfoca de manera central en la validación automática de datos mediante inteligencia artificial a partir de evidencia visual, lo que representa una oportunidad de diferenciación para CoBox Smart Vision.
+
+A partir de este contraste, se identifica una oportunidad de diferenciación para CoBox Smart Vision: ofrecer una solución de menor fricción de adopción, basada en dispositivos móviles existentes, captura guiada, operación offline, validación local básica de calidad de imagen y procesamiento inteligente de evidencias cuando exista conectividad. Esta orientación permite atender a empresas que necesitan mejorar la confiabilidad de sus registros sin asumir la complejidad de soluciones enterprise o infraestructura especializada.
 
 #### 2.1.1. Análisis competitivo
 
@@ -612,7 +617,7 @@ A pesar de las capacidades de estos competidores, ninguno de ellos se enfoca de 
         <tr>
             <td style="border: 1px solid #000; padding: 10px; font-weight: bold; width: 15%;">¿Por qué llevar a cabo este análisis?</td>
             <td colspan="5" style="border: 1px solid #000; padding: 10px; vertical-align: top;">
-                Identificar las capacidades, limitaciones y enfoques de soluciones actuales en el mercado de gestión logística, con el fin de determinar oportunidades de diferenciación para CoBox Smart Vision, especialmente en la validación automática de datos operativos mediante inteligencia artificial.
+                El análisis competitivo permite identificar cómo las soluciones actuales abordan la gestión de flotas, la trazabilidad logística, el monitoreo operativo y el control de entregas. A partir de esta comparación, CoBox Smart Vision puede reconocer oportunidades de diferenciación enfocadas en la validación de evidencias visuales, la reducción de errores manuales, la operación offline y la accesibilidad para PyMES de transporte de carga.
                 <br><br>
             </td>
         </tr>
@@ -648,54 +653,54 @@ A pesar de las capacidades de estos competidores, ninguno de ellos se enfoca de 
         <tr>
             <td rowspan="2" style="border: 1px solid #000; padding: 10px; font-weight: bold; text-align: center; writing-mode: vertical-lr; transform: rotate(180deg);">Perfil</td>
             <td style="border: 1px solid #000; padding: 10px;">Overview</td>
-            <td style="border: 1px solid #000;">Plataforma de auditoría logística basada en IA que valida automáticamente datos operativos mediante evidencia visual.</td>
-            <td style="border: 1px solid #000;">Nube de Operaciones Conectadas con enfoque en seguridad proactiva e inteligencia de datos IoT.</td>
-            <td style="border: 1px solid #000;">Ecosistema de Datos Unificados para activos mixtos, agnóstico al hardware y centrado en integración empresarial.</td>
-            <td style="border: 1px solid #000;">TMS SaaS especializado en orquestación de última milla, ruteo dinámico y experiencia de entrega.</td>
+            <td style="border: 1px solid #000;">Capa de auditoría logística basada en evidencia visual verificable para validar datos operativos críticos capturados en campo.</td>
+            <td style="border: 1px solid #000;">Plataforma de operaciones conectadas orientada a telemática, seguridad de flotas, monitoreo de activos y análisis operativo.</td>
+            <td style="border: 1px solid #000;">Solución de gestión de flotas y activos conectados enfocada en telemática, integración de datos y visibilidad operativa.</td>
+            <td style="border: 1px solid #000;">TMS SaaS orientado a planificación logística, optimización de rutas, última milla, seguimiento de entregas y experiencia del cliente final.</td>
         </tr>
         <tr>
             <td style="border: 1px solid #000; padding: 10px;">Ventaja competitiva ¿Qué valor ofrece a los clientes?</td>
-            <td style="border: 1px solid #000;">Validación automática con IA sin hardware especializado, eliminando el error humano en auditorías.</td>
-            <td style="border: 1px solid #000;">Seguridad preventiva basada en IA de visión y una experiencia de usuario (UX) líder en la industria.</td>
-            <td style="border: 1px solid #000;">Interoperabilidad total (plataforma Unity) e integración nativa con fabricantes de vehículos (OEMs).</td>
-            <td style="border: 1px solid #000;">Optimización logística profunda adaptada a las restricciones específicas de LATAM (barreras geográficas, pagos, etc.).</td>
+            <td style="border: 1px solid #000;">Permite validar evidencias críticas sin requerir hardware especializado, usando captura móvil guiada, trazabilidad contextual y procesamiento inteligente.</td>
+            <td style="border: 1px solid #000;">Ofrece visibilidad operativa avanzada mediante sensores, cámaras, telemática y analítica para mejorar seguridad y eficiencia.</td>
+            <td style="border: 1px solid #000;">Centraliza datos de activos y flotas, facilitando integración con sistemas empresariales y monitoreo de operaciones distribuidas.</td>
+            <td style="border: 1px solid #000;">Optimiza rutas, entregas y seguimiento logístico, mejorando la planificación y la experiencia del cliente final.</td>
         </tr>
         <tr>
             <td rowspan="2" style="border: 1px solid #000; padding: 10px; font-weight: bold; text-align: center; writing-mode: vertical-lr; transform: rotate(180deg); background-color: #f9f9f9;">Perfil de Marketing</td>
             <td style="border: 1px solid #000; padding: 10px; background-color: #f9f9f9;">Mercado objetivo</td>
-            <td style="border: 1px solid #000; background-color: #f9f9f9;">PyMES y contratistas logísticos con procesos manuales y alta rotación.</td>
-            <td style="border: 1px solid #000; background-color: #f9f9f9;">Grandes corporativos (Enterprise) de transporte, construcción y servicios públicos.</td>
-            <td style="border: 1px solid #000; background-color: #f9f9f9;">Flotas industriales mixtas, maquinaria pesada y empresas con infraestructura IT compleja (SAP/Oracle).</td>
-            <td style="border: 1px solid #000; background-color: #f9f9f9;">Empresas de Retail, Consumo Masivo (CPG) y logística de distribución urbana en LATAM.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">PyMES de transporte de carga con procesos manuales o semi-digitales, baja adopción de telemetría especializada y necesidad de evidencia verificable.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Empresas medianas y grandes con flotas que requieren telemática, seguridad vial, monitoreo de activos y control operativo avanzado.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Organizaciones con flotas, activos móviles o necesidades de integración de datos operativos a nivel empresarial.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Empresas de retail, consumo masivo, operadores logísticos y organizaciones con operaciones de distribución urbana o última milla.</td>
         </tr>
         <tr>
             <td style="border: 1px solid #000; padding: 10px; background-color: #f9f9f9;">Estrategias de marketing</td>
-            <td style="border: 1px solid #000; background-color: #f9f9f9;">Enfoque en la "Verdad Operativa" y reducción inmediata de fraude/costos administrativos.</td>
-            <td style="border: 1px solid #000; background-color: #f9f9f9;">Marketing basado en Seguridad y ROI a través de la prevención de accidentes y ahorro de combustible.</td>
-            <td style="border: 1px solid #000; background-color: #f9f9f9;">Estrategia de "Data-First": eficiencia a través de la integración de silos de información corporativa.</td>
-            <td style="border: 1px solid #000; background-color: #f9f9f9;">Crecimiento regional basado en la digitalización de la experiencia del cliente final y eficiencia de rutas.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Posicionamiento basado en confiabilidad operativa, reducción de discrepancias, facilidad de adopción y uso de dispositivos móviles existentes.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Comunicación centrada en seguridad, eficiencia operacional, reducción de riesgos y control integral de flotas conectadas.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Enfoque en integración de datos, visibilidad de activos, administración centralizada y escalabilidad empresarial.</td>
+            <td style="border: 1px solid #000; background-color: #f9f9f9;">Enfoque en optimización de distribución, eficiencia de rutas, seguimiento de entregas y mejora de experiencia del cliente final.</td>
         </tr>
         <tr>
             <td rowspan="3" style="border: 1px solid #000; padding: 10px; font-weight: bold; text-align: center; writing-mode: vertical-lr; transform: rotate(180deg);">Perfil de Producto</td>
             <td style="border: 1px solid #000; padding: 10px;">Productos & Servicios</td>
-            <td style="border: 1px solid #000;">IA de visión, validación de documentos/fotos, App móvil, Backend Cloud con trazabilidad.</td>
-            <td style="border: 1px solid #000;">Dashcams con IA, Sensores de activos, ELD, Monitoreo de temperatura, Software de seguridad.</td>
-            <td style="border: 1px solid #000;">Pasarela de datos Unity, Telemática para activos no motorizados, Integración API, Control de carga.</td>
-            <td style="border: 1px solid #000;">Algoritmo de ruteo, Módulo de liquidación de fletes, App de conductor, Tracking en tiempo real para el cliente.</td>
+            <td style="border: 1px solid #000;">Aplicación móvil de captura guiada, validación básica local de calidad de imagen, sincronización offline, backend de trazabilidad y procesamiento inteligente de evidencias.</td>
+            <td style="border: 1px solid #000;">Software de gestión de flotas, dispositivos telemáticos, cámaras, sensores, monitoreo de activos, seguridad y reportes operativos.</td>
+            <td style="border: 1px solid #000;">Plataforma de gestión de flotas, telemática, monitoreo de activos, integración de datos y herramientas de control operativo.</td>
+            <td style="border: 1px solid #000;">Planificación de rutas, seguimiento de entregas, app para conductores, proof of delivery, notificaciones y analítica logística.</td>
         </tr>
         <tr>
             <td style="border: 1px solid #000; padding: 10px;">Precios & Costos</td>
-            <td style="border: 1px solid #000;">Suscripción accesible SaaS Pure-Play (sin inversión inicial en equipos).</td>
-            <td style="border: 1px solid #000;">Alto costo: Modelo de contrato multianual (Hardware + Licencia por unidad).</td>
-            <td style="border: 1px solid #000;">Medio-Alto: Basado en volumen de activos e integraciones de software requeridas.</td>
-            <td style="border: 1px solid #000;">Medio: Modelo SaaS escalable por número de usuarios o vehículos.</td>
+            <td style="border: 1px solid #000;">Modelo SaaS modular orientado a bajo costo de adopción, sin inversión inicial en hardware especializado.</td>
+            <td style="border: 1px solid #000;">Costo potencialmente alto por combinación de software, dispositivos, cámaras, sensores e implementación.</td>
+            <td style="border: 1px solid #000;">Costo medio o alto según volumen de activos, funcionalidades contratadas e integraciones requeridas.</td>
+            <td style="border: 1px solid #000;">Modelo SaaS escalable, generalmente asociado al volumen operativo, usuarios, vehículos o servicios gestionados.</td>
         </tr>
         <tr>
             <td style="border: 1px solid #000; padding: 10px;">Canales de distribución (Web y/o Móvil)</td>
-            <td style="border: 1px solid #000;">Web + Mobile (BYOD - Bring Your Own Device).</td>
-            <td style="border: 1px solid #000;">Web + Hardware IoT propietario + Mobile.</td>
-            <td style="border: 1px solid #000;">Web + Cloud Integration + Mobile.</td>
-            <td style="border: 1px solid #000;">Web + Mobile + Integración con WhatsApp/SMS.</td>
+            <td style="border: 1px solid #000;">Web + aplicación móvil, priorizando uso de dispositivos móviles existentes por parte de conductores y gestores.</td>
+            <td style="border: 1px solid #000;">Web + aplicación móvil + hardware IoT, cámaras y sensores instalados en vehículos o activos.</td>
+            <td style="border: 1px solid #000;">Web + aplicación móvil + dispositivos telemáticos + integraciones con plataformas empresariales.</td>
+            <td style="border: 1px solid #000;">Web + aplicación móvil + integraciones con canales de notificación y sistemas logísticos.</td>
         </tr>
         <tr>
             <td rowspan="5" style="border: 1px solid #000; padding: 10px; font-weight: bold; text-align: center; writing-mode: vertical-lr; transform: rotate(180deg); background-color: #fdfdfd;">Análisis SWOT</td>
@@ -705,72 +710,123 @@ A pesar de las capacidades de estos competidores, ninguno de ellos se enfoca de 
         </tr>
         <tr>
             <td style="border: 1px solid #000; padding: 10px;">Fortalezas</td>
-            <td style="border: 1px solid #000;">Agilidad, validación visual inteligente, no requiere instalación física.</td>
-            <td style="border: 1px solid #000;">Precisión extrema de sensores, marca global consolidada, IA de cabina.</td>
-            <td style="border: 1px solid #000;">Flexibilidad de datos, compatible con flotas pre-existentes, soporte Enterprise.</td>
-            <td style="border: 1px solid #000;">Dominio del mercado regional, UX muy sencilla, integración de pagos locales.</td>
+            <td style="border: 1px solid #000;">Baja fricción de adopción, enfoque en PyMES, captura móvil guiada, operación offline y validación de evidencias críticas sin hardware especializado.</td>
+            <td style="border: 1px solid #000;">Marca consolidada, ecosistema de hardware y software, monitoreo en tiempo real y capacidades avanzadas de telemática.</td>
+            <td style="border: 1px solid #000;">Experiencia en integración de datos de flotas, monitoreo de activos y soporte para operaciones empresariales complejas.</td>
+            <td style="border: 1px solid #000;">Especialización en ruteo, distribución, última milla y seguimiento de entregas en mercados latinoamericanos.</td>
         </tr>
         <tr>
             <td style="border: 1px solid #000; padding: 10px;">Debilidades</td>
-            <td style="border: 1px solid #000;">Dependencia de la calidad de cámara del usuario y conectividad móvil.</td>
-            <td style="border: 1px solid #000;">Rigidez de hardware (cerrado), dependencia de red 5G/4G constante.</td>
-            <td style="border: 1px solid #000;">Complejidad de configuración inicial para unificar datos dispersos.</td>
-            <td style="border: 1px solid #000;">Menor enfoque en la validación profunda de integridad de datos (fraude).</td>
+            <td style="border: 1px solid #000;">Dependencia de la calidad de la cámara, condiciones de captura, conectividad posterior y correcta adopción por parte de conductores.</td>
+            <td style="border: 1px solid #000;">Mayor complejidad de implementación y posible dependencia de dispositivos o infraestructura especializada.</td>
+            <td style="border: 1px solid #000;">Puede resultar complejo para empresas pequeñas con procesos manuales, baja madurez digital o recursos limitados.</td>
+            <td style="border: 1px solid #000;">Su foco principal está en optimización logística y entregas, no necesariamente en auditoría visual de evidencias críticas como odómetro o combustible.</td>
         </tr>
         <tr>
             <td style="border: 1px solid #000; padding: 10px;">Oportunidades</td>
-            <td style="border: 1px solid #000;">Automatización del "Checkout" logístico en empresas que hoy usan papel o Excel.</td>
-            <td style="border: 1px solid #000;">Expansión hacia la automatización total de almacenes con drones/robots.</td>
-            <td style="border: 1px solid #000;">Consolidación como el estándar de datos para seguros de flotas (Insurtech).</td>
-            <td style="border: 1px solid #000;">Expansión a mercados emergentes fuera de LATAM con desafíos similares.</td>
+            <td style="border: 1px solid #000;">Atender PyMES que requieren trazabilidad y evidencia verificable, pero no pueden asumir telemetría especializada ni plataformas enterprise.</td>
+            <td style="border: 1px solid #000;">Expandir capacidades de análisis predictivo, seguridad vial y automatización operativa en flotas conectadas.</td>
+            <td style="border: 1px solid #000;">Fortalecer su rol como plataforma de datos para flotas, seguros, mantenimiento y gestión de activos.</td>
+            <td style="border: 1px solid #000;">Ampliar su cobertura en mercados con alta demanda de digitalización logística, última milla y visibilidad de entregas.</td>
         </tr>
         <tr>
             <td style="border: 1px solid #000; padding: 10px;">Amenazas</td>
-            <td style="border: 1px solid #000;">Gigantes de IoT añadiendo capas de validación por software gratuitas.</td>
-            <td style="border: 1px solid #000;">Regulaciones de privacidad de datos biométricos más estrictas a nivel global.</td>
-            <td style="border: 1px solid #000;">Competidores que ofrezcan integración gratuita con APIs estandarizadas.</td>
-            <td style="border: 1px solid #000;">Entrada de actores globales (como Uber Direct) al espacio de última milla.</td>
+            <td style="border: 1px solid #000;">Competidores consolidados podrían incorporar módulos de validación visual o proof of delivery más avanzados dentro de sus plataformas existentes.</td>
+            <td style="border: 1px solid #000;">Soluciones más livianas y móviles podrían captar segmentos PyME que no requieren telemática completa.</td>
+            <td style="border: 1px solid #000;">Nuevas plataformas SaaS de menor costo podrían ofrecer integración básica de flotas con menor complejidad de adopción.</td>
+            <td style="border: 1px solid #000;">Actores globales o regionales podrían integrar auditoría visual, validación documental y seguimiento logístico en una sola solución.</td>
         </tr>
     </tbody>
 </table>
 
+El análisis evidencia que los competidores revisados cuentan con fortalezas relevantes en telemática, monitoreo de flotas, optimización de rutas, control de entregas e integración de datos. Sin embargo, también permite identificar un espacio competitivo para CoBox Smart Vision: la validación de evidencias operativas críticas en PyMES de transporte de carga que aún dependen de registros manuales, fotografías aisladas, comprobantes físicos o mensajería.
+
+Por ello, la ventaja inicial de CoBox Smart Vision no debe formularse como superioridad general frente a plataformas consolidadas, sino como especialización en un problema más acotado: convertir evidencia visual capturada en campo en información verificable, trazable y útil para auditoría operativa. Esta diferenciación será la base para definir las estrategias y tácticas frente a competidores en la siguiente subsección.
+
 #### 2.1.2. Estrategias y tácticas frente a competidores
 
-**Estrategia de posicionamiento:**
+A partir del análisis competitivo, CoBox Smart Vision define sus estrategias frente a competidores desde una posición de especialización. La solución no busca competir directamente en amplitud funcional con plataformas consolidadas de telemática, gestión de flotas o planificación logística, sino enfocarse en una brecha específica identificada en el segmento objetivo: la falta de información operativa verificable, trazable y auditable durante la ejecución de servicios de transporte de carga.
 
-CoBox Smart Vision se posiciona como una solución especializada en la validación automática de información operativa mediante inteligencia artificial, orientada a mejorar la confiabilidad de los datos en entornos logísticos.
+Mientras soluciones como Samsara y Powerfleet se orientan principalmente a telemática, monitoreo de activos, sensores, cámaras o integración de datos empresariales, y Driv.in se enfoca en planificación logística, ruteo y control de entregas, CoBox Smart Vision se posiciona como una capa accesible de auditoría operativa basada en evidencia visual. Su ventaja preliminar se concentra en validar evidencias críticas capturadas desde campo —como odómetros, comprobantes de combustible, documentos de entrega e incidencias— sin exigir infraestructura especializada ni reemplazar los sistemas existentes de la empresa.
 
-A diferencia de plataformas de gestión de flotas o sistemas de planificación logística, la propuesta no busca reemplazar soluciones existentes, sino resolver una brecha específica relacionada con la integridad y verificabilidad de los datos, especialmente en escenarios donde el ingreso manual de información genera errores o inconsistencias.
+**Estrategia de posicionamiento**
 
-Este posicionamiento permite enfocar la solución en segmentos que actualmente no cuentan con herramientas avanzadas de validación, particularmente pequeñas y medianas empresas de transporte de carga con procesos manuales o semi-digitalizados.
+CoBox Smart Vision se posiciona como una solución especializada en mejorar la confiabilidad de los datos operativos capturados en campo. Su propuesta se centra en reducir la dependencia del ingreso manual mediante captura móvil guiada, validación local básica de calidad de imagen, trazabilidad contextual, operación offline y procesamiento inteligente de evidencias cuando exista conectividad.
 
-**Estrategias frente a competidores:**
+Este posicionamiento permite diferenciar la solución frente a competidores más amplios. En lugar de ofrecer una plataforma integral de gestión de flotas o un TMS completo, CoBox Smart Vision se enfoca en resolver una brecha concreta: transformar evidencias visuales dispersas en información verificable para auditoría, resolución de discrepancias y toma de decisiones operativas.
 
-1. _Estrategia de diferenciación por especialización:_
-  En lugar de competir en amplitud funcional con plataformas como Samsara o Powerfleet, CoBox Smart Vision se enfoca en un dominio específico: la validación automática de datos operativos mediante evidencia visual.
-  Esta especialización permite desarrollar capacidades profundas en el uso de inteligencia artificial aplicada a la interpretación de imágenes y documentos, generando un valor que no es ofrecido por soluciones tradicionales centradas en la gestión o monitoreo.
+La estrategia resulta especialmente relevante para pequeñas y medianas empresas de transporte de carga que actualmente operan con hojas de cálculo, comprobantes físicos, fotografías enviadas por mensajería o registros manuales, y que no cuentan con recursos suficientes para adoptar soluciones enterprise, telemetría avanzada o hardware especializado.
 
-2. _Estrategia de entrada por segmento desatendido (PyMES):_
-  La solución se orienta inicialmente a pequeñas y medianas empresas de transporte de carga, las cuales presentan altos niveles de dependencia de procesos manuales y menor acceso a soluciones avanzadas debido a costos o complejidad de implementación.
-  Este segmento representa una oportunidad estratégica, ya que las soluciones existentes están principalmente diseñadas para empresas medianas y grandes con mayor capacidad de inversión en infraestructura y sistemas.
+**Estrategias frente a competidores**
 
-3. _Estrategia de reducción de fricción de adopción:_
-  A diferencia de soluciones que requieren instalación de hardware especializado o procesos complejos de integración, CoBox Smart Vision prioriza un modelo basado en dispositivos móviles y captura de evidencia visual, reduciendo la barrera de entrada y facilitando la adopción por parte de usuarios en campo.
-  Este enfoque permite validar rápidamente la propuesta de valor sin necesidad de inversiones iniciales elevadas.
+1. _Estrategia de diferenciación por especialización_
+
+   CoBox Smart Vision no compite con Samsara, Powerfleet o Driv.in desde la amplitud de funcionalidades, sino desde la profundidad en un problema específico: la validación de evidencias operativas críticas. Esta estrategia permite concentrar el MVP en casos donde el error manual, la falta de trazabilidad o la manipulación de datos generan mayor fricción para gestores y conductores.
+
+   La especialización se expresa en flujos como captura de odómetro, validación de comprobantes de combustible, registro de documentos de entrega e incidencias. Estos casos permiten demostrar valor operativo sin desarrollar una plataforma logística completa desde la primera versión.
+
+2. _Estrategia de entrada por segmento desatendido_
+
+   CoBox Smart Vision prioriza inicialmente a PyMES de transporte de carga que operan con procesos manuales o semi-digitales. Este segmento suele quedar parcialmente desatendido por soluciones enterprise debido a barreras de costo, complejidad de implementación, necesidad de hardware o dependencia de integraciones avanzadas.
+
+   Frente a competidores con mayor orientación a empresas medianas o grandes, la solución propone una adopción gradual, más accesible y centrada en dolores operativos frecuentes: discrepancias de kilometraje, comprobantes difíciles de verificar, evidencias aisladas, reclamos no sustentados y reprocesos administrativos.
+
+3. _Estrategia de reducción de fricción de adopción_
+
+   A diferencia de soluciones basadas en instalación de sensores, cámaras o dispositivos telemáticos, CoBox Smart Vision prioriza el uso de dispositivos móviles existentes. Esto reduce la inversión inicial y permite validar la propuesta mediante pilotos controlados antes de escalar la solución.
+
+   La reducción de fricción también se refleja en la experiencia del conductor. El flujo debe minimizar el ingreso manual, guiar la captura de evidencia, funcionar en escenarios de conectividad limitada y mostrar mensajes claros cuando una imagen esté borrosa, incompleta, mal iluminada o no pueda ser validada correctamente.
+
+4. _Estrategia de complementariedad frente a sistemas existentes_
+
+   CoBox Smart Vision no se plantea como reemplazo inmediato de soluciones de gestión logística, ERP, TMS o sistemas de flota. Su estrategia es actuar como una capa complementaria de auditoría visual que mejora la confiabilidad de los datos antes de que estos sean utilizados por gestores, clientes o responsables de operación.
+
+   Esta aproximación reduce la resistencia de adopción, ya que permite integrarse progresivamente al flujo actual de la empresa y enfocarse primero en los puntos de mayor dolor operativo.
+
+5. _Estrategia defensiva frente a competidores consolidados_
+
+   Una amenaza relevante es que plataformas consolidadas incorporen módulos de validación visual, proof of delivery avanzado o procesamiento documental dentro de sus propios ecosistemas. Para responder a esta amenaza, CoBox Smart Vision debe construir ventaja desde la cercanía con el segmento PyME, la simplicidad de uso, la rapidez de implementación y la adaptación a condiciones reales de campo en el contexto local.
+
+   La defensa competitiva no debe basarse únicamente en la tecnología de IA, sino en la combinación de bajo costo de adopción, comprensión del proceso operativo, flujos simples para conductores y métricas claras de reducción de discrepancias.
+
 
 **Tácticas frente a competidores**
 
-1. _Enfoque en casos de uso críticos:_
-  Priorizar escenarios específicos donde la validación automática de datos tenga mayor impacto, como el registro de kilometraje, validación de documentos logísticos y verificación de entregas, permitiendo demostrar valor tangible en etapas tempranas.
+1. _Priorizar casos de uso críticos y medibles_
 
-2. _Validación temprana con usuarios reales:_
-  Realizar pruebas piloto con conductores y gestores logísticos para evaluar la facilidad de uso, la aceptación del modelo basado en evidencia visual y el impacto en la reducción de errores operativos.
-  
-3. _Simplificación extrema de la experiencia de usuario:_
-  Diseñar interfaces con flujos mínimos de interacción, donde el usuario capture evidencia en lugar de ingresar datos manualmente, reduciendo la carga cognitiva y facilitando la adopción en campo.
+   El MVP debe concentrarse en eventos donde la validación de evidencia visual tenga impacto directo: odómetro inicial y final, comprobantes de combustible, documentos de entrega e incidencias. Esta táctica permite demostrar valor tangible sin competir en todos los módulos de una plataforma logística completa.
 
-4. _Enfoque en métricas de valor:_
-  Medir el impacto de la solución mediante indicadores concretos como reducción de errores, disminución del tiempo de registro y mejora en la confiabilidad de los datos, permitiendo sustentar el valor frente a alternativas existentes.
+2. _Ejecutar pilotos con PyMES de transporte_
+
+   Se deben realizar pruebas piloto con gestores y conductores reales para validar si la captura guiada reduce errores, disminuye reprocesos y mejora la confianza en la información operativa. Estos pilotos permitirán comparar el proceso actual frente al uso de CoBox Smart Vision mediante métricas antes/después.
+
+3. _Diseñar una experiencia móvil de baja carga cognitiva_
+
+   La aplicación móvil debe priorizar flujos simples, instrucciones claras, confirmaciones visibles de guardado y sincronización, y alertas comprensibles ante evidencias borrosas, incompletas, con baja iluminación o problemas de lectura. Esta táctica responde directamente a la necesidad de adopción por parte de conductores que trabajan bajo presión de tiempo, fatiga y conectividad variable.
+
+4. _Usar operación offline como diferenciador práctico_
+
+   La solución debe permitir que el conductor capture evidencias sin conexión y que estas se sincronicen posteriormente conservando relación con el servicio, usuario, momento de captura y ubicación disponible. Esta táctica diferencia a CoBox Smart Vision en contextos donde las rutas pueden presentar conectividad limitada.
+
+5. _Comunicar valor en términos de auditoría, no solo digitalización_
+
+   El mensaje competitivo debe evitar enfocarse únicamente en “digitalizar registros”. La propuesta debe comunicar que el valor está en contar con evidencia verificable para resolver discrepancias, sustentar reclamos, reducir reprocesos y mejorar la confiabilidad de los datos operativos.
+
+6. _Medir indicadores de impacto operativo_
+
+   Para sustentar la propuesta frente a alternativas existentes, se deben medir indicadores como tiempo promedio de registro, porcentaje de evidencias rechazadas, cantidad de registros observados, número de discrepancias resueltas con evidencia y percepción de confianza del gestor sobre la información registrada.
+
+7. _Mantener bajo costo de adopción_
+
+   La táctica comercial inicial debe evitar dependencias fuertes de hardware especializado o implementaciones complejas. El modelo debe apoyarse en dispositivos móviles existentes, pilotos controlados y una propuesta SaaS modular que permita escalar por vehículos, usuarios o funcionalidades.
+
+8. _Diferenciarse frente a cada competidor_
+
+   - Frente a Samsara, CoBox Smart Vision debe diferenciarse por menor dependencia de hardware y mayor accesibilidad para PyMES.
+   - Frente a Powerfleet, debe diferenciarse por simplicidad de implementación y foco en evidencia visual operativa, no en integración compleja de activos.
+   - Frente a Driv.in, debe diferenciarse por auditoría de datos críticos capturados en campo, no por optimización de rutas o última milla.
+
+En conjunto, estas estrategias y tácticas permiten que CoBox Smart Vision compita desde un enfoque acotado, defendible y alineado con el alcance del MVP. La ventaja inicial no consiste en superar funcionalmente a plataformas consolidadas, sino en resolver mejor una brecha específica para el segmento objetivo: convertir evidencias visuales capturadas durante la operación logística en información confiable, trazable y útil para auditoría.
 
 ### 2.2. Entrevistas
 
@@ -782,37 +838,55 @@ Se han definido dos segmentos objetivo para la recolección de información: ges
 
 ---
 
+**Bloque general: Preguntas demográficas y de contexto**
+
+Estas preguntas se aplican al inicio de cada entrevista, independientemente del segmento al que pertenezca el entrevistado. Su propósito es recolectar información base para la construcción de User Persona y para contextualizar los hallazgos obtenidos durante el análisis de entrevistas.
+
+1. ¿Cuál es su edad, distrito de residencia o zona principal de trabajo, y ocupación actual?
+2. ¿Cuánto tiempo de experiencia tiene en transporte, logística, distribución o actividades relacionadas?
+3. ¿Qué dispositivos utiliza con mayor frecuencia en su trabajo diario: celular, computadora, tablet u otros?
+4. ¿Qué canales digitales utiliza más para coordinar o reportar información: WhatsApp, llamadas, correo, hojas de cálculo, aplicaciones móviles, sistemas web u otros?
+5. ¿Qué tan cómodo se siente utilizando herramientas digitales o aplicaciones móviles en su trabajo?
+
+---
+
 **Segmento 1: Gestión de operaciones logísticas**
 
-1. ¿Cuál es su rol dentro de la empresa y cuáles son sus principales responsabilidades en la gestión de la flota?  
-2. ¿Cuántos vehículos administra y qué tipo de operaciones logísticas realiza (distribución, larga distancia, última milla)?  
-3. ¿Cómo se registran actualmente los datos operativos como kilometraje, consumo de combustible y entregas?  
-4. ¿Qué herramientas utiliza actualmente para gestionar y supervisar estas operaciones?  
-5. ¿Qué problemas o inconsistencias ha identificado en los datos reportados por los conductores?  
-6. ¿Qué impacto tienen estos errores o discrepancias en la operación y en la toma de decisiones?  
-7. ¿Cómo valida actualmente la veracidad de la información reportada desde campo?  
-8. ¿Qué tan importante es para usted contar con información verificable y auditada automáticamente?  
-9. ¿Qué tan dispuesto estaría a utilizar una solución que valide automáticamente los datos mediante el análisis de imágenes o evidencia visual?  
-10. ¿Qué preocupaciones tendría respecto al uso de sistemas automatizados basados en inteligencia artificial?  
-11. ¿Qué beneficios esperaría obtener de una solución que elimine la necesidad de validar manualmente la información?  
-12. ¿Qué factores serían determinantes para adoptar una nueva herramienta tecnológica en su operación (costo, facilidad de uso, precisión, integración, etc.)?  
+**Objetivo del segmento:**  
+Comprender cómo los responsables de operación registran, supervisan, validan y utilizan la información logística; qué problemas enfrentan con los datos reportados desde campo; qué herramientas utilizan actualmente; y qué factores influirían en la adopción de una solución basada en evidencia visual verificable.
+
+1. ¿Cuál es su rol dentro de la empresa y qué responsabilidades tiene en la gestión de flota, conductores, servicios o decisiones operativas?
+2. ¿Cuántos vehículos administra o supervisa, y qué tipo de operaciones realiza la empresa: distribución urbana, rutas interprovinciales, última milla u otro tipo de servicio?
+3. ¿Cómo registran actualmente datos como kilometraje, consumo de combustible, entregas, incidencias o cierre de servicio?
+4. ¿Qué herramientas utilizan para gestionar o supervisar la operación: papel, Excel, WhatsApp, llamadas, GPS, sistemas de flota, TMS u otras?
+5. ¿Qué evidencias suelen recibir desde campo para validar un servicio, por ejemplo fotos, comprobantes, guías, ubicación, mensajes o documentos físicos?
+6. ¿Qué problemas o inconsistencias ha identificado con mayor frecuencia en la información reportada por los conductores?
+7. ¿Puede mencionar un caso reciente donde una diferencia de kilometraje, combustible, entrega, comprobante o incidencia haya generado revisión, reclamo o conflicto?
+8. ¿Cómo validan actualmente si la información enviada desde campo es correcta, completa y corresponde al servicio realizado?
+9. ¿Qué impacto generan estos errores o discrepancias en tiempo administrativo, costos, reclamos, relación con clientes o relación con conductores?
+10. ¿Ha utilizado o evaluado soluciones como GPS, telemetría, gestión de flotas, TMS, ruteo o control de entregas? ¿Qué facilitó o impidió su adopción?
+11. ¿Qué valor tendría para usted que una evidencia visual, como una foto del odómetro, comprobante o guía, quede asociada al servicio, fecha, conductor y ubicación?
+12. ¿Qué factores serían decisivos para adoptar una solución de este tipo: costo, facilidad de uso, precisión, rapidez, funcionamiento sin conexión, integración, soporte o seguridad?
 
 ---
 
 **Segmento 2: Conductores / operadores de ruta**
 
-1. ¿Cuánto tiempo lleva trabajando como conductor de transporte de carga y qué tipo de rutas realiza?  
-2. ¿Cómo registra actualmente el inicio y fin de cada viaje?  
-3. ¿Cómo registra el kilometraje y consumo de combustible durante sus recorridos?  
-4. ¿Cuánto tiempo le toma completar estos registros al finalizar un servicio?  
-5. ¿Qué dificultades ha tenido al registrar información durante o después de un viaje?  
-6. ¿Ha tenido problemas o conflictos relacionados con errores en los datos que registra?  
-7. ¿Qué tan cómodo se siente utilizando aplicaciones móviles en su trabajo diario?  
-8. ¿Preferiría capturar una fotografía del odómetro o documento en lugar de ingresar los datos manualmente? ¿Por qué?  
-9. ¿Qué tan fácil o difícil cree que sería utilizar una aplicación que valide automáticamente la información a partir de una imagen?  
-10. ¿Qué condiciones podrían dificultar el uso de este tipo de aplicación (iluminación, conectividad, tiempo, etc.)?  
-11. ¿Qué características considera importantes para que una aplicación sea fácil de usar durante sus rutas?  
-12. ¿Qué lo motivaría a completar correctamente el registro de información en cada servicio?  
+**Objetivo del segmento:**  
+Comprender cómo los conductores registran información durante la ruta, qué dificultades enfrentan en campo, qué tan viable resulta la captura de evidencia visual, qué barreras existen para la adopción móvil y qué condiciones reales deben considerarse para diseñar una experiencia simple, offline y de baja carga operativa.
+
+1. ¿Cuánto tiempo lleva trabajando como conductor u operador de transporte de carga, y qué tipo de rutas realiza con mayor frecuencia?
+2. ¿Qué responsabilidades tiene además de conducir, por ejemplo registrar kilometraje, reportar entregas, guardar comprobantes o informar incidencias?
+3. ¿Cómo registra actualmente el inicio y fin de cada servicio, el kilometraje, el combustible y las entregas realizadas?
+4. ¿Qué herramientas utiliza para reportar información durante la ruta: papel, WhatsApp, llamadas, fotos, GPS, aplicaciones móviles u otras?
+5. ¿En qué momento suele completar estos registros: durante la ruta, al llegar al destino, al finalizar el día o después del servicio?
+6. ¿Cuánto tiempo aproximado le toma completar los registros relacionados con un servicio?
+7. ¿Qué dificultades ha tenido al registrar información durante o después de un viaje?
+8. ¿Ha tenido problemas por errores en kilometraje, combustible, comprobantes, entregas o incidencias reportadas? ¿Podría contar un caso?
+9. ¿Qué condiciones hacen más difícil registrar o enviar información correctamente: falta de señal, poca luz, cansancio, apuro, tráfico, lluvia, presión del cliente u otras?
+10. Cuando debe reportar un dato o evidencia, ¿qué le resulta más rápido o confiable: escribirlo, tomar una foto, enviar un mensaje, llamar al gestor o usar una aplicación? ¿Por qué?
+11. ¿Qué tan útil sería que una aplicación le avise si una foto del odómetro, comprobante o documento salió borrosa, oscura, incompleta o difícil de leer antes de enviarla?
+12. ¿Qué características debería tener una aplicación para que sea fácil de usar durante sus rutas y no se convierta en una carga adicional? 
 
 #### 2.2.2. Registro de entrevistas
 
