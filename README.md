@@ -1237,7 +1237,7 @@ A partir del análisis de entrevistas realizado en la sección 2.2.3, se definie
 
 User Persona: **Ricardo Lozano — Coordinador de Operaciones**
 
-<img src="./assets/tb1/user_persona_1.png" alt="User Persona Coordinador de Operaciones" />
+<img src="./assets/tp1/user_persona_segmento_1.png" alt="User Persona Coordinador de Operaciones" />
 
 Este perfil representa a gestores que operan con herramientas fragmentadas, enfrentan inconsistencias en datos y requieren información confiable para la toma de decisiones.
 
@@ -1247,7 +1247,7 @@ Este perfil representa a gestores que operan con herramientas fragmentadas, enfr
 
 User Persona: **Luis Soto — Conductor de larga distancia**
 
-<img src="./assets/tb1/user_persona_2.png" alt="User Persona Conductor de larga distancia" />
+<img src="./assets/tp1/user_persona_segmento_2.png" alt="User Persona Conductor de larga distancia" />
 
 Este perfil representa a conductores que trabajan en condiciones exigentes, con alta carga operativa, y que necesitan herramientas simples que reduzcan el esfuerzo de registro y respalden su trabajo con evidencia objetiva.
 
