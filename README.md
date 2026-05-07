@@ -905,20 +905,23 @@ Comprender cómo los conductores registran información durante la ruta, qué di
 | Rol           | Coordinador de Operaciones                       |
 | Empresa       | Transportes Valdivia SAC                         |
 | Edad          | 38 años                                          |
-| Origen        | Huancayo, reside en Lima Norte                   |
+| Origen        | Reside en Los Olivos, Lima Norte                 |
+| Experiencia   | 12 años en transporte y logística                |
 | Flota         | 14 unidades — rutas Lima–Junín–Pasco             |
 
 ---
 
 **Resumen de la entrevista**
 
-Ricardo coordina una flota de 14 camiones en una empresa familiar de transporte interprovincial. Gestiona toda la operación con WhatsApp, Excel y llamadas telefónicas, sin herramientas integradas. Un intento previo de implementar GPS fue abandonado al año por costos de mensualidad.
+Ricardo Valdivia Quispe es coordinador de operaciones en Transportes Valdivia SAC. Supervisa 14 unidades dedicadas principalmente a rutas interprovinciales hacia Junín y Pasco, además de reparto local en Lima. Su trabajo consiste en planificar rutas, asignar conductores, recibir incidencias, coordinar respuestas operativas y preparar reportes de kilometraje y combustible para revisión del dueño.
 
-Identifica inconsistencias frecuentes en el kilometraje reportado por los conductores —diferencias de 50 a 60 km sin justificación— y boletas de combustible que no corresponden a la fecha o ruta del servicio. No cuenta con ningún mecanismo real de auditoría: su única validación es cruzar manualmente los datos con Google Maps, lo que califica él mismo como "intuición, no auditoría".
+La empresa registra la operación mediante hojas de ruta físicas, boletas de combustible, guías de remisión, WhatsApp y Excel. Los conductores anotan kilometraje, entregas y combustible de forma manual, mientras que Ricardo consolida la información al retorno de cada servicio. Las incidencias no siguen un formato estándar y suelen reportarse por WhatsApp o de manera verbal.
 
-El impacto más directo de estas discrepancias es doble: conflictos internos con conductores que no pueden resolverse por falta de evidencia, e incapacidad de proyectar costos de combustible con datos confiables para reportar al gerente general. Describe su situación con claridad: *"eso no es gestión, es adivinar"*.
+Los principales problemas identificados son diferencias de kilometraje, bajo rendimiento de combustible y comprobantes que no coinciden con la ruta o fecha del servicio. Ricardo menciona que la validación actual se realiza manualmente, comparando rutas con Google Maps, revisando boletas y llamando al conductor cuando detecta inconsistencias.
 
-Muestra disposición media-alta ante una solución de captura visual y validación automática, condicionada a que no le genere más carga operativa a él. El modelo que le genera mayor interés es el de alertas proactivas ante anomalías, no el de consulta activa. Sus principales objeciones son la precisión del sistema ante falsos positivos, la privacidad de los datos y la necesidad de un caso económico claro para convencer al dueño, dado el antecedente negativo con el GPS.
+Estas discrepancias generan entre dos y tres horas semanales de revisión adicional, conflictos con conductores y menor confianza en los reportes operativos. La empresa ya evaluó GPS y sistemas de gestión de flota, pero no los adoptó por costo mensual, complejidad y baja percepción de retorno.
+
+Ricardo considera valioso contar con evidencia visual asociada al servicio, conductor, fecha y ubicación, especialmente para reducir discusiones y sustentar reportes ante el dueño. Para adoptar una solución, prioriza confiabilidad en operación real, facilidad de uso para conductores, precio accesible y acompañamiento inicial.
 
 ---
 
@@ -933,21 +936,23 @@ Muestra disposición media-alta ante una solución de captura visual y validaci�
 | Rol           | Jefa de Operaciones                                  |
 | Empresa       | Grupo Ccori Logística EIRL                           |
 | Edad          | 44 años                                              |
-| Origen        | Cusco, reside en San Juan de Lurigancho              |
+| Origen        | San Juan de Lurigancho, Lima                         |
+| Experiencia   | 18 años en transporte, logística y operaciones       |
 | Flota         | 22 unidades — distribución retail Lima Metropolitana |
 
 ---
 
 **Resumen de la entrevista**
 
-Miriam dirige las operaciones de una empresa de distribución retail fundada por su familia en Cusco, con 22 unidades activas en Lima. Reporta ante un directorio de tres socios, lo que le exige presentar datos operativos confiables de forma periódica. A pesar de contar con un TMS instalado hace tres años y GPS en todas las unidades, el sistema está subutilizado: los conductores siguen llenando papel y el equipo transcribe manualmente al sistema, generando doble trabajo para el mismo dato.
+Miriam Ccori Huanca es jefa de operaciones en Grupo Ccori Logística EIRL, empresa familiar de transporte y distribución. Supervisa 22 unidades activas, principalmente orientadas a distribución retail en Lima Metropolitana y algunas rutas cortas hacia Ica. Su rol incluye gestión de turnos, control de flota, coordinación con clientes, seguimiento de indicadores y reporte mensual al directorio.
 
-Sus problemas principales son la variabilidad inexplicable de consumo de combustible entre unidades similares —hasta un 30% de diferencia sin causa técnica identificada— y la incapacidad de resolver disputas con clientes por falta de evidencia de entrega. Ambos problemas le han generado consecuencias concretas: pérdida de un contrato de cliente corporativo que exigía trazabilidad formal, y cuestionamientos recurrentes del directorio ante márgenes operativos inconsistentes.
+La empresa cuenta con GPS y TMS activos; sin embargo, el proceso operativo sigue dependiendo de papel, WhatsApp y transcripción manual. Los conductores registran información durante la ruta en documentos físicos y luego el equipo administrativo la ingresa al sistema. Las guías de remisión y boletas de combustible se manejan físicamente, mientras que las incidencias se reportan por WhatsApp sin un protocolo estándar.
 
-Su validación actual consiste en cruzar manualmente el registro GPS con los reportes del conductor solo cuando hay un reclamo puntual, lo que la deja con visibilidad reactiva y parcial sobre la operación. Describe la necesidad de datos auditables como urgente tanto para retener clientes como para sostener su posición ante los socios.
+Los principales problemas identificados son variaciones no explicadas en consumo de combustible, inconsistencias entre reportes de conductor y ayudante, reclamos de clientes por faltantes de entrega y falta de evidencia digital con hora, coordenadas y fotografía. Miriam menciona que incluso perdieron un contrato retail porque no pudieron entregar evidencia digital trazable para auditoría interna del cliente.
 
-Muestra alta disposición hacia una solución de captura visual y validación automática, pero exige implementación gradual tras una mala experiencia previa con un TMS que fue lanzado sin soporte adecuado. Sus criterios de adopción incluyen integración con sistemas existentes, soporte postventa con SLA claro, gestión del cambio con conductores veteranos y resultados medibles en los primeros dos meses.
+La validación actual se realiza de forma manual y reactiva, cruzando datos del GPS, reportes del conductor y documentación física solo cuando aparece un reclamo o una alerta. Esta situación genera entre tres y cuatro horas diarias de transcripción y conciliación de datos, además de afectar la credibilidad de los reportes operativos frente al directorio.
 
+Miriam considera que una solución de evidencia visual asociada al servicio, conductor, fecha y ubicación tendría alto valor para responder reclamos, sustentar indicadores y recuperar oportunidades comerciales perdidas por falta de trazabilidad. Para adoptar una herramienta de este tipo, prioriza integración o baja fricción con los sistemas actuales, soporte postventa real, adopción por parte de conductores y resultados medibles durante los primeros dos meses.
 ---
 
 **Entrevista #3**
@@ -962,19 +967,22 @@ Muestra alta disposición hacia una solución de captura visual y validación au
 | Empresa       | Trans Mamani Cargo SAC                                |
 | Edad          | 52 años                                               |
 | Origen        | Puno, reside en Villa El Salvador                     |
+| Experiencia   | Más de 20 años en transporte de carga                 |
 | Flota         | 8 unidades propias + 6 en alquiler — rutas Lima–sur   |
 
 ---
 
 **Resumen de la entrevista**
 
-Jorge fundó su empresa en 2003 con un solo camión. Hoy administra 14 unidades operativas sin ningún sistema formal: usa cuaderno físico, WhatsApp y llamadas telefónicas para controlar toda la operación. Es el único decisor de la empresa, lo que simplifica el proceso de adopción pero también concentra en él todas las resistencias al cambio.
+Jorge Mamani Apaza es gerente general y fundador de Trans Mamani Cargo SAC. Además de dirigir la empresa, participa directamente en la operación: asigna rutas, contrata conductores, revisa camiones, coordina clientes y, en ocasiones, maneja cuando falta personal. Su empresa opera con 8 camiones propios y hasta 6 alquilados en temporadas de mayor demanda, principalmente en rutas hacia el sur del país.
 
-La transición de empresa pequeña a mediana le generó una pérdida de control que reconoce con preocupación: antes conocía cada detalle de la operación porque la manejaba personalmente, hoy no puede hacer seguimiento confiable de 14 unidades, especialmente de las 6 alquiladas cuyos conductores no son de su confianza directa. Ha tenido casos documentados de odómetros manipulados en unidades alquiladas y boletas de combustible de grifos que no corresponden a la ruta reportada.
+La gestión actual se realiza mediante cuaderno, llamadas, WhatsApp y hojas de ruta físicas. Los conductores registran kilometraje, combustible, entregas e incidencias manualmente, y entregan boletas o guías al finalizar el servicio. La supervisión depende en gran medida de la confianza personal y de la experiencia de Jorge con las rutas, ya que no utiliza GPS, TMS ni sistemas digitales de flota.
 
-El impacto económico es concreto: estima que hay un margen mensual inexplicable producto de kilómetros y combustible inflados, y perdió un cliente en Arequipa que solicitó reportes formales de cada servicio para su auditoría interna, algo que Jorge no pudo proveer. Señala con honestidad: *"me da vergüenza mostrarles mi cuaderno"*.
+Los principales problemas identificados son kilómetros que no coinciden con la ruta esperada, consumo de combustible difícil de justificar, sospechas de manipulación de odómetro en unidades alquiladas y boletas de grifos que no corresponden a la ruta. También menciona haber perdido un cliente en Arequipa porque no pudo entregar reportes digitales con información suficiente para auditoría interna.
 
-Su disposición ante tecnología es escéptica pero pragmática: no rechaza la solución, pero exige verla funcionar en una de sus unidades reales antes de comprometerse. El término "inteligencia artificial" le genera distancia; el valor debe comunicársele en lenguaje operativo concreto. Es el perfil de cierre más rápido si el piloto convence, ya que no necesita aprobación de ningún comité. Sus condiciones son simplicidad real de uso, precio accesible para una pyme y acompañamiento en el arranque.
+La validación actual se basa en conocimiento empírico: Jorge compara los datos reportados con lo que sabe de las rutas, llama a conductores o consulta informalmente con personas en destino. Este método le permite detectar algunas inconsistencias, pero no es escalable ni verificable. Las discrepancias generan pérdida de dinero difícil de explicar, conflictos con conductores y limitaciones para presentarse ante clientes más grandes.
+
+Jorge considera valioso contar con evidencia visual asociada al servicio, fecha, conductor y ubicación, porque le permitiría recuperar control sobre kilometraje y combustible, presentarse con mayor formalidad ante clientes y crecer sin depender exclusivamente de llamadas o confianza personal. Para adoptar una solución, prioriza simplicidad real, precio accesible, soporte disponible y una prueba piloto en una unidad real durante aproximadamente un mes.
 
 ---
 
@@ -998,13 +1006,15 @@ Su disposición ante tecnología es escéptica pero pragmática: no rechaza la s
 
 **Resumen de la entrevista**
 
-Edilberto es conductor de larga distancia con 19 años de trayectoria, especializado en rutas al sur del país. Registra su operación en un cuadernillo propio que completa a mano durante el viaje y entrega al retorno, proceso que le toma entre una hora y hora y media al cierre de cada servicio. Reconoce abiertamente que el cansancio después de jornadas de 12 horas genera errores involuntarios en los registros numéricos.
+Edilberto Poma Condori es conductor de tracto camión con 19 años de experiencia en rutas de larga distancia, principalmente en la carretera sur entre Lima, Arequipa, Juliaca y Puno. Su trabajo implica viajes de varios días, con periodos cortos de descanso en Lima antes de volver a salir a ruta.
 
-Sus principales conflictos operativos se originan en eventos que no quedan documentados: desvíos por huaycos o bloqueos viales en rutas de sierra, tiempos de espera en almacenes de destino de hasta cuatro horas, y retenciones por controles policiales en carretera. Ninguno de estos eventos tiene canal formal de registro, lo que deriva en discrepancias de kilometraje que luego son cuestionadas por el coordinador sin posibilidad de defensa objetiva. Sufrió un descuento de viáticos injustificado por este motivo, episodio que recuerda con malestar acumulado: *"uno guarda esas cosas"*.
+Actualmente registra el kilometraje, combustible, entregas e incidencias mediante hojas de ruta, cuadernillo personal, boletas físicas, guías firmadas, WhatsApp y llamadas. El cierre completo del servicio suele realizarse al regresar a Lima, lo que puede generar pérdida de detalles porque algunos eventos se reconstruyen de memoria después de varios días.
 
-Usa WhatsApp con fluidez pero rechaza aplicaciones con múltiples pantallas; abandonó una app anterior tras dos semanas por complejidad de uso. Su aceptación de la captura visual es inmediata y entusiasta: identifica con precisión que la foto del odómetro es más rápida y prueba que el dato es real, lo que invierte la dinámica actual donde "el papel casi siempre gana". Sus condiciones técnicas son claras: funcionamiento offline en zonas sin señal de la sierra y el altiplano, botones grandes compatibles con uso con guantes, legibilidad bajo luz solar directa y confirmación visible de que el registro fue guardado.
+Las principales dificultades que identifica son la falta de señal en tramos largos, baja iluminación durante cargas nocturnas, frío en zonas de sierra, boletas ilegibles de provincia y eventos no planificados como desvíos o bloqueos de vía. También menciona haber tenido descuentos por diferencias de kilometraje que no pudo sustentar con evidencia objetiva.
 
-Su motivación para adoptar la solución no es económica sino de justicia laboral: quiere que su trabajo bien hecho quede respaldado automáticamente, sin depender de que alguien le crea.
+Edilberto considera que tomar fotos del odómetro, comprobantes o documentos es más rápido y confiable que escribir datos manualmente, porque reduce errores y sirve como respaldo frente a cuestionamientos posteriores. También valora que una aplicación avise inmediatamente si una foto salió borrosa, oscura o incompleta, ya que permitiría corregir el registro antes de alejarse del lugar.
+
+Para que una aplicación sea usable durante sus rutas, prioriza funcionamiento sin internet, botones grandes, pocos pasos, confirmación clara de guardado y autocompletado de datos conocidos como conductor o placa. Su expectativa principal es que la herramienta no aumente la carga operativa y funcione en condiciones reales de carretera.
 
 ---
 
@@ -1026,13 +1036,15 @@ Su motivación para adoptar la solución no es económica sino de justicia labor
 
 **Resumen de la entrevista**
 
-Yadira realiza hasta 14 o 15 entregas diarias en Lima Metropolitana, lo que la convierte en el perfil con mayor volumen de registros por jornada entre los conductores entrevistados. El cierre administrativo del día le toma entre 40 minutos y una hora, parte del cual corresponde a transcripción duplicada: registra información en papel durante la ruta y luego la pasa al Excel del coordinador. Identifica este proceso como ineficiente desde hace tiempo y ya lo escaló internamente sin obtener respuesta.
+Yadira Ríos Solano es conductora de reparto urbano con cinco años de experiencia. Realiza entregas en distintos distritos de Lima Metropolitana y puede atender entre 14 y 15 clientes por jornada. Además de conducir, registra entregas, coordina con su ayudante, recopila firmas, guarda guías y reporta incidencias al coordinador.
 
-El conflicto más frecuente que enfrenta es el de entregas rechazadas posteriormente por clientes que no firmaron o que niegan haber recibido la carga completa. Sin evidencia objetiva, la resolución depende de a quién le cree la empresa. Por iniciativa propia, Yadira comenzó a fotografiar cada entrega —producto descargado y guía firmada— y a enviarlas por WhatsApp al coordinador, práctica que ella misma diseñó sin que nadie se la pidiera y que la ha protegido en múltiples ocasiones. Es la usuaria que más claramente articula el valor de CoBox: la solución formaliza y organiza lo que ella ya hace de forma manual.
+Actualmente utiliza WhatsApp, cuadernillo, guías físicas y una tableta proporcionada por la empresa. Sin embargo, señala que la tableta es lenta y suele preferir su celular personal para reportar novedades, tomar fotos y coordinar entregas. También menciona que comenzó a tomar fotografías de cada entrega por iniciativa propia para respaldarse ante reclamos de clientes.
 
-Su comodidad digital es alta: usa Google Maps, Waze y WhatsApp de forma habitual. Sus objeciones no son de capacidad sino de diseño: rechaza el onboarding largo, los flujos lentos y la falta de confirmación de guardado. Define con precisión el producto que necesita: foto georeferenciada asociada automáticamente a cada entrega, lista de pendientes del día consultable, y validación inmediata de la imagen con mensaje claro si algo salió mal.
+Las principales dificultades que identifica son la cantidad de registros por jornada, el tráfico, el apuro entre entregas, el deterioro de documentos físicos por garúa, errores de registro entre conductor y ayudante, restricciones de uso de celular en algunos almacenes y problemas de batería durante jornadas largas. Estas condiciones pueden hacer que se omitan pasos o que la información quede incompleta.
 
-Una observación de campo relevante que aporta: en algunos almacenes de mercados mayoristas no se permite el uso del celular en el interior, por lo que el registro debe hacerse fuera del recinto. Su motivación de adopción está ligada a la reciprocidad: usará el sistema si también ella puede consultar su propio historial, no solo la empresa.
+Yadira considera que la fotografía es el método más rápido y confiable para sustentar entregas, pero el envío por WhatsApp genera desorden cuando hay muchas imágenes y el coordinador no puede identificar fácilmente a qué cliente corresponde cada evidencia. Por ello, valora una aplicación que organice automáticamente las fotos por cliente, hora y ubicación.
+
+Para adoptar una herramienta móvil, prioriza rapidez, una lista clara de entregas pendientes, confirmación visible de guardado, validación inmediata de fotos borrosas o ilegibles, y acceso a su propio historial de registros. Desde su perspectiva, la solución debe ayudar tanto a la empresa como al conductor, evitando que sea percibida solo como una herramienta de control.
 
 ---
 
@@ -1054,85 +1066,166 @@ Una observación de campo relevante que aporta: en algunos almacenes de mercados
 
 **Resumen de la entrevista**
 
-Hipólito transporta insumos agroindustriales con habilitación para mercancías peligrosas en la ruta Lima–sur. La naturaleza regulada de su carga le exige documentación adicional con datos técnicos —temperatura, presión, volumen— que no siempre comprende en detalle, lo que le genera incertidumbre al momento de llenar formularios en campo. Tuvo un caso de error por confusión de unidades de medida (litros vs. galones) que derivó en un llamado de atención formal.
+Hipólito es conductor de carga pesada con ocho años de experiencia en la ruta Lima–Ica–Nasca. Maneja una cisterna con insumos agroindustriales, por lo que además de conducir debe completar formatos físicos relacionados con carga peligrosa, registrar kilometraje, conservar vouchers de combustible y reportar paradas, controles o incidencias durante el trayecto.
 
-Su conflicto más significativo involucra una retención de SUTRAN en Cañete de aproximadamente una hora que no quedó documentada en ningún registro oficial. La demora causó un reclamo del cliente y una consulta de la empresa sin que él pudiera aportar más que su palabra. Desde entonces intenta solicitar el número de acta de intervención policial cuando lo retienen, pero no siempre lo obtienen con rapidez. Esta situación define con claridad su necesidad: el registro automático de hora y ubicación en paradas forzadas es el caso de uso de mayor valor para su perfil.
+Actualmente utiliza papel, formatos físicos, llamadas telefónicas, fotos cuando se le solicitan, WhatsApp para reportes básicos y GPS de la unidad. Prefiere llamar antes que escribir, porque considera que es más rápido y reduce malentendidos. Sin embargo, muestra desconfianza frente a aplicaciones móviles, ya que percibe que algunas herramientas pueden usarse más para sancionar al conductor que para apoyarlo.
 
-Describe desconfianza hacia las aplicaciones móviles no por incapacidad técnica sino por experiencias previas con apps que solicitaban permisos excesivos sin explicación. Esta barrera es psicológica y puede superarse con comunicación transparente sobre el uso de cada permiso. Su uso digital actual se limita a WhatsApp con mensajes de voz.
+Las principales dificultades que identifica son la falta de señal en la ruta al sur, la poca iluminación durante viajes nocturnos, el cansancio, el apuro y la necesidad de registrar paradas obligatorias por controles policiales o eventos externos. Señala que estos eventos no siempre quedan bien documentados, lo que puede generar reclamos por demoras o sospechas injustificadas.
 
-Sus requisitos de uso son precisos: modo offline obligatorio para tramos sin cobertura entre Cañete, Chincha y zonas de Ica; fallback manual si la foto no es reconocida por el sistema; mensajes de error descriptivos y accionables en lugar de alertas genéricas; autocompletado de datos conocidos como placa y ruta habitual; e interfaz mínima con instrucciones explícitas en cada paso. Su motivación de adopción es la seguridad: protección ante fiscalizaciones de SUTRAN, reducción de conflictos al retornar a Lima y tranquilidad de saber que su trabajo queda documentado. Resume su postura con una observación que aplica a todo el proceso de diseño del producto: *"quien diseña la app capaz no las piensa"*, en referencia a las condiciones reales de uso en campo que raramente llegan al equipo de desarrollo.
+Hipólito ha tenido problemas cuando una parada policial retrasa la ruta y luego la empresa cuestiona el motivo de la demora. En estos casos, siente que no cuenta con evidencia suficiente para demostrar que cumplió con su trabajo y que el retraso respondió a una condición externa.
+
+Para reportar información, considera que la llamada es lo más rápido, pero reconoce que una foto es más confiable cuando se necesita evidencia. Valora que una aplicación avise si una imagen salió borrosa, oscura o incompleta, porque permitiría corregir el registro en el momento y evitar reclamos posteriores.
+
+Para adoptar una aplicación, considera indispensable que sea mínima, sin formularios largos ni lenguaje complejo, que registre información automáticamente cuando sea posible y que sirva como respaldo ante la empresa o entidades de control. También enfatiza que la herramienta debe ayudar a corregir errores antes de sancionar, de modo que sea percibida como apoyo y no como mecanismo de vigilancia.
 
 #### 2.2.3. Análisis de entrevistas
 
-A partir de las entrevistas realizadas a los segmentos de gestión de operaciones logísticas y conductores de unidades de carga, se identificaron patrones consistentes en relación con los problemas operativos, la confiabilidad de los datos y la adopción de soluciones tecnológicas en el contexto del transporte de carga.
+A partir de las entrevistas realizadas a los segmentos de gestión de operaciones logísticas y conductores de unidades de carga, se identificaron patrones relevantes sobre el registro de información operativa, la validación de evidencias, la confiabilidad de los datos y las barreras de adopción tecnológica en empresas de transporte de carga.
 
----
+El análisis se organiza por segmento objetivo y utiliza porcentajes calculados sobre la muestra cualitativa entrevistada. Estos porcentajes no buscan representar estadísticamente a todo el mercado, sino evidenciar la frecuencia de patrones dentro del grupo entrevistado y servir como base para la construcción posterior de los arquetipos y artefactos de needfinding.
 
-**1. Problemas recurrentes identificados**
+##### 2.2.3.1. Alcance del análisis y muestra entrevistada
 
-Se evidenció una alta dependencia de procesos manuales para el registro de información operativa, incluyendo kilometraje, consumo de combustible y eventos de servicio. Estos procesos generan errores frecuentes, pérdida de información y retrasos en la disponibilidad de datos.
+La muestra estuvo compuesta por seis entrevistas distribuidas en dos segmentos: tres entrevistas a representantes de gestión de operaciones logísticas y tres entrevistas a conductores u operadores de ruta. Esta distribución permite contrastar la perspectiva de quienes supervisan, validan y toman decisiones operativas con la perspectiva de quienes capturan información y evidencias desde campo.
 
-Asimismo, se identificaron inconsistencias recurrentes en los datos reportados, tales como diferencias de kilometraje sin justificación y registros de combustible que no corresponden al contexto operativo. Estas discrepancias impactan directamente en los costos y en la capacidad de planificación de las empresas.
+| Segmento | Entrevistados | Cantidad | Porcentaje de la muestra |
+|----------|---------------|----------|---------------------------|
+| Gestión de operaciones logísticas | Ricardo Valdivia, Miriam Ccori, Jorge Mamani | 3 | 50% |
+| Conductores / operadores de ruta | Edilberto Poma, Yadira Ríos, Hipólito | 3 | 50% |
+| **Total** |  | **6** | **100%** |
 
-Otro problema crítico identificado es la ausencia de mecanismos formales de validación de la información. La verificación de datos se realiza de manera manual y reactiva, generalmente solo cuando ocurre un conflicto, lo que limita la capacidad de control y auditoría de las operaciones.
+<p align="center">
+  <img src="./assets/graficos/grafico_muestra_segmentos.png" width="500"/>
+</p>
 
+##### 2.2.3.2. Análisis del Segmento 1: Gestión de operaciones logísticas
 
-**2. Impacto en la operación logística**
+El segmento de gestión de operaciones logísticas está compuesto por perfiles que supervisan rutas, flotas, conductores, reportes e incidencias. En el caso de las PyMES entrevistadas, se observó que el rol de gestión puede mezclarse con responsabilidades económicas o de decisión, especialmente cuando el entrevistado también participa en decisiones de inversión, relación con clientes o control directo de la operación.
 
-Los problemas identificados generan efectos directos en la gestión operativa, incluyendo:
+###### Características objetivas del segmento
 
-- Conflictos entre conductores y gestores debido a la falta de evidencia objetiva
-- Dificultades para tomar decisiones basadas en datos confiables
-- Pérdida de clientes por falta de trazabilidad y evidencia de servicio
-- Incremento de costos operativos debido a datos inconsistentes
+| Variable objetiva identificada | Entrevistados relacionados | Frecuencia | Porcentaje |
+|--------------------------------|----------------------------|------------|------------|
+| Utilizan WhatsApp, llamadas o canales informales para coordinar la operación | Ricardo, Miriam, Jorge | 3/3 | 100% |
+| Mantienen dependencia de papel, cuadernos, hojas de ruta, boletas o guías físicas | Ricardo, Miriam, Jorge | 3/3 | 100% |
+| Realizan validación manual o reactiva cuando existe sospecha, reclamo o discrepancia | Ricardo, Miriam, Jorge | 3/3 | 100% |
+| Reportan discrepancias asociadas a kilometraje, combustible, comprobantes o entregas | Ricardo, Miriam, Jorge | 3/3 | 100% |
+| Han usado, evaluado o descartado soluciones como GPS, TMS o aplicaciones de ruta | Ricardo, Miriam, Jorge | 3/3 | 100% |
+| Identifican pérdida de tiempo administrativo por revisión, transcripción o conciliación de datos | Ricardo, Miriam, Jorge | 3/3 | 100% |
+| Reportan pérdida o riesgo de pérdida de clientes por falta de trazabilidad digital | Miriam, Jorge | 2/3 | 66.7% |
 
-Estos impactos reflejan que la problemática no es únicamente técnica, sino también organizacional, afectando la confianza interna y la relación con clientes.
+En este segmento se confirma que la problemática no se limita a la ausencia total de herramientas digitales. Ricardo opera principalmente con WhatsApp, Excel y documentos físicos; Jorge utiliza llamadas, cuaderno y hojas de ruta; mientras que Miriam cuenta con GPS y TMS, pero mantiene procesos manuales de transcripción y conciliación. Esto evidencia que la brecha principal no es únicamente registrar datos, sino contar con información verificable, estructurada y trazable desde el origen.
 
----
+###### Características subjetivas del segmento
 
-**3. Comportamiento y necesidades de los usuarios**
+| Característica subjetiva identificada | Entrevistados relacionados | Frecuencia | Porcentaje | Necesidad asociada |
+|--------------------------------------|----------------------------|------------|------------|--------------------|
+| Frustración por no contar con evidencia objetiva para resolver discrepancias | Ricardo, Miriam, Jorge | 3/3 | 100% | Contar con evidencias asociadas al servicio, conductor, fecha y ubicación |
+| Preocupación por costos, retorno de inversión o sostenibilidad de una nueva herramienta | Ricardo, Miriam, Jorge | 3/3 | 100% | Adoptar una solución de bajo costo, con valor medible y escalamiento progresivo |
+| Necesidad de soporte o acompañamiento durante la implementación | Ricardo, Miriam, Jorge | 3/3 | 100% | Reducir el riesgo de abandono por mala implementación |
+| Interés en una solución simple que no incremente la complejidad operativa | Ricardo, Miriam, Jorge | 3/3 | 100% | Priorizar baja fricción de adopción |
+| Valoración positiva de la evidencia visual como respaldo para auditoría o reclamos | Ricardo, Miriam, Jorge | 3/3 | 100% | Usar captura visual como soporte de validación operativa |
+| Necesidad de resultados visibles en piloto o corto plazo | Miriam, Jorge | 2/3 | 66.7% | Demostrar valor antes de escalar la adopción |
 
-En el segmento de gestión, se observa una necesidad clara de contar con información confiable, verificable y disponible en tiempo oportuno para la toma de decisiones. Los gestores priorizan la capacidad de auditar datos y detectar inconsistencias de manera proactiva.
+Los gestores entrevistados no rechazan la tecnología; sin embargo, condicionan su adopción a que sea confiable, simple, acompañada por soporte y capaz de demostrar impacto. Esta percepción se relaciona directamente con la propuesta de CoBox Smart Vision, ya que el MVP no busca reemplazar un TMS, ERP o sistema de telemetría, sino actuar como una capa de auditoría operativa basada en evidencias visuales verificables.
 
-En el segmento de conductores, se identificó una preferencia por soluciones simples, con mínima interacción, que no incrementen la carga operativa durante la ejecución de sus tareas. La captura de evidencia visual es percibida como una alternativa más práctica frente al ingreso manual de datos.
+###### Hallazgos principales del segmento
 
-Asimismo, se identificaron condiciones operativas relevantes como la necesidad de funcionamiento offline, uso en entornos con iluminación variable y limitaciones en el uso de dispositivos móviles en ciertos contextos.
+El primer hallazgo es que los tres entrevistados validan información de manera manual, parcial y reactiva. La revisión ocurre cuando aparece una discrepancia, reclamo o sospecha, no como parte de un proceso sistemático de auditoría. Esto genera dependencia del criterio del gestor y dificulta detectar problemas antes de que escalen.
 
----
+El segundo hallazgo es que las discrepancias más frecuentes se concentran en kilometraje, combustible, comprobantes y entregas. Estos casos coinciden con los eventos críticos definidos para CoBox Smart Vision: odómetro, comprobantes de combustible, documentos de entrega e incidencias.
 
-**4. Validación de hipótesis Lean UX**
+El tercer hallazgo es que herramientas como GPS, TMS o aplicaciones de ruta no resuelven por sí solas la brecha de evidencia verificable. En los casos analizados, estas herramientas pueden aportar ubicación o registro histórico, pero no garantizan que la evidencia capturada desde campo sea completa, contextualizada y útil para auditoría.
 
-Los resultados obtenidos permiten validar las siguientes hipótesis planteadas:
+El cuarto hallazgo es que la falta de trazabilidad tiene impacto económico y comercial. Miriam y Jorge reportaron pérdida de clientes o contratos por no poder entregar evidencia digital suficiente para auditoría o control interno del cliente. En consecuencia, la trazabilidad no solo se relaciona con control operativo, sino también con competitividad comercial.
 
-- La dependencia del ingreso manual de datos es una de las principales causas de errores e inconsistencias en la información operativa.
-- Existe una necesidad real de contar con mecanismos de validación automática que permitan garantizar la confiabilidad de los datos.
-- Los usuarios están dispuestos a adoptar soluciones basadas en captura de evidencia visual, siempre que estas no incrementen la complejidad de uso.
-- La disponibilidad de información validada tiene un impacto directo en la toma de decisiones y en la eficiencia operativa.
+##### 2.2.3.3. Análisis del Segmento 2: Conductores / operadores de ruta
 
-Estas validaciones confirman la relevancia del problema identificado y la pertinencia de la propuesta de solución planteada.
+El segmento de conductores y operadores de ruta concentra la generación de datos y evidencias durante la ejecución del servicio. Los entrevistados realizan operaciones en contextos diferentes: larga distancia, reparto urbano y carga pesada. A pesar de estas diferencias, se identifican patrones comunes relacionados con uso de celular, dependencia de papel, preferencia por evidencias fotográficas, necesidad de simplicidad y operación en condiciones reales de campo.
 
----
+###### Características objetivas del segmento
 
-**5. Riesgos y barreras de adopción**
+| Variable objetiva identificada | Entrevistados relacionados | Frecuencia | Porcentaje |
+|--------------------------------|----------------------------|------------|------------|
+| Utilizan celular Android como dispositivo principal de trabajo | Edilberto, Yadira, Hipólito | 3/3 | 100% |
+| Utilizan WhatsApp, llamadas o fotos como canales reales de reporte | Edilberto, Yadira, Hipólito | 3/3 | 100% |
+| Mantienen uso de papel, cuadernillos, boletas, guías o formatos físicos | Edilberto, Yadira, Hipólito | 3/3 | 100% |
+| Reportan información durante la ruta y también al cierre del servicio | Edilberto, Yadira, Hipólito | 3/3 | 100% |
+| Valoran la fotografía como evidencia objetiva frente a reclamos o discrepancias | Edilberto, Yadira, Hipólito | 3/3 | 100% |
+| Identifican condiciones de campo que afectan el registro: señal, luz, cansancio, tráfico o restricciones operativas | Edilberto, Yadira, Hipólito | 3/3 | 100% |
+| Han tenido problemas por falta de evidencia, descuentos, reclamos o cuestionamientos posteriores | Edilberto, Yadira, Hipólito | 3/3 | 100% |
 
-A pesar de la disposición hacia soluciones tecnológicas, se identificaron riesgos relevantes que podrían afectar la adopción:
+Los tres conductores dependen del celular como herramienta principal, pero no necesariamente de aplicaciones especializadas. WhatsApp, llamadas y fotografías son los canales reales de coordinación y evidencia. También se mantiene una alta dependencia de documentos físicos, lo que genera riesgo de pérdida, daño, ilegibilidad o transcripción posterior.
 
-- Escepticismo hacia nuevas herramientas debido a experiencias previas fallidas
-- Desconfianza en la precisión de sistemas automatizados
-- Resistencia al cambio en usuarios con baja alfabetización digital
-- Limitaciones operativas como conectividad intermitente y condiciones de uso en campo
+###### Características subjetivas del segmento
 
-Estos factores deben ser considerados en el diseño de la solución para asegurar su viabilidad en entornos reales.
+| Característica subjetiva identificada | Entrevistados relacionados | Frecuencia | Porcentaje | Necesidad asociada |
+|--------------------------------------|----------------------------|------------|------------|--------------------|
+| Preferencia por soluciones simples, rápidas y con pocos pasos | Edilberto, Yadira, Hipólito | 3/3 | 100% | Diseñar una experiencia móvil de baja carga cognitiva |
+| Valoración de la foto como respaldo ante reclamos, descuentos o dudas | Edilberto, Yadira, Hipólito | 3/3 | 100% | Asociar evidencias visuales a servicio, ubicación, fecha y responsable |
+| Necesidad de funcionamiento sin conexión o tolerancia a conectividad limitada | Edilberto, Hipólito | 2/3 | 66.7% | Permitir captura offline y sincronización posterior |
+| Necesidad de alertas inmediatas cuando una foto sea borrosa, oscura o incompleta | Edilberto, Yadira, Hipólito | 3/3 | 100% | Validar calidad de imagen antes de cerrar el registro |
+| Rechazo a formularios largos, múltiples pantallas o procesos lentos | Edilberto, Yadira, Hipólito | 3/3 | 100% | Reducir pasos y automatizar datos conocidos |
+| Preocupación por que la herramienta sea usada como mecanismo de vigilancia o sanción | Hipólito | 1/3 | 33.3% | Comunicar la solución como respaldo y no solo como control |
+| Interés en acceder al propio historial de registros | Yadira | 1/3 | 33.3% | Brindar transparencia al conductor sobre sus evidencias capturadas |
 
----
+Los conductores perciben la evidencia visual no solo como una herramienta para la empresa, sino también como protección frente a reclamos, descuentos injustificados o cuestionamientos posteriores. Este hallazgo es relevante porque refuerza que la solución debe generar confianza en ambos lados de la operación: gestores y conductores.
 
-**6. Oportunidad identificada**
+###### Hallazgos principales del segmento
 
-El análisis evidencia una brecha clara en el mercado: la falta de soluciones que permitan validar automáticamente la información operativa en entornos logísticos.
+El primer hallazgo es que la captura fotográfica ya existe como práctica informal. Los conductores toman fotos de boletas, documentos, entregas u odómetros cuando se les solicita o cuando desean protegerse ante posibles reclamos. Sin embargo, estas fotos suelen quedar dispersas en WhatsApp y no se asocian automáticamente a servicio, cliente, ubicación o momento de captura.
 
-Mientras que las herramientas actuales se enfocan en la captura y gestión de datos, no abordan de manera central la confiabilidad de la información registrada.
+El segundo hallazgo es que la carga administrativa del conductor es significativa. Edilberto estima entre 60 y 90 minutos de cierre administrativo luego de una ruta larga, mientras que Yadira estima hasta una hora y media diaria en registros y papeleo durante reparto urbano. Esta evidencia refuerza la hipótesis de que la captura visual guiada puede reducir tiempo de registro y transcripción.
 
-En este contexto, se identifica una oportunidad para desarrollar una solución que permita reducir la dependencia del ingreso manual y mejorar la integridad de los datos mediante mecanismos automatizados de validación, alineándose con las necesidades identificadas en ambos segmentos de usuarios.
+El tercer hallazgo es que las condiciones reales de campo deben orientar el diseño de la solución. La falta de señal, baja iluminación, cansancio, tráfico, restricciones de uso de celular en almacenes, batería limitada y uso de guantes pueden afectar la captura de información. Por ello, la solución debe operar offline, confirmar guardado, validar calidad de imagen y minimizar pasos.
+
+El cuarto hallazgo es que la adopción depende de que la aplicación sea percibida como apoyo y no como vigilancia. Hipólito manifestó desconfianza hacia aplicaciones que puedan usarse para rastrear o sancionar al conductor. Por tanto, CoBox Smart Vision debe comunicar claramente que la evidencia también protege al conductor frente a reclamos o registros incorrectos.
+
+##### 2.2.3.4. Hallazgos transversales entre segmentos
+
+A nivel transversal, los dos segmentos coinciden en que la operación actual depende de herramientas accesibles pero poco estructuradas: WhatsApp, llamadas, papel, cuadernos, hojas de cálculo, boletas físicas, guías y fotografías aisladas. Estas herramientas permiten comunicar o registrar información, pero no garantizan trazabilidad, integridad ni auditabilidad.
+
+<p align="center">
+  <img src="./assets/graficos/grafico_herramientas_actuales.png" width="650"/>
+</p>
+
+| Hallazgo transversal | Evidencia en gestión | Evidencia en conductores | Implicancia para CoBox Smart Vision |
+|----------------------|----------------------|---------------------------|-------------------------------------|
+| Alta dependencia de herramientas informales | Los gestores reciben datos por WhatsApp, llamadas, documentos físicos o Excel | Los conductores reportan por WhatsApp, llamadas, fotos y papel | La solución debe capturar datos desde origen y evitar dispersión de evidencias |
+| Validación manual y reactiva | Los gestores revisan solo ante sospechas o reclamos | Los conductores entregan información que luego puede ser cuestionada | Se requiere evidencia estructurada y estados de validación |
+| La foto ya es una práctica aceptada | Los gestores reciben fotos por WhatsApp de manera informal | Los conductores usan fotos como respaldo o prueba | CoBox SV debe formalizar y asociar automáticamente esas evidencias al servicio |
+| La falta de evidencia genera conflictos | Gestores enfrentan discrepancias con conductores o clientes | Conductores enfrentan descuentos, reclamos o cuestionamientos | La evidencia debe beneficiar a ambos actores, no solo al supervisor |
+| La adopción depende de baja fricción | Gestores piden simplicidad, soporte y bajo costo | Conductores piden pocos pasos, rapidez y confirmación clara | La experiencia móvil debe ser simple, guiada y tolerante a errores |
+| Las condiciones de campo afectan la calidad del registro | Gestores reciben datos incompletos o tardíos | Conductores enfrentan baja señal, poca luz, cansancio y presión operativa | Se requiere captura offline, validación local de calidad de imagen y sincronización posterior |
+
+<p align="center">
+  <img src="./assets/graficos/grafico_problemas_principales.png" width="650"/>
+</p>
+
+Estos hallazgos refuerzan la brecha definida en el Capítulo I: la diferencia entre tener datos registrados y contar con datos confiables, verificables y trazables. La evidencia obtenida muestra que los datos existen, pero se encuentran dispersos, dependen de transcripción manual o carecen de contexto suficiente para resolver disputas operativas.
+
+##### 2.2.3.5. Validación preliminar de hipótesis Lean UX
+
+Las entrevistas permiten validar cualitativamente varias hipótesis planteadas en el proceso Lean UX. Sin embargo, algunas requieren validación cuantitativa posterior mediante pilotos, métricas de uso y comparación antes/después.
+
+| Hipótesis Lean UX | Evidencia obtenida en entrevistas | Estado |
+|-------------------|-----------------------------------|--------|
+| La captura visual puede reducir el tiempo de registro frente al ingreso manual | Conductores reportan tiempos altos de cierre o registro; gestores identifican transcripción y conciliación como actividades recurrentes | Parcialmente validada cualitativamente |
+| La evidencia asociada al servicio aumenta la confianza de gestores y conductores | Ambos segmentos valoran fotos vinculadas a servicio, fecha, ubicación o conductor para resolver disputas | Validada cualitativamente |
+| La validación automática puede reducir errores o evidencias inválidas | Conductores valoran alertas inmediatas por fotos borrosas, oscuras o incompletas | Parcialmente validada cualitativamente |
+| La operación offline es necesaria para rutas con conectividad limitada | Conductores de ruta larga y carga pesada mencionan falta de señal en carretera | Validada como necesidad operativa |
+| La solución debe mantener baja carga cognitiva para ser adoptada | Los conductores rechazan aplicaciones con muchos pasos y los gestores priorizan facilidad de uso | Validada cualitativamente |
+| El modelo de adopción requiere demostrar valor en corto plazo | Gestores solicitan bajo costo, soporte, piloto real y resultados medibles | Parcialmente validada; requiere piloto de negocio |
+
+La validación obtenida es preliminar porque proviene de entrevistas cualitativas. La confirmación definitiva deberá realizarse en un piloto controlado, midiendo reducción de tiempo de registro, disminución de registros observados, tasa de recaptura de evidencias inválidas, nivel de adopción del conductor y percepción de confianza del gestor.
+
+##### 2.2.3.6. Conclusión del análisis de entrevistas
+
+El análisis confirma que la problemática de CoBox Smart Vision no se limita a digitalizar registros existentes. En ambos segmentos se observa que la información operativa ya se genera mediante papeles, mensajes, llamadas, fotografías, hojas de cálculo, GPS o TMS; sin embargo, dicha información no siempre es verificable, oportuna, estructurada ni auditable.
+
+En el segmento de gestión, la principal necesidad es contar con evidencia confiable para revisar servicios, resolver discrepancias, responder reclamos y sustentar decisiones frente a dueños, socios, directorio o clientes. En el segmento de conductores, la necesidad principal es registrar evidencias de forma rápida y simple, sin incrementar la carga operativa, y contar con respaldo objetivo frente a cuestionamientos posteriores.
+
+Por ello, las entrevistas respaldan la oportunidad de desarrollar CoBox Smart Vision como una capa de auditoría operativa basada en evidencia visual verificable. La solución debe priorizar captura guiada, funcionamiento offline, validación local básica de calidad de imagen, asociación de evidencias al servicio, sincronización posterior y una experiencia móvil de baja fricción. Estos hallazgos servirán como insumo directo para la construcción de los User Persona, User Task Matrix, Empathy Mapping y As-Is Scenario Mapping en la sección de Needfinding.
 
 ### 2.3. Needfinding
 
