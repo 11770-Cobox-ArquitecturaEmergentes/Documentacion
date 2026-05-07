@@ -229,191 +229,353 @@ Soy una persona responsable y comprometida con la consecución de los mejores re
 
 ### 1.2. Solution Profile
 
-CoWare desarrolla CoBox como su producto principal, una plataforma digital que permite centralizar la gestión de servicios logísticos, facilitando la planificación, el monitoreo de recorridos, el registro de eventos operativos y la generación de reportes.
+CoWare desarrolla CoBox como una plataforma digital para centralizar la gestión de servicios logísticos de transporte de carga; sin embargo, la evolución hacia **CoBox Smart Vision** responde a una brecha más crítica que la simple digitalización: la falta de confiabilidad de los datos operativos capturados desde campo. En las PyMES de transporte, registros como kilometraje, consumo de combustible, entregas e incidencias suelen depender de ingreso manual, fotografías aisladas, comprobantes físicos o mensajes no estructurados, lo que limita su uso para auditoría, resolución de disputas y toma de decisiones operativas.
 
-A partir de esta base, el proyecto evoluciona hacia **CoBox Smart Vision**, una propuesta que introduce capacidades de automatización inteligente orientadas a reducir la intervención manual en el registro de información y mejorar la confiabilidad de los datos operativos. Esta evolución responde a la necesidad de avanzar desde la digitalización de procesos hacia mecanismos más robustos de validación de información en entornos logísticos.
+**CoBox Smart Vision** se plantea como una capa accesible de auditoría operativa basada en evidencia visual verificable. Su propuesta de valor consiste en convertir evidencias capturadas durante la ruta —como odómetros, comprobantes de combustible, documentos de entrega e incidencias— en datos operativos trazables, asociados al servicio correspondiente y validados mediante captura guiada, validación local básica de calidad de imagen, geolocalización, sincronización posterior y procesamiento inteligente. El MVP no busca resolver toda la gestión logística ni reemplazar un TMS, ERP o sistema de telemetría por hardware; su alcance inicial se concentra en validar evidencias críticas donde el error manual, la falta de trazabilidad o la manipulación de datos generan mayor fricción operativa.
 
-Esta nueva propuesta considera las condiciones reales del entorno de operación, incluyendo escenarios de conectividad limitada y usuarios con distintos niveles de alfabetización digital, lo que implica priorizar simplicidad de uso, eficiencia en campo y consistencia en el registro de información.
+La solución está dirigida inicialmente a pequeñas y medianas empresas de transporte de carga que operan con procesos manuales o semi-digitales y necesitan mejorar el control de sus servicios sin asumir la complejidad de plataformas enterprise. Para este segmento, el valor principal no está en registrar más datos, sino en contar con información confiable para reducir discrepancias entre gestores y conductores, disminuir reprocesos administrativos, sustentar reclamos y auditar operaciones con evidencia objetiva. Por ello, el enfoque del MVP prioriza una experiencia móvil simple, captura offline, validación local básica de calidad de imagen —por ejemplo, detección de desenfoque, baja iluminación o evidencia incompleta— y procesamiento cloud posterior para la extracción avanzada de datos cuando exista conectividad.
 
 #### 1.2.1 Antecedentes y problemática
 
-En el sector logístico de transporte de carga, especialmente en pequeñas y medianas empresas, persiste una alta dependencia de procesos manuales y herramientas no integradas como hojas de cálculo, registros físicos y aplicaciones de mensajería. Esta situación genera fragmentación de la información, errores en el registro de datos y una limitada capacidad para auditar las operaciones de forma confiable.
+El transporte de carga por carretera constituye una actividad crítica para la continuidad de las operaciones comerciales, ya que conecta proveedores, centros de distribución, clientes y puntos de entrega. En el contexto peruano, el Ministerio de Transportes y Comunicaciones mantiene estadísticas específicas sobre el parque vehicular autorizado para transporte de carga general nacional, incluyendo información por ámbito, clase de vehículo, antigüedad, departamento y principales marcas. Esto evidencia que se trata de un sector formalmente medido y relevante para la gestión operativa del país (Ministerio de Transportes y Comunicaciones [MTC], 2025).
 
-Si bien soluciones como CoBox permiten digitalizar parcialmente estos procesos, aún existe una fuerte dependencia del ingreso manual de datos, lo que introduce riesgos significativos como errores humanos, inconsistencias en la información y posibles fraudes en el reporte de kilometraje y consumo de combustible.
+Sin embargo, en pequeñas y medianas empresas de transporte de carga persiste una alta dependencia de procesos manuales y herramientas no integradas, como hojas de cálculo, registros físicos, fotografías aisladas y aplicaciones de mensajería. Esta forma de operación genera fragmentación de información, duplicidad de registros, errores humanos y capacidad limitada para auditar los datos reportados desde campo. Esta situación se vuelve más crítica en un entorno empresarial donde la informalidad de las MYPE en Perú alcanzó el 84.8% en 2022, lo que refleja barreras estructurales para adoptar soluciones tecnológicas complejas, costosas o difíciles de operar (Ministerio de la Producción [PRODUCE], 2024).
 
-En este contexto, el problema central evoluciona desde la falta de digitalización hacia la falta de **validación automática de la información operativa**, lo que limita la confiabilidad de los datos utilizados para la toma de decisiones.
+El problema de fondo no se limita a la falta de digitalización. Aunque una solución como CoBox permite centralizar parte de la operación logística, todavía existe dependencia del ingreso manual de datos críticos como kilometraje, consumo de combustible, entregas e incidencias. Cuando estos datos se registran manualmente o se respaldan con evidencias no validadas, la empresa mantiene una brecha de confiabilidad: la información existe, pero no necesariamente puede considerarse verificable, auditable o libre de manipulación.
 
-Para estructurar la problemática, se aplica la técnica de las 5W + 2H:
+En entrevistas preliminares, se identificaron patrones recurrentes que refuerzan esta problemática: diferencias de kilometraje sin justificación, comprobantes de combustible que no corresponden con la ruta o fecha del servicio, pérdida de clientes por falta de trazabilidad formal y conflictos entre gestores y conductores por ausencia de evidencia objetiva. Estos hallazgos se desarrollan con mayor detalle en la sección 2.2.3; en esta sección se incorporan como evidencia preliminar para delimitar el problema central del Capítulo I: la falta de validación automática de la información operativa capturada durante la ejecución del servicio.
 
-| Elemento | Descripción |
-|----------|------------|
-| **Who** | Empresas de transporte de carga, gestores logísticos y conductores que registran y supervisan operaciones. |
-| **What** | Registro manual de información crítica (kilometraje, combustible, entregas), susceptible a errores y manipulación. |
-| **Where** | En oficinas de operación logística, empresas de transporte, y en campo a través de dispositivos móviles utilizados por los choferes. |
-| **When** | Durante la ejecución de servicios logísticos y procesos de reporte posterior. |
-| **Why** | Debido a la ausencia de herramientas que automaticen la captura y validación de datos operativos. |
-| **How** | Mediante el uso de registros manuales, fotografías no validadas y sistemas desconectados. |
-| **How Much** | Impacto en costos operativos, pérdida de eficiencia y riesgos de fraude (a validar en etapas de investigación). |
+La oportunidad de solución se encuentra en incorporar mecanismos de validación inteligente que reduzcan la carga manual y eleven la confiabilidad de los registros sin exigir infraestructura costosa. Como referencia macro, Fortune Business Insights reporta que el mercado global de logística digital fue valorado en USD 37.64 mil millones en 2025 y proyecta que alcanzará USD 155.29 mil millones en 2034, impulsado por la adopción de tecnologías para visibilidad, automatización y eficiencia operativa (Fortune Business Insights, 2026). No obstante, esta referencia debe interpretarse como una tendencia global de digitalización logística, no como prueba directa de disposición de pago en PyMES peruanas. Para CoBox Smart Vision, la validación del mercado dependerá principalmente de la evidencia levantada en entrevistas, pilotos controlados y métricas de reducción de discrepancias operativas.
+
+Para estructurar la problemática, se aplica la técnica de las 5W + 2H. El análisis no solo busca describir el contexto, sino delimitar el segmento inicial, el dolor prioritario, el comportamiento actual y las métricas que permitirán validar si CoBox Smart Vision resuelve un problema económicamente relevante.
+
+| Elemento | Análisis refinado |
+|----------|-------------------|
+| **Who** | El segmento inicial está compuesto por pequeñas y medianas empresas de transporte de carga que gestionan flotas con procesos manuales o semi-digitales. El cliente económico es el dueño, gerente general o jefe de operaciones, quien asume pérdidas, reclamos y decisiones de inversión. Los usuarios directos son gestores logísticos y conductores: los primeros necesitan información confiable para supervisar y auditar, mientras que los segundos registran evidencias en campo bajo presión operativa, fatiga y conectividad variable. |
+| **What** | El problema crítico es la falta de información operativa verificable. Datos como kilometraje, consumo de combustible, entregas, incidencias y documentos de ruta existen, pero se registran de forma manual o semi-digital, por lo que pueden contener errores, duplicidades, omisiones o manipulación. El resultado es una brecha entre “tener datos” y “tener datos confiables para decidir, auditar o resolver disputas”. |
+| **Where** | El problema ocurre en dos espacios conectados: en campo, durante rutas, entregas, recargas de combustible, paradas no planificadas y zonas con baja conectividad; y en oficina, cuando los gestores consolidan información, revisan discrepancias, responden reclamos o preparan reportes para clientes y gerencia. |
+| **When** | Se presenta en los momentos de mayor criticidad operativa: inicio de servicio, captura de odómetro, recarga de combustible, entrega, registro de incidencia, cierre de ruta y revisión posterior. En esos puntos, un dato incorrecto o una evidencia no verificable puede generar conflictos internos, reprocesos, reclamos de clientes o decisiones basadas en información incompleta. |
+| **Why** | Porque las herramientas actuales permiten registrar y comunicar información, pero no validan automáticamente si lo reportado desde campo es consistente con el contexto del servicio. Una fotografía enviada por mensajería, una hoja de cálculo o un registro físico pueden respaldar parcialmente una operación, pero no garantizan por sí mismos trazabilidad, integridad, georreferenciación ni auditabilidad. |
+| **How** | El proceso actual se sostiene mediante cuadernos, hojas de cálculo, fotografías enviadas por WhatsApp, comprobantes físicos, llamadas y revisiones manuales. La validación ocurre de forma reactiva: el gestor revisa cuando aparece una discrepancia, un reclamo o una sospecha. Esto traslada el control al final del proceso, cuando corregir o demostrar lo ocurrido ya es más costoso. |
+| **How Much** | El impacto económico se manifiesta en cuatro frentes: tiempo administrativo invertido en revisar discrepancias, riesgo de pagos o reembolsos incorrectos por kilometraje y combustible, pérdida de confianza del cliente cuando no existe evidencia verificable, y reprocesos internos para reconstruir lo ocurrido después del servicio. Las entrevistas preliminares del proyecto evidencian diferencias de kilometraje, variaciones no explicadas de combustible y pérdida de trazabilidad formal ante clientes. Como referencia internacional sobre el costo de fallas de control en cadenas logísticas, CargoNet reportó 3,625 incidentes de robo de carga en Estados Unidos y Canadá durante 2024, 27% más que en 2023, con un valor promedio por robo de USD 202,364 (CargoNet, 2025). Aunque esta referencia no valida por sí sola el dolor específico de las PyMES peruanas, refuerza que la falta de control y trazabilidad logística puede tener consecuencias económicas significativas. Para el MVP, el impacto se validará mediante reducción del tiempo de revisión por servicio, disminución de registros observados, reducción de discrepancias entre gestor y conductor, y número de incidencias resueltas con evidencia verificable. |
 
 ##### Objetivos de la solución
 
-- Reducir la dependencia del ingreso manual de datos
-- Incrementar la confiabilidad de la información operativa
-- Automatizar la validación de evidencias en campo
-- Mejorar la trazabilidad de los servicios logísticos
+- Reducir la dependencia del ingreso manual de datos operativos críticos durante el registro de kilometraje, combustible, entregas e incidencias.
+- Incrementar la confiabilidad de la información utilizada para supervisión, auditoría y toma de decisiones operativas.
+- Automatizar la validación de evidencias capturadas en campo, priorizando odómetros, comprobantes de combustible y documentos de entrega.
+- Mejorar la trazabilidad de los servicios logísticos mediante registros verificables, georreferenciados y asociados al contexto de operación.
+- Disminuir conflictos operativos derivados de datos incompletos, contradictorios o no sustentados con evidencia objetiva.
+- Reducir el tiempo administrativo dedicado a revisar servicios con discrepancias durante el piloto del MVP.
+- Validar si las PyMES de transporte perciben la auditoría basada en evidencia visual como una mejora suficientemente valiosa para sostener un modelo SaaS modular.
 
 ##### Restricciones del proyecto
 
-- Operación en entornos con conectividad limitada
-- Usuarios con bajo nivel de alfabetización digital
-- Necesidad de integración con infraestructura cloud existente
+- La solución debe operar en entornos con conectividad limitada, permitiendo captura offline y sincronización posterior.
+- La experiencia móvil debe ser simple, considerando usuarios con distintos niveles de alfabetización digital.
+- La validación automática debe contemplar condiciones reales de campo, como fotografías borrosas, baja iluminación, reflejos, ángulos incorrectos o evidencias incompletas.
+- El MVP aplicará validación local básica de calidad de imagen en el dispositivo móvil, mientras que la extracción avanzada de datos mediante IA de visión o procesamiento documental podrá ejecutarse en servicios cloud especializados cuando exista conectividad.
+- La arquitectura debe integrarse con la infraestructura cloud existente y mantener una estrategia viable para un equipo académico de alcance limitado.
+- El procesamiento de evidencias debe proteger la privacidad y seguridad de la información operativa, evitando exposición de credenciales, imágenes o datos sensibles.
+- El modelo de solución debe priorizar bajo costo de adopción para PyMES, usando dispositivos móviles existentes siempre que sea posible.
 
-En respuesta a esta problemática, se plantea la evolución hacia CoBox Smart Vision, una solución que incorpora inteligencia artificial de visión y procesamiento en el borde para validar automáticamente la información capturada en campo, eliminando la dependencia del ingreso manual y garantizando la integridad de los datos.
+En respuesta a esta problemática, se plantea la evolución hacia **CoBox Smart Vision**, una solución que incorpora captura móvil guiada, validación local básica de calidad de imagen, sincronización offline y procesamiento inteligente de evidencias críticas. La propuesta no busca únicamente digitalizar registros, sino transformar evidencias visuales en datos operativos verificables, reduciendo errores humanos, fortaleciendo la trazabilidad y generando información confiable para auditoría, resolución de disputas y toma de decisiones.
 
 #### 1.2.2. Lean UX Process
 
 ##### 1.2.2.1 Lean UX Problem Statements
 
-El dominio del problema se sitúa en la gestión operativa del transporte de carga, donde la captura, validación y uso de información en campo representan un factor crítico para la eficiencia y confiabilidad de las operaciones logísticas.
+El Lean UX Problem Statement de CoBox Smart Vision se construye a partir de la brecha identificada en la operación de PyMES de transporte de carga: la información crítica del servicio existe, pero no siempre puede considerarse confiable, verificable o auditable. Por ello, esta sección organiza el problema desde el dominio, los segmentos, los dolores, la brecha actual, la visión estratégica y el segmento inicial de validación.
 
-El segmento de clientes está compuesto principalmente por pequeñas y medianas empresas de transporte de carga, incluyendo gestores logísticos y conductores, quienes requieren herramientas que les permitan registrar, validar y supervisar información operativa de manera eficiente y confiable.
+**Problem Statement consolidado**
 
-Los principales puntos de dolor identificados incluyen la alta dependencia del ingreso manual de datos, la existencia de errores humanos en registros críticos, la posibilidad de manipulación o fraude en reportes operativos y la falta de mecanismos de validación automática que aseguren la integridad de la información.
+Las PyMES de transporte de carga que operan con registros manuales o semi-digitales necesitan reducir discrepancias en kilometraje, combustible, entregas e incidencias, porque los datos capturados desde campo no siempre son verificables, auditables ni consistentes con el contexto real del servicio.
 
-Existe una brecha significativa entre las soluciones actuales, enfocadas principalmente en la digitalización de procesos, y la necesidad de contar con sistemas que validen automáticamente la información capturada en campo mediante evidencia verificable.
+Este problema genera reprocesos administrativos, conflictos entre gestores y conductores, dificultad para sustentar reclamos y pérdida de confianza en la información usada para tomar decisiones operativas. CoBox Smart Vision buscará resolver esta brecha mediante captura guiada de evidencias visuales, validación local básica, trazabilidad contextual, operación offline, sincronización posterior y procesamiento inteligente cuando exista conectividad, priorizando inicialmente los flujos de odómetro, comprobantes de combustible, documentos de entrega e incidencias.
 
-En este contexto, la visión del producto es evolucionar hacia una solución que no solo registre información, sino que sea capaz de interpretarla y validarla automáticamente mediante el uso de tecnologías de inteligencia artificial, reduciendo la intervención humana y mejorando la confiabilidad de los datos.
+**Business Problem**
 
-La estrategia consiste en implementar un enfoque progresivo basado en captura de evidencia visual, procesamiento inteligente de datos y validación cruzada con información contextual, priorizando la usabilidad en campo y la adaptabilidad a entornos de conectividad limitada.
+Las empresas del segmento objetivo no enfrentan únicamente un problema de digitalización, sino una pérdida de confiabilidad operativa. Aunque pueden registrar datos mediante hojas de cálculo, fotografías, mensajes o sistemas básicos, estos registros no siempre permiten demostrar que el kilometraje, el consumo de combustible, la entrega o la incidencia reportada corresponden realmente al servicio ejecutado.
 
-El segmento inicial se enfoca en empresas de transporte de carga con flotas pequeñas y medianas que presentan procesos manuales o semi-digitalizados y que requieren mejorar la trazabilidad y confiabilidad de sus operaciones.
+Esta falta de evidencia verificable genera costos indirectos: tiempo administrativo para revisar discrepancias, dificultad para resolver reclamos, riesgo de pagos o reembolsos incorrectos, pérdida de confianza entre gestores y conductores, y menor capacidad para auditar la operación con información objetiva.
+
+**Business Outcomes**
+
+CoBox Smart Vision buscará validar su impacto en el negocio mediante los siguientes resultados esperados:
+
+- Reducir el tiempo administrativo dedicado a revisar servicios con discrepancias.
+- Disminuir la cantidad de registros observados por falta de evidencia verificable.
+- Reducir conflictos entre gestores y conductores asociados a kilometraje, combustible, entregas o incidencias.
+- Aumentar la proporción de servicios auditables con evidencia visual asociada, georreferenciada y trazable.
+- Validar si el segmento percibe la auditoría basada en evidencia visual como una mejora suficientemente valiosa para sostener un modelo SaaS modular.
+
+**Domain**
+
+El dominio del problema se ubica en la gestión operativa del transporte de carga, específicamente en el registro, validación y uso de información generada durante la ejecución de servicios logísticos. El punto crítico no es únicamente capturar datos, sino asegurar que la información proveniente de campo sea verificable, consistente y útil para supervisión, auditoría, resolución de disputas y toma de decisiones.
+
+Dentro de este dominio, CoBox Smart Vision se enfoca en los momentos donde la confiabilidad del dato tiene mayor impacto operativo: inicio de servicio, captura de odómetro, recarga de combustible, entrega, registro de incidencia y cierre de ruta.
+
+**Customer Segments**
+
+El segmento inicial está compuesto por pequeñas y medianas empresas de transporte de carga que operan con procesos manuales o semi-digitales. Dentro de este segmento se identifican tres actores relevantes:
+
+- **Cliente económico:** dueño, gerente general o jefe de operaciones, responsable de asumir costos por errores, reclamos, reprocesos, pérdidas operativas o decisiones de inversión.
+- **Usuario gestor:** coordinador o responsable de operaciones logísticas, encargado de supervisar servicios, revisar evidencias, detectar discrepancias y generar reportes confiables.
+- **Usuario operativo:** conductor de carga, responsable de ejecutar el servicio y registrar evidencias desde campo bajo presión de tiempo, fatiga, conectividad variable y condiciones ambientales no controladas.
+
+**User Outcomes / Benefits**
+
+Los beneficios esperados para cada usuario clave son los siguientes:
+
+| Usuario | Resultado esperado |
+|---------|--------------------|
+| Cliente económico | Contar con una operación más auditable, con menor exposición a reprocesos, reclamos no sustentados y pérdidas derivadas de información no verificable. |
+| Gestor logístico | Revisar servicios con evidencia objetiva, reducir tiempo de validación manual y resolver discrepancias con mayor rapidez. |
+| Conductor | Registrar evidencias de forma simple, incluso en condiciones de baja conectividad, y contar con respaldo objetivo frente a reclamos o cuestionamientos posteriores. |
+
+**Pain Points**
+
+Los principales dolores identificados son:
+
+- Dependencia del ingreso manual de datos críticos como kilometraje, combustible, entregas e incidencias, lo que genera errores, omisiones y necesidad de revisión posterior.
+- Uso de evidencias aisladas, como fotografías enviadas por mensajería, sin validación automática ni relación estructurada con el servicio logístico.
+- Dificultad para auditar información operativa cuando existen discrepancias entre lo reportado por el conductor y lo revisado por el gestor.
+- Conflictos entre gestores y conductores por falta de evidencia objetiva.
+- Pérdida de tiempo administrativo al reconstruir lo ocurrido después del servicio, especialmente cuando la información está dispersa entre hojas de cálculo, mensajes, comprobantes físicos y llamadas.
+- Limitaciones de conectividad, baja alfabetización digital, baja iluminación, fotografías borrosas o incompletas y presión operativa durante el registro en campo.
+
+**Gap**
+
+Las soluciones actuales permiten registrar, centralizar o comunicar información, pero no garantizan que los datos capturados desde campo sean verificables antes de ser usados en reportes, auditorías o decisiones operativas. La brecha principal se encuentra entre “tener datos registrados” y “tener datos confiables, validados y trazables”.
+
+El status quo persiste porque herramientas como hojas de cálculo, mensajería, fotografías sueltas o registros físicos son accesibles y conocidas para el segmento; sin embargo, fallan cuando la empresa necesita demostrar integridad, contexto, georreferenciación, consistencia y trazabilidad de la información. CoBox Smart Vision se diferencia porque no busca reemplazar todo el sistema logístico, sino agregar una capa de auditoría visual sobre los puntos críticos donde el dato manual pierde confiabilidad.
+
+**Vision / Strategy**
+
+La visión de CoBox Smart Vision es evolucionar CoBox desde una plataforma de gestión logística hacia una capa accesible de auditoría operativa basada en trazabilidad del servicio. La estrategia inicial consiste en validar primero los casos de mayor dolor operativo: odómetro, comprobantes de combustible, documentos de entrega e incidencias.
+
+Para ello, el MVP priorizará captura móvil guiada, operación offline, sincronización posterior, geolocalización de evidencias, validación local básica de calidad de imagen y procesamiento inteligente de datos cuando exista conectividad. En condiciones reales de campo, la solución deberá contemplar casos de borde como fotografías borrosas, baja iluminación, reflejos, ángulos incorrectos, documentos incompletos o fallas temporales de conexión.
+
+**Initial Segment**
+
+El segmento inicial priorizado son PyMES de transporte de carga que realizan servicios recurrentes de distribución urbana o rutas interprovinciales, operan con flotas pequeñas o medianas, registran kilometraje, combustible y entregas mediante procesos manuales o semi-digitales, y no cuentan con telemetría especializada ni plataformas enterprise.
+
+Este segmento permite validar la propuesta con ciclos cortos, pilotos controlados y métricas operativas claras, porque concentra tres condiciones críticas para el MVP: dolor frecuente, comprador identificable y dependencia actual de evidencias no estructuradas. La validación inicial no buscará cubrir todo el mercado logístico, sino demostrar que la auditoría visual de evidencias críticas reduce discrepancias y genera valor suficiente para sostener una adopción progresiva.
 
 ##### 1.2.2.2 Lean UX Assumptions
 
 ###### Business Assumptions
 
-1. Creemos que nuestros clientes necesitan una forma automatizada y confiable de gestionar las operaciones logísticas del transporte de carga, que reduzca la dependencia del ingreso manual de datos.
-2. Estas necesidades se resuelven mediante una solución que no solo digitalice procesos, sino que valide automáticamente la información operativa a partir de evidencia visual y procesamiento inteligente.
-3. Nuestros clientes iniciales serán pequeñas y medianas empresas de transporte de carga que buscan mejorar la confiabilidad de sus datos y reducir errores operativos y riesgos de fraude.
-4. El valor más importante de lo que el cliente requiere de nuestro servicio es la trazabilidad verificable y la integridad de la información en cada servicio logístico realizado.
-5. El cliente puede tener los siguientes beneficios adicionales: reducción de tiempo administrativo, validación automática de evidencias, disminución de conflictos operativos, y mejora en el control de desempeño de la flota.
-6. Vamos a adquirir clientes mediante marketing directo a empresas de transporte, demostraciones del sistema enfocadas en reducción de fraude y eficiencia operativa, y recomendaciones de clientes satisfechos.
-7. Haremos dinero a través de suscripciones mensuales basadas en el número de usuarios, vehículos y funcionalidades avanzadas de validación y analítica.
-8. Nuestra competencia principal serán sistemas ERP logísticos tradicionales, hojas de cálculo y plataformas de gestión de flotas que no cuentan con validación automática de datos.
-9. Los venceremos ya que nuestra plataforma se enfoca en la validación inteligente de información operativa mediante evidencia digital, con una experiencia de usuario simple y adaptada al trabajo en campo.
-10. Nuestro mayor riesgo es que las empresas tradicionales se resistan a confiar en sistemas automatizados basados en inteligencia artificial o perciban la solución como compleja.
-11. Resolveremos esto mediante interfaces ultra-simples, flujos de uso basados en captura de evidencia (en lugar de ingreso manual), funcionamiento offline y acompañamiento en la adopción.
+1. Creemos que nuestros clientes necesitan una forma confiable de validar la información operativa capturada durante los servicios de transporte de carga, especialmente en registros de kilometraje, combustible, entregas e incidencias.
+
+2. Estas necesidades se resuelven mediante una solución que no solo centralice información, sino que convierta evidencias visuales capturadas en campo en datos verificables, asociados al servicio logístico correspondiente.
+
+3. Nuestros clientes iniciales serán pequeñas y medianas empresas de transporte de carga que operan con procesos manuales o semi-digitales y que necesitan mejorar la trazabilidad sin asumir el costo o complejidad de soluciones enterprise o hardware especializado.
+
+4. El valor más importante para el cliente es contar con información operativa confiable, verificable y auditable para supervisar servicios, resolver discrepancias, reducir reprocesos y tomar decisiones basadas en evidencia.
+
+5. El cliente puede obtener beneficios adicionales como reducción del tiempo administrativo, menor dependencia de registros manuales, disminución de conflictos entre gestores y conductores, mejora en la respuesta ante reclamos y mayor control sobre el desempeño de la operación.
+
+6. Vamos a adquirir clientes mediante pilotos controlados con PyMES de transporte, demostraciones enfocadas en casos de uso críticos —odómetro, combustible, entregas e incidencias—, contacto directo con empresas del sector y una landing page orientada a captar solicitudes de demostración.
+
+7. Generaremos ingresos a través de un modelo SaaS modular, con suscripciones mensuales basadas en número de vehículos, usuarios activos y funcionalidades avanzadas de validación, trazabilidad y reportes.
+
+8. Nuestra competencia principal serán los procesos manuales, hojas de cálculo, fotografías enviadas por mensajería, sistemas ERP/TMS tradicionales y plataformas de gestión de flota que centralizan información, pero no se enfocan en validar automáticamente evidencias operativas capturadas en campo.
+
+9. Nos diferenciaremos porque CoBox Smart Vision no se posiciona como un TMS genérico ni como una solución de telemetría basada en hardware, sino como una capa accesible de auditoría operativa para PyMES, basada en evidencia visual verificable, operación móvil simple y bajo costo de adopción.
+
+10. Nuestro mayor riesgo de negocio es que las empresas perciban la validación automática como una mejora secundaria y no como un problema suficientemente frecuente, costoso o urgente para pagar por la solución.
+
+11. Resolveremos este riesgo mediante pilotos con servicios reales, medición de impacto operativo, demostraciones con datos comparables antes/después y priorización de casos donde la falta de evidencia ya genera conflictos, reprocesos, reclamos o pérdida de confianza en la operación.
+
 12. ¿Qué otras suposiciones tenemos que, si resultan falsas, harán que nuestro negocio/proyecto fracase?
-    * Que las empresas de transporte están dispuestas a adoptar soluciones que automaticen la validación de datos y reduzcan su control manual.
-    * Que los conductores adoptarán un modelo basado en captura de evidencia visual en lugar de ingreso manual de información.
-    * Que las empresas valoran la confiabilidad y verificabilidad de los datos por encima de mantener procesos manuales conocidos.
+
+    * Que las PyMES de transporte están dispuestas a cambiar procesos manuales conocidos por un flujo basado en captura de evidencia visual.
+    * Que los conductores adoptarán la aplicación si el registro visual es más rápido, claro y útil que el ingreso manual.
+    * Que los gestores confiarán en datos validados automáticamente y los usarán para tomar decisiones operativas.
+    * Que el MVP puede demostrar valor medible sin requerir hardware especializado ni una implementación enterprise compleja.
+    * Que la validación automática puede funcionar en condiciones reales de campo, considerando baja iluminación, fotografías borrosas, reflejos, conectividad limitada o evidencias incompletas.
+    * Que la reducción de discrepancias, reprocesos y tiempo administrativo será suficientemente visible para sostener un modelo SaaS modular.
+    * Que los casos de uso priorizados —odómetro, combustible, documentos de entrega e incidencias— ocurren con suficiente frecuencia como para justificar el uso recurrente de la solución.
+
+13. Suposiciones más riesgosas para validar primero:
+
+    * **Riesgo alto - Dolor pagable:** que el cliente económico perciba la falta de evidencia verificable como un problema suficientemente importante para pagar una suscripción.
+    * **Riesgo alto - Adopción del conductor:** que el conductor adopte la captura guiada sin sentir que incrementa su carga operativa durante la ruta.
+    * **Riesgo alto - Calidad de validación:** que la validación automática funcione en condiciones reales de campo, incluyendo baja iluminación, fotografías borrosas, reflejos, ángulos incorrectos, conectividad limitada o evidencias incompletas.
+    * **Riesgo medio - Confianza del gestor:** que el gestor confíe en los estados de validación generados por el sistema y los use para revisar servicios, resolver discrepancias o sustentar reclamos.
+    * **Riesgo medio - Sostenibilidad del modelo:** que la mejora operativa sea lo bastante recurrente y medible como para sostener un cobro mensual por vehículo, usuario o módulo funcional.
 
 ###### User Assumptions
 
 1. ¿Quién será nuestro usuario?
-   * El usuario principal de CoBox Smart Vision son gerentes y coordinadores de operaciones logísticas que necesitan información confiable y validada para supervisar su flota.
-   * También está dirigido a conductores de carga que requieren una herramienta simple para registrar eventos mediante captura de evidencia sin procesos manuales complejos.
+
+   * El cliente económico será el dueño, gerente general o jefe de operaciones de una PyME de transporte de carga, responsable de controlar costos, resolver reclamos y decidir sobre la adopción de nuevas herramientas.
+   * El usuario gestor será el coordinador o responsable de operaciones logísticas, quien necesita supervisar servicios, revisar evidencias, identificar discrepancias y generar reportes confiables.
+   * El usuario operativo será el conductor de carga, quien registra información y evidencias durante la ejecución del servicio desde un dispositivo móvil.
 
 2. ¿Dónde encaja nuestro producto en su vida?
-   * Se integra en la rutina diaria tanto en oficinas como en campo, siendo utilizado durante la ejecución de servicios para capturar y validar información operativa en tiempo real o de manera diferida.
+
+   * Para el gestor, CoBox Smart Vision encaja en la rutina diaria de supervisión, revisión de servicios, atención de reclamos y control operativo.
+   * Para el conductor, encaja durante la ejecución del servicio, especialmente en momentos críticos como inicio de ruta, captura de odómetro, recarga de combustible, entrega, incidencia, parada no planificada y cierre de servicio.
+   * Para el cliente económico, encaja en la necesidad de contar con evidencia objetiva para auditar operaciones, controlar costos y tomar decisiones de mejora sobre la flota.
 
 3. ¿Qué problemas resuelve nuestro producto?
-   * Se busca resolver la dependencia del ingreso manual de datos, la falta de confiabilidad en registros operativos y la ausencia de mecanismos de validación de evidencias.
-   * Los procesos manuales generan errores, inconsistencias y conflictos entre conductores y gestores, debido a la falta de información verificable.
 
-4. ¿Cómo y Cuándo es usado nuestro producto?
-   * Es utilizado durante todas las etapas del proceso logístico, especialmente en campo mediante dispositivos móviles para captura de evidencia, y en oficinas para monitoreo y análisis.
-   * Los gestores acceden principalmente desde aplicaciones web, mientras los conductores utilizan la aplicación móvil durante la ejecución del servicio.
+   * Reduce la dependencia del ingreso manual de datos operativos críticos.
+   * Permite asociar evidencias visuales a servicios específicos, evitando fotografías aisladas o registros difíciles de auditar.
+   * Mejora la confiabilidad de la información usada por gestores para supervisar, auditar y resolver discrepancias.
+   * Brinda respaldo objetivo al conductor frente a reclamos, descuentos injustificados o conflictos derivados de datos no verificables.
+   * Permite continuidad operativa en escenarios de conectividad limitada mediante captura offline y sincronización posterior.
+   * Reduce el tiempo dedicado a reconstruir lo ocurrido después del servicio cuando existen inconsistencias entre kilometraje, combustible, entregas o incidencias reportadas.
+
+4. ¿Cómo y cuándo es usado nuestro producto?
+
+   * El conductor utiliza la aplicación móvil durante la ruta para capturar evidencias, registrar incidencias y consultar el estado de sincronización o validación de sus registros.
+   * El gestor utiliza la aplicación web para consultar servicios, revisar evidencias, validar observaciones, responder reclamos y analizar información operativa.
+   * El cliente económico utiliza los reportes y evidencias consolidadas para revisar el desempeño operativo, identificar patrones de discrepancia y decidir mejoras en procesos o control interno.
+   * El sistema se usa durante la operación en campo y también después del servicio, cuando se consolidan registros, se revisan discrepancias o se generan reportes.
 
 5. ¿Qué características son importantes?
-   * Captura de evidencia visual para registro de información operativa
-   * Validación automática de datos mediante inteligencia artificial
-   * Funcionamiento offline con sincronización posterior
-   * Generación de reportes basados en datos validados
-   * Interfaz simple con mínima interacción requerida
+
+   * Captura guiada de evidencia visual.
+   * Validación automática de odómetro, comprobantes, documentos de entrega e incidencias.
+   * Funcionamiento offline con sincronización posterior.
+   * Mensajes claros ante evidencias borrosas, incompletas, con baja iluminación o problemas de lectura.
+   * Estados visibles de guardado, sincronización, validación u observación.
+   * Reportes basados en datos verificados.
+   * Interfaz móvil simple, rápida y con mínima carga cognitiva para el conductor.
+   * Trazabilidad contextual de la evidencia, incluyendo relación con servicio, momento de captura, ubicación y estado de validación.
+   * Mecanismo de contingencia cuando una evidencia no pueda validarse automáticamente, permitiendo recaptura o registro observado.
 
 6. ¿Cómo luce y se comporta nuestro producto?
-   * Presenta interfaces diferenciadas: dashboards analíticos para gestores y aplicación móvil con flujo simplificado para conductores.
-   * Se comporta de forma eficiente en campo, priorizando rapidez, validación automática, confirmaciones claras y sincronización cuando existe conectividad.
+
+   * Para el conductor, el producto se comporta como una aplicación móvil de flujo guiado, con acciones simples, confirmaciones visibles y tolerancia a conectividad limitada.
+   * Para el gestor, se comporta como una plataforma web de supervisión y auditoría, donde cada servicio puede revisarse con evidencias, estados de validación, incidencias y trazabilidad.
+   * Para el cliente económico, se comporta como una herramienta de control operativo que resume discrepancias, evidencias verificadas y servicios observados para apoyar decisiones de gestión.
+   * En condiciones de campo, el producto debe priorizar rapidez, claridad y resiliencia: si la evidencia no puede validarse, debe explicar el motivo y permitir recaptura o registro de contingencia.
 
 ##### 1.2.2.3 Lean UX Hypothesis Statements
 
-Creemos que al reemplazar el ingreso manual de datos por un modelo basado en captura de evidencia visual, los conductores reducirán el tiempo requerido para registrar información operativa.
-Sabremos que estamos en lo correcto cuando se observe una disminución en el tiempo promedio de registro por servicio y una reducción en la carga operativa percibida por los usuarios en campo.
+1. Creemos que al reemplazar parte del ingreso manual de datos por captura guiada de evidencia visual, los conductores de PyMES de transporte reducirán el tiempo requerido para registrar información operativa durante el servicio, especialmente en eventos de odómetro, combustible, entrega e incidencias.
 
-Creemos que al incorporar validación automática de datos mediante inteligencia artificial, será posible reducir errores humanos y detectar inconsistencias en los registros operativos.
-Sabremos que estamos en lo correcto cuando disminuyan las discrepancias en datos críticos como kilometraje y consumo de combustible, y se identifiquen automáticamente registros anómalos.
+Sabremos que esto será correcto cuando, durante un piloto de 4 semanas, el tiempo promedio de registro por evento disminuya al menos 25% frente al proceso manual actual, y al menos el 80% de los conductores participantes complete el flujo de captura sin asistencia del gestor. Esta hipótesis será medida mediante comparación de tiempos antes/después, registros de uso de la aplicación y observación de sesiones piloto.
 
-Creemos que al utilizar evidencia digital verificable en lugar de registros manuales, se incrementará la confianza de los gestores en la información operativa.
-Sabremos que estamos en lo correcto cuando se reduzcan los conflictos entre conductores y coordinadores, y aumente la aceptación de los datos registrados como fuente confiable para auditoría.
+2. Creemos que al asociar evidencias visuales a servicios logísticos específicos, los gestores aumentarán la confianza en la información operativa registrada desde campo, porque podrán revisar datos vinculados a evidencia, ubicación, momento de captura y estado de validación.
 
-Creemos que al diseñar una experiencia de usuario basada en flujos simples y mínima interacción, los conductores adoptarán la aplicación sin resistencia significativa.
-Sabremos que estamos en lo correcto cuando se mantenga un alto nivel de uso activo de la aplicación y se reduzca la necesidad de soporte técnico durante la operación.
+Sabremos que esto será correcto cuando, durante un piloto de 4 semanas, al menos el 70% de los servicios registrados cuente con evidencia asociada y estado de validación, y los gestores califiquen dichos registros como confiables para revisión operativa en al menos 4 de 5 puntos en una encuesta posterior al piloto. Esta hipótesis será medida mediante registros del sistema, revisión de servicios observados y encuesta a gestores.
 
-Creemos que al ofrecer información validada automáticamente y disponible de forma oportuna, los gestores podrán tomar decisiones más rápidas y efectivas.
-Sabremos que estamos en lo correcto cuando se reduzcan los tiempos de respuesta ante incidencias operativas y se evidencie una mejora en indicadores de gestión logística.
+3. Creemos que al incorporar validación automática de evidencias mediante inteligencia artificial y reglas de consistencia contextual, se reducirán errores humanos y se identificarán inconsistencias en datos críticos como kilometraje, combustible, entregas e incidencias.
+
+Sabremos que esto será correcto cuando, durante un piloto de 4 semanas, la cantidad de registros observados o disputados disminuya al menos 20% frente al proceso manual actual, y el sistema identifique automáticamente evidencias con problemas de lectura, baja calidad o inconsistencia contextual antes de que el gestor realice la revisión final. Esta hipótesis será medida mediante comparación de registros observados antes/después, logs de validación y revisión manual de una muestra de evidencias.
+
+4. Creemos que al permitir captura offline y sincronización posterior, los conductores podrán registrar evidencias en rutas con conectividad limitada sin interrumpir la operación ni perder trazabilidad del servicio asociado.
+
+Sabremos que esto será correcto cuando, durante un piloto de 4 semanas, al menos el 90% de las evidencias capturadas sin conexión se almacene localmente, se sincronice correctamente al recuperar conectividad y conserve relación con el servicio, usuario, momento de captura y ubicación disponible. Esta hipótesis será medida mediante logs de almacenamiento local, eventos de sincronización, revisión de errores y trazabilidad de evidencias sincronizadas.
+
+5. Creemos que al informar problemas de calidad de imagen antes de cerrar el registro, se reducirá la cantidad de evidencias inválidas o no utilizables por desenfoque, baja iluminación, reflejos, encuadre incorrecto o información incompleta.
+
+Sabremos que esto será correcto cuando, durante un piloto de 4 semanas, la proporción de evidencias rechazadas en revisión posterior disminuya al menos 30% frente al proceso actual, y al menos el 70% de las evidencias observadas por baja calidad sea recapturada exitosamente por el conductor antes de finalizar el registro. Esta hipótesis será medida mediante logs de validación de calidad, tasa de recaptura, revisión manual de evidencias y comparación con evidencias rechazadas en el proceso previo.
+
+6. Creemos que al demostrar mayor trazabilidad sin requerir hardware especializado, las PyMES de transporte percibirán CoBox Smart Vision como una solución viable y accesible para mejorar su control operativo.
+
+Sabremos que esto será correcto cuando, al finalizar un piloto de 4 semanas, al menos 2 de cada 3 clientes económicos participantes indiquen disposición a continuar con un piloto extendido o suscripción inicial bajo un modelo SaaS modular, sustentando su decisión en reducción de discrepancias, menor tiempo de revisión o mayor capacidad de auditoría. Esta hipótesis será medida mediante entrevistas de cierre, encuesta de disposición de pago, análisis de métricas del piloto y validación de interés en un plan mensual por vehículo, usuario o módulo funcional.
 
 ##### 1.2.2.4. Lean UX Canvas
 
-![Lean UX Canvas](./assets/tb1/lean_ux_canvas.png)
+![Lean UX Canvas](./assets/tp1/lean_ux_canvas.png)
 
 ### 1.3. Segmentos Objetivo
 
-CoWare identifica dos segmentos principales dentro del dominio del transporte de carga, los cuales cumplen roles diferenciados en la operación logística y presentan necesidades específicas frente a la evolución hacia soluciones basadas en validación automática de información.
+CoWare identifica dos segmentos principales dentro del dominio del transporte de carga. Ambos participan en la misma operación logística, pero cumplen roles distintos frente al problema identificado: la falta de información operativa verificable, trazable y auditable. El primer segmento concentra la decisión de adopción, la supervisión del servicio y la necesidad de control operativo; el segundo concentra la generación de evidencias en campo, sin la cual la solución no podría producir datos confiables.
 
-#### Segmento Primario: Gestión de Operaciones Logísticas
+La selección de estos segmentos se sustenta en el contexto del transporte terrestre de carga en Perú, donde el Ministerio de Transportes y Comunicaciones mantiene estadísticas específicas sobre el parque vehicular autorizado de transporte de carga general nacional (Ministerio de Transportes y Comunicaciones [MTC], 2025). Asimismo, el enfoque en pequeñas y medianas empresas responde a la realidad de adopción tecnológica del país: PRODUCE reporta que la informalidad de las MYPE alcanzó el 84.8% en 2022, con una tasa de 91.3% en microempresas y 48.3% en pequeñas empresas, lo que evidencia la necesidad de soluciones accesibles, simples y de baja fricción operativa (Ministerio de la Producción [PRODUCE], 2024).
 
-Este segmento está conformado por gerentes, coordinadores y responsables de operaciones en pequeñas y medianas empresas de transporte de carga que administran flotas vehiculares y supervisan la ejecución de servicios logísticos.
+#### Segmento inicial priorizado para el MVP
 
-- **Perfil organizacional**: Empresas con estructuras operativas tradicionales que han iniciado procesos de digitalización, pero aún presentan dependencia de registros manuales y herramientas no integradas.
+Para la primera validación de CoBox Smart Vision, el segmento inicial priorizado estará compuesto por pequeñas y medianas empresas de transporte de carga que realizan servicios recurrentes de distribución urbana o rutas interprovinciales, operan con flotas pequeñas o medianas y gestionan evidencias operativas mediante procesos manuales o semi-digitales.
 
-- **Necesidades clave**: Requieren información confiable, consistente y oportuna para la toma de decisiones, así como mecanismos que les permitan validar la veracidad de los datos reportados desde campo.
+Este segmento se prioriza porque concentra cuatro condiciones relevantes para el MVP: necesidad frecuente de registrar kilometraje, combustible, entregas e incidencias; uso de fotografías, comprobantes físicos, hojas de cálculo o mensajería como respaldo operativo; ausencia de telemetría especializada o plataformas enterprise; y necesidad de sustentar servicios ante clientes, gerencia o responsables de operación. Por ello, permite validar la propuesta con pilotos controlados, métricas operativas claras y bajo costo de adopción.
+
+#### Segmento Primario: Cliente económico y gestión de operaciones logísticas
+
+Este segmento está conformado por dueños, gerentes generales, jefes de operaciones, coordinadores y responsables de operaciones en pequeñas y medianas empresas de transporte de carga. Estas personas administran flotas, supervisan servicios logísticos, responden ante clientes y toman decisiones sobre herramientas que puedan mejorar el control operativo.
+
+- **Perfil organizacional**: PyMES de transporte de carga con estructuras operativas tradicionales, procesos manuales o semi-digitales, uso frecuente de hojas de cálculo, registros físicos, llamadas, fotografías aisladas y aplicaciones de mensajería para coordinar y validar operaciones.
+
+- **Características del segmento**:
+  - Empresas con flotas pequeñas o medianas.
+  - Operaciones recurrentes de distribución urbana, rutas interprovinciales o servicios para clientes empresariales.
+  - Registro operativo basado en hojas de cálculo, comprobantes físicos, fotografías, llamadas o mensajería.
+  - Capacidad limitada para asumir soluciones enterprise, hardware especializado o implementaciones complejas.
+  - Necesidad de herramientas que puedan adoptarse progresivamente sin interrumpir la operación diaria.
+
+- **Necesidades clave**:
+  - Contar con información confiable, verificable y asociada a cada servicio logístico.
+  - Reducir discrepancias en registros de kilometraje, combustible, entregas e incidencias.
+  - Auditar operaciones con evidencia objetiva y no solo con declaraciones, fotografías aisladas o registros manuales.
+  - Generar reportes útiles para clientes, gerencia y control interno.
+  - Sustentar reclamos o discrepancias con trazabilidad del servicio, evidencia visual y contexto de captura.
 
 - **Problemas relevantes**:
-  - Inconsistencias en registros de kilometraje y consumo de combustible
-  - Dificultad para auditar operaciones con evidencia verificable
-  - Conflictos internos por discrepancias en datos reportados
-  - Limitada trazabilidad en tiempo real
+  - Inconsistencias en kilometraje y consumo de combustible.
+  - Dificultad para validar comprobantes, entregas o incidencias reportadas desde campo.
+  - Conflictos internos por discrepancias entre lo reportado por el conductor y lo revisado por el gestor.
+  - Reprocesos administrativos al consolidar información dispersa.
+  - Pérdida de confianza en los datos utilizados para tomar decisiones operativas.
+  - Falta de evidencia estructurada para responder reclamos de clientes o auditorías internas.
 
 - **Motivaciones principales**:
-  - Reducir riesgos de fraude y errores operativos
-  - Mejorar la eficiencia en la gestión de flota
-  - Contar con datos auditables para control y toma de decisiones
+  - Reducir errores, reprocesos y conflictos operativos.
+  - Mejorar la trazabilidad de servicios sin incorporar hardware especializado.
+  - Contar con evidencia verificable para auditoría, reclamos y toma de decisiones.
+  - Adoptar una solución accesible y escalable según número de vehículos, usuarios o módulos funcionales.
+  - Validar una mejora operativa sin asumir la complejidad de una plataforma logística enterprise.
 
 - **Relación con la solución**:
-  Este segmento se beneficia directamente de la evolución hacia CoBox Smart Vision, al obtener información validada automáticamente mediante inteligencia artificial, lo que incrementa la confiabilidad de los datos y permite una gestión basada en evidencia.
+  Este segmento se beneficia directamente de CoBox Smart Vision al obtener una capa de auditoría operativa basada en registros visuales trazables. La solución permite que los gestores revisen registros asociados a servicios específicos, con estados de validación, trazabilidad, geolocalización y soporte documental para resolver discrepancias o sustentar decisiones operativas.
 
----
+#### Segmento Secundario: Usuario operativo - Conductores de unidades de carga
 
-#### Segmento Secundario: Conductores de Unidades de Carga
+Este segmento está compuesto por conductores y operadores de campo encargados de ejecutar los servicios de transporte, registrar eventos operativos y capturar evidencias durante la ruta. Aunque no suelen ser los compradores de la solución, son usuarios críticos para su adopción, ya que la calidad de los datos depende de su interacción con la aplicación móvil.
 
-Este segmento está compuesto por los operadores de campo encargados de ejecutar los servicios de transporte y registrar eventos operativos durante el recorrido.
-
-- **Perfil demográfico**: Conductores con experiencia en el sector, con niveles diversos de alfabetización digital, que operan en entornos de alta exigencia y condiciones variables de conectividad.
+- **Perfil demográfico y operativo**:
+  - Conductores con experiencia en transporte urbano, interprovincial o de carga especializada.
+  - Usuarios con niveles diversos de alfabetización digital.
+  - Operación en jornadas extensas, condiciones de fatiga, presión de tiempo y conectividad variable.
+  - Uso frecuente de herramientas simples como llamadas, WhatsApp, mapas móviles o fotografías enviadas por mensajería.
 
 - **Responsabilidades operativas**:
-  - Registrar kilometraje, consumo de combustible y eventos del servicio
-  - Proporcionar evidencia de entregas y actividades realizadas
-  - Mantener comunicación con el equipo de operaciones
+  - Registrar inicio y cierre de servicio.
+  - Capturar kilometraje, combustible, entregas, incidencias y paradas no planificadas.
+  - Proporcionar evidencia de actividades realizadas en campo.
+  - Mantener comunicación con el equipo de operaciones.
+  - Sincronizar información cuando exista conectividad disponible.
 
 - **Problemas relevantes**:
-  - Carga operativa asociada al ingreso manual de datos
-  - Riesgo de errores involuntarios en registros
-  - Conflictos derivados de falta de evidencia objetiva
-  - Dificultades para usar herramientas complejas en campo
+  - Carga operativa asociada al ingreso manual de datos.
+  - Errores involuntarios por cansancio, presión operativa o registros posteriores al servicio.
+  - Conflictos derivados de falta de evidencia objetiva.
+  - Dificultad para utilizar aplicaciones complejas durante la operación.
+  - Riesgo de que registros válidos no sean aceptados por falta de trazabilidad o contexto.
+  - Pérdida de tiempo cuando debe reenviar fotografías, explicar incidencias o corregir información incompleta después del servicio.
 
 - **Necesidades funcionales**:
-  - Interacción simple y rápida durante la operación
-  - Funcionamiento offline en zonas con baja conectividad
-  - Reducción del esfuerzo necesario para registrar información
+  - Interacción móvil simple, rápida y guiada.
+  - Funcionamiento offline en zonas con baja conectividad.
+  - Confirmación visible de guardado, sincronización y validación.
+  - Mensajes claros cuando una evidencia sea borrosa, incompleta, tenga baja iluminación o no pueda validarse.
+  - Acceso a historial de evidencias como respaldo de su trabajo.
+  - Opción de recaptura o registro observado cuando una evidencia no cumpla condiciones mínimas de calidad.
 
 - **Motivaciones principales**:
-  - Facilitar el cumplimiento de sus tareas operativas
-  - Evitar conflictos con supervisores por discrepancias de datos
-  - Contar con respaldo objetivo de su trabajo
+  - Reducir el tiempo y esfuerzo necesario para registrar información.
+  - Evitar conflictos con supervisores por discrepancias de datos.
+  - Contar con respaldo objetivo frente a reclamos, descuentos injustificados o cuestionamientos posteriores.
+  - Usar una herramienta que no interrumpa la ruta ni incremente la carga operativa.
 
 - **Relación con la solución**:
-  La evolución hacia CoBox Smart Vision introduce un cambio significativo en este segmento, reemplazando el ingreso manual de datos por un modelo basado en captura de evidencia visual, lo que reduce la carga operativa y mejora la precisión de los registros.
+  CoBox Smart Vision reemplaza parte del ingreso manual por captura guiada de evidencia visual desde dispositivos móviles. Para este segmento, el valor principal está en registrar información de forma rápida, incluso sin conexión, recibir alertas claras cuando una evidencia no sea válida y contar con información asociada al servicio que respalde su trabajo ante gestores o clientes.
 
 ---
 
@@ -1587,3 +1749,13 @@ La arquitectura propuesta permite escalar horizontalmente la capa de servicios, 
 
 <img src="./assets/tb1/c4_deployment_diagram.png" alt="Software Architecture Container Level Diagram" />
 
+
+# Referencias Bibliograficas
+
+CargoNet. (2025, January 21). *2024 supply chain risk trends analysis*. Verisk Analytics. https://www.cargonet.com/news-and-events/cargonet-in-the-media/2024-theft-trends/
+
+Fortune Business Insights. (2026). *Digital logistics market size, share & industry analysis, by solution, by application, by deployment mode, by end-user, and regional forecast, 2026–2034* (Report ID: FBI109139). https://www.fortunebusinessinsights.com/digital-logistics-market-109139
+
+Ministerio de la Producción. (2024). *Tasa de informalidad MYPE: Ficha técnica*. Observatorio PRODUCEmpresarial. https://www.producempresarial.pe/tasa-de-informalidad-mype-ficha-tecnica/
+
+Ministerio de Transportes y Comunicaciones. (2025, November 24). *Estadística: Servicios de transporte terrestre por carretera - parque automotor*. Plataforma del Estado Peruano. https://www.gob.pe/institucion/mtc/informes-publicaciones/344892-estadistica-servicios-de-transporte-terrestre-por-carretera-parque-automotor
