@@ -1536,62 +1536,200 @@ De esta forma, la selección de funcionalidades primarias (Primary User Stories)
 
 A continuación, se definen los escenarios de atributos de calidad (Quality Attribute Scenarios) priorizados para la plataforma **CoBox**, los cuales actuarán como drivers arquitectónicos clave para la toma de decisiones del sistema, alineando las necesidades operativas de la logística con capacidades de Edge AI.
 
+#### Escenarios de Disponibilidad y Resiliencia
 
+**QA-01: Operación Offline con Sincronización Posterior**
 
+| Elemento | Descripción |
+|---|---|
+| **ID** | QA-01 |
+| **Atributo de Calidad** | Disponibilidad / Resiliencia (Reliability) |
+| **Fuente del Estímulo** | Dispositivo móvil del conductor (nodo Edge) |
+| **Estímulo** | Caída abrupta de conectividad de red (4G/3G) durante el registro de evidencias en campo |
+| **Artefacto** | Módulo Offline-First con almacenamiento local (SQLite cifrado) y motor de sincronización |
+| **Entorno** | Operación en rutas rurales o interprovinciales con conectividad intermitente (ej. Cañete-Chincha-Nasca) |
+| **Respuesta** | El sistema persiste el evento en almacenamiento local mediante patrón Store-and-Forward. Al restaurarse la conectividad, sincroniza de forma asíncrona los registros pendientes mediante un Message Broker (RabbitMQ), conservando trazabilidad completa del servicio, timestamp de captura y ubicación |
+| **Medida** | Persistencia local < 50 ms. Sincronización completa < 5 segundos tras reconexión. Tasa de pérdida de datos = 0%. 100% de evidencias capturadas offline sincronizadas exitosamente al recuperar conectividad |
 
+**QA-08: Recuperación ante Desastres (Disaster Recovery)**
 
-| ID    | Atributo                      | Fuente                   | Estímulo                                      | Artefacto                          | Entorno                                      | Respuesta                                                                 | Medida                                             |
-|-------|------------------------------|--------------------------|-----------------------------------------------|------------------------------------|----------------------------------------------|---------------------------------------------------------------------------|----------------------------------------------------|
-| QA-01 | Disponibilidad / Resiliencia | Usuario (Conductor)      | Registro de evidencias sin conectividad       | Módulo Offline y Sincronización    | Operación en campo sin red                   | Almacena datos localmente y sincroniza al recuperar conexión              | 100% sincronización sin pérdida de datos           |
-| QA-02 | Rendimiento (Performance)    | Gestor / Sistema         | Procesamiento de imagen (odómetro)            | Módulo Edge AI / OCR               | Ejecución en tiempo real en dispositivo      | Extrae kilometraje automáticamente y lo valida                            | Procesamiento < 2 segundos                         |
-| QA-03 | Seguridad / Integridad       | Developer / App Externa  | Acceso a servicios de trazabilidad            | API Gateway + Autenticación        | Consumo de APIs por terceros                 | Valida credenciales y retorna token o acceso denegado                     | 0 accesos no autorizados; latencia < 1 s           |
-| QA-04 | Interoperabilidad            | Sistema / Developer      | Solicitud externa de datos/logística          | API RESTful                        | Integración con sistemas externos (ERP)      | Procesa solicitudes en JSON y responde con datos o errores estructurados  | 100% solicitudes válidas atendidas                 |
-| QA-05 | Usabilidad                   | Usuario (Conductor)      | Captura de imagen de evidencia                | Interfaz móvil (captura guiada)    | Uso en campo con presión operativa           | Valida calidad de imagen y solicita repetición si es necesario             | 90% éxito en el primer intento                     |
-| QA-06 | Escalabilidad                | Múltiples Conductores    | Pico de envíos concurrentes                   | Backend asíncrono / clústeres      | Reconexiones masivas o cierre de turnos      | Procesa solicitudes concurrentes sin colapsar                             | Soporta hasta 3x usuarios sin latencia > 3 s       |
+| Elemento | Descripción |
+|---|---|
+| **ID** | QA-08 |
+| **Atributo de Calidad** | Disponibilidad / Fiabilidad (Reliability) |
+| **Fuente del Estímulo** | Infraestructura Cloud - Proveedor Principal (AWS) |
+| **Estímulo** | Caída total o degradación severa de la región principal de AWS que afecta servicios de backend, API Gateway y base de datos operacional |
+| **Artefacto** | Infraestructura Multi-Nube (AWS + GCP) con configuración Infrastructure as Code (Terraform) |
+| **Entorno** | Fallo catastrófico de proveedor cloud principal durante operación normal del sistema |
+| **Respuesta** | El sistema detecta la indisponibilidad del proveedor principal en < 30 segundos mediante health checks distribuidos. Conmuta automáticamente tráfico hacia GCP usando DNS failover y enrutamiento BGP simétrico. La base de datos operacional (Aurora PostgreSQL) mantiene réplica sincrónica en GCP Cloud SQL. Los servicios críticos se levantan desde imágenes Docker pre-registradas en Google Container Registry |
+| **Medida** | Recovery Time Objective (RTO) < 5 minutos. Recovery Point Objective (RPO) < 1 minuto. Sin pérdida de transacciones confirmadas. Degradación temporal de funcionalidades no críticas (reportes avanzados) aceptable durante failover |
 
- Descripción Detallada de Escenarios
+#### Escenarios de Rendimiento (Performance)
 
- QA-01: Disponibilidad / Resiliencia
-El sistema garantiza operación offline, permitiendo capturar evidencias sin conexión. Los datos se almacenan localmente y se sincronizan automáticamente al restablecer conectividad, evitando pérdida de información.
+**QA-02: Procesamiento Edge AI - Extracción de Odómetro**
 
- QA-02: Rendimiento (Edge AI)
-El procesamiento de imágenes se ejecuta en el dispositivo (Edge AI), extrayendo automáticamente el kilometraje del odómetro en tiempo real, reduciendo latencia y errores humanos.
+| Elemento | Descripción |
+|---|---|
+| **ID** | QA-02 |
+| **Atributo de Calidad** | Rendimiento / Eficiencia de Desempeño (Performance Efficiency) |
+| **Fuente del Estímulo** | Conductor / Sistema - Captura de imagen de odómetro |
+| **Estímulo** | Captura de fotografía del odómetro mediante cámara del dispositivo móvil en condiciones de campo reales |
+| **Artefacto** | Módulo Edge AI con Modelo de Lenguaje Pequeño (SLM) cuantificado para OCR local |
+| **Entorno** | Ejecución en tiempo real en dispositivo móvil Android/iOS del conductor. Hardware objetivo: procesador Snapdragon 600 series o equivalente, 3-4 GB RAM |
+| **Respuesta** | El sistema ejecuta procesamiento local (on-device) usando modelo OCR cuantificado a INT8. Extrae lectura numérica del odómetro, valida formato y coherencia contextual, y devuelve resultado sin enviar imagen completa al backend |
+| **Medida** | Latencia de extracción < 150 ms desde captura hasta resultado. Consumo máximo de RAM < 200 MB para modelo y procesamiento. Precisión OCR ≥ 95% en condiciones de iluminación adecuada (≥ 200 lux). La extracción no debe degradar la experiencia de captura del conductor |
 
- QA-03: Seguridad / Integridad
-El API Gateway controla el acceso mediante autenticación estricta. Solo solicitudes con credenciales válidas reciben acceso, bloqueando cualquier intento no autorizado.
+**QA-06: Experiencia de Usuario en Captura de Evidencias**
 
- QA-04: Interoperabilidad
-La API REST permite integración con sistemas externos (ERP, dashboards), procesando solicitudes en formato JSON y asegurando compatibilidad y manejo de errores.
+| Elemento | Descripción |
+|---|---|
+| **ID** | QA-06 |
+| **Atributo de Calidad** | Usabilidad / Eficiencia de Interacción (Usability) |
+| **Fuente del Estímulo** | Conductor de transporte de carga |
+| **Estímulo** | Registro de evidencia visual durante la ejecución del servicio en condiciones operativas adversas |
+| **Artefacto** | Interfaz móvil de captura guiada con validación local de calidad de imagen |
+| **Entorno** | Uso en campo con presión operativa, fatiga del conductor, condiciones variables de iluminación, vibración del vehículo y posible uso de guantes |
+| **Respuesta** | El sistema valida en tiempo real la calidad de la imagen capturada (nivel de iluminación ≥ 100 lux, nitidez con varianza de Laplaciano ≥ 100, región de interés detectable). Proporciona retroalimentación visual inmediata: ícono verde para captura válida, alerta específica para problemas detectados ("Foto borrosa - vuelva a capturar", "Poca luz - active flash"). Permite hasta 3 reintentos antes de ofrecer modo manual de contingencia |
+| **Medida** | Latencia de validación de calidad < 50 ms. Tasa de éxito en primera captura ≥ 90% en condiciones diurnas normales. Reducción de evidencias rechazadas en revisión posterior ≥ 70% comparado con proceso manual actual. Menos de 3 pasos desde apertura de cámara hasta confirmación de guardado |
 
- QA-05: Usabilidad
-La app guía al usuario en la captura de evidencias, validando la calidad de imágenes en tiempo real y reduciendo errores operativos.
+#### Escenarios de Seguridad (Security)
 
-QA-06: Escalabilidad
-El sistema maneja picos de carga mediante procesamiento asíncrono, soportando múltiples usuarios concurrentes sin degradación significativa del rendimiento.
+**QA-03: Control de Acceso Zero-Trust vía API Gateway**
 
+| Elemento | Descripción |
+|---|---|
+| **ID** | QA-03 |
+| **Atributo de Calidad** | Seguridad / Integridad (Security) |
+| **Fuente del Estímulo** | Actor externo malicioso o aplicación cliente no autorizada |
+| **Estímulo** | Intento de acceso no autorizado a endpoints de API sin credenciales válidas o con token expirado/manipulado |
+| **Artefacto** | API Gateway con autenticación OAuth2/OIDC mediante Auth0 y validación JWT estricta |
+| **Entorno** | Redes públicas e integraciones externas con sistemas de terceros (ERP, dashboards) |
+| **Respuesta** | El API Gateway intercepta toda solicitud entrante. Valida token JWT (firma, expiración, audiencia, scopes). Para solicitudes válidas, enruta hacia microservicio correspondiente con claims de autorización. Para solicitudes inválidas, retorna HTTP 401/403 sin alcanzar servicios internos. Registra intentos fallidos en log de auditoría |
+| **Medida** | 0 accesos no autorizados a endpoints protegidos. Validación de token < 50 ms. Máximo 5 intentos fallidos por IP en ventana de 1 minuto (rate limiting). Todos los intentos rechazados registrados con timestamp, IP y motivo |
 
+**QA-09: Cifrado de Datos en Reposo - Dispositivo Móvil**
 
+| Elemento | Descripción |
+|---|---|
+| **ID** | QA-09 |
+| **Atributo de Calidad** | Seguridad / Confidencialidad (Security) |
+| **Fuente del Estímulo** | Dispositivo móvil del conductor |
+| **Estímulo** | Pérdida, robo o acceso físico no autorizado al teléfono que almacena evidencias capturadas localmente |
+| **Artefacto** | Almacenamiento local cifrado (SQLite con SQLCipher o equivalente) + Secure Enclave del dispositivo |
+| **Entorno** | Dispositivo Android/iOS fuera del control corporativo directo, potencialmente en manos de terceros no autorizados |
+| **Respuesta** | Todas las evidencias y datos operativos almacenados localmente se cifran con AES-256-GCM. La clave de cifrado deriva de un secreto protegido por el Secure Enclave/Keystore del dispositivo (no hardcodeado). El acceso a la aplicación requiere autenticación biométrica (huella) o PIN de 6 dígitos. Se implementa mecanismo de borrado remoto vía MDM si el dispositivo se reporta como perdido |
+| **Medida** | 0 evidencias accesibles sin autenticación exitosa. Cifrado verificado en cada arranque de la aplicación. Clave de cifrado nunca expuesta en memoria no protegida. Tiempo máximo para borrado remoto efectivo < 24 horas desde reporte de pérdida |
 
-##### 4.1.2.3. Constraints
+**QA-10: Confidencialidad de Datos en Tránsito**
 
+| Elemento | Descripción |
+|---|---|
+| **ID** | QA-10 |
+| **Atributo de Calidad** | Seguridad / Confidencialidad (Security) |
+| **Fuente del Estímulo** | Sistema - Comunicación entre App Móvil y Backend |
+| **Estímulo** | Transmisión de evidencias fotográficas y metadatos operativos desde dispositivo móvil hacia servidores cloud |
+| **Artefacto** | Canal de comunicación API REST protegido con TLS y cifrado de carga útil adicional |
+| **Entorno** | Redes móviles 3G/4G/5G potencialmente inseguras, puntos de acceso WiFi públicos en grifos o paraderos |
+| **Respuesta** | Toda comunicación entre app móvil y backend utiliza TLS 1.3 con cipher suites robustos (AES-256-GCM). El certificado del servidor se valida estrictamente (certificate pinning). Las evidencias fotográficas se transmiten con cifrado extremo a extremo adicional sobre el canal TLS. Metadatos sensibles (geolocalización exacta) se transmiten solo cuando el servicio está activo |
+| **Medida** | 0 transmisiones sin cifrado TLS 1.3. Certificate pinning activo con fallo cerrado (no acepta certificados no reconocidos). Sin exposición de datos sensibles en logs de proxy o intermediarios de red. Latencia adicional por cifrado < 100 ms sobre transmisión sin cifrar |
 
+#### Escenarios de Integridad y Trazabilidad
 
-A continuación, se presenta la reestructuración de las restricciones (constraints) del sistema, fundamentadas en paradigmas arquitectónicos modernos, redes distribuidas e Inteligencia Artificial descentralizada.
+**QA-04: Interoperabilidad con Sistemas Externos**
 
+| Elemento | Descripción |
+|---|---|
+| **ID** | QA-04 |
+| **Atributo de Calidad** | Interoperabilidad / Compatibilidad (Compatibility) |
+| **Fuente del Estímulo** | Sistema externo - ERP de cliente o dashboard de terceros |
+| **Estímulo** | Solicitud de datos logísticos estructurados (servicios, evidencias validadas, reportes) mediante API REST |
+| **Artefacto** | API RESTful documentada con OpenAPI 3.0 y endpoints versionados |
+| **Entorno** | Integración B2B con sistemas enterprise de clientes logísticos (TMS, ERP) o herramientas de BI |
+| **Respuesta** | El sistema procesa solicitudes HTTP en formato JSON estructurado según contrato OpenAPI. Responde con código HTTP adecuado (200 éxito, 400 error de validación, 404 recurso no encontrado, 429 rate limit). Incluye headers de versionado de API y paginación en respuestas de colecciones. Errores incluyen mensaje descriptivo y código de error trazable |
+| **Medida** | 100% de solicitudes bien formadas respondidas con código HTTP correcto. Documentación OpenAPI sincronizada con implementación real. Tiempo de respuesta para consultas estándar < 500 ms (p95). Compatibilidad con 2 versiones anteriores de API (deprecación con mínimo 6 meses de aviso) |
 
-| ID   | Restricción Evolucionada (Constraint) | Justificación Científica / Tecnológica |
-|------|--------------------------------------|----------------------------------------|
-| **C-1** | **Autonomía Operativa Descentralizada (Edge Intelligence)** | El ecosistema debe ejecutar validaciones analíticas in situ sin depender de la nube. El uso de Modelos de Lenguaje Pequeños (SLMs) y arquitecturas multimodales (ej. OCR avanzado) permite procesar datos con latencias < 50 ms, operando como nodo autónomo. |
-| **C-2** | **Eficiencia Financiera mediante Optimización Multi-Nube** | La orquestación con contenedores (Kubernetes) permite balancear cargas entre instancias spot y bajo demanda (AWS, GCP), evitando vendor lock-in y optimizando costos. |
-| **C-3** | **Fusión de Sensores y Nodos Edge 6G** | La combinación de sensores y network slicing en 5G/6G permite decisiones en tiempo real sin depender de APIs externas, reduciendo vulnerabilidad y latencia. |
-| **C-4** | **Interfaces Multimodales y NLP** | Modelos generativos transforman lenguaje natural en operaciones automatizadas, reduciendo fricción y facilitando adopción por usuarios con baja alfabetización digital. |
-| **C-5** | **Trazabilidad Inmutable mediante Blockchain-IA** | Registros distribuidos + IA garantizan integridad, auditabilidad y cumplimiento normativo (ej. transporte farmacéutico), reduciendo fraude. |
-| **C-6** | **Interoperabilidad Asíncrona (Event-Driven & API Gateway)** | Arquitectura basada en eventos permite integración con sistemas legacy sin afectar rendimiento, asegurando bajo acoplamiento. |
-| **C-7** | **Compresión de Modelos ante Restricciones de Hardware** | Técnicas como cuantización (8 bits) y destilación de conocimiento reducen consumo de memoria, energía y calor en dispositivos móviles. |
-| **C-8** | **Soberanía de Datos y Zero Trust** | Procesamiento en el edge evita exposición de datos sensibles. La arquitectura Zero Trust reduce riesgos de ciberataques y violaciones de privacidad. |
-| **C-9** | **Transmisión Asíncrona de Datos Contenerizados** | Uso de data pipelines con caché local permite sincronización diferida cuando hay conectividad estable, garantizando integridad de datos. |
-| **C-10** | **Despliegue Continuo (MLOps) y OTA** | Permite actualizaciones sin detener operaciones mediante despliegues OTA y pruebas A/B, asegurando evolución continua del sistema. |
+**QA-05: Consistencia de Datos en Arquitectura Distribuida**
 
+| Elemento | Descripción |
+|---|---|
+| **ID** | QA-05 |
+| **Atributo de Calidad** | Consistencia / Integridad de Datos (Reliability) |
+| **Fuente del Estímulo** | Múltiples microservicios internos procesando eventos del mismo servicio logístico |
+| **Estímulo** | Actualización distribuida del estado de un servicio: conductor registra evidencia de entrega, sistema valida automáticamente, gestor consulta estado |
+| **Artefacto** | Arquitectura Event-Driven con patrón Outbox, message broker (RabbitMQ) y patrón Saga para transacciones distribuidas |
+| **Entorno** | Sistema distribuido con múltiples bounded contexts (Evidence, Delivery, Incident, Reporting) procesando eventos del mismo servicio |
+| **Respuesta** | El microservicio origen emite evento de dominio mediante patrón Outbox (garantiza atomicidad entre escritura en BD y publicación de evento). Los servicios consumidores procesan eventos de forma idempotente (detectan duplicados por correlationId). En caso de fallo en compensación, el evento se envía a Dead Letter Queue para análisis manual. Las vistas de consulta (read models) se actualizan de forma eventual |
+| **Medida** | Consistencia eventual < 2 segundos para el 99% de los eventos (p99). 0% de inconsistencias no detectadas (eventos perdidos sin trazabilidad). Detección de duplicados = 100%. Eventos en DLQ no superan 0.1% del total procesado |
+
+#### Escenarios de Escalabilidad
+
+**QA-07: Escalabilidad ante Picos de Carga Operativa**
+
+| Elemento | Descripción |
+|---|---|
+| **ID** | QA-07 |
+| **Atributo de Calidad** | Escalabilidad / Elasticidad (Performance Efficiency) |
+| **Fuente del Estímulo** | Sistema - Múltiples conductores finalizando servicios simultáneamente |
+| **Estímulo** | Reconexión masiva de dispositivos móviles al finalizar turnos (ej. 50 conductores sincronizando evidencias acumuladas en ventana de 15 minutos) |
+| **Artefacto** | Backend asíncrono con colas de mensajes (RabbitMQ) y orquestación de contenedores (Docker Compose en EC2 para MVP) |
+| **Entorno** | Pico de carga 3x superior a la media operativa normal, típicamente entre 17:00-19:00 horas al cierre de jornada |
+| **Respuesta** | El sistema escala horizontalmente los consumidores de eventos para procesar la cola de sincronización. Las solicitudes de sincronización se encolan sin bloquear al cliente (HTTP 202 Accepted). El API Gateway aplica rate limiting adaptativo para proteger servicios internos. Las evidencias se procesan en orden FIFO por servicio, no por hora de llegada |
+| **Medida** | Throughput sostenido > 5000 transacciones por segundo durante pico. Latencia de encolamiento < 300 ms. Sin degradación en servicios de consulta para gestores durante pico de sincronización. Tiempo máximo de espera en cola < 120 segundos para el 99% de evidencias |
+
+#### Resumen de Escenarios de Calidad
+
+| ID | Atributo Principal | Prioridad (1-10) | Relación con Drivers | Relación con Constraints |
+|---|---|---|---|---|
+| QA-01 | Disponibilidad / Resiliencia | 10 | DR-01, DR-02, DR-06 | C-1, C-9 |
+| QA-02 | Rendimiento Edge AI | 9 | DR-02 | C-1, C-7, C-14 |
+| QA-03 | Seguridad / Control Acceso | 9 | DR-03, DR-04 | C-8 |
+| QA-04 | Interoperabilidad | 7 | DR-05 | C-6 |
+| QA-05 | Consistencia Distribuida | 8 | DR-04, DR-06 | C-6 |
+| QA-06 | Usabilidad en Campo | 8 | DR-02 | C-1, C-7 |
+| QA-07 | Escalabilidad | 8 | DR-07 | C-2, C-9 |
+| QA-08 | Recuperación ante Desastres | 10 | DR-01, DR-07 | C-2 |
+| QA-09 | Cifrado Local / Privacidad | 9 | DR-03 | C-8, C-11 |
+| QA-10 | Confidencialidad en Tránsito | 9 | DR-03 | C-8 |
+
+#### 4.1.2.3. Constraints
+
+A continuación, se presentan las restricciones (constraints) del sistema CoBox Smart Vision, organizadas en cuatro categorías: restricciones técnicas, restricciones de negocio, restricciones operativas y restricciones de calidad. Cada constraint incluye una métrica verificable y su trazabilidad con los escenarios de calidad (QA) definidos en la sección 4.1.2.2.
+
+##### Restricciones Técnicas
+
+| ID | Restricción | Descripción | Métrica Verificable | QA Relacionado |
+|---|---|---|---|---|
+| **C-1** | **Autonomía Operativa Descentralizada (Edge Intelligence)** | El sistema debe ejecutar validaciones analíticas de evidencias visuales en el dispositivo móvil sin depender de conectividad cloud. Aplica a funciones de OCR de odómetro, validación de calidad de imagen y verificación preliminar de documentos | Latencia de procesamiento local < 150 ms. Modelo OCR cuantificado a INT8. Funcionamiento verificado en dispositivo con 3 GB RAM y procesador Snapdragon 600 series o equivalente | QA-02, QA-06 |
+| **C-2** | **Infraestructura Multi-Nube con Optimización de Costos** | La plataforma debe operar sobre infraestructura cloud híbrida (AWS como principal, GCP como secundario para IA especializada) usando contenedores Docker. La orquestación con Docker Compose es suficiente para el MVP; Kubernetes se evaluará para escalado productivo | Tiempo de despliegue de infraestructura completa < 30 minutos usando Terraform. Conmutación entre proveedores < 5 minutos. Sin dependencia de servicios propietarios no replicables (vendor lock-in) | QA-07, QA-08 |
+| **C-3** | **Procesamiento Local sin Dependencia de Hardware Especializado** | La solución no debe requerir sensores externos, dispositivos telemáticos ni hardware adicional instalado en vehículos. Toda captura se realiza mediante smartphones estándar de los conductores | 100% de funcionalidades core ejecutables en smartphone Android con cámara ≥ 8 MP y GPS integrado. Sin requisitos de hardware vehicular. Sin dependencia de APIs de sensores externos | QA-01, QA-06 |
+| **C-4** | **Experiencia Móvil de Baja Carga Cognitiva** | La interfaz móvil debe ser operable por conductores con distintos niveles de alfabetización digital. Debe priorizar flujos guiados, botones grandes, confirmaciones visuales claras y mínima entrada de texto manual | Máximo 3 pasos desde apertura de app hasta captura de evidencia. Iconografía universal sin dependencia de texto complejo. Mensajes de error en lenguaje operativo concreto ("Foto borrosa - acerque más" en lugar de códigos técnicos) | QA-06 |
+| **C-5** | **Trazabilidad Inmutable de Registros Operativos** | Todo evento operativo crítico (inicio de servicio, captura de evidencia, validación, incidencia, cierre) debe generar un registro trazable con timestamp, ubicación y responsable. Para el MVP, se implementa con base de datos relacional con logs de auditoría inmutables (PostgreSQL con triggers de auditoría). La integración con Blockchain se evalúa para fase post-MVP si requisitos de no repudio lo justifican | 100% de eventos críticos con trazabilidad completa (quién, qué, cuándo, dónde). Registros de auditoría no modificables por usuarios ni administradores. Retención mínima de 12 meses | QA-03, QA-05 |
+| **C-6** | **Interoperabilidad mediante API RESTful Versionada** | Toda comunicación entre frontend, app móvil y servicios externos debe realizarse mediante API REST documentada con OpenAPI 3.0. La arquitectura Event-Driven aplica solo para comunicación asíncrona entre microservicios internos | Documentación OpenAPI sincronizada con implementación real. Versionado de API mediante URL path (/api/v1/). Compatibilidad con 2 versiones anteriores durante 6 meses de deprecación. Endpoints externos con rate limiting configurable | QA-04 |
+| **C-7** | **Optimización de Modelos IA para Dispositivos Móviles** | Los modelos de IA desplegados en dispositivo móvil deben estar optimizados mediante cuantización (INT8 o FP16), poda de pesos y compresión para minimizar uso de RAM, almacenamiento y batería | Modelo OCR: tamaño < 15 MB comprimido, RAM < 200 MB durante inferencia. Modelo de calidad de imagen: tamaño < 5 MB, RAM < 50 MB. Consumo de batería < 5% por hora de uso continuo. Tiempo de carga de modelo < 2 segundos en arranque | QA-02, QA-06 |
+| **C-8** | **Seguridad Zero-Trust y Protección de Datos Sensibles** | Toda solicitud debe autenticarse y autorizarse mediante OAuth2/OIDC con Auth0. Los datos sensibles (evidencias fotográficas, geolocalización exacta, datos personales) deben cifrarse en reposo y en tránsito. Se aplica principio de mínimo privilegio por rol (RBAC) | Cifrado en reposo: AES-256-GCM. Cifrado en tránsito: TLS 1.3 con certificate pinning. Tokens JWT con expiración ≤ 1 hora. Secretos gestionados mediante variables de entorno o servicio de secret management (nunca en código fuente). 0 credenciales expuestas en logs o repositorios | QA-03, QA-09, QA-10 |
+
+##### Restricciones de Negocio
+
+| ID | Restricción | Descripción | Métrica Verificable | QA Relacionado |
+|---|---|---|---|---|
+| **C-9** | **Costo Mensual de Infraestructura para MVP** | El costo total de infraestructura cloud (AWS + GCP + Auth0) no debe exceder $500 USD mensuales durante la fase de piloto con hasta 50 vehículos activos y 5 gestores concurrentes | Factura mensual consolidada < $500 USD. Desglose estimado: AWS (EC2 t3.medium + RDS + S3) ~$300, GCP (Vertex AI Vision + Document AI) ~$150, Auth0 (plan B2C) ~$50. Optimización con instancias spot para entornos no productivos | QA-07, QA-08 |
+| **C-10** | **Tiempo de Desarrollo y Despliegue del MVP** | El MVP funcional debe estar desarrollado, probado y desplegado en 16 semanas (1 ciclo académico) con un equipo de 4 desarrolladores con dedicación parcial. El alcance se limita a los bounded contexts de Fleet Management, Delivery Management y Evidence Management. Incident Management y Reports Management se implementan con funcionalidad reducida | Semana 4: wireframes y prototipo validado. Semana 8: app móvil con captura offline funcional. Semana 12: backend con validación automática integrada. Semana 16: piloto con al menos 2 PyMES reales. Funcionalidades no core (Blockchain, mantenimiento predictivo) difieren a versión post-MVP | QA-01, QA-02, QA-03 |
+| **C-11** | **Modelo de Adopción Gradual sin Inversión Inicial del Cliente** | El piloto inicial no debe requerir inversión económica del cliente. El modelo SaaS modular se activa solo tras validación de métricas de impacto (reducción de discrepancias, ahorro de tiempo). El costo mensual por vehículo debe ser ≤ $30 USD para ser competitivo frente a alternativas manuales | 0 costo para clientes durante piloto de 4 semanas. Propuesta comercial post-piloto: plan básico desde $15/vehículo/mes (captura y trazabilidad), plan avanzado desde $30/vehículo/mes (validación IA + reportes). Payback estimado para cliente < 3 meses | QA-01, QA-06 |
+
+##### Restricciones Operativas
+
+| ID | Restricción | Descripción | Métrica Verificable | QA Relacionado |
+|---|---|---|---|---|
+| **C-12** | **Operación Offline-First con Sincronización Garantizada** | La aplicación móvil debe permitir captura de evidencias y registro de eventos sin conectividad a internet. La sincronización debe ocurrir automáticamente sin intervención del conductor. Los datos no sincronizados deben persistir localmente de forma segura | Almacenamiento local mínimo para 72 horas de operación offline (~200 evidencias). Sincronización automática con reintentos exponenciales (1s, 2s, 4s, 8s; máximo 3 ciclos). Notificación visual de estado de sincronización (pendiente/sincronizando/completado/error). Sin pérdida de datos por cierre forzoso de app | QA-01, QA-09 |
+| **C-13** | **Continuidad Operativa en Condiciones Adversas de Campo** | La solución debe funcionar en condiciones reales de operación de transporte de carga: baja iluminación, vibración, polvo, uso de guantes, fatiga del conductor, restricciones de uso de celular en almacenes | Validación de calidad de imagen adaptativa a condiciones de iluminación (umbral mínimo 50 lux con flash activado). Interfaz operable con guantes (botones ≥ 48dp según Material Design). Modo de ahorro de batería para jornadas > 8 horas. Funcionalidad reducida (solo captura) cuando batería < 10% | QA-06 |
+| **C-14** | **Precisión Mínima de Validación Automática** | Los algoritmos de validación automática (OCR de odómetro, detección de calidad de imagen, verificación de comprobantes) deben alcanzar umbrales mínimos de precisión para ser considerados confiables por gestores. Un falso positivo (validar dato incorrecto) tiene mayor impacto negativo que un falso negativo (solicitar recaptura) | OCR de odómetro: precisión ≥ 95%, recall ≥ 90% en condiciones de iluminación ≥ 200 lux. Detección de imagen borrosa: precisión ≥ 90%, recall ≥ 85%. Validación de comprobante de combustible: precisión ≥ 85% para coincidencia de RUC y fecha. Tasa de falsos positivos < 2% en todas las categorías | QA-02, QA-05 |
+
+##### Restricciones de Calidad y Evolución
+
+| ID | Restricción | Descripción | Métrica Verificable | QA Relacionado |
+|---|---|---|---|---|
+| **C-15** | **Observabilidad y Monitoreo Continuo** | La plataforma debe exponer métricas de salud, rendimiento y uso para todos los microservicios, API Gateway y procesos de validación. El monitoreo debe permitir diagnóstico proactivo de incidentes | Métricas exportadas en formato Prometheus. Dashboards en Grafana con: latencia p50/p95/p99, tasa de errores, throughput, estado de sincronización, uso de recursos. Alertas configuradas para: latencia > 500 ms sostenida 5 min, tasa de error > 1%, fallo de sincronización > 5% | QA-07, QA-08 |
+| **C-16** | **Despliegue Continuo y Actualizaciones Over-the-Air (OTA)** | Los servicios backend deben soportar despliegue continuo sin interrupción del servicio (zero-downtime deployment). La app móvil debe actualizarse mediante mecanismos OTA sin requerir visita a tienda de aplicaciones para hotfixes críticos | Despliegue backend: rolling update con health check, rollback automático si tasa de error > 5%. App móvil: actualizaciones OTA para assets y configuraciones sin publicar nueva versión en Play Store/App Store. Canal de beta para testers del equipo de operaciones | QA-01, QA-08 |
 ---
 
 ## 4.1.3 Architectural Drivers Backlog
